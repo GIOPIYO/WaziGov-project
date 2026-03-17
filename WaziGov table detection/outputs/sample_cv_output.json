@@ -1,0 +1,318 @@
+{
+  "document_id": "SHA256_of_source_pdf_filename_plus_timestamp",
+  "source_file": "COUNTY-GOVERNMENTS-BUDGET-IMPLEMENTATION-REVIEW-REPORT-FY-2024.2025.pdf",
+  "page_count": 14,
+  "processed_at": "2026-03-09T14:30:00Z",
+  "model_version": "microsoft/table-transformer-detection",
+  "tables": [
+    {
+      "table_id": "page_003_table_00",
+      "page_number": 3,
+      "bbox": {
+        "xmin": 412.3,
+        "ymin": 1520.7,
+        "xmax": 6475.1,
+        "ymax": 8890.2
+      },
+      "confidence": 0.9847,
+      "label": "table",
+      "grid": {
+        "rows": 16,
+        "cols": 6
+      },
+      "continuation": {
+        "is_continuation": false,
+        "continues_on_next_page": true,
+        "linked_table_id": "page_004_table_00"
+      },
+      "cells": [
+        {
+          "cell_id": "page_003_table_00_r0_c0",
+          "row_idx": 0,
+          "col_idx": 0,
+          "row_span": 1,
+          "col_span": 1,
+          "cell_type": "column_header",
+          "hierarchy_level": null,
+          "bbox": {
+            "xmin": 412.3,
+            "ymin": 1520.7,
+            "xmax": 950.0,
+            "ymax": 1680.3
+          },
+          "raw_text": "S/No.",
+          "image_b64": "/9j/4AAQSkZJRgABAQEASABIAAD/2wBDA... (base64-encoded PNG of this cell at 300 DPI)",
+          "confidence": 0.95
+        },
+        {
+          "cell_id": "page_003_table_00_r0_c1",
+          "row_idx": 0,
+          "col_idx": 1,
+          "row_span": 1,
+          "col_span": 1,
+          "cell_type": "column_header",
+          "hierarchy_level": null,
+          "bbox": {
+            "xmin": 950.0,
+            "ymin": 1520.7,
+            "xmax": 2800.0,
+            "ymax": 1680.3
+          },
+          "raw_text": "Revenue Category",
+          "image_b64": "/9j/4AAQSkZJRgABAQEASABIAAD/2wBDA... (base64 PNG)",
+          "confidence": 0.93
+        },
+        {
+          "cell_id": "page_003_table_00_r0_c2",
+          "row_idx": 0,
+          "col_idx": 2,
+          "row_span": 1,
+          "col_span": 1,
+          "cell_type": "column_header",
+          "hierarchy_level": null,
+          "bbox": {
+            "xmin": 2800.0,
+            "ymin": 1520.7,
+            "xmax": 3800.0,
+            "ymax": 1680.3
+          },
+          "raw_text": "Approved Estimates",
+          "image_b64": "/9j/... (base64 PNG)",
+          "confidence": 0.94
+        },
+        {
+          "cell_id": "page_003_table_00_r0_c3",
+          "row_idx": 0,
+          "col_idx": 3,
+          "row_span": 1,
+          "col_span": 1,
+          "cell_type": "column_header",
+          "hierarchy_level": null,
+          "bbox": {
+            "xmin": 3800.0,
+            "ymin": 1520.7,
+            "xmax": 4800.0,
+            "ymax": 1680.3
+          },
+          "raw_text": "Actual Revenue",
+          "image_b64": "/9j/... (base64 PNG)",
+          "confidence": 0.92
+        },
+        {
+          "cell_id": "page_003_table_00_r0_c4",
+          "row_idx": 0,
+          "col_idx": 4,
+          "row_span": 1,
+          "col_span": 1,
+          "cell_type": "column_header",
+          "hierarchy_level": null,
+          "bbox": {
+            "xmin": 4800.0,
+            "ymin": 1520.7,
+            "xmax": 5650.0,
+            "ymax": 1680.3
+          },
+          "raw_text": "Deviation",
+          "image_b64": "/9j/... (base64 PNG)",
+          "confidence": 0.96
+        },
+        {
+          "cell_id": "page_003_table_00_r0_c5",
+          "row_idx": 0,
+          "col_idx": 5,
+          "row_span": 1,
+          "col_span": 1,
+          "cell_type": "column_header",
+          "hierarchy_level": null,
+          "bbox": {
+            "xmin": 5650.0,
+            "ymin": 1520.7,
+            "xmax": 6475.1,
+            "ymax": 1680.3
+          },
+          "raw_text": "% of Budget Absorbed",
+          "image_b64": "/9j/... (base64 PNG)",
+          "confidence": 0.91
+        },
+
+        {
+          "cell_id": "page_003_table_00_r1_c0",
+          "row_idx": 1,
+          "col_idx": 0,
+          "row_span": 1,
+          "col_span": 6,
+          "cell_type": "header",
+          "hierarchy_level": 1,
+          "bbox": {
+            "xmin": 412.3,
+            "ymin": 1680.3,
+            "xmax": 6475.1,
+            "ymax": 1830.0
+          },
+          "raw_text": "A. County Own Revenue",
+          "image_b64": "/9j/... (base64 PNG)",
+          "confidence": 0.89,
+          "__comment": "MERGED CELL: col_span=6 means this row header spans all 6 columns"
+        },
+
+        {
+          "cell_id": "page_003_table_00_r2_c0",
+          "row_idx": 2,
+          "col_idx": 0,
+          "row_span": 1,
+          "col_span": 1,
+          "cell_type": "data",
+          "hierarchy_level": null,
+          "bbox": {
+            "xmin": 412.3,
+            "ymin": 1830.0,
+            "xmax": 950.0,
+            "ymax": 1970.0
+          },
+          "raw_text": "1",
+          "image_b64": "/9j/... (base64 PNG)",
+          "confidence": 0.97
+        },
+        {
+          "cell_id": "page_003_table_00_r2_c1",
+          "row_idx": 2,
+          "col_idx": 1,
+          "row_span": 1,
+          "col_span": 1,
+          "cell_type": "data",
+          "hierarchy_level": 2,
+          "bbox": {
+            "xmin": 950.0,
+            "ymin": 1830.0,
+            "xmax": 2800.0,
+            "ymax": 1970.0
+          },
+          "raw_text": "Property Rates",
+          "image_b64": "/9j/... (base64 PNG)",
+          "confidence": 0.94
+        },
+        {
+          "cell_id": "page_003_table_00_r2_c2",
+          "row_idx": 2,
+          "col_idx": 2,
+          "row_span": 1,
+          "col_span": 1,
+          "cell_type": "data",
+          "hierarchy_level": null,
+          "bbox": {
+            "xmin": 2800.0,
+            "ymin": 1830.0,
+            "xmax": 3800.0,
+            "ymax": 1970.0
+          },
+          "raw_text": "150,000,000",
+          "image_b64": "/9j/... (base64 PNG)",
+          "confidence": 0.96
+        },
+        {
+          "cell_id": "page_003_table_00_r2_c3",
+          "row_idx": 2,
+          "col_idx": 3,
+          "row_span": 1,
+          "col_span": 1,
+          "cell_type": "data",
+          "hierarchy_level": null,
+          "bbox": {
+            "xmin": 3800.0,
+            "ymin": 1830.0,
+            "xmax": 4800.0,
+            "ymax": 1970.0
+          },
+          "raw_text": "98,450,320",
+          "image_b64": "/9j/... (base64 PNG)",
+          "confidence": 0.95
+        },
+        {
+          "cell_id": "page_003_table_00_r2_c4",
+          "row_idx": 2,
+          "col_idx": 4,
+          "row_span": 1,
+          "col_span": 1,
+          "cell_type": "data",
+          "hierarchy_level": null,
+          "bbox": {
+            "xmin": 4800.0,
+            "ymin": 1830.0,
+            "xmax": 5650.0,
+            "ymax": 1970.0
+          },
+          "raw_text": "-51,549,680",
+          "image_b64": "/9j/... (base64 PNG)",
+          "confidence": 0.93
+        },
+        {
+          "cell_id": "page_003_table_00_r2_c5",
+          "row_idx": 2,
+          "col_idx": 5,
+          "row_span": 1,
+          "col_span": 1,
+          "cell_type": "data",
+          "hierarchy_level": null,
+          "bbox": {
+            "xmin": 5650.0,
+            "ymin": 1830.0,
+            "xmax": 6475.1,
+            "ymax": 1970.0
+          },
+          "raw_text": "65.6%",
+          "image_b64": "/9j/... (base64 PNG)",
+          "confidence": 0.94
+        }
+      ],
+      "validation": {
+        "is_valid": true,
+        "checks_performed": ["column_sum", "row_consistency", "header_hierarchy"],
+        "warnings": []
+      }
+    },
+
+    {
+      "table_id": "page_004_table_00",
+      "page_number": 4,
+      "bbox": {
+        "xmin": 410.0,
+        "ymin": 350.0,
+        "xmax": 6470.0,
+        "ymax": 5200.0
+      },
+      "confidence": 0.9912,
+      "label": "table",
+      "grid": {
+        "rows": 12,
+        "cols": 6
+      },
+      "continuation": {
+        "is_continuation": true,
+        "continues_from": "page_003_table_00",
+        "continues_on_next_page": false,
+        "linked_table_id": null
+      },
+      "cells": [
+        {
+          "cell_id": "page_004_table_00_r0_c0",
+          "row_idx": 0,
+          "col_idx": 0,
+          "row_span": 1,
+          "col_span": 1,
+          "cell_type": "data",
+          "hierarchy_level": null,
+          "bbox": { "xmin": 410.0, "ymin": 350.0, "xmax": 945.0, "ymax": 500.0 },
+          "raw_text": "9",
+          "image_b64": "/9j/... (base64 PNG)",
+          "confidence": 0.97
+        }
+      ],
+      "validation": {
+        "is_valid": true,
+        "checks_performed": ["column_sum", "row_consistency"],
+        "warnings": []
+      },
+      "__comment": "This table continues from page 3 — the NLP module should merge cells from both table_ids"
+    }
+  ]
+}

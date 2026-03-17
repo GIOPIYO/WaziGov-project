@@ -1,0 +1,33 @@
+<annotation>
+  <folder>pascal_voc</folder>
+  <filename>fdeb2494-COUNTY-GOVERNMENTS-BUDGET-IMPLEMENTATION-REVIEW-REPORT-FY-2024.2025_page_007.png</filename>
+  <size>
+    <width>6888</width>
+    <height>9742</height>
+    <depth>3</depth>
+  </size>
+  <object>
+    <name>table</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+      <xmin>925</xmin>
+      <ymin>2833</ymin>
+      <xmax>6100</xmax>
+      <ymax>4423</ymax>
+    </bndbox>
+  </object>
+  <object>
+    <name>table</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+      <xmin>925</xmin>
+      <ymin>5537</ymin>
+      <xmax>6145</xmax>
+      <ymax>7244</ymax>
+    </bndbox>
+  </object>
+</annotation>

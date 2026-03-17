@@ -1,0 +1,19 @@
+# WaziGov Table Detection - Dependencies
+# ========================================
+
+# PDF processing
+PyMuPDF>=1.23.0
+
+# Image processing
+Pillow>=10.0.0
+
+# Deep Learning
+torch>=2.0.0
+torchvision>=0.15.0
+transformers>=4.35.0
+
+# Label Studio
+label-studio>=1.10.0
+
+# Utilities
+tqdm>=4.65.0

@@ -1,0 +1,24 @@
+<!--
+  WaziGov Table Detection - Label Studio Annotation Config
+  ==========================================================
+  Two-stage annotation matching the Table Transformer architecture:
+  
+  Stage 1 (TABLE DETECTION): Draw bounding boxes around entire tables.
+    Labels: "table", "table_rotated"
+  
+  Stage 2 (STRUCTURE RECOGNITION): Within each table crop, annotate internal structure.
+    Labels: "table_row", "table_column", "table_spanning_cell",
+            "table_projected_row_header", "table_column_header"
+  
+  This config handles Stage 1 (table detection on full page images).
+  A separate config is used for Stage 2 (structure recognition on cropped tables).
+-->
+<View>
+  <Header value="WaziGov Table Detection - Draw bounding boxes around ALL tables on this page"/>
+  <Text name="instructions" value="Instructions: Draw a tight rectangle around each table. Include headers but exclude page titles/footers that aren't part of the table structure. Use 'table_rotated' for tables that are rotated 90 degrees."/>
+  <Image name="image" value="$image" zoom="true" zoomControl="true" rotateControl="false"/>
+  <RectangleLabels name="label" toName="image">
+    <Label value="table" background="#FF6B6B"/>
+    <Label value="table_rotated" background="#4ECDC4"/>
+  </RectangleLabels>
+</View>

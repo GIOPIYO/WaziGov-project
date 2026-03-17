@@ -1,0 +1,31 @@
+<!--
+  WaziGov Structure Recognition - Label Studio Annotation Config
+  ================================================================
+  Stage 2: Annotate internal table structure on CROPPED table images.
+  
+  Labels (matching PubTables-1M / Table Transformer classes):
+    - table_row:                   One row of the table
+    - table_column:                One column of the table
+    - table_spanning_cell:         A cell that spans multiple rows and/or columns
+    - table_projected_row_header:  Row header that applies to rows below it
+    - table_column_header:         Column header row (top of the table)
+  
+  Annotation guidelines:
+    1. First draw ALL row bounding boxes (horizontal strips spanning full table width)
+    2. Then draw ALL column bounding boxes (vertical strips spanning full table height)
+    3. Mark any merged/spanning cells with "table_spanning_cell"
+    4. Mark header rows with "table_column_header"
+    5. Mark row header columns with "table_projected_row_header"
+-->
+<View>
+  <Header value="WaziGov Structure Recognition - Annotate rows, columns, and special cells"/>
+  <Text name="instructions" value="Step 1: Draw rows (full width). Step 2: Draw columns (full height). Step 3: Mark spanning/merged cells. Step 4: Mark header rows/columns."/>
+  <Image name="image" value="$image" zoom="true" zoomControl="true" rotateControl="false"/>
+  <RectangleLabels name="label" toName="image">
+    <Label value="table_row" background="#4A90D9"/>
+    <Label value="table_column" background="#7B68EE"/>
+    <Label value="table_spanning_cell" background="#FF6B6B"/>
+    <Label value="table_column_header" background="#FFD93D"/>
+    <Label value="table_projected_row_header" background="#6BCB77"/>
+  </RectangleLabels>
+</View>

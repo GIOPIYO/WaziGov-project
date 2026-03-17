@@ -1,0 +1,33 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Data (large files - track with Git LFS or exclude)
+data/images/pages/*.png
+data/images/pages/*.jpg
+data/images/table_crops/*.png
+data/images/table_crops/*.jpg
+
+# Keep directory structure
+!data/images/pages/.gitkeep
+!data/images/table_crops/.gitkeep
+
+# Model weights (large)
+*.pt
+*.pth
+*.bin
+*.onnx
