@@ -1,0 +1,730 @@
+{
+  "AUDITOR-GENERAL-S-REPORT-ON-THE-COUNTY-GOVERNMENTS-COUNTY-ASSEMBLES-2021-2022-VOLUME-2.pdf": [
+    {
+      "page": 179,
+      "model_score": 47.1057,
+      "n_tables": 2,
+      "table_area_ratio_sum": 0.2394
+    },
+    {
+      "page": 210,
+      "model_score": 47.0636,
+      "n_tables": 2,
+      "table_area_ratio_sum": 0.2367
+    },
+    {
+      "page": 104,
+      "model_score": 43.7913,
+      "n_tables": 2,
+      "table_area_ratio_sum": 0.1796
+    },
+    {
+      "page": 160,
+      "model_score": 30.6784,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.356
+    },
+    {
+      "page": 88,
+      "model_score": 27.5108,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.2504
+    },
+    {
+      "page": 121,
+      "model_score": 26.962,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.2327
+    },
+    {
+      "page": 124,
+      "model_score": 26.1926,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.2065
+    },
+    {
+      "page": 209,
+      "model_score": 25.7703,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.1924
+    },
+    {
+      "page": 134,
+      "model_score": 25.1424,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.1715
+    },
+    {
+      "page": 156,
+      "model_score": 24.4823,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.1499
+    },
+    {
+      "page": 32,
+      "model_score": 24.4383,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.148
+    },
+    {
+      "page": 61,
+      "model_score": 24.2669,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.1424
+    },
+    {
+      "page": 147,
+      "model_score": 23.9144,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.1305
+    },
+    {
+      "page": 151,
+      "model_score": 23.6667,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.1224
+    },
+    {
+      "page": 195,
+      "model_score": 23.5874,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.1196
+    },
+    {
+      "page": 84,
+      "model_score": 23.3791,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.1127
+    },
+    {
+      "page": 85,
+      "model_score": 23.1497,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.105
+    },
+    {
+      "page": 211,
+      "model_score": 22.2537,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.0753
+    }
+  ],
+  "AUDITOR-GENERAL-S-REPORT-ON-THE-COUNTY-GOVERNMENTS-COUNTY-EXECUTIVES-2021-2022-VOLUME-1.pdf": [
+    {
+      "page": 226,
+      "model_score": 54.7073,
+      "n_tables": 2,
+      "table_area_ratio_sum": 0.4908
+    },
+    {
+      "page": 220,
+      "model_score": 49.3712,
+      "n_tables": 2,
+      "table_area_ratio_sum": 0.3149
+    },
+    {
+      "page": 357,
+      "model_score": 32.8023,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.4268
+    },
+    {
+      "page": 154,
+      "model_score": 29.3551,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.3119
+    },
+    {
+      "page": 258,
+      "model_score": 28.7114,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.2908
+    },
+    {
+      "page": 297,
+      "model_score": 28.2455,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.2749
+    },
+    {
+      "page": 189,
+      "model_score": 25.1041,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.1704
+    },
+    {
+      "page": 306,
+      "model_score": 24.847,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.1616
+    },
+    {
+      "page": 439,
+      "model_score": 22.9944,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.0999
+    },
+    {
+      "page": 156,
+      "model_score": 22.6171,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.0873
+    },
+    {
+      "page": 402,
+      "model_score": 22.3677,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.079
+    },
+    {
+      "page": 173,
+      "model_score": 21.4806,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.0719
+    },
+    {
+      "page": 307,
+      "model_score": 21.3723,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.0705
+    },
+    {
+      "page": 426,
+      "model_score": 21.2846,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.0658
+    },
+    {
+      "page": 350,
+      "model_score": 21.2666,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.0661
+    },
+    {
+      "page": 325,
+      "model_score": 21.2649,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.0622
+    },
+    {
+      "page": 202,
+      "model_score": 21.225,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.0667
+    },
+    {
+      "page": 526,
+      "model_score": 21.1946,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.0535
+    }
+  ],
+  "Auditor-Generals-summary-Report-on-County-Governments-2023-2024.pdf": [
+    {
+      "page": 96,
+      "model_score": 51.573,
+      "n_tables": 2,
+      "table_area_ratio_sum": 0.3865
+    },
+    {
+      "page": 89,
+      "model_score": 38.1659,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.6056
+    },
+    {
+      "page": 100,
+      "model_score": 38.05,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.6017
+    },
+    {
+      "page": 102,
+      "model_score": 38.0303,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.601
+    },
+    {
+      "page": 106,
+      "model_score": 37.8349,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.5945
+    },
+    {
+      "page": 110,
+      "model_score": 37.7145,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.5905
+    },
+    {
+      "page": 91,
+      "model_score": 37.529,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.5843
+    },
+    {
+      "page": 121,
+      "model_score": 37.2144,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.5738
+    },
+    {
+      "page": 87,
+      "model_score": 37.1381,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.5713
+    },
+    {
+      "page": 127,
+      "model_score": 37.1141,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.5705
+    },
+    {
+      "page": 108,
+      "model_score": 37.0502,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.5684
+    },
+    {
+      "page": 130,
+      "model_score": 37.0452,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.5682
+    },
+    {
+      "page": 113,
+      "model_score": 36.8684,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.5623
+    },
+    {
+      "page": 132,
+      "model_score": 36.8657,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.5622
+    },
+    {
+      "page": 98,
+      "model_score": 36.7872,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.5596
+    },
+    {
+      "page": 118,
+      "model_score": 36.7694,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.559
+    },
+    {
+      "page": 142,
+      "model_score": 36.5852,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.5529
+    },
+    {
+      "page": 93,
+      "model_score": 36.2589,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.5421
+    }
+  ],
+  "COUNTY-GOVERNMENTS-BUDGET-IMPLEMENTATION-REVIEW-REPORT-FY-2024.2025.pdf": [
+    {
+      "page": 9,
+      "model_score": 47.4337,
+      "n_tables": 2,
+      "table_area_ratio_sum": 0.2485
+    },
+    {
+      "page": 7,
+      "model_score": 46.7419,
+      "n_tables": 2,
+      "table_area_ratio_sum": 0.2249
+    },
+    {
+      "page": 11,
+      "model_score": 44.47,
+      "n_tables": 2,
+      "table_area_ratio_sum": 0.1495
+    },
+    {
+      "page": 13,
+      "model_score": 32.3146,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.4106
+    },
+    {
+      "page": 12,
+      "model_score": 32.1135,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.4038
+    },
+    {
+      "page": 4,
+      "model_score": 31.7678,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.3923
+    },
+    {
+      "page": 3,
+      "model_score": 31.284,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.3762
+    },
+    {
+      "page": 14,
+      "model_score": 30.0131,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.397
+    },
+    {
+      "page": 10,
+      "model_score": 25.8995,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.1967
+    },
+    {
+      "page": 6,
+      "model_score": 24.1525,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.1385
+    },
+    {
+      "page": 8,
+      "model_score": 23.5678,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.119
+    }
+  ],
+  "GREEN-BOOK-COUNTY-ASSEMBLIES-VOL.-2-2022-2023.pdf": [
+    {
+      "page": 125,
+      "model_score": 26.3179,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.2107
+    },
+    {
+      "page": 147,
+      "model_score": 25.7898,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.193
+    },
+    {
+      "page": 113,
+      "model_score": 25.7536,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.1919
+    },
+    {
+      "page": 130,
+      "model_score": 24.9662,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.1656
+    },
+    {
+      "page": 207,
+      "model_score": 24.4745,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.1492
+    },
+    {
+      "page": 155,
+      "model_score": 24.3768,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.1461
+    },
+    {
+      "page": 75,
+      "model_score": 23.2256,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.1076
+    },
+    {
+      "page": 71,
+      "model_score": 22.6526,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.0885
+    },
+    {
+      "page": 118,
+      "model_score": 22.4589,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.0821
+    },
+    {
+      "page": 97,
+      "model_score": 21.463,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.0596
+    },
+    {
+      "page": 148,
+      "model_score": 21.2919,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.0659
+    },
+    {
+      "page": 151,
+      "model_score": 21.2354,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.0595
+    },
+    {
+      "page": 96,
+      "model_score": 21.2244,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.0542
+    },
+    {
+      "page": 15,
+      "model_score": 21.1214,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.0701
+    },
+    {
+      "page": 208,
+      "model_score": 21.037,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.0604
+    },
+    {
+      "page": 176,
+      "model_score": 20.8161,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.0512
+    },
+    {
+      "page": 81,
+      "model_score": 20.7568,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.053
+    },
+    {
+      "page": 22,
+      "model_score": 20.6841,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.0483
+    }
+  ],
+  "GREEN-BOOK-COUNTY-EXECUTIVES-VOL-1-2022-2023-1.pdf": [
+    {
+      "page": 133,
+      "model_score": 27.9256,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.2643
+    },
+    {
+      "page": 318,
+      "model_score": 25.7151,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.1905
+    },
+    {
+      "page": 257,
+      "model_score": 25.2365,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.1746
+    },
+    {
+      "page": 192,
+      "model_score": 24.8597,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.1621
+    },
+    {
+      "page": 278,
+      "model_score": 24.7352,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.1579
+    },
+    {
+      "page": 156,
+      "model_score": 24.2855,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.1429
+    },
+    {
+      "page": 302,
+      "model_score": 23.6166,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.1207
+    },
+    {
+      "page": 329,
+      "model_score": 21.1444,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.0552
+    },
+    {
+      "page": 457,
+      "model_score": 20.8817,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.0556
+    },
+    {
+      "page": 460,
+      "model_score": 20.8343,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.0505
+    },
+    {
+      "page": 269,
+      "model_score": 20.7848,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.0556
+    },
+    {
+      "page": 158,
+      "model_score": 20.7566,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.0578
+    },
+    {
+      "page": 157,
+      "model_score": 20.7306,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.0565
+    },
+    {
+      "page": 476,
+      "model_score": 20.6602,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.0487
+    },
+    {
+      "page": 225,
+      "model_score": 20.6418,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.066
+    },
+    {
+      "page": 337,
+      "model_score": 20.6413,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.0557
+    },
+    {
+      "page": 455,
+      "model_score": 20.6366,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.0536
+    },
+    {
+      "page": 149,
+      "model_score": 20.6248,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.059
+    }
+  ],
+  "GREEN-BOOK-EXECUTIVES-2024-FINAL-5.3.2025-SIGNED.pdf": [
+    {
+      "page": 53,
+      "model_score": 50.0836,
+      "n_tables": 2,
+      "table_area_ratio_sum": 0.3366
+    },
+    {
+      "page": 287,
+      "model_score": 28.9114,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.2972
+    },
+    {
+      "page": 167,
+      "model_score": 28.2664,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.2756
+    },
+    {
+      "page": 298,
+      "model_score": 26.5942,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.2804
+    },
+    {
+      "page": 420,
+      "model_score": 25.0843,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.1696
+    },
+    {
+      "page": 318,
+      "model_score": 25.059,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.1687
+    },
+    {
+      "page": 197,
+      "model_score": 24.6141,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.1539
+    },
+    {
+      "page": 54,
+      "model_score": 23.9294,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.1311
+    },
+    {
+      "page": 39,
+      "model_score": 23.5234,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.1175
+    },
+    {
+      "page": 152,
+      "model_score": 23.2675,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.1091
+    },
+    {
+      "page": 135,
+      "model_score": 21.6111,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.0706
+    },
+    {
+      "page": 400,
+      "model_score": 20.9306,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.0546
+    },
+    {
+      "page": 128,
+      "model_score": 20.4654,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.0529
+    },
+    {
+      "page": 515,
+      "model_score": 20.4474,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.048
+    },
+    {
+      "page": 370,
+      "model_score": 20.3945,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.0555
+    },
+    {
+      "page": 204,
+      "model_score": 20.3087,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.0539
+    },
+    {
+      "page": 444,
+      "model_score": 20.3086,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.0561
+    },
+    {
+      "page": 371,
+      "model_score": 20.2512,
+      "n_tables": 1,
+      "table_area_ratio_sum": 0.052
+    }
+  ]
+}

@@ -18,6 +18,19 @@ from transformers import DetrImageProcessor, TableTransformerForObjectDetection
 import xml.etree.ElementTree as ET
 
 
+def resolve_path(path_value, project_dir):
+    """Resolve a user path. Relative paths are anchored to current working dir, then project dir."""
+    p = Path(path_value)
+    if p.is_absolute():
+        return p
+
+    cwd_candidate = (Path.cwd() / p).resolve()
+    if cwd_candidate.exists():
+        return cwd_candidate
+
+    return (project_dir / p).resolve()
+
+
 def parse_voc_annotation(xml_path):
     """Parse ground truth from PASCAL VOC XML."""
     tree = ET.parse(xml_path)
@@ -98,9 +111,23 @@ def evaluate(args):
     print("WaziGov Table Detection - Evaluation")
     print("=" * 60)
 
-    data_dir = Path(args.data_dir)
-    images_dir = data_dir / "images" / "pages"
-    annotations_dir = data_dir / "annotations" / "pascal_voc"
+    project_dir = Path(__file__).resolve().parents[1]
+    data_dir = resolve_path(args.data_dir, project_dir)
+    images_dir = (
+        resolve_path(args.images_dir, project_dir)
+        if args.images_dir
+        else (data_dir / "images" / "pages")
+    )
+    annotations_dir = (
+        resolve_path(args.annotations_dir, project_dir)
+        if args.annotations_dir
+        else (data_dir / "annotations" / "pascal_voc")
+    )
+
+    print(f"Project dir: {project_dir}")
+    print(f"Data dir: {data_dir}")
+    print(f"Annotations dir: {annotations_dir}")
+    print(f"Images dir: {images_dir}")
 
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     print(f"Device: {device}")
@@ -121,7 +148,32 @@ def evaluate(args):
     total_tp, total_fp, total_fn = 0, 0, 0
 
     xml_files = sorted(annotations_dir.glob("*.xml"))
+    xml_total = len(xml_files)
+
+    if args.split_file:
+        split_path = resolve_path(args.split_file, project_dir)
+        stems = {
+            line.strip()
+            for line in split_path.read_text(encoding="utf-8").splitlines()
+            if line.strip()
+        }
+        xml_files = [x for x in xml_files if x.stem in stems]
+
     print(f"\nEvaluating on {len(xml_files)} annotated pages...\n")
+    if len(xml_files) == 0:
+        print("No annotation XML files matched your inputs.")
+        print(f"  annotations_dir: {annotations_dir}")
+        if args.split_file:
+            print(f"  split_file: {args.split_file}")
+            print(f"  split_path_resolved: {split_path}")
+            print(f"  xml_before_split: {xml_total}")
+            print(f"  split_stems: {len(stems)}")
+            overlaps = sum(1 for x in sorted(annotations_dir.glob("*.xml")) if x.stem in stems)
+            print(f"  xml_split_overlap: {overlaps}")
+            print("  Hint: split stems may not overlap this annotation set.")
+        print(f"  images_dir: {images_dir}")
+        print("Evaluation cannot proceed with zero matched pages.")
+        return
 
     for xml_path in xml_files:
         gt_boxes, gt_labels, (w, h) = parse_voc_annotation(xml_path)
@@ -218,6 +270,24 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Evaluate table detection model")
     parser.add_argument("--model", type=str, default="models/table_detection/final_model")
     parser.add_argument("--data-dir", type=str, default="data/")
+    parser.add_argument(
+        "--images-dir",
+        type=str,
+        default=None,
+        help="Override image directory (default: <data-dir>/images/pages)",
+    )
+    parser.add_argument(
+        "--annotations-dir",
+        type=str,
+        default=None,
+        help="Override annotation XML directory (default: <data-dir>/annotations/pascal_voc)",
+    )
+    parser.add_argument(
+        "--split-file",
+        type=str,
+        default=None,
+        help="Optional split file (train.txt/val.txt/test.txt) to evaluate a subset",
+    )
     parser.add_argument("--threshold", type=float, default=0.5)
     parser.add_argument("--iou-threshold", type=float, default=0.5)
     parser.add_argument("--output", type=str, default="outputs/evaluation_results.json")

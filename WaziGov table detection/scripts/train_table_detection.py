@@ -155,11 +155,17 @@ class WaziGovTableDataset(Dataset):
         return pixel_values, labels
 
 
-def collate_fn(batch):
-    """Custom collate function for DETR."""
-    pixel_values = torch.stack([item[0] for item in batch])
+def collate_fn(batch, processor):
+    """Custom collate for DETR: pad variable-size images and build pixel masks."""
+    pixel_values = [item[0] for item in batch]
     labels = [item[1] for item in batch]
-    return {"pixel_values": pixel_values, "labels": labels}
+
+    encoding = processor.pad(pixel_values, return_tensors="pt")
+    return {
+        "pixel_values": encoding["pixel_values"],
+        "pixel_mask": encoding["pixel_mask"],
+        "labels": labels,
+    }
 
 
 # ============================================================================
@@ -184,14 +190,43 @@ def split_dataset(dataset, val_ratio=0.2, seed=42):
     return train_set, val_set
 
 
+def split_dataset_from_files(dataset, split_dir):
+    """Build train/val subsets from split text files with image stems."""
+    split_dir = Path(split_dir)
+    train_file = split_dir / "train.txt"
+    val_file = split_dir / "val.txt"
+
+    if not train_file.exists() or not val_file.exists():
+        return None, None
+
+    def read_stems(path):
+        return {line.strip() for line in path.read_text(encoding="utf-8").splitlines() if line.strip()}
+
+    train_stems = read_stems(train_file)
+    val_stems = read_stems(val_file)
+
+    stem_to_idx = {xml_path.stem: idx for idx, (_, xml_path) in enumerate(dataset.samples)}
+    train_indices = sorted(stem_to_idx[s] for s in train_stems if s in stem_to_idx)
+    val_indices = sorted(stem_to_idx[s] for s in val_stems if s in stem_to_idx)
+
+    if not train_indices or not val_indices:
+        return None, None
+
+    train_set = torch.utils.data.Subset(dataset, train_indices)
+    val_set = torch.utils.data.Subset(dataset, val_indices)
+    print(f"  Train (split files): {len(train_set)} samples, Val (split files): {len(val_set)} samples")
+    return train_set, val_set
+
+
 class TableTrainer(Trainer):
     """Custom Trainer to handle DETR loss properly."""
 
     def compute_loss(self, model, inputs, return_outputs=False, **kwargs):
         pixel_values = inputs["pixel_values"]
+        pixel_mask = inputs.get("pixel_mask")
         labels = inputs["labels"]
 
-        outputs = model(pixel_values=pixel_values, labels=labels)
+        outputs = model(pixel_values=pixel_values, pixel_mask=pixel_mask, labels=labels)
         loss = outputs.loss
 
         return (loss, outputs) if return_outputs else loss
@@ -205,8 +240,13 @@ def train(args):
 
     # Paths
     data_dir = Path(args.data_dir)
-    images_dir = data_dir / "images" / "pages"
-    annotations_dir = data_dir / "annotations" / "pascal_voc"
+    images_dir = Path(args.images_dir) if args.images_dir else data_dir / "images" / "pages"
+    annotations_dir = (
+        Path(args.annotations_dir)
+        if args.annotations_dir
+        else data_dir / "annotations" / "pascal_voc"
+    )
+    split_dir = Path(args.split_dir) if args.split_dir else data_dir / "splits"
     output_dir = Path(args.output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
 
@@ -256,8 +296,14 @@ def train(args):
         print("ERROR: No samples found. Check your paths and annotations.")
         sys.exit(1)
 
-    # Split into train/val
-    train_dataset, val_dataset = split_dataset(dataset, val_ratio=args.val_ratio)
+    # Split into train/val (prefer proposal-compliant split files if available)
+    train_dataset, val_dataset = None, None
+    if not args.use_random_split:
+        train_dataset, val_dataset = split_dataset_from_files(dataset, split_dir)
+
+    if train_dataset is None or val_dataset is None:
+        print("  Split files not found/usable, falling back to random split.")
+        train_dataset, val_dataset = split_dataset(dataset, val_ratio=args.val_ratio)
 
     # Training arguments
     training_args = TrainingArguments(
@@ -280,6 +326,7 @@ def train(args):
         remove_unused_columns=False,
         fp16=torch.cuda.is_available(),
         dataloader_num_workers=args.num_workers,
+        dataloader_pin_memory=torch.cuda.is_available(),
         report_to="none",  # Set to "tensorboard" if you want TB logging
     )
 
@@ -289,7 +336,7 @@ def train(args):
         args=training_args,
         train_dataset=train_dataset,
         eval_dataset=val_dataset,
-        data_collator=collate_fn,
+        data_collator=lambda batch: collate_fn(batch, processor),
     )
 
     # Train
@@ -379,6 +426,29 @@ def parse_args():
     parser.add_argument(
         "--num-workers", type=int, default=0,
         help="DataLoader workers (default: 0 for Windows compatibility)"
+    )
+    parser.add_argument(
+        "--images-dir",
+        type=str,
+        default=None,
+        help="Override image directory (default: <data-dir>/images/pages)",
+    )
+    parser.add_argument(
+        "--annotations-dir",
+        type=str,
+        default=None,
+        help="Override annotation XML directory (default: <data-dir>/annotations/pascal_voc)",
+    )
+    parser.add_argument(
+        "--split-dir",
+        type=str,
+        default=None,
+        help="Directory containing train.txt/val.txt/test.txt (default: <data-dir>/splits)",
+    )
+    parser.add_argument(
+        "--use-random-split",
+        action="store_true",
+        help="Ignore split files and use random train/val split",
     )
     return parser.parse_args()
 

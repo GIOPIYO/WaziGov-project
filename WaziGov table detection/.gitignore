@@ -25,6 +25,8 @@ data/pdfs/*.pdf
 /data/
 /data/*
 
+/models/
+
 # Keep directory structure
 !data/images/pages/.gitkeep
 !data/images/table_crops/.gitkeep
@@ -34,3 +36,6 @@ data/pdfs/*.pdf
 *.pth
 *.bin
 *.onnx
+
+/SCT212-0147-2022 Project Proposal WaziGov.pdf
+/SCT212-0199-2022 WaziGov_Project_Proposal.pdf
