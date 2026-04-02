@@ -21,6 +21,9 @@ data/images/pages/*.png
 data/images/pages/*.jpg
 data/images/table_crops/*.png
 data/images/table_crops/*.jpg
+data/pdfs/*.pdf
+/data/
+/data/*
 
 # Keep directory structure
 !data/images/pages/.gitkeep
