@@ -26,6 +26,7 @@ data/pdfs/*.pdf
 /data/*
 
 /models/
+/output/
 
 # Keep directory structure
 !data/images/pages/.gitkeep
