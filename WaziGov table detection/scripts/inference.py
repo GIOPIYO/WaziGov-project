@@ -35,10 +35,23 @@ import torch
 from PIL import Image, ImageDraw, ImageFont
 from transformers import DetrImageProcessor, TableTransformerForObjectDetection
 
-if importlib.util.find_spec("pytesseract") is not None:
-    pytesseract = importlib.import_module("pytesseract")
+if importlib.util.find_spec("easyocr") is not None:
+    easyocr = importlib.import_module("easyocr")
 else:
-    pytesseract = None
+    easyocr = None
+
+easyocr_reader = None
+backup_detector = {"model": None, "processor": None, "device": None}
+
+
+def get_easyocr_reader():
+    """Lazily initialize EasyOCR reader."""
+    global easyocr_reader
+    if easyocr is None:
+        return None
+    if easyocr_reader is None:
+        easyocr_reader = easyocr.Reader(["en"], gpu=torch.cuda.is_available())
+    return easyocr_reader
 
 
 def resolve_path(path_value, project_dir):
@@ -215,30 +228,109 @@ def extract_pdf_text_for_cell(page_words, cell_bbox_px, dpi=300):
     return " ".join(t for _, _, t in words).strip()
 
 
-def extract_ocr_text_for_cell(table_image, cell_bbox_local):
-    """Run OCR on a cell crop when the PDF text layer is empty."""
-    if pytesseract is None:
+def extract_ocr_text_for_cell(table_image, cell_bbox_local, padding=12, scale_factor=2):
+    """Run EasyOCR on a cell crop when the PDF text layer is empty."""
+    reader = get_easyocr_reader()
+    if reader is None:
         return ""
 
     x1, y1, x2, y2 = [int(round(v)) for v in cell_bbox_local]
+    x1 -= padding
+    y1 -= padding
+    x2 += padding
+    y2 += padding
     x1 = max(0, min(x1, table_image.width - 1))
     y1 = max(0, min(y1, table_image.height - 1))
     x2 = max(x1 + 1, min(x2, table_image.width))
     y2 = max(y1 + 1, min(y2, table_image.height))
 
     cell_crop = table_image.crop((x1, y1, x2, y2))
+    if scale_factor > 1:
+        cell_crop = cell_crop.resize(
+            (cell_crop.width * scale_factor, cell_crop.height * scale_factor),
+            Image.Resampling.LANCZOS,
+        )
     try:
-        raw_text = pytesseract.image_to_string(cell_crop, config="--psm 6")
+        ocr_results = reader.readtext(
+            __import__("numpy").array(cell_crop),
+            detail=1,
+            paragraph=False,
+            decoder="greedy",
+        )
     except Exception:
         return ""
-    return " ".join(raw_text.split()).strip()
+
+    if not ocr_results:
+        return ""
+
+    ocr_results = sorted(ocr_results, key=lambda item: (item[0][0][1], item[0][0][0]))
+    text_parts = [item[1] for item in ocr_results if item[1].strip()]
+    return " ".join(text_parts).strip()
 
 
-def extract_cell_text(table_image, page_words, page_bbox, cell_bbox_local):
+def extract_easyocr_words_from_image(image):
+    """Extract OCR words with pixel bboxes from a full page image."""
+    reader = get_easyocr_reader()
+    if reader is None:
+        return []
+
+    try:
+        ocr_results = reader.readtext(
+            __import__("numpy").array(image),
+            detail=1,
+            paragraph=False,
+            decoder="greedy",
+        )
+    except Exception:
+        return []
+
+    words = []
+    for item in ocr_results:
+        poly, text = item[0], item[1]
+        if not text or not text.strip():
+            continue
+        xs = [p[0] for p in poly]
+        ys = [p[1] for p in poly]
+        words.append([min(xs), min(ys), max(xs), max(ys), text.strip()])
+    return words
+
+
+def infer_table_bbox_from_ocr_words(ocr_words, margin=12.0):
+    """Infer coarse table bbox from OCR word boxes in pixel space."""
+    if not ocr_words:
+        return None
+    xmin = min(w[0] for w in ocr_words) - margin
+    ymin = min(w[1] for w in ocr_words) - margin
+    xmax = max(w[2] for w in ocr_words) + margin
+    ymax = max(w[3] for w in ocr_words) + margin
+    return [float(max(0.0, xmin)), float(max(0.0, ymin)), float(max(xmin + 1.0, xmax)), float(max(ymin + 1.0, ymax))]
+
+
+def extract_ocr_word_text_for_cell(ocr_words, cell_bbox_px):
+    """Extract text from full-page OCR words overlapping a cell bbox."""
+    if not ocr_words:
+        return ""
+    x1, y1, x2, y2 = cell_bbox_px
+    parts = []
+    for word in ocr_words:
+        wx1, wy1, wx2, wy2, text = word
+        if bbox_intersection_ratio([x1, y1, x2, y2], [wx1, wy1, wx2, wy2]) >= 0.15:
+            parts.append((wy1, wx1, text))
+    if not parts:
+        return ""
+    parts.sort(key=lambda p: (round(p[0], 1), p[1]))
+    return " ".join(p[2] for p in parts).strip()
+
+
+def extract_cell_text(table_image, page_words, page_bbox, cell_bbox_local, ocr_words=None):
     """Prefer PDF text extraction and fall back to OCR only when needed."""
     raw_text = extract_pdf_text_for_cell(page_words, page_bbox)
     if raw_text:
         return raw_text, "pdf_text"
+
+    ocr_word_text = extract_ocr_word_text_for_cell(ocr_words or [], page_bbox)
+    if ocr_word_text:
+        return ocr_word_text, "ocr"
 
     ocr_text = extract_ocr_text_for_cell(table_image, cell_bbox_local)
     if ocr_text:
@@ -320,6 +412,30 @@ def cosine_similarity(a, b):
     if norm_a == 0 or norm_b == 0:
         return 0.0
     return dot / (norm_a * norm_b)
+
+
+def resize_vector(values, target_length):
+    """Resize a vector to target length using linear interpolation."""
+    if not values:
+        return [0.0] * target_length
+    if len(values) == target_length:
+        return list(values)
+    if target_length <= 1:
+        return [float(values[0])]
+
+    src = [float(v) for v in values]
+    src_len = len(src)
+    out = []
+    for i in range(target_length):
+        pos = i * (src_len - 1) / (target_length - 1)
+        left = int(math.floor(pos))
+        right = int(math.ceil(pos))
+        if left == right:
+            out.append(src[left])
+            continue
+        t = pos - left
+        out.append(src[left] * (1.0 - t) + src[right] * t)
+    return out
 
 
 def build_table_profile(col_segments, table_bbox_page):
@@ -427,6 +543,192 @@ def infer_table_bbox_from_words(page_words, dpi=300, margin=12.0):
     return [float(max(0.0, xmin)), float(max(0.0, ymin)), float(max(xmin + 1.0, xmax)), float(max(ymin + 1.0, ymax))]
 
 
+def pt_bbox_to_px_bbox(pt_bbox, dpi=300):
+    """Convert a PDF-point bbox to pixel bbox at the target DPI."""
+    scale = dpi / 72.0
+    x1, y1, x2, y2 = pt_bbox
+    return [x1 * scale, y1 * scale, x2 * scale, y2 * scale]
+
+
+def get_pdf_table_candidates(page, dpi=300):
+    """Return table bbox candidates from PyMuPDF's table finder in pixel coords."""
+    try:
+        tables_obj = page.find_tables()
+    except Exception:
+        return []
+
+    tables = getattr(tables_obj, "tables", None)
+    if not tables:
+        return []
+
+    candidates = []
+    for table in tables:
+        bbox = getattr(table, "bbox", None)
+        if not bbox:
+            continue
+        px = pt_bbox_to_px_bbox(bbox, dpi=dpi)
+        candidates.append([float(px[0]), float(px[1]), float(px[2]), float(px[3])])
+    return candidates
+
+
+def clamp_bbox_to_image(bbox, width, height):
+    """Clamp a bbox to image bounds and ensure non-zero dimensions."""
+    x1, y1, x2, y2 = bbox
+    x1 = max(0.0, min(float(x1), float(width - 1)))
+    y1 = max(0.0, min(float(y1), float(height - 1)))
+    x2 = max(x1 + 1.0, min(float(x2), float(width)))
+    y2 = max(y1 + 1.0, min(float(y2), float(height)))
+    return [x1, y1, x2, y2]
+
+
+def bbox_iou(a, b):
+    """Compute IoU between two xyxy boxes."""
+    ax1, ay1, ax2, ay2 = a
+    bx1, by1, bx2, by2 = b
+    ix1, iy1 = max(ax1, bx1), max(ay1, by1)
+    ix2, iy2 = min(ax2, bx2), min(ay2, by2)
+    iw = max(0.0, ix2 - ix1)
+    ih = max(0.0, iy2 - iy1)
+    inter = iw * ih
+    area_a = max(0.0, ax2 - ax1) * max(0.0, ay2 - ay1)
+    area_b = max(0.0, bx2 - bx1) * max(0.0, by2 - by1)
+    union = area_a + area_b - inter
+    if union <= 0:
+        return 0.0
+    return inter / union
+
+
+def stabilize_detections_with_pdf_tables(detections, page, image_size, dpi=300):
+    """Replace implausibly tiny detector boxes with PDF-native table bboxes when available."""
+    width, height = image_size
+    page_area = float(max(1, width * height))
+    candidates = [clamp_bbox_to_image(c, width, height) for c in get_pdf_table_candidates(page, dpi=dpi)]
+
+    if not candidates:
+        stabilized = []
+        for det in detections:
+            box = det.get("bbox", {})
+            bbox = clamp_bbox_to_image(
+                [box.get("xmin", 0.0), box.get("ymin", 0.0), box.get("xmax", 1.0), box.get("ymax", 1.0)],
+                width,
+                height,
+            )
+            det["bbox"] = {
+                "xmin": round(bbox[0], 1),
+                "ymin": round(bbox[1], 1),
+                "xmax": round(bbox[2], 1),
+                "ymax": round(bbox[3], 1),
+            }
+            stabilized.append(det)
+        return stabilized
+
+    if not detections:
+        injected = []
+        for cand in candidates:
+            injected.append(
+                {
+                    "label": "table",
+                    "score": 0.55,
+                    "bbox": {
+                        "xmin": round(cand[0], 1),
+                        "ymin": round(cand[1], 1),
+                        "xmax": round(cand[2], 1),
+                        "ymax": round(cand[3], 1),
+                    },
+                }
+            )
+        return injected
+
+    stabilized = []
+    for det in detections:
+        box = det.get("bbox", {})
+        bbox = clamp_bbox_to_image(
+            [box.get("xmin", 0.0), box.get("ymin", 0.0), box.get("xmax", 1.0), box.get("ymax", 1.0)],
+            width,
+            height,
+        )
+        bw = bbox[2] - bbox[0]
+        bh = bbox[3] - bbox[1]
+        area_ratio = (bw * bh) / page_area
+
+        tiny_box = bw < 100 or bh < 100 or area_ratio < 0.002
+        if tiny_box:
+            best_cand = max(candidates, key=lambda c: bbox_iou(bbox, c))
+            # If IoU is zero due tiny box near origin, choose closest center candidate.
+            if bbox_iou(bbox, best_cand) == 0.0:
+                cx = (bbox[0] + bbox[2]) / 2.0
+                cy = (bbox[1] + bbox[3]) / 2.0
+                best_cand = min(
+                    candidates,
+                    key=lambda c: abs(((c[0] + c[2]) / 2.0) - cx) + abs(((c[1] + c[3]) / 2.0) - cy),
+                )
+            bbox = best_cand
+
+        det["bbox"] = {
+            "xmin": round(bbox[0], 1),
+            "ymin": round(bbox[1], 1),
+            "xmax": round(bbox[2], 1),
+            "ymax": round(bbox[3], 1),
+        }
+        stabilized.append(det)
+
+    return stabilized
+
+
+def detection_quality_score(detections, image_size):
+    """Score detection geometry quality using area coverage and count."""
+    width, height = image_size
+    page_area = float(max(1, width * height))
+    if not detections:
+        return 0.0
+
+    areas = []
+    for det in detections:
+        box = det.get("bbox", {})
+        w = max(0.0, float(box.get("xmax", 0.0)) - float(box.get("xmin", 0.0)))
+        h = max(0.0, float(box.get("ymax", 0.0)) - float(box.get("ymin", 0.0)))
+        areas.append((w * h) / page_area)
+
+    max_area = max(areas) if areas else 0.0
+    mean_area = sum(areas) / max(1, len(areas))
+    count_bonus = min(0.2, len(detections) * 0.03)
+    return max_area * 0.8 + mean_area * 0.2 + count_bonus
+
+
+def detections_are_implausible(detections, image_size):
+    """Flag detections that are too small to represent realistic page tables."""
+    width, height = image_size
+    page_area = float(max(1, width * height))
+    if not detections:
+        return True
+
+    max_ratio = 0.0
+    for det in detections:
+        box = det.get("bbox", {})
+        w = max(0.0, float(box.get("xmax", 0.0)) - float(box.get("xmin", 0.0)))
+        h = max(0.0, float(box.get("ymax", 0.0)) - float(box.get("ymin", 0.0)))
+        max_ratio = max(max_ratio, (w * h) / page_area)
+
+    return max_ratio < 0.01
+
+
+def get_backup_detector(device):
+    """Lazily load pretrained detector used for geometry fallback."""
+    global backup_detector
+    if (
+        backup_detector["model"] is None
+        or backup_detector["processor"] is None
+        or backup_detector["device"] != str(device)
+    ):
+        print("Loading geometry backup detector: microsoft/table-transformer-detection")
+        processor = DetrImageProcessor.from_pretrained("microsoft/table-transformer-detection")
+        model = TableTransformerForObjectDetection.from_pretrained("microsoft/table-transformer-detection")
+        model.to(device)
+        model.eval()
+        backup_detector = {"model": model, "processor": processor, "device": str(device)}
+    return backup_detector["model"], backup_detector["processor"]
+
+
 def validate_table(table_entry):
     """Attach validation checks and warnings to a table entry."""
     warnings = []
@@ -441,25 +743,25 @@ def validate_table(table_entry):
     else:
         warnings.append("empty_grid")
 
+    text_sources = {cell.get("text_source", "none") for cell in cells}
     if any(cell.get("raw_text", "").strip() for cell in cells):
-        checks.append("pdf_text_fill")
+        if "pdf_text" in text_sources:
+            checks.append("pdf_text_fill")
+        if "ocr" in text_sources:
+            checks.append("ocr_fallback")
     else:
         warnings.append("no_cell_text_extracted")
 
-    if any(cell.get("row_span", 1) > 1 or cell.get("col_span", 1) > 1 for cell in cells):
-        checks.append("merged_cell_postprocessing")
-    else:
-        checks.append("merged_cell_postprocessing")
+    checks.append("merged_cell_postprocessing")
+    if not any(cell.get("row_span", 1) > 1 or cell.get("col_span", 1) > 1 for cell in cells):
+        warnings.append("no_merged_cells_detected")
 
     if any(cell.get("hierarchy_level") is not None for cell in cells):
         checks.append("hierarchy_assignment")
     else:
         warnings.append("no_header_hierarchy_detected")
 
-    if table_entry.get("continuation", {}).get("is_continuation") or table_entry.get("continuation", {}).get("continues_on_next_page"):
-        checks.append("continuation_linking")
-    else:
-        checks.append("continuation_linking")
+    checks.append("continuation_linking")
 
     # Numeric ratio validation for rows with percentage-like cells.
     row_map = {}
@@ -467,7 +769,6 @@ def validate_table(table_entry):
         row_map.setdefault(cell["row_idx"], []).append(cell)
 
     numeric_ratio_checked = False
-    ratio_issue = False
     for row_cells in row_map.values():
         parsed = []
         for cell in sorted(row_cells, key=lambda c: c["col_idx"]):
@@ -485,7 +786,6 @@ def validate_table(table_entry):
                 expected_pct = (actual / approved) * 100.0
                 numeric_ratio_checked = True
                 if abs(expected_pct - reported_pct) > 2.0:
-                    ratio_issue = True
                     warnings.append(
                         f"numeric_ratio_mismatch_row_{row_cells[0]['row_idx']}: expected {expected_pct:.1f} vs reported {reported_pct:.1f}"
                     )
@@ -541,10 +841,11 @@ def link_continuations(per_page_tables):
                 if len(prev_profile) < 1 or len(current_profile) < 1:
                     continue
 
-                if len(prev_profile) != len(current_profile):
-                    continue
+                common_len = max(3, min(len(prev_profile), len(current_profile)))
+                prev_profile_cmp = resize_vector(prev_profile, common_len)
+                current_profile_cmp = resize_vector(current_profile, common_len)
 
-                profile_sim = cosine_similarity(prev_profile, current_profile)
+                profile_sim = cosine_similarity(prev_profile_cmp, current_profile_cmp)
                 width_sim = 1.0 - min(1.0, abs(prev_width - current_width) / max(prev_width, current_width, 1.0))
                 x_shift_sim = 1.0 - min(
                     1.0,
@@ -554,10 +855,10 @@ def link_continuations(per_page_tables):
                 score = 0.7 * profile_sim + 0.2 * width_sim + 0.1 * x_shift_sim
                 if score > best_score:
                     best_score = score
-                    best_match = (prev_index, prev_table)
+                    best_match = (prev_index, prev_table, score)
 
             if best_match and best_score >= 0.82:
-                prev_index, prev_table = best_match
+                prev_index, prev_table, score = best_match
                 current_id = current_table["table_id"]
                 prev_id = prev_table["table_id"]
 
@@ -566,9 +867,11 @@ def link_continuations(per_page_tables):
                     "continues_from": prev_id,
                     "continues_on_next_page": False,
                     "linked_table_id": None,
+                    "match_score": round(score, 4),
                 }
                 prev_table["continuation"]["continues_on_next_page"] = True
                 prev_table["continuation"]["linked_table_id"] = current_id
+                prev_table["continuation"]["match_score"] = round(score, 4)
 
 
 def finalize_table_entries(per_page_tables):
@@ -584,6 +887,7 @@ def build_cells_from_structure(
     table_bbox_page,
     structure_detections,
     page_words,
+    ocr_words,
     page_number,
     table_idx,
 ):
@@ -669,6 +973,7 @@ def build_cells_from_structure(
                 page_words,
                 page_bbox,
                 local_bbox,
+                ocr_words=ocr_words,
             )
             confidence = round((row.get("score", 0.0) + col.get("score", 0.0)) / 2.0, 4)
 
@@ -770,8 +1075,10 @@ def build_cv_handoff_for_pdf(pdf_path, page_count, per_page_detections, model_ve
                 "grid": {"rows": 0, "cols": 0},
                 "continuation": {
                     "is_continuation": False,
+                    "continues_from": None,
                     "continues_on_next_page": False,
                     "linked_table_id": None,
+                    "match_score": None,
                 },
                 "cells": [],
                 "validation": {
@@ -883,6 +1190,8 @@ def process_pdf(
     structure_processor=None,
     structure_threshold=0.5,
     max_pages=None,
+    use_pdf_table_finder=True,
+    use_backup_detector=True,
 ):
     """Convert PDF to images and detect tables on each page."""
     try:
@@ -909,6 +1218,7 @@ def process_pdf(
     for page_num in range(page_total):
         page = doc.load_page(page_num)
         page_words = page.get_text("words")
+        page_ocr_words = []
         mat = fitz.Matrix(300 / 72, 300 / 72)  # 300 DPI
         pix = page.get_pixmap(matrix=mat)
 
@@ -919,6 +1229,28 @@ def process_pdf(
             img_path, model, processor, device, output_dir, threshold
         )
         image = Image.open(img_path).convert("RGB")
+        if use_pdf_table_finder:
+            detections = stabilize_detections_with_pdf_tables(
+                detections,
+                page,
+                image.size,
+                dpi=300,
+            )
+
+        if use_backup_detector and detections_are_implausible(detections, image.size):
+            backup_model, backup_processor = get_backup_detector(device)
+            backup_detections = detect_tables(image, backup_model, backup_processor, device, threshold)
+            if use_pdf_table_finder:
+                backup_detections = stabilize_detections_with_pdf_tables(
+                    backup_detections,
+                    page,
+                    image.size,
+                    dpi=300,
+                )
+
+            if detection_quality_score(backup_detections, image.size) > detection_quality_score(detections, image.size):
+                print(f"    Geometry fallback used pretrained detector on page {page_num + 1}")
+                detections = backup_detections
         all_detections[f"page_{page_num + 1}"] = detections
         per_page_detections[page_num] = detections
 
@@ -932,6 +1264,10 @@ def process_pdf(
 
             if (x2 - x1) < 50 or (y2 - y1) < 50:
                 inferred_bbox = infer_table_bbox_from_words(page_words)
+                if not inferred_bbox:
+                    if not page_ocr_words:
+                        page_ocr_words = extract_easyocr_words_from_image(image)
+                    inferred_bbox = infer_table_bbox_from_ocr_words(page_ocr_words)
                 if inferred_bbox:
                     x1, y1, x2, y2 = [int(round(v)) for v in inferred_bbox]
                     x1 = max(0, x1)
@@ -960,8 +1296,10 @@ def process_pdf(
                 "grid": {"rows": 0, "cols": 0},
                 "continuation": {
                     "is_continuation": False,
+                    "continues_from": None,
                     "continues_on_next_page": False,
                     "linked_table_id": None,
+                    "match_score": None,
                 },
                 "cells": [],
                 "validation": {
@@ -985,6 +1323,7 @@ def process_pdf(
                     table_bbox_page=[float(x1), float(y1), float(x2), float(y2)],
                     structure_detections=structure_dets,
                     page_words=page_words,
+                    ocr_words=page_ocr_words,
                     page_number=page_num + 1,
                     table_idx=table_idx,
                 )
@@ -1027,7 +1366,8 @@ def process_pdf(
         print(f"NLP handoff JSON saved: {cv_output_path}")
         if structure_model and structure_processor:
             print("Included: table grid, cell bboxes, base64 cell images, and PDF text per cell.")
-            print("Remaining TODO: continuation linking, merged-cell post-processing, arithmetic validation.")
+            print("Included: continuation linking, merged-cell post-processing, and validation checks.")
+            print("Note: table geometry stabilization is still pending for difficult layouts.")
         else:
             print("Note: cells/grid/continuation require structure recognition + post-processing.")
 
@@ -1076,6 +1416,16 @@ def main():
     parser.add_argument(
         "--max-pages", type=int, default=None,
         help="Optional number of first PDF pages to process (for fast testing)"
+    )
+    parser.add_argument(
+        "--disable-pdf-table-finder",
+        action="store_true",
+        help="Disable PyMuPDF table finder geometry stabilization for PDF inference",
+    )
+    parser.add_argument(
+        "--disable-backup-detector",
+        action="store_true",
+        help="Disable pretrained geometry fallback when primary detections are implausibly small",
     )
     args = parser.parse_args()
 
@@ -1136,6 +1486,8 @@ def main():
             structure_processor=structure_processor,
             structure_threshold=args.structure_threshold,
             max_pages=args.max_pages,
+            use_pdf_table_finder=not args.disable_pdf_table_finder,
+            use_backup_detector=not args.disable_backup_detector,
         )
         if args.cv_output and cv_output_path:
             print("Tip: Use this file as CV->NLP handoff input.")
