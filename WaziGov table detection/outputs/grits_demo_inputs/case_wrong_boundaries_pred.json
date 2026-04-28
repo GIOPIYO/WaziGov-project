@@ -1,0 +1,267 @@
+{
+  "document_id": "pred_demo_doc",
+  "source_file": "test.pdf",
+  "page_count": 1,
+  "processed_at": "2026-04-17T00:00:00Z",
+  "model_version": "demo_variant",
+  "tables": [
+    {
+      "table_id": "page_001_table_00",
+      "page_number": 1,
+      "bbox": {
+        "xmin": 0.0,
+        "ymin": 0.0,
+        "xmax": 300.0,
+        "ymax": 200.0
+      },
+      "confidence": 0.98,
+      "label": "table",
+      "grid": {
+        "rows": 4,
+        "cols": 3
+      },
+      "continuation": {
+        "is_continuation": false,
+        "continues_from": null,
+        "continues_on_next_page": false,
+        "linked_table_id": null,
+        "match_score": 0.0
+      },
+      "cells": [
+        {
+          "cell_id": "page_001_table_00_r0_c0",
+          "row_idx": 0,
+          "col_idx": 0,
+          "row_span": 1,
+          "col_span": 1,
+          "cell_type": "header",
+          "hierarchy_level": 1,
+          "bbox": {
+            "xmin": 4.831009995196657,
+            "ymin": -5.102162923930475,
+            "xmax": 92.79075857050287,
+            "ymax": 42.049903523430146
+          },
+          "raw_text": "Cell_R0_C0",
+          "text_source": "pdf_text",
+          "image_b64": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAADElEQVR4nGP49+8fAAX4AvvKn0zIAAAAAElFTkSuQmCC",
+          "confidence": 0.95
+        },
+        {
+          "cell_id": "page_001_table_00_r0_c1",
+          "row_idx": 0,
+          "col_idx": 1,
+          "row_span": 1,
+          "col_span": 1,
+          "cell_type": "header",
+          "hierarchy_level": 1,
+          "bbox": {
+            "xmin": 104.81335489335352,
+            "ymin": 0.907330674966996,
+            "xmax": 201.8098502489808,
+            "ymax": 40.63565358963567
+          },
+          "raw_text": "Cell_R0_C1",
+          "text_source": "pdf_text",
+          "image_b64": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAADElEQVR4nGP49+8fAAX4AvvKn0zIAAAAAElFTkSuQmCC",
+          "confidence": 0.95
+        },
+        {
+          "cell_id": "page_001_table_00_r0_c2",
+          "row_idx": 0,
+          "col_idx": 2,
+          "row_span": 1,
+          "col_span": 1,
+          "cell_type": "header",
+          "hierarchy_level": 1,
+          "bbox": {
+            "xmin": 191.87390479723186,
+            "ymin": -5.346782132185208,
+            "xmax": 302.0403745809996,
+            "ymax": 51.22490125877226
+          },
+          "raw_text": "Cell_R0_C2",
+          "text_source": "pdf_text",
+          "image_b64": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAADElEQVR4nGP49+8fAAX4AvvKn0zIAAAAAElFTkSuQmCC",
+          "confidence": 0.95
+        },
+        {
+          "cell_id": "page_001_table_00_r1_c0",
+          "row_idx": 1,
+          "col_idx": 0,
+          "row_span": 1,
+          "col_span": 1,
+          "cell_type": "data",
+          "hierarchy_level": null,
+          "bbox": {
+            "xmin": 4.32039225844807,
+            "ymin": 54.02649947180472,
+            "xmax": 98.39039641923317,
+            "ymax": 98.98418092567707
+          },
+          "raw_text": "Cell_R1_C0",
+          "text_source": "pdf_text",
+          "image_b64": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAADElEQVR4nGP49+8fAAX4AvvKn0zIAAAAAElFTkSuQmCC",
+          "confidence": 0.95
+        },
+        {
+          "cell_id": "page_001_table_00_r1_c1",
+          "row_idx": 1,
+          "col_idx": 1,
+          "row_span": 1,
+          "col_span": 1,
+          "cell_type": "data",
+          "hierarchy_level": null,
+          "bbox": {
+            "xmin": 95.56381416461325,
+            "ymin": 57.38600641585868,
+            "xmax": 205.17614734259536,
+            "ymax": 93.1931863275378
+          },
+          "raw_text": "Cell_R1_C1",
+          "text_source": "pdf_text",
+          "image_b64": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAADElEQVR4nGP49+8fAAX4AvvKn0zIAAAAAElFTkSuQmCC",
+          "confidence": 0.95
+        },
+        {
+          "cell_id": "page_001_table_00_r1_c2",
+          "row_idx": 1,
+          "col_idx": 2,
+          "row_span": 1,
+          "col_span": 1,
+          "cell_type": "data",
+          "hierarchy_level": null,
+          "bbox": {
+            "xmin": 198.45228796307006,
+            "ymin": 45.557426833432835,
+            "xmax": 294.3062752421518,
+            "ymax": 105.26988258013048
+          },
+          "raw_text": "Cell_R1_C2",
+          "text_source": "pdf_text",
+          "image_b64": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAADElEQVR4nGP49+8fAAX4AvvKn0zIAAAAAElFTkSuQmCC",
+          "confidence": 0.95
+        },
+        {
+          "cell_id": "page_001_table_00_r2_c0",
+          "row_idx": 2,
+          "col_idx": 0,
+          "row_span": 1,
+          "col_span": 1,
+          "cell_type": "data",
+          "hierarchy_level": null,
+          "bbox": {
+            "xmin": -7.955794469603026,
+            "ymin": 97.59854601274675,
+            "xmax": 97.17958760969256,
+            "ymax": 146.87911444957942
+          },
+          "raw_text": "Cell_R2_C0",
+          "text_source": "pdf_text",
+          "image_b64": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAADElEQVR4nGP49+8fAAX4AvvKn0zIAAAAAElFTkSuQmCC",
+          "confidence": 0.95
+        },
+        {
+          "cell_id": "page_001_table_00_r2_c1",
+          "row_idx": 2,
+          "col_idx": 1,
+          "row_span": 1,
+          "col_span": 1,
+          "cell_type": "data",
+          "hierarchy_level": null,
+          "bbox": {
+            "xmin": 95.29041734444026,
+            "ymin": 90.86900885846194,
+            "xmax": 199.18849759343686,
+            "ymax": 142.49652325706418
+          },
+          "raw_text": "Cell_R2_C1",
+          "text_source": "pdf_text",
+          "image_b64": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAADElEQVR4nGP49+8fAAX4AvvKn0zIAAAAAElFTkSuQmCC",
+          "confidence": 0.95
+        },
+        {
+          "cell_id": "page_001_table_00_r2_c2",
+          "row_idx": 2,
+          "col_idx": 2,
+          "row_span": 1,
+          "col_span": 1,
+          "cell_type": "data",
+          "hierarchy_level": null,
+          "bbox": {
+            "xmin": 208.4459074405632,
+            "ymin": 91.57600396156917,
+            "xmax": 295.8635656281419,
+            "ymax": 152.57279598988887
+          },
+          "raw_text": "Cell_R2_C2",
+          "text_source": "pdf_text",
+          "image_b64": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAADElEQVR4nGP49+8fAAX4AvvKn0zIAAAAAElFTkSuQmCC",
+          "confidence": 0.95
+        },
+        {
+          "cell_id": "page_001_table_00_r3_c0",
+          "row_idx": 3,
+          "col_idx": 0,
+          "row_span": 1,
+          "col_span": 1,
+          "cell_type": "data",
+          "hierarchy_level": null,
+          "bbox": {
+            "xmin": 7.709034958736137,
+            "ymin": 147.23270052333953,
+            "xmax": 93.8457718051332,
+            "ymax": 191.39110297647483
+          },
+          "raw_text": "Cell_R3_C0",
+          "text_source": "pdf_text",
+          "image_b64": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAADElEQVR4nGP49+8fAAX4AvvKn0zIAAAAAElFTkSuQmCC",
+          "confidence": 0.95
+        },
+        {
+          "cell_id": "page_001_table_00_r3_c1",
+          "row_idx": 3,
+          "col_idx": 1,
+          "row_span": 1,
+          "col_span": 1,
+          "cell_type": "data",
+          "hierarchy_level": null,
+          "bbox": {
+            "xmin": 103.2252663713542,
+            "ymin": 155.46136681577383,
+            "xmax": 209.70443041321516,
+            "ymax": 207.10635442030295
+          },
+          "raw_text": "Cell_R3_C1",
+          "text_source": "pdf_text",
+          "image_b64": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAADElEQVR4nGP49+8fAAX4AvvKn0zIAAAAAElFTkSuQmCC",
+          "confidence": 0.95
+        },
+        {
+          "cell_id": "page_001_table_00_r3_c2",
+          "row_idx": 3,
+          "col_idx": 2,
+          "row_span": 1,
+          "col_span": 1,
+          "cell_type": "data",
+          "hierarchy_level": null,
+          "bbox": {
+            "xmin": 207.32967333510538,
+            "ymin": 147.60252450078332,
+            "xmax": 299.06820604736873,
+            "ymax": 206.682208532815
+          },
+          "raw_text": "Cell_R3_C2",
+          "text_source": "pdf_text",
+          "image_b64": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAADElEQVR4nGP49+8fAAX4AvvKn0zIAAAAAElFTkSuQmCC",
+          "confidence": 0.95
+        }
+      ],
+      "validation": {
+        "is_valid": true,
+        "checks": [],
+        "warnings": []
+      }
+    }
+  ]
+}

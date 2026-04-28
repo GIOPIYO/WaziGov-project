@@ -169,3 +169,33 @@ The `--split` flag generates 70/15/15 train/val/test splits in `data/splits/`.
 | Table bounding boxes | 150-200 |
 | Cell-level structure labels | 15,000-20,000 |
 | Train/Val/Test split | 70% / 15% / 15% |
+
+## GRiTS Evaluation (Structure)
+
+Use GRiTS-style metrics to compare a predicted CV handoff JSON against a ground-truth handoff JSON:
+
+```bash
+python scripts/evaluate_grits.py \
+    --gt outputs/cv_handoff_gt.json \
+    --pred outputs/cv_handoff_pred.json \
+    --mode paper_like \
+    --match-by table_id \
+    --output outputs/grits_results.json
+```
+
+Reported metrics:
+- `grits_top` (grid/boundary topology similarity)
+- `grits_con` (slot-level content similarity)
+- `grits_loc` (cell geometry similarity using bbox IoU)
+- `grits` (mean of top, con, loc)
+
+Scoring modes:
+- `grits_style` (default): robust practical scoring for current handoff schema.
+- `paper_like`: stricter slot-aligned scoring intended to be closer to proposal-style structure evaluation.
+
+For detailed comparison of the two modes and recommendations on when to use each, see [docs/grits_comparison_guide.md](docs/grits_comparison_guide.md).
+
+Generate synthetic test cases to compare modes:
+```bash
+python scripts/grits_comparison_demo.py
+```
