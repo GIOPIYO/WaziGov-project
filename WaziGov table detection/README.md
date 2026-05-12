@@ -199,3 +199,7 @@ Generate synthetic test cases to compare modes:
 ```bash
 python scripts/grits_comparison_demo.py
 ```
+
+## Satellite Change Detection Module
+
+The satellite prototype now lives in the sibling folder [Satellite change detection module](../Satellite%20change%20detection%20module/README.md).
