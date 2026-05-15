@@ -203,3 +203,26 @@ python scripts/grits_comparison_demo.py
 ## Satellite Change Detection Module
 
 The satellite prototype now lives in the sibling folder [Satellite change detection module](../Satellite%20change%20detection%20module/README.md).
+
+## Phone Image Verification Module
+
+The phone-image verification module lives in the sibling folder [Phone image verification module](../Phone%20image%20verification%20module/README.md).
+
+Verifies phone images for evidence authenticity across three criteria:
+- **Geolocation**: Extract GPS from EXIF and validate within site bounds
+- **Authenticity & Forensics**: Check metadata integrity and basic deepfake detection
+- **Scene Matching**: Compare keypoints against reference satellite/reference images
+
+Quick smoke test:
+```bash
+cd ../Phone\ image\ verification\ module
+python phone_image_verifier.py --smoke-test
+```
+
+Verify a batch of photos:
+```bash
+python phone_image_verifier.py \
+    --image-dir ./photos \
+    --lat-min -1.3 --lon-min 36.7 --lat-max -1.2 --lon-max 36.8 \
+    --reference-image satellite_reference.jpg
+```
