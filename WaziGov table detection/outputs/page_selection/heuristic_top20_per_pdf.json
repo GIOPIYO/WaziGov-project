@@ -1,0 +1,1222 @@
+{
+  "AUDITOR-GENERAL-S-REPORT-ON-THE-COUNTY-GOVERNMENTS-COUNTY-ASSEMBLES-2021-2022-VOLUME-2.pdf": [
+    {
+      "page": 208,
+      "score": 100.8,
+      "line_count": 51,
+      "num_hits": 27,
+      "keyword_hits": 79,
+      "dense_numeric_lines": 1,
+      "long_lines": 1
+    },
+    {
+      "page": 210,
+      "score": 91.2,
+      "line_count": 96,
+      "num_hits": 46,
+      "keyword_hits": 44,
+      "dense_numeric_lines": 0,
+      "long_lines": 4
+    },
+    {
+      "page": 88,
+      "score": 80.6,
+      "line_count": 90,
+      "num_hits": 47,
+      "keyword_hits": 29,
+      "dense_numeric_lines": 0,
+      "long_lines": 5
+    },
+    {
+      "page": 168,
+      "score": 74.6,
+      "line_count": 40,
+      "num_hits": 23,
+      "keyword_hits": 55,
+      "dense_numeric_lines": 0,
+      "long_lines": 15
+    },
+    {
+      "page": 134,
+      "score": 73.6,
+      "line_count": 73,
+      "num_hits": 34,
+      "keyword_hits": 39,
+      "dense_numeric_lines": 0,
+      "long_lines": 8
+    },
+    {
+      "page": 36,
+      "score": 72.4,
+      "line_count": 38,
+      "num_hits": 19,
+      "keyword_hits": 59,
+      "dense_numeric_lines": 0,
+      "long_lines": 12
+    },
+    {
+      "page": 32,
+      "score": 71.8,
+      "line_count": 72,
+      "num_hits": 34,
+      "keyword_hits": 36,
+      "dense_numeric_lines": 0,
+      "long_lines": 11
+    },
+    {
+      "page": 179,
+      "score": 71.8,
+      "line_count": 80,
+      "num_hits": 29,
+      "keyword_hits": 45,
+      "dense_numeric_lines": 0,
+      "long_lines": 5
+    },
+    {
+      "page": 160,
+      "score": 70.6,
+      "line_count": 99,
+      "num_hits": 48,
+      "keyword_hits": 16,
+      "dense_numeric_lines": 0,
+      "long_lines": 1
+    },
+    {
+      "page": 209,
+      "score": 70.6,
+      "line_count": 77,
+      "num_hits": 29,
+      "keyword_hits": 44,
+      "dense_numeric_lines": 0,
+      "long_lines": 3
+    },
+    {
+      "page": 212,
+      "score": 70.4,
+      "line_count": 39,
+      "num_hits": 24,
+      "keyword_hits": 49,
+      "dense_numeric_lines": 0,
+      "long_lines": 12
+    },
+    {
+      "page": 85,
+      "score": 69.2,
+      "line_count": 60,
+      "num_hits": 27,
+      "keyword_hits": 43,
+      "dense_numeric_lines": 0,
+      "long_lines": 12
+    },
+    {
+      "page": 196,
+      "score": 67.8,
+      "line_count": 43,
+      "num_hits": 22,
+      "keyword_hits": 48,
+      "dense_numeric_lines": 0,
+      "long_lines": 15
+    },
+    {
+      "page": 66,
+      "score": 66.6,
+      "line_count": 37,
+      "num_hits": 17,
+      "keyword_hits": 55,
+      "dense_numeric_lines": 0,
+      "long_lines": 11
+    },
+    {
+      "page": 72,
+      "score": 66.4,
+      "line_count": 40,
+      "num_hits": 20,
+      "keyword_hits": 48,
+      "dense_numeric_lines": 0,
+      "long_lines": 20
+    },
+    {
+      "page": 37,
+      "score": 62.0,
+      "line_count": 39,
+      "num_hits": 20,
+      "keyword_hits": 44,
+      "dense_numeric_lines": 0,
+      "long_lines": 14
+    },
+    {
+      "page": 84,
+      "score": 61.6,
+      "line_count": 53,
+      "num_hits": 19,
+      "keyword_hits": 40,
+      "dense_numeric_lines": 1,
+      "long_lines": 9
+    },
+    {
+      "page": 33,
+      "score": 61.2,
+      "line_count": 47,
+      "num_hits": 16,
+      "keyword_hits": 50,
+      "dense_numeric_lines": 0,
+      "long_lines": 10
+    },
+    {
+      "page": 61,
+      "score": 59.6,
+      "line_count": 60,
+      "num_hits": 21,
+      "keyword_hits": 41,
+      "dense_numeric_lines": 0,
+      "long_lines": 8
+    },
+    {
+      "page": 171,
+      "score": 59.6,
+      "line_count": 44,
+      "num_hits": 15,
+      "keyword_hits": 49,
+      "dense_numeric_lines": 0,
+      "long_lines": 12
+    }
+  ],
+  "AUDITOR-GENERAL-S-REPORT-ON-THE-COUNTY-GOVERNMENTS-COUNTY-EXECUTIVES-2021-2022-VOLUME-1.pdf": [
+    {
+      "page": 306,
+      "score": 96.6,
+      "line_count": 87,
+      "num_hits": 44,
+      "keyword_hits": 52,
+      "dense_numeric_lines": 0,
+      "long_lines": 11
+    },
+    {
+      "page": 402,
+      "score": 93.8,
+      "line_count": 63,
+      "num_hits": 33,
+      "keyword_hits": 64,
+      "dense_numeric_lines": 0,
+      "long_lines": 15
+    },
+    {
+      "page": 47,
+      "score": 86.6,
+      "line_count": 43,
+      "num_hits": 27,
+      "keyword_hits": 48,
+      "dense_numeric_lines": 2,
+      "long_lines": 29
+    },
+    {
+      "page": 298,
+      "score": 86.2,
+      "line_count": 42,
+      "num_hits": 25,
+      "keyword_hits": 64,
+      "dense_numeric_lines": 0,
+      "long_lines": 25
+    },
+    {
+      "page": 30,
+      "score": 85.0,
+      "line_count": 40,
+      "num_hits": 25,
+      "keyword_hits": 64,
+      "dense_numeric_lines": 0,
+      "long_lines": 19
+    },
+    {
+      "page": 189,
+      "score": 84.6,
+      "line_count": 71,
+      "num_hits": 36,
+      "keyword_hits": 48,
+      "dense_numeric_lines": 0,
+      "long_lines": 15
+    },
+    {
+      "page": 64,
+      "score": 84.4,
+      "line_count": 49,
+      "num_hits": 20,
+      "keyword_hits": 70,
+      "dense_numeric_lines": 0,
+      "long_lines": 22
+    },
+    {
+      "page": 307,
+      "score": 83.6,
+      "line_count": 54,
+      "num_hits": 23,
+      "keyword_hits": 66,
+      "dense_numeric_lines": 0,
+      "long_lines": 16
+    },
+    {
+      "page": 15,
+      "score": 83.0,
+      "line_count": 41,
+      "num_hits": 20,
+      "keyword_hits": 68,
+      "dense_numeric_lines": 0,
+      "long_lines": 23
+    },
+    {
+      "page": 156,
+      "score": 82.8,
+      "line_count": 64,
+      "num_hits": 27,
+      "keyword_hits": 59,
+      "dense_numeric_lines": 0,
+      "long_lines": 16
+    },
+    {
+      "page": 38,
+      "score": 82.4,
+      "line_count": 48,
+      "num_hits": 24,
+      "keyword_hits": 62,
+      "dense_numeric_lines": 0,
+      "long_lines": 20
+    },
+    {
+      "page": 297,
+      "score": 82.2,
+      "line_count": 99,
+      "num_hits": 45,
+      "keyword_hits": 34,
+      "dense_numeric_lines": 0,
+      "long_lines": 5
+    },
+    {
+      "page": 154,
+      "score": 82.0,
+      "line_count": 80,
+      "num_hits": 45,
+      "keyword_hits": 21,
+      "dense_numeric_lines": 2,
+      "long_lines": 6
+    },
+    {
+      "page": 172,
+      "score": 81.0,
+      "line_count": 42,
+      "num_hits": 26,
+      "keyword_hits": 50,
+      "dense_numeric_lines": 1,
+      "long_lines": 24
+    },
+    {
+      "page": 308,
+      "score": 81.0,
+      "line_count": 40,
+      "num_hits": 26,
+      "keyword_hits": 56,
+      "dense_numeric_lines": 0,
+      "long_lines": 25
+    },
+    {
+      "page": 202,
+      "score": 80.0,
+      "line_count": 44,
+      "num_hits": 18,
+      "keyword_hits": 68,
+      "dense_numeric_lines": 0,
+      "long_lines": 20
+    },
+    {
+      "page": 65,
+      "score": 79.2,
+      "line_count": 41,
+      "num_hits": 18,
+      "keyword_hits": 54,
+      "dense_numeric_lines": 2,
+      "long_lines": 22
+    },
+    {
+      "page": 226,
+      "score": 78.6,
+      "line_count": 129,
+      "num_hits": 55,
+      "keyword_hits": 15,
+      "dense_numeric_lines": 0,
+      "long_lines": 3
+    },
+    {
+      "page": 171,
+      "score": 77.6,
+      "line_count": 38,
+      "num_hits": 22,
+      "keyword_hits": 60,
+      "dense_numeric_lines": 0,
+      "long_lines": 16
+    },
+    {
+      "page": 258,
+      "score": 77.4,
+      "line_count": 94,
+      "num_hits": 43,
+      "keyword_hits": 24,
+      "dense_numeric_lines": 1,
+      "long_lines": 8
+    }
+  ],
+  "Auditor-Generals-summary-Report-on-County-Governments-2023-2024.pdf": [
+    {
+      "page": 89,
+      "score": 150.8,
+      "line_count": 138,
+      "num_hits": 92,
+      "keyword_hits": 38,
+      "dense_numeric_lines": 2,
+      "long_lines": 0
+    },
+    {
+      "page": 91,
+      "score": 145.2,
+      "line_count": 135,
+      "num_hits": 93,
+      "keyword_hits": 42,
+      "dense_numeric_lines": 0,
+      "long_lines": 0
+    },
+    {
+      "page": 87,
+      "score": 144.4,
+      "line_count": 166,
+      "num_hits": 93,
+      "keyword_hits": 41,
+      "dense_numeric_lines": 0,
+      "long_lines": 0
+    },
+    {
+      "page": 102,
+      "score": 144.4,
+      "line_count": 167,
+      "num_hits": 93,
+      "keyword_hits": 41,
+      "dense_numeric_lines": 0,
+      "long_lines": 0
+    },
+    {
+      "page": 106,
+      "score": 142.6,
+      "line_count": 197,
+      "num_hits": 90,
+      "keyword_hits": 43,
+      "dense_numeric_lines": 0,
+      "long_lines": 1
+    },
+    {
+      "page": 108,
+      "score": 138.6,
+      "line_count": 164,
+      "num_hits": 90,
+      "keyword_hits": 38,
+      "dense_numeric_lines": 0,
+      "long_lines": 1
+    },
+    {
+      "page": 110,
+      "score": 132.4,
+      "line_count": 149,
+      "num_hits": 87,
+      "keyword_hits": 35,
+      "dense_numeric_lines": 0,
+      "long_lines": 0
+    },
+    {
+      "page": 23,
+      "score": 126.6,
+      "line_count": 99,
+      "num_hits": 47,
+      "keyword_hits": 54,
+      "dense_numeric_lines": 5,
+      "long_lines": 10
+    },
+    {
+      "page": 121,
+      "score": 102.6,
+      "line_count": 162,
+      "num_hits": 60,
+      "keyword_hits": 38,
+      "dense_numeric_lines": 0,
+      "long_lines": 1
+    },
+    {
+      "page": 98,
+      "score": 102.4,
+      "line_count": 161,
+      "num_hits": 60,
+      "keyword_hits": 38,
+      "dense_numeric_lines": 0,
+      "long_lines": 0
+    },
+    {
+      "page": 100,
+      "score": 102.4,
+      "line_count": 162,
+      "num_hits": 60,
+      "keyword_hits": 38,
+      "dense_numeric_lines": 0,
+      "long_lines": 0
+    },
+    {
+      "page": 142,
+      "score": 101.8,
+      "line_count": 163,
+      "num_hits": 60,
+      "keyword_hits": 37,
+      "dense_numeric_lines": 0,
+      "long_lines": 1
+    },
+    {
+      "page": 104,
+      "score": 100.8,
+      "line_count": 159,
+      "num_hits": 58,
+      "keyword_hits": 39,
+      "dense_numeric_lines": 0,
+      "long_lines": 0
+    },
+    {
+      "page": 93,
+      "score": 95.2,
+      "line_count": 152,
+      "num_hits": 56,
+      "keyword_hits": 35,
+      "dense_numeric_lines": 0,
+      "long_lines": 0
+    },
+    {
+      "page": 95,
+      "score": 94.4,
+      "line_count": 155,
+      "num_hits": 56,
+      "keyword_hits": 34,
+      "dense_numeric_lines": 0,
+      "long_lines": 0
+    },
+    {
+      "page": 118,
+      "score": 92.6,
+      "line_count": 135,
+      "num_hits": 53,
+      "keyword_hits": 36,
+      "dense_numeric_lines": 0,
+      "long_lines": 1
+    },
+    {
+      "page": 107,
+      "score": 87.2,
+      "line_count": 120,
+      "num_hits": 54,
+      "keyword_hits": 28,
+      "dense_numeric_lines": 0,
+      "long_lines": 0
+    },
+    {
+      "page": 92,
+      "score": 86.2,
+      "line_count": 76,
+      "num_hits": 51,
+      "keyword_hits": 25,
+      "dense_numeric_lines": 1,
+      "long_lines": 0
+    },
+    {
+      "page": 111,
+      "score": 83.2,
+      "line_count": 94,
+      "num_hits": 54,
+      "keyword_hits": 23,
+      "dense_numeric_lines": 0,
+      "long_lines": 0
+    },
+    {
+      "page": 22,
+      "score": 82.8,
+      "line_count": 66,
+      "num_hits": 23,
+      "keyword_hits": 47,
+      "dense_numeric_lines": 3,
+      "long_lines": 13
+    }
+  ],
+  "COUNTY-GOVERNMENTS-BUDGET-IMPLEMENTATION-REVIEW-REPORT-FY-2024.2025.pdf": [
+    {
+      "page": 1,
+      "score": 0.0,
+      "line_count": 0,
+      "num_hits": 0,
+      "keyword_hits": 0,
+      "dense_numeric_lines": 0,
+      "long_lines": 0
+    },
+    {
+      "page": 2,
+      "score": 0.0,
+      "line_count": 0,
+      "num_hits": 0,
+      "keyword_hits": 0,
+      "dense_numeric_lines": 0,
+      "long_lines": 0
+    },
+    {
+      "page": 3,
+      "score": 0.0,
+      "line_count": 0,
+      "num_hits": 0,
+      "keyword_hits": 0,
+      "dense_numeric_lines": 0,
+      "long_lines": 0
+    },
+    {
+      "page": 4,
+      "score": 0.0,
+      "line_count": 0,
+      "num_hits": 0,
+      "keyword_hits": 0,
+      "dense_numeric_lines": 0,
+      "long_lines": 0
+    },
+    {
+      "page": 5,
+      "score": 0.0,
+      "line_count": 0,
+      "num_hits": 0,
+      "keyword_hits": 0,
+      "dense_numeric_lines": 0,
+      "long_lines": 0
+    },
+    {
+      "page": 6,
+      "score": 0.0,
+      "line_count": 0,
+      "num_hits": 0,
+      "keyword_hits": 0,
+      "dense_numeric_lines": 0,
+      "long_lines": 0
+    },
+    {
+      "page": 7,
+      "score": 0.0,
+      "line_count": 0,
+      "num_hits": 0,
+      "keyword_hits": 0,
+      "dense_numeric_lines": 0,
+      "long_lines": 0
+    },
+    {
+      "page": 8,
+      "score": 0.0,
+      "line_count": 0,
+      "num_hits": 0,
+      "keyword_hits": 0,
+      "dense_numeric_lines": 0,
+      "long_lines": 0
+    },
+    {
+      "page": 9,
+      "score": 0.0,
+      "line_count": 0,
+      "num_hits": 0,
+      "keyword_hits": 0,
+      "dense_numeric_lines": 0,
+      "long_lines": 0
+    },
+    {
+      "page": 10,
+      "score": 0.0,
+      "line_count": 0,
+      "num_hits": 0,
+      "keyword_hits": 0,
+      "dense_numeric_lines": 0,
+      "long_lines": 0
+    },
+    {
+      "page": 11,
+      "score": 0.0,
+      "line_count": 0,
+      "num_hits": 0,
+      "keyword_hits": 0,
+      "dense_numeric_lines": 0,
+      "long_lines": 0
+    },
+    {
+      "page": 12,
+      "score": 0.0,
+      "line_count": 0,
+      "num_hits": 0,
+      "keyword_hits": 0,
+      "dense_numeric_lines": 0,
+      "long_lines": 0
+    },
+    {
+      "page": 13,
+      "score": 0.0,
+      "line_count": 0,
+      "num_hits": 0,
+      "keyword_hits": 0,
+      "dense_numeric_lines": 0,
+      "long_lines": 0
+    },
+    {
+      "page": 14,
+      "score": 0.0,
+      "line_count": 0,
+      "num_hits": 0,
+      "keyword_hits": 0,
+      "dense_numeric_lines": 0,
+      "long_lines": 0
+    }
+  ],
+  "GREEN-BOOK-COUNTY-ASSEMBLIES-VOL.-2-2022-2023.pdf": [
+    {
+      "page": 155,
+      "score": 70.4,
+      "line_count": 65,
+      "num_hits": 30,
+      "keyword_hits": 40,
+      "dense_numeric_lines": 0,
+      "long_lines": 12
+    },
+    {
+      "page": 209,
+      "score": 69.2,
+      "line_count": 38,
+      "num_hits": 21,
+      "keyword_hits": 50,
+      "dense_numeric_lines": 0,
+      "long_lines": 20
+    },
+    {
+      "page": 31,
+      "score": 68.2,
+      "line_count": 39,
+      "num_hits": 21,
+      "keyword_hits": 49,
+      "dense_numeric_lines": 0,
+      "long_lines": 19
+    },
+    {
+      "page": 189,
+      "score": 66.0,
+      "line_count": 41,
+      "num_hits": 20,
+      "keyword_hits": 48,
+      "dense_numeric_lines": 0,
+      "long_lines": 18
+    },
+    {
+      "page": 22,
+      "score": 65.8,
+      "line_count": 38,
+      "num_hits": 17,
+      "keyword_hits": 53,
+      "dense_numeric_lines": 0,
+      "long_lines": 15
+    },
+    {
+      "page": 203,
+      "score": 65.4,
+      "line_count": 40,
+      "num_hits": 20,
+      "keyword_hits": 46,
+      "dense_numeric_lines": 0,
+      "long_lines": 23
+    },
+    {
+      "page": 190,
+      "score": 63.4,
+      "line_count": 41,
+      "num_hits": 17,
+      "keyword_hits": 49,
+      "dense_numeric_lines": 0,
+      "long_lines": 19
+    },
+    {
+      "page": 15,
+      "score": 63.2,
+      "line_count": 31,
+      "num_hits": 18,
+      "keyword_hits": 49,
+      "dense_numeric_lines": 0,
+      "long_lines": 12
+    },
+    {
+      "page": 71,
+      "score": 62.8,
+      "line_count": 60,
+      "num_hits": 22,
+      "keyword_hits": 43,
+      "dense_numeric_lines": 0,
+      "long_lines": 10
+    },
+    {
+      "page": 176,
+      "score": 62.6,
+      "line_count": 38,
+      "num_hits": 17,
+      "keyword_hits": 49,
+      "dense_numeric_lines": 0,
+      "long_lines": 15
+    },
+    {
+      "page": 198,
+      "score": 62.6,
+      "line_count": 37,
+      "num_hits": 16,
+      "keyword_hits": 50,
+      "dense_numeric_lines": 0,
+      "long_lines": 17
+    },
+    {
+      "page": 148,
+      "score": 60.8,
+      "line_count": 35,
+      "num_hits": 16,
+      "keyword_hits": 47,
+      "dense_numeric_lines": 0,
+      "long_lines": 20
+    },
+    {
+      "page": 193,
+      "score": 60.8,
+      "line_count": 45,
+      "num_hits": 20,
+      "keyword_hits": 41,
+      "dense_numeric_lines": 0,
+      "long_lines": 20
+    },
+    {
+      "page": 76,
+      "score": 60.6,
+      "line_count": 40,
+      "num_hits": 16,
+      "keyword_hits": 41,
+      "dense_numeric_lines": 1,
+      "long_lines": 18
+    },
+    {
+      "page": 27,
+      "score": 60.0,
+      "line_count": 39,
+      "num_hits": 16,
+      "keyword_hits": 46,
+      "dense_numeric_lines": 0,
+      "long_lines": 20
+    },
+    {
+      "page": 202,
+      "score": 59.4,
+      "line_count": 36,
+      "num_hits": 18,
+      "keyword_hits": 43,
+      "dense_numeric_lines": 0,
+      "long_lines": 17
+    },
+    {
+      "page": 144,
+      "score": 58.4,
+      "line_count": 36,
+      "num_hits": 17,
+      "keyword_hits": 43,
+      "dense_numeric_lines": 0,
+      "long_lines": 18
+    },
+    {
+      "page": 208,
+      "score": 56.6,
+      "line_count": 35,
+      "num_hits": 15,
+      "keyword_hits": 44,
+      "dense_numeric_lines": 0,
+      "long_lines": 17
+    },
+    {
+      "page": 207,
+      "score": 56.4,
+      "line_count": 58,
+      "num_hits": 19,
+      "keyword_hits": 40,
+      "dense_numeric_lines": 0,
+      "long_lines": 8
+    },
+    {
+      "page": 113,
+      "score": 55.6,
+      "line_count": 59,
+      "num_hits": 23,
+      "keyword_hits": 33,
+      "dense_numeric_lines": 0,
+      "long_lines": 8
+    }
+  ],
+  "GREEN-BOOK-COUNTY-EXECUTIVES-VOL-1-2022-2023-1.pdf": [
+    {
+      "page": 99,
+      "score": 106.2,
+      "line_count": 40,
+      "num_hits": 31,
+      "keyword_hits": 82,
+      "dense_numeric_lines": 0,
+      "long_lines": 17
+    },
+    {
+      "page": 302,
+      "score": 89.4,
+      "line_count": 59,
+      "num_hits": 34,
+      "keyword_hits": 58,
+      "dense_numeric_lines": 0,
+      "long_lines": 11
+    },
+    {
+      "page": 197,
+      "score": 88.0,
+      "line_count": 41,
+      "num_hits": 30,
+      "keyword_hits": 53,
+      "dense_numeric_lines": 1,
+      "long_lines": 23
+    },
+    {
+      "page": 476,
+      "score": 86.6,
+      "line_count": 39,
+      "num_hits": 25,
+      "keyword_hits": 54,
+      "dense_numeric_lines": 2,
+      "long_lines": 17
+    },
+    {
+      "page": 303,
+      "score": 79.0,
+      "line_count": 50,
+      "num_hits": 23,
+      "keyword_hits": 59,
+      "dense_numeric_lines": 0,
+      "long_lines": 21
+    },
+    {
+      "page": 194,
+      "score": 78.8,
+      "line_count": 43,
+      "num_hits": 25,
+      "keyword_hits": 54,
+      "dense_numeric_lines": 0,
+      "long_lines": 28
+    },
+    {
+      "page": 392,
+      "score": 78.8,
+      "line_count": 39,
+      "num_hits": 24,
+      "keyword_hits": 51,
+      "dense_numeric_lines": 1,
+      "long_lines": 21
+    },
+    {
+      "page": 192,
+      "score": 76.4,
+      "line_count": 65,
+      "num_hits": 33,
+      "keyword_hits": 43,
+      "dense_numeric_lines": 0,
+      "long_lines": 12
+    },
+    {
+      "page": 269,
+      "score": 76.0,
+      "line_count": 41,
+      "num_hits": 20,
+      "keyword_hits": 55,
+      "dense_numeric_lines": 1,
+      "long_lines": 15
+    },
+    {
+      "page": 366,
+      "score": 75.2,
+      "line_count": 48,
+      "num_hits": 21,
+      "keyword_hits": 58,
+      "dense_numeric_lines": 0,
+      "long_lines": 18
+    },
+    {
+      "page": 158,
+      "score": 75.0,
+      "line_count": 39,
+      "num_hits": 21,
+      "keyword_hits": 51,
+      "dense_numeric_lines": 1,
+      "long_lines": 20
+    },
+    {
+      "page": 225,
+      "score": 74.2,
+      "line_count": 39,
+      "num_hits": 19,
+      "keyword_hits": 58,
+      "dense_numeric_lines": 0,
+      "long_lines": 25
+    },
+    {
+      "page": 329,
+      "score": 74.2,
+      "line_count": 40,
+      "num_hits": 21,
+      "keyword_hits": 49,
+      "dense_numeric_lines": 1,
+      "long_lines": 24
+    },
+    {
+      "page": 102,
+      "score": 73.8,
+      "line_count": 41,
+      "num_hits": 14,
+      "keyword_hits": 66,
+      "dense_numeric_lines": 0,
+      "long_lines": 21
+    },
+    {
+      "page": 393,
+      "score": 73.8,
+      "line_count": 39,
+      "num_hits": 21,
+      "keyword_hits": 49,
+      "dense_numeric_lines": 1,
+      "long_lines": 22
+    },
+    {
+      "page": 133,
+      "score": 73.0,
+      "line_count": 81,
+      "num_hits": 39,
+      "keyword_hits": 25,
+      "dense_numeric_lines": 1,
+      "long_lines": 6
+    },
+    {
+      "page": 278,
+      "score": 72.0,
+      "line_count": 84,
+      "num_hits": 33,
+      "keyword_hits": 38,
+      "dense_numeric_lines": 0,
+      "long_lines": 10
+    },
+    {
+      "page": 70,
+      "score": 71.4,
+      "line_count": 40,
+      "num_hits": 20,
+      "keyword_hits": 54,
+      "dense_numeric_lines": 0,
+      "long_lines": 21
+    },
+    {
+      "page": 318,
+      "score": 71.2,
+      "line_count": 70,
+      "num_hits": 35,
+      "keyword_hits": 35,
+      "dense_numeric_lines": 0,
+      "long_lines": 6
+    },
+    {
+      "page": 16,
+      "score": 70.8,
+      "line_count": 48,
+      "num_hits": 21,
+      "keyword_hits": 52,
+      "dense_numeric_lines": 0,
+      "long_lines": 20
+    }
+  ],
+  "GREEN-BOOK-EXECUTIVES-2024-FINAL-5.3.2025-SIGNED.pdf": [
+    {
+      "page": 53,
+      "score": 111.0,
+      "line_count": 78,
+      "num_hits": 45,
+      "keyword_hits": 27,
+      "dense_numeric_lines": 7,
+      "long_lines": 2
+    },
+    {
+      "page": 16,
+      "score": 106.4,
+      "line_count": 57,
+      "num_hits": 34,
+      "keyword_hits": 68,
+      "dense_numeric_lines": 2,
+      "long_lines": 6
+    },
+    {
+      "page": 28,
+      "score": 81.6,
+      "line_count": 60,
+      "num_hits": 21,
+      "keyword_hits": 61,
+      "dense_numeric_lines": 1,
+      "long_lines": 13
+    },
+    {
+      "page": 39,
+      "score": 77.8,
+      "line_count": 60,
+      "num_hits": 24,
+      "keyword_hits": 54,
+      "dense_numeric_lines": 1,
+      "long_lines": 4
+    },
+    {
+      "page": 516,
+      "score": 75.2,
+      "line_count": 68,
+      "num_hits": 20,
+      "keyword_hits": 60,
+      "dense_numeric_lines": 0,
+      "long_lines": 16
+    },
+    {
+      "page": 287,
+      "score": 74.6,
+      "line_count": 96,
+      "num_hits": 47,
+      "keyword_hits": 22,
+      "dense_numeric_lines": 0,
+      "long_lines": 3
+    },
+    {
+      "page": 152,
+      "score": 72.0,
+      "line_count": 61,
+      "num_hits": 25,
+      "keyword_hits": 50,
+      "dense_numeric_lines": 0,
+      "long_lines": 10
+    },
+    {
+      "page": 153,
+      "score": 71.8,
+      "line_count": 40,
+      "num_hits": 17,
+      "keyword_hits": 61,
+      "dense_numeric_lines": 0,
+      "long_lines": 13
+    },
+    {
+      "page": 335,
+      "score": 70.8,
+      "line_count": 44,
+      "num_hits": 23,
+      "keyword_hits": 50,
+      "dense_numeric_lines": 0,
+      "long_lines": 16
+    },
+    {
+      "page": 371,
+      "score": 69.0,
+      "line_count": 42,
+      "num_hits": 15,
+      "keyword_hits": 60,
+      "dense_numeric_lines": 0,
+      "long_lines": 15
+    },
+    {
+      "page": 461,
+      "score": 68.6,
+      "line_count": 44,
+      "num_hits": 17,
+      "keyword_hits": 58,
+      "dense_numeric_lines": 0,
+      "long_lines": 9
+    },
+    {
+      "page": 42,
+      "score": 68.4,
+      "line_count": 59,
+      "num_hits": 19,
+      "keyword_hits": 53,
+      "dense_numeric_lines": 0,
+      "long_lines": 16
+    },
+    {
+      "page": 54,
+      "score": 68.4,
+      "line_count": 67,
+      "num_hits": 27,
+      "keyword_hits": 43,
+      "dense_numeric_lines": 0,
+      "long_lines": 8
+    },
+    {
+      "page": 298,
+      "score": 67.8,
+      "line_count": 44,
+      "num_hits": 20,
+      "keyword_hits": 54,
+      "dense_numeric_lines": 0,
+      "long_lines": 3
+    },
+    {
+      "page": 65,
+      "score": 67.4,
+      "line_count": 44,
+      "num_hits": 24,
+      "keyword_hits": 46,
+      "dense_numeric_lines": 0,
+      "long_lines": 9
+    },
+    {
+      "page": 265,
+      "score": 67.2,
+      "line_count": 40,
+      "num_hits": 20,
+      "keyword_hits": 50,
+      "dense_numeric_lines": 0,
+      "long_lines": 16
+    },
+    {
+      "page": 400,
+      "score": 67.2,
+      "line_count": 37,
+      "num_hits": 18,
+      "keyword_hits": 47,
+      "dense_numeric_lines": 1,
+      "long_lines": 15
+    },
+    {
+      "page": 514,
+      "score": 67.2,
+      "line_count": 40,
+      "num_hits": 20,
+      "keyword_hits": 51,
+      "dense_numeric_lines": 0,
+      "long_lines": 12
+    },
+    {
+      "page": 444,
+      "score": 67.0,
+      "line_count": 39,
+      "num_hits": 18,
+      "keyword_hits": 54,
+      "dense_numeric_lines": 0,
+      "long_lines": 11
+    },
+    {
+      "page": 235,
+      "score": 66.8,
+      "line_count": 44,
+      "num_hits": 13,
+      "keyword_hits": 62,
+      "dense_numeric_lines": 0,
+      "long_lines": 8
+    }
+  ]
+}

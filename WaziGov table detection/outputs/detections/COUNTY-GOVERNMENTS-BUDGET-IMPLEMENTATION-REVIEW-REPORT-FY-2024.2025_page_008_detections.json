@@ -1,0 +1,15 @@
+{
+  "image": "C:\\Users\\joeki\\Documents\\Notes\\WaziGov project\\WaziGov table detection\\data\\images\\pages\\COUNTY-GOVERNMENTS-BUDGET-IMPLEMENTATION-REVIEW-REPORT-FY-2024.2025_page_008.png",
+  "detections": [
+    {
+      "label": "table",
+      "score": 0.9311,
+      "bbox": {
+        "xmin": 0.3,
+        "ymin": 0.1,
+        "xmax": 5.2,
+        "ymax": 3.7
+      }
+    }
+  ]
+}

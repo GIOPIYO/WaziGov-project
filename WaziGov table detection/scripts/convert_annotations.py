@@ -26,9 +26,22 @@ import json
 import os
 import xml.etree.ElementTree as ET
 from pathlib import Path
+from urllib.parse import unquote
 from xml.dom import minidom
 
 from PIL import Image
+
+
+def _extract_image_filename(image_value: str) -> str:
+    """Extract a clean image filename from Label Studio local-files URL/path."""
+    raw = image_value or ""
+
+    if "?d=" in raw:
+        raw = raw.split("?d=", 1)[1]
+
+    # Decode URL-encoded paths and normalize slashes before basename extraction.
+    raw = unquote(raw).replace("\\", "/")
+    return os.path.basename(raw)
 
 
 def labelstudio_to_pascal_voc(
@@ -36,6 +49,7 @@ def labelstudio_to_pascal_voc(
     images_dir: str,
     output_dir: str,
     stage: str = "detection",
+    include_empty_tasks: bool = False,
 ) -> int:
     """
     Convert Label Studio JSON export to PASCAL VOC XML annotations.
@@ -45,6 +59,7 @@ def labelstudio_to_pascal_voc(
         images_dir: Directory containing the source images.
         output_dir: Directory to save the XML annotation files.
         stage: 'detection' or 'structure' (determines valid label set).
+        include_empty_tasks: If true, write XML files for tasks with no boxes.
 
     Returns:
         Number of annotation files created.
@@ -71,23 +86,30 @@ def labelstudio_to_pascal_voc(
 
     count = 0
     for task in tasks:
-        annotations = task.get("annotations", [])
-
-        # Skip tasks with no annotations (pages with no tables)
-        if not annotations or not annotations[0].get("result", []):
-            print(f"  Skipping task {task.get('id', '?')} - no annotations")
+        img_filename = _extract_image_filename(task.get("data", {}).get("image", ""))
+        if not img_filename:
+            print(f"  Skipping task {task.get('id', '?')} - missing image path")
             continue
 
-        results = annotations[0]["result"]
+        annotations = task.get("annotations", [])
 
-        # Get image dimensions from the first result
-        img_width = results[0].get("original_width", 0)
-        img_height = results[0].get("original_height", 0)
+        # Find image dimensions from any rectangle annotation first.
+        img_width = 0
+        img_height = 0
+        for ann in annotations:
+            for result in ann.get("result", []):
+                if result.get("type") != "rectanglelabels":
+                    continue
+                img_width = result.get("original_width", 0)
+                img_height = result.get("original_height", 0)
+                if img_width and img_height:
+                    break
+            if img_width and img_height:
+                break
 
         # If dimensions not in annotation, try reading from the actual image
         if img_width == 0 or img_height == 0:
             from PIL import Image as PILImage
-            img_filename = task["data"]["image"].split("/")[-1].split("?d=")[-1]
             img_path = os.path.join(images_dir, img_filename)
             if os.path.exists(img_path):
                 with PILImage.open(img_path) as img:
@@ -95,9 +117,6 @@ def labelstudio_to_pascal_voc(
             else:
                 print(f"  Skipping - image not found: {img_path}")
                 continue
-
-        # Get the image filename
-        img_filename = task["data"]["image"].split("/")[-1].split("?d=")[-1]
 
         # Build XML annotation
         annotation = ET.Element("annotation")
@@ -158,7 +177,7 @@ def labelstudio_to_pascal_voc(
 
                     has_objects = True
 
-        if has_objects:
+        if has_objects or include_empty_tasks:
             # Pretty-print XML
             xml_str = minidom.parseString(ET.tostring(annotation)).toprettyxml(indent="  ")
             # Remove the XML declaration added by minidom
@@ -171,6 +190,8 @@ def labelstudio_to_pascal_voc(
 
             count += 1
             print(f"  {xml_filename}: {len(annotation.findall('object'))} objects")
+        else:
+            print(f"  Skipping task {task.get('id', '?')} - no annotations")
 
     return count
 
@@ -251,6 +272,11 @@ def main():
         action="store_true",
         help="Also generate train/val/test split files",
     )
+    parser.add_argument(
+        "--include-empty-tasks",
+        action="store_true",
+        help="Include pages with no boxes as empty XML annotations",
+    )
 
     args = parser.parse_args()
 
@@ -271,7 +297,13 @@ def main():
     print(f"Images: {images_dir}")
     print(f"Output: {output_dir}")
 
-    count = labelstudio_to_pascal_voc(args.input, str(images_dir), str(output_dir), args.stage)
+    count = labelstudio_to_pascal_voc(
+        args.input,
+        str(images_dir),
+        str(output_dir),
+        args.stage,
+        include_empty_tasks=args.include_empty_tasks,
+    )
     print(f"\nConverted {count} annotations to PASCAL VOC format")
 
     if args.split and count > 0:
