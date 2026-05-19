@@ -1,0 +1,22 @@
+{
+  "totals": {
+    "tables": 4,
+    "cells": 29,
+    "empty_text_cells": 29,
+    "ocr_cells": 0,
+    "continuation_tables": 4,
+    "merged_cells": 0,
+    "low_conf_cells": 1
+  },
+  "warnings": [
+    "high_empty_text_ratio"
+  ],
+  "errors": [],
+  "checks": {
+    "has_root_fields": true,
+    "has_cells": true,
+    "text_coverage_ok": false,
+    "confidence_coverage_ok": true
+  },
+  "ready_for_nlp": true
+}

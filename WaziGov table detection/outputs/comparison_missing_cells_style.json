@@ -1,0 +1,38 @@
+{
+  "config": {
+    "gt": "C:\\Users\\joeki\\Documents\\Notes\\WaziGov project\\WaziGov table detection\\outputs\\grits_demo_inputs\\case_missing_cells_gt.json",
+    "pred": "C:\\Users\\joeki\\Documents\\Notes\\WaziGov project\\WaziGov table detection\\outputs\\grits_demo_inputs\\case_missing_cells_pred.json",
+    "match_by": "table_id",
+    "table_iou_threshold": 0.3,
+    "mode": "grits_style"
+  },
+  "summary": {
+    "gt_tables": 1,
+    "pred_tables": 1,
+    "matched_tables": 1,
+    "unmatched_gt_tables": 0,
+    "unmatched_pred_tables": 0,
+    "grits_top": 0.9697,
+    "grits_con": 0.8571,
+    "grits_loc": 0.75,
+    "grits": 0.8589
+  },
+  "unmatched": {
+    "gt_table_ids": [],
+    "pred_table_ids": []
+  },
+  "per_table": [
+    {
+      "gt_table_id": "page_001_table_00",
+      "pred_table_id": "page_001_table_00",
+      "page_number": 1,
+      "match_method": "table_id",
+      "match_score": 1.0,
+      "weight": 12,
+      "grits_top": 0.9697,
+      "grits_con": 0.8571,
+      "grits_loc": 0.75,
+      "grits": 0.8589
+    }
+  ]
+}
