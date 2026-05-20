@@ -12,3 +12,5 @@ psycopg2-binary==2.9.9
 setup_env.sh
 
 data/postgres_data/
+wazigov-bert-v1.zip
+wazigov-bert-v1/
