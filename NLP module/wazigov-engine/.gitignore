@@ -9,3 +9,6 @@ pandas==2.2.0
 pytesseract==0.3.10
 psycopg2-binary==2.9.9
 .venv/
+setup_env.sh
+
+data/postgres_data/
