@@ -150,18 +150,44 @@ def verify_single():
             except json.JSONDecodeError:
                 pass
         bounds = bounds or DEFAULT_BOUNDS
-        
+
         ref_image = data.get("reference_image_path") or REFERENCE_IMAGE
         privacy_mode = data.get("privacy_mode", "").lower() in {"true", "1", "yes"}
         max_age = int(data.get("max_image_age_days", 30))
-        
+
+        # Client-supplied GPS fallback: accept JSON list/string or separate lat/lon fields
+        client_gps = None
+        if "client_gps" in data:
+            try:
+                client_gps = json.loads(data["client_gps"])
+                if isinstance(client_gps, dict):
+                    client_gps = (client_gps.get("lat"), client_gps.get("lon"))
+            except Exception:
+                # try to parse simple comma-separated
+                try:
+                    parts = data["client_gps"].split(",")
+                    client_gps = (float(parts[0]), float(parts[1]))
+                except Exception:
+                    client_gps = None
+        else:
+            # fallback to client_lat/client_lon fields
+            try:
+                if data.get("client_lat") and data.get("client_lon"):
+                    client_gps = (float(data.get("client_lat")), float(data.get("client_lon")))
+            except Exception:
+                client_gps = None
+
+        # Optional upload timestamp provided by client (ISO format). If not provided server uses now.
+        upload_ts = data.get("upload_timestamp") or datetime.utcnow().isoformat()
+
         # Verify
         report = verify_image(
             filepath,
             reference_bounds=bounds,
             reference_image=ref_image,
-            upload_timestamp=datetime.utcnow().isoformat(),
+            upload_timestamp=upload_ts,
             max_image_age_days=max_age,
+            client_gps=client_gps,
         )
         
         return jsonify({

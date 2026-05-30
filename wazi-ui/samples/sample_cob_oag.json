@@ -1,0 +1,27 @@
+{
+  "project_id": "county-road-123",
+  "title": "County Road Upgrade - Block A",
+  "location": { "lat": -1.245, "lon": 36.751, "label": "Block A" },
+  "last_updated": "2026-05-28T09:00:00Z",
+  "overall_status": "Partial",
+  "summary": "COB reports a 40% completion of earthworks; OAG flagged incomplete procurement documentation.",
+  "cob_findings": [
+    {
+      "report_id": "cob-2025-r1",
+      "fiscal_year": "2024/2025",
+      "title": "Progress report - earthworks",
+      "summary": "Contractor reports 40% completion of earthworks in Block A.",
+      "amount": 1250000.0,
+      "link": "https://cob.example/reports/cob-2025-r1.pdf"
+    }
+  ],
+  "oag_findings": [
+    {
+      "report_id": "oag-2025-r7",
+      "title": "Audit finding - procurement",
+      "summary": "Procurement documentation incomplete; recommend audit and possible sanctions.",
+      "recommendation": "Provide full procurement file within 30 days.",
+      "link": "https://oag.example/reports/oag-2025-r7.pdf"
+    }
+  ]
+}

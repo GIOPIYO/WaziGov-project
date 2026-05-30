@@ -280,6 +280,7 @@ def verify_image(
     reference_image: Optional[Path] = None,
     upload_timestamp: Optional[str] = None,
     max_image_age_days: int = 30,
+    client_gps: Optional[tuple[float, float]] = None,
 ) -> VerificationReport:
     """Verify a single image against all criteria.
     
@@ -298,6 +299,17 @@ def verify_image(
     exif_data = extract_exif(image_path)
     gps = parse_gps_from_exif(exif_data)
     creation_ts = extract_creation_timestamp(exif_data)
+
+    # If EXIF GPS missing, accept client-supplied GPS as fallback
+    used_client_gps = False
+    if not gps and client_gps is not None:
+        try:
+            lat, lon = float(client_gps[0]), float(client_gps[1])
+            gps = GPSCoords(latitude=lat, longitude=lon)
+            used_client_gps = True
+        except Exception:
+            # ignore invalid client_gps format
+            pass
     
     # 2. Geolocation score
     geolocation_score = 0.0
@@ -332,6 +344,8 @@ def verify_image(
     # Build reasoning
     if metadata_stripped:
         reasoning.append("⚠ All EXIF metadata removed (possible old/laundered photo)")
+    if used_client_gps:
+        reasoning.append("ℹ GPS coordinates provided by client (no EXIF GPS available)")
     if timestamp_suspicious:
         reasoning.append(f"⚠ {ts_reason}")
     if not gps:
