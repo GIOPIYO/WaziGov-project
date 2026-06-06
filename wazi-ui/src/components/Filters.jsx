@@ -1,5 +1,5 @@
 import React from 'react';
-import { Search, Filter, RotateCcw } from 'lucide-react';
+import { Search, RotateCcw } from 'lucide-react';
 
 export default function Filters({
   searchQuery,
@@ -12,17 +12,18 @@ export default function Filters({
   setSelectedOpinion,
   selectedStatus,
   setSelectedStatus,
-  onReset
+  countyOptions = ['Nairobi', 'Mombasa', 'Kisumu', 'Turkana', 'Kiambu'],
+  sectorOptions = ['Infrastructure', 'Health', 'Water & Sanitation', 'Education', 'Agriculture'],
+  opinionOptions = ['Clean', 'Qualified', 'Adverse', 'Disclaimer'],
+  statusOptions = ['Complete', 'In Progress', 'Suspended', 'Planning'],
+  onReset,
 }) {
-  const sectors = ["Infrastructure", "Health", "Water & Sanitation", "Education", "Agriculture"];
-  const counties = ["Nairobi", "Mombasa", "Kisumu", "Turkana", "Kiambu"];
-  const opinions = [
-    { label: "Clean / Unqualified", value: "Clean" },
-    { label: "Qualified", value: "Qualified" },
-    { label: "Adverse / Alarm", value: "Adverse" },
-    { label: "Disclaimer", value: "Disclaimer" }
-  ];
-  const statuses = ["Complete", "In Progress", "Suspended", "Planning"];
+  const opinionLabels = {
+    Clean: 'Clean / Unqualified',
+    Qualified: 'Qualified',
+    Adverse: 'Adverse / Alarm',
+    Disclaimer: 'Disclaimer',
+  };
 
   return (
     <div className="glass-panel" style={styles.container}>
@@ -45,7 +46,6 @@ export default function Filters({
       </div>
 
       <div style={styles.filterGrid}>
-        {/* County Filter */}
         <div style={styles.filterGroup}>
           <label style={styles.label}>County Region</label>
           <select
@@ -54,14 +54,15 @@ export default function Filters({
             value={selectedCounty}
             onChange={(e) => setSelectedCounty(e.target.value)}
           >
-            <option value="">All 47 Counties</option>
-            {counties.map((c) => (
-              <option key={c} value={c}>{c} County</option>
+            <option value="">All Counties</option>
+            {countyOptions.map((county) => (
+              <option key={county} value={county}>
+                {county}
+              </option>
             ))}
           </select>
         </div>
 
-        {/* Sector Filter */}
         <div style={styles.filterGroup}>
           <label style={styles.label}>Development Sector</label>
           <select
@@ -71,13 +72,14 @@ export default function Filters({
             onChange={(e) => setSelectedSector(e.target.value)}
           >
             <option value="">All Sectors</option>
-            {sectors.map((s) => (
-              <option key={s} value={s}>{s}</option>
+            {sectorOptions.map((sector) => (
+              <option key={sector} value={sector}>
+                {sector}
+              </option>
             ))}
           </select>
         </div>
 
-        {/* Audit Opinion Filter */}
         <div style={styles.filterGroup}>
           <label style={styles.label}>OAG Audit Opinion</label>
           <select
@@ -87,13 +89,14 @@ export default function Filters({
             onChange={(e) => setSelectedOpinion(e.target.value)}
           >
             <option value="">All Audit Ratings</option>
-            {opinions.map((o) => (
-              <option key={o.value} value={o.value}>{o.label}</option>
+            {opinionOptions.map((value) => (
+              <option key={value} value={value}>
+                {opinionLabels[value] || value}
+              </option>
             ))}
           </select>
         </div>
 
-        {/* Status Filter */}
         <div style={styles.filterGroup}>
           <label style={styles.label}>Project Status</label>
           <select
@@ -103,8 +106,10 @@ export default function Filters({
             onChange={(e) => setSelectedStatus(e.target.value)}
           >
             <option value="">All Statuses</option>
-            {statuses.map((s) => (
-              <option key={s} value={s}>{s}</option>
+            {statusOptions.map((status) => (
+              <option key={status} value={status}>
+                {status}
+              </option>
             ))}
           </select>
         </div>
@@ -181,5 +186,5 @@ const styles = {
     backgroundSize: '16px',
     appearance: 'none',
     paddingRight: '36px',
-  }
+  },
 };

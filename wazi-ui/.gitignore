@@ -24,3 +24,5 @@ dist-ssr
 *.sw?
 
 outputs
+.env
+link-db.ps1

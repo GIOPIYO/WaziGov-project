@@ -1,14 +1,19 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { ShieldCheck, Database, FileSpreadsheet } from 'lucide-react';
-import { mockProjects } from './data/mockProjects';
+import { loadCobOagBundle } from './data/cobOagBundle';
+import { loadProjectSummaries } from './data/projectSummariesLoader';
+import { buildDashboardProjects, buildDashboardFilterOptions } from './data/dashboardProjects';
 import Sidebar from './components/Sidebar';
 import Dashboard from './pages/Dashboard';
+import Analytics from './pages/Analytics';
 import Projects from './pages/Projects';
 import Reports from './pages/Reports';
 import Settings from './pages/Settings';
 
 export default function App() {
-  const [projects, setProjects] = useState(mockProjects);
+  const [projects, setProjects] = useState([]);
+  const [projectSummaries, setProjectSummaries] = useState({});
+  const [cobOagBundle, setCobOagBundle] = useState({ status: 'loading', data: null, error: null });
   
   // Filtering States
   const [searchQuery, setSearchQuery] = useState('');
@@ -20,6 +25,39 @@ export default function App() {
   // Selected project for modal deep-dive
   const [selectedProject, setSelectedProject] = useState(null);
   const [activeSection, setActiveSection] = useState('dashboard');
+
+  useEffect(() => {
+    let isActive = true;
+
+    loadProjectSummaries()
+      .then((summaries) => {
+        if (isActive) {
+          setProjectSummaries(summaries);
+          setProjects(buildDashboardProjects(summaries));
+        }
+      })
+      .catch(() => {
+        if (isActive) {
+          setProjectSummaries({});
+        }
+      });
+
+    loadCobOagBundle()
+      .then((bundle) => {
+        if (isActive) {
+          setCobOagBundle({ status: 'ready', data: bundle, error: null });
+        }
+      })
+      .catch((error) => {
+        if (isActive) {
+          setCobOagBundle({ status: 'error', data: null, error });
+        }
+      });
+
+    return () => {
+      isActive = false;
+    };
+  }, []);
 
   // Reset all filters
   const handleResetFilters = () => {
@@ -68,6 +106,8 @@ export default function App() {
     return matchesSearch && matchesCounty && matchesSector && matchesOpinion && matchesStatus;
   });
 
+  const filterOptions = buildDashboardFilterOptions(projects);
+
   const renderSection = () => {
     switch (activeSection) {
       case 'dashboard':
@@ -78,21 +118,27 @@ export default function App() {
           setSearchQuery={setSearchQuery}
           selectedCounty={selectedCounty}
           setSelectedCounty={setSelectedCounty}
+          countyOptions={filterOptions.counties}
           selectedSector={selectedSector}
           setSelectedSector={setSelectedSector}
+          sectorOptions={filterOptions.sectors}
           selectedOpinion={selectedOpinion}
           setSelectedOpinion={setSelectedOpinion}
+          opinionOptions={filterOptions.opinions}
           selectedStatus={selectedStatus}
           setSelectedStatus={setSelectedStatus}
+          statusOptions={filterOptions.statuses}
           handleResetFilters={handleResetFilters}
           selectedProject={selectedProject}
           setSelectedProject={setSelectedProject}
           handleAddCitizenReport={handleAddCitizenReport}
         />;
       case 'projects':
-        return <Projects />;
+        return <Projects projectData={projectSummaries} />;
+      case 'analytics':
+        return <Analytics />;
       case 'reports':
-        return <Reports />;
+        return <Reports bundleState={cobOagBundle} />;
       case 'settings':
         return <Settings />;
       default:
@@ -103,12 +149,16 @@ export default function App() {
           setSearchQuery={setSearchQuery}
           selectedCounty={selectedCounty}
           setSelectedCounty={setSelectedCounty}
+          countyOptions={filterOptions.counties}
           selectedSector={selectedSector}
           setSelectedSector={setSelectedSector}
+          sectorOptions={filterOptions.sectors}
           selectedOpinion={selectedOpinion}
           setSelectedOpinion={setSelectedOpinion}
+          opinionOptions={filterOptions.opinions}
           selectedStatus={selectedStatus}
           setSelectedStatus={setSelectedStatus}
+          statusOptions={filterOptions.statuses}
           handleResetFilters={handleResetFilters}
           selectedProject={selectedProject}
           setSelectedProject={setSelectedProject}

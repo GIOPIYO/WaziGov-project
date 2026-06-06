@@ -342,7 +342,7 @@ export default function ProjectDetailsModal({ project, onClose, onAddCitizenRepo
                   {project.citizenReports.length > 0 ? (
                     <div style={styles.commentsList}>
                       {project.citizenReports.map((c) => (
-                        <div key={c.id} style={styles.commentCard} className="material-card" style={{ ...styles.commentCard, marginTop: 0 }}>
+                        <div key={c.id} className="material-card" style={{ ...styles.commentCard, marginTop: 0 }}>
                           <div style={styles.commentHeader}>
                             <div style={styles.commentUser}>
                               <div style={styles.userAvatar}>
@@ -391,8 +391,8 @@ export default function ProjectDetailsModal({ project, onClose, onAddCitizenRepo
                   )}
                 </div>
 
-                <div style={styles.citizenFormPanel} className="material-card" style={{ ...styles.citizenFormPanel, marginTop: 0 }}>
-                  <span style={styles.sectionLabel} style={{ color: 'var(--accent-blue)', fontWeight: '700' }}>Submit Ground Observation</span>
+                <div className="material-card" style={{ ...styles.citizenFormPanel, marginTop: 0 }}>
+                  <span style={{ ...styles.sectionLabel, color: 'var(--accent-blue)', fontWeight: '700' }}>Submit Ground Observation</span>
                   
                   {formSuccess ? (
                     <div style={styles.formSuccessBlock}>

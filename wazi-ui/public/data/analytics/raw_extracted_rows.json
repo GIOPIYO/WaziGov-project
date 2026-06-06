@@ -1,0 +1,418 @@
+{
+  "rows": [
+    {
+      "source_file": "outputs\\cob_oag_2023_2024_full.json",
+      "report_id": "bundle",
+      "table_id": "budget_summary",
+      "county": "Nairobi County",
+      "executive_budget_kshs": 42286936833,
+      "assembly_budget_kshs": 2680000000,
+      "total_budget_kshs": 44966936833
+    },
+    {
+      "source_file": "outputs\\cob_oag_2023_2024_full.json",
+      "report_id": "bundle",
+      "table_id": "budget_summary",
+      "county": "Nakuru County",
+      "executive_budget_kshs": 23310531513,
+      "assembly_budget_kshs": 1233482750,
+      "total_budget_kshs": 24544014263
+    },
+    {
+      "source_file": "outputs\\cob_oag_2023_2024_full.json",
+      "report_id": "bundle",
+      "table_id": "budget_summary",
+      "county": "Kiambu County",
+      "executive_budget_kshs": 21458869952,
+      "assembly_budget_kshs": 1755986518,
+      "total_budget_kshs": 23214856470
+    },
+    {
+      "source_file": "outputs\\cob_oag_2023_2024_full.json",
+      "report_id": "bundle",
+      "table_id": "budget_summary",
+      "county": "Kilifi County",
+      "executive_budget_kshs": 18812448474,
+      "assembly_budget_kshs": 1191334267,
+      "total_budget_kshs": 20003782741
+    },
+    {
+      "source_file": "outputs\\cob_oag_2023_2024_full.json",
+      "report_id": "bundle",
+      "table_id": "budget_summary",
+      "county": "Turkana County",
+      "executive_budget_kshs": 15983137168,
+      "assembly_budget_kshs": 1241876959,
+      "total_budget_kshs": 17225014127
+    },
+    {
+      "source_file": "outputs\\cob_oag_2023_2024_full.json",
+      "report_id": "bundle",
+      "table_id": "budget_summary",
+      "county": "Mombasa County",
+      "executive_budget_kshs": 15990000000,
+      "assembly_budget_kshs": 1045944906,
+      "total_budget_kshs": 17035944906
+    },
+    {
+      "source_file": "outputs\\cob_oag_2023_2024_full.json",
+      "report_id": "bundle",
+      "table_id": "budget_summary",
+      "county": "Machakos County",
+      "executive_budget_kshs": 15808454221,
+      "assembly_budget_kshs": 1087995826,
+      "total_budget_kshs": 16896450047
+    },
+    {
+      "source_file": "outputs\\cob_oag_2023_2024_full.json",
+      "report_id": "bundle",
+      "table_id": "budget_summary",
+      "county": "Kakamega County",
+      "executive_budget_kshs": 15385606901,
+      "assembly_budget_kshs": 1400821103,
+      "total_budget_kshs": 16786428004
+    },
+    {
+      "source_file": "outputs\\cob_oag_2023_2024_full.json",
+      "report_id": "bundle",
+      "table_id": "budget_summary",
+      "county": "Kitui County",
+      "executive_budget_kshs": 14257138712,
+      "assembly_budget_kshs": 1409872841,
+      "total_budget_kshs": 15667011553
+    },
+    {
+      "source_file": "outputs\\cob_oag_2023_2024_full.json",
+      "report_id": "bundle",
+      "table_id": "budget_summary",
+      "county": "Narok County",
+      "executive_budget_kshs": 14024206088,
+      "assembly_budget_kshs": 961000000,
+      "total_budget_kshs": 14985206088
+    },
+    {
+      "source_file": "outputs\\cob_oag_2023_2024_full.json",
+      "report_id": "bundle",
+      "table_id": "budget_summary",
+      "county": "Uasin Gishu County",
+      "executive_budget_kshs": 13286616749,
+      "assembly_budget_kshs": 1073056637,
+      "total_budget_kshs": 14359673386
+    },
+    {
+      "source_file": "outputs\\cob_oag_2023_2024_full.json",
+      "report_id": "bundle",
+      "table_id": "budget_summary",
+      "county": "Kwale County",
+      "executive_budget_kshs": 13168456197,
+      "assembly_budget_kshs": 1090712566,
+      "total_budget_kshs": 14259168763
+    },
+    {
+      "source_file": "outputs\\cob_oag_2023_2024_full.json",
+      "report_id": "bundle",
+      "table_id": "budget_summary",
+      "county": "Bungoma County",
+      "executive_budget_kshs": 12948647400,
+      "assembly_budget_kshs": 1283975880,
+      "total_budget_kshs": 14232623280
+    },
+    {
+      "source_file": "outputs\\cob_oag_2023_2024_full.json",
+      "report_id": "bundle",
+      "table_id": "budget_summary",
+      "county": "Kisumu County",
+      "executive_budget_kshs": 12557553292,
+      "assembly_budget_kshs": 1140311910,
+      "total_budget_kshs": 13697865202
+    },
+    {
+      "source_file": "outputs\\cob_oag_2023_2024_full.json",
+      "report_id": "bundle",
+      "table_id": "budget_summary",
+      "county": "Kisii County",
+      "executive_budget_kshs": 11872739910,
+      "assembly_budget_kshs": 1378381974,
+      "total_budget_kshs": 13251121884
+    },
+    {
+      "source_file": "outputs\\cob_oag_2023_2024_full.json",
+      "report_id": "bundle",
+      "table_id": "budget_summary",
+      "county": "Mandera County",
+      "executive_budget_kshs": 11987831007,
+      "assembly_budget_kshs": 1013000000,
+      "total_budget_kshs": 13000831007
+    },
+    {
+      "source_file": "outputs\\cob_oag_2023_2024_full.json",
+      "report_id": "bundle",
+      "table_id": "budget_summary",
+      "county": "Migori County",
+      "executive_budget_kshs": 11473037521,
+      "assembly_budget_kshs": 1103508709,
+      "total_budget_kshs": 12576546230
+    },
+    {
+      "source_file": "outputs\\cob_oag_2023_2024_full.json",
+      "report_id": "bundle",
+      "table_id": "budget_summary",
+      "county": "Wajir County",
+      "executive_budget_kshs": 11143480018,
+      "assembly_budget_kshs": 997050023,
+      "total_budget_kshs": 12140530041
+    },
+    {
+      "source_file": "outputs\\cob_oag_2023_2024_full.json",
+      "report_id": "bundle",
+      "table_id": "budget_summary",
+      "county": "Meru County",
+      "executive_budget_kshs": 10813575576,
+      "assembly_budget_kshs": 1022378295,
+      "total_budget_kshs": 11835953871
+    },
+    {
+      "source_file": "outputs\\cob_oag_2023_2024_full.json",
+      "report_id": "bundle",
+      "table_id": "budget_summary",
+      "county": "Kajiado County",
+      "executive_budget_kshs": 10514620550,
+      "assembly_budget_kshs": 1077243556,
+      "total_budget_kshs": 11591864106
+    },
+    {
+      "source_file": "outputs\\cob_oag_2023_2024_full.json",
+      "report_id": "bundle",
+      "table_id": "budget_summary",
+      "county": "Trans Nzoia County",
+      "executive_budget_kshs": 10185156069,
+      "assembly_budget_kshs": 1085421133,
+      "total_budget_kshs": 11270577202
+    },
+    {
+      "source_file": "outputs\\cob_oag_2023_2024_full.json",
+      "report_id": "bundle",
+      "table_id": "budget_summary",
+      "county": "Makueni County",
+      "executive_budget_kshs": 10233333653,
+      "assembly_budget_kshs": 949001447,
+      "total_budget_kshs": 11182335100
+    },
+    {
+      "source_file": "outputs\\cob_oag_2023_2024_full.json",
+      "report_id": "bundle",
+      "table_id": "budget_summary",
+      "county": "Homa Bay County",
+      "executive_budget_kshs": 9962208395,
+      "assembly_budget_kshs": 1205017905,
+      "total_budget_kshs": 11167226300
+    },
+    {
+      "source_file": "outputs\\cob_oag_2023_2024_full.json",
+      "report_id": "bundle",
+      "table_id": "budget_summary",
+      "county": "Garissa County",
+      "executive_budget_kshs": 9568689395,
+      "assembly_budget_kshs": 963731729,
+      "total_budget_kshs": 10532421124
+    },
+    {
+      "source_file": "outputs\\cob_oag_2023_2024_full.json",
+      "report_id": "bundle",
+      "table_id": "budget_summary",
+      "county": "Murang'a County",
+      "executive_budget_kshs": 9516657013,
+      "assembly_budget_kshs": 829709033,
+      "total_budget_kshs": 10346366046
+    },
+    {
+      "source_file": "outputs\\cob_oag_2023_2024_full.json",
+      "report_id": "bundle",
+      "table_id": "budget_summary",
+      "county": "Busia County",
+      "executive_budget_kshs": 9221975801,
+      "assembly_budget_kshs": 981057352,
+      "total_budget_kshs": 10203033153
+    },
+    {
+      "source_file": "outputs\\cob_oag_2023_2024_full.json",
+      "report_id": "bundle",
+      "table_id": "budget_summary",
+      "county": "Nandi County",
+      "executive_budget_kshs": 8988667004,
+      "assembly_budget_kshs": 861999461,
+      "total_budget_kshs": 9850666465
+    },
+    {
+      "source_file": "outputs\\cob_oag_2023_2024_full.json",
+      "report_id": "bundle",
+      "table_id": "budget_summary",
+      "county": "Siaya County",
+      "executive_budget_kshs": 8622296306,
+      "assembly_budget_kshs": 1138827082,
+      "total_budget_kshs": 9761123388
+    },
+    {
+      "source_file": "outputs\\cob_oag_2023_2024_full.json",
+      "report_id": "bundle",
+      "table_id": "budget_summary",
+      "county": "Bomet County",
+      "executive_budget_kshs": 8521100308,
+      "assembly_budget_kshs": 1069903256,
+      "total_budget_kshs": 9591003564
+    },
+    {
+      "source_file": "outputs\\cob_oag_2023_2024_full.json",
+      "report_id": "bundle",
+      "table_id": "budget_summary",
+      "county": "Marsabit County",
+      "executive_budget_kshs": 8107949379,
+      "assembly_budget_kshs": 1316701070,
+      "total_budget_kshs": 9424650449
+    },
+    {
+      "source_file": "outputs\\cob_oag_2023_2024_full.json",
+      "report_id": "bundle",
+      "table_id": "budget_summary",
+      "county": "Baringo County",
+      "executive_budget_kshs": 7985216848,
+      "assembly_budget_kshs": 907788878,
+      "total_budget_kshs": 8893005726
+    },
+    {
+      "source_file": "outputs\\cob_oag_2023_2024_full.json",
+      "report_id": "bundle",
+      "table_id": "budget_summary",
+      "county": "Tana River County",
+      "executive_budget_kshs": 7826060113,
+      "assembly_budget_kshs": 1043437753,
+      "total_budget_kshs": 8869497866
+    },
+    {
+      "source_file": "outputs\\cob_oag_2023_2024_full.json",
+      "report_id": "bundle",
+      "table_id": "budget_summary",
+      "county": "Nyandarua County",
+      "executive_budget_kshs": 7757865839,
+      "assembly_budget_kshs": 990285706,
+      "total_budget_kshs": 8748151545
+    },
+    {
+      "source_file": "outputs\\cob_oag_2023_2024_full.json",
+      "report_id": "bundle",
+      "table_id": "budget_summary",
+      "county": "Kericho County",
+      "executive_budget_kshs": 7604644288,
+      "assembly_budget_kshs": 880123744,
+      "total_budget_kshs": 8484768032
+    },
+    {
+      "source_file": "outputs\\cob_oag_2023_2024_full.json",
+      "report_id": "bundle",
+      "table_id": "budget_summary",
+      "county": "Nyamira County",
+      "executive_budget_kshs": 7282175903,
+      "assembly_budget_kshs": 914979149,
+      "total_budget_kshs": 8197155052
+    },
+    {
+      "source_file": "outputs\\cob_oag_2023_2024_full.json",
+      "report_id": "bundle",
+      "table_id": "budget_summary",
+      "county": "Embu County",
+      "executive_budget_kshs": 7298577468,
+      "assembly_budget_kshs": 634021950,
+      "total_budget_kshs": 7932599418
+    },
+    {
+      "source_file": "outputs\\cob_oag_2023_2024_full.json",
+      "report_id": "bundle",
+      "table_id": "budget_summary",
+      "county": "Laikipia County",
+      "executive_budget_kshs": 7080656223,
+      "assembly_budget_kshs": 645809049,
+      "total_budget_kshs": 7726465272
+    },
+    {
+      "source_file": "outputs\\cob_oag_2023_2024_full.json",
+      "report_id": "bundle",
+      "table_id": "budget_summary",
+      "county": "West Pokot County",
+      "executive_budget_kshs": 6878909805,
+      "assembly_budget_kshs": 836564478,
+      "total_budget_kshs": 7715474283
+    },
+    {
+      "source_file": "outputs\\cob_oag_2023_2024_full.json",
+      "report_id": "bundle",
+      "table_id": "budget_summary",
+      "county": "Samburu County",
+      "executive_budget_kshs": 6977942770,
+      "assembly_budget_kshs": 687999097,
+      "total_budget_kshs": 7665941867
+    },
+    {
+      "source_file": "outputs\\cob_oag_2023_2024_full.json",
+      "report_id": "bundle",
+      "table_id": "budget_summary",
+      "county": "Kirinyaga County",
+      "executive_budget_kshs": 6481998272,
+      "assembly_budget_kshs": 758549134,
+      "total_budget_kshs": 7240547406
+    },
+    {
+      "source_file": "outputs\\cob_oag_2023_2024_full.json",
+      "report_id": "bundle",
+      "table_id": "budget_summary",
+      "county": "Vihiga County",
+      "executive_budget_kshs": 5965773487,
+      "assembly_budget_kshs": 735818899,
+      "total_budget_kshs": 6701592386
+    },
+    {
+      "source_file": "outputs\\cob_oag_2023_2024_full.json",
+      "report_id": "bundle",
+      "table_id": "budget_summary",
+      "county": "Elgeyo/Marakwet County",
+      "executive_budget_kshs": 5820971067,
+      "assembly_budget_kshs": 706848845,
+      "total_budget_kshs": 6527819912
+    },
+    {
+      "source_file": "outputs\\cob_oag_2023_2024_full.json",
+      "report_id": "bundle",
+      "table_id": "budget_summary",
+      "county": "Tharaka-Nithi County",
+      "executive_budget_kshs": 5954279762,
+      "assembly_budget_kshs": 564516596,
+      "total_budget_kshs": 6518796358
+    },
+    {
+      "source_file": "outputs\\cob_oag_2023_2024_full.json",
+      "report_id": "bundle",
+      "table_id": "budget_summary",
+      "county": "Isiolo County",
+      "executive_budget_kshs": 5139557699,
+      "assembly_budget_kshs": 579252680,
+      "total_budget_kshs": 5718810379
+    },
+    {
+      "source_file": "outputs\\cob_oag_2023_2024_full.json",
+      "report_id": "bundle",
+      "table_id": "budget_summary",
+      "county": "Taita/Taveta County",
+      "executive_budget_kshs": 4391514765,
+      "assembly_budget_kshs": 840893598,
+      "total_budget_kshs": 5232408363
+    },
+    {
+      "source_file": "outputs\\cob_oag_2023_2024_full.json",
+      "report_id": "bundle",
+      "table_id": "budget_summary",
+      "county": "Lamu County",
+      "executive_budget_kshs": 3952337952,
+      "assembly_budget_kshs": 589500000,
+      "total_budget_kshs": 4541837952
+    }
+  ]
+}

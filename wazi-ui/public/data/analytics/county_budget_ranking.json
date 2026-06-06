@@ -1,0 +1,235 @@
+{
+  "generated_at": "C:/Users/joeki/Documents/Notes/WaziGov project/wazi-ui",
+  "ranking": [
+    {
+      "rank": 1,
+      "county": "Nairobi",
+      "total_ksh": 44966936833
+    },
+    {
+      "rank": 2,
+      "county": "Nakuru",
+      "total_ksh": 24544014263
+    },
+    {
+      "rank": 3,
+      "county": "Kiambu",
+      "total_ksh": 23214856470
+    },
+    {
+      "rank": 4,
+      "county": "Kilifi",
+      "total_ksh": 20003782741
+    },
+    {
+      "rank": 5,
+      "county": "Turkana",
+      "total_ksh": 17225014127
+    },
+    {
+      "rank": 6,
+      "county": "Mombasa",
+      "total_ksh": 17035944906
+    },
+    {
+      "rank": 7,
+      "county": "Machakos",
+      "total_ksh": 16896450047
+    },
+    {
+      "rank": 8,
+      "county": "Kakamega",
+      "total_ksh": 16786428004
+    },
+    {
+      "rank": 9,
+      "county": "Kitui",
+      "total_ksh": 15667011553
+    },
+    {
+      "rank": 10,
+      "county": "Narok",
+      "total_ksh": 14985206088
+    },
+    {
+      "rank": 11,
+      "county": "Uasin Gishu",
+      "total_ksh": 14359673386
+    },
+    {
+      "rank": 12,
+      "county": "Kwale",
+      "total_ksh": 14259168763
+    },
+    {
+      "rank": 13,
+      "county": "Bungoma",
+      "total_ksh": 14232623280
+    },
+    {
+      "rank": 14,
+      "county": "Kisumu",
+      "total_ksh": 13697865202
+    },
+    {
+      "rank": 15,
+      "county": "Kisii",
+      "total_ksh": 13251121884
+    },
+    {
+      "rank": 16,
+      "county": "Mandera",
+      "total_ksh": 13000831007
+    },
+    {
+      "rank": 17,
+      "county": "Migori",
+      "total_ksh": 12576546230
+    },
+    {
+      "rank": 18,
+      "county": "Wajir",
+      "total_ksh": 12140530041
+    },
+    {
+      "rank": 19,
+      "county": "Meru",
+      "total_ksh": 11835953871
+    },
+    {
+      "rank": 20,
+      "county": "Kajiado",
+      "total_ksh": 11591864106
+    },
+    {
+      "rank": 21,
+      "county": "Trans Nzoia",
+      "total_ksh": 11270577202
+    },
+    {
+      "rank": 22,
+      "county": "Makueni",
+      "total_ksh": 11182335100
+    },
+    {
+      "rank": 23,
+      "county": "Homa Bay",
+      "total_ksh": 11167226300
+    },
+    {
+      "rank": 24,
+      "county": "Garissa",
+      "total_ksh": 10532421124
+    },
+    {
+      "rank": 25,
+      "county": "Murang'a",
+      "total_ksh": 10346366046
+    },
+    {
+      "rank": 26,
+      "county": "Busia",
+      "total_ksh": 10203033153
+    },
+    {
+      "rank": 27,
+      "county": "Nandi",
+      "total_ksh": 9850666465
+    },
+    {
+      "rank": 28,
+      "county": "Siaya",
+      "total_ksh": 9761123388
+    },
+    {
+      "rank": 29,
+      "county": "Bomet",
+      "total_ksh": 9591003564
+    },
+    {
+      "rank": 30,
+      "county": "Marsabit",
+      "total_ksh": 9424650449
+    },
+    {
+      "rank": 31,
+      "county": "Baringo",
+      "total_ksh": 8893005726
+    },
+    {
+      "rank": 32,
+      "county": "Tana River",
+      "total_ksh": 8869497866
+    },
+    {
+      "rank": 33,
+      "county": "Nyandarua",
+      "total_ksh": 8748151545
+    },
+    {
+      "rank": 34,
+      "county": "Kericho",
+      "total_ksh": 8484768032
+    },
+    {
+      "rank": 35,
+      "county": "Nyamira",
+      "total_ksh": 8197155052
+    },
+    {
+      "rank": 36,
+      "county": "Embu",
+      "total_ksh": 7932599418
+    },
+    {
+      "rank": 37,
+      "county": "Laikipia",
+      "total_ksh": 7726465272
+    },
+    {
+      "rank": 38,
+      "county": "West Pokot",
+      "total_ksh": 7715474283
+    },
+    {
+      "rank": 39,
+      "county": "Samburu",
+      "total_ksh": 7665941867
+    },
+    {
+      "rank": 40,
+      "county": "Kirinyaga",
+      "total_ksh": 7240547406
+    },
+    {
+      "rank": 41,
+      "county": "Vihiga",
+      "total_ksh": 6701592386
+    },
+    {
+      "rank": 42,
+      "county": "Elgeyo-Marakwet",
+      "total_ksh": 6527819912
+    },
+    {
+      "rank": 43,
+      "county": "Tharaka-Nithi",
+      "total_ksh": 6518796358
+    },
+    {
+      "rank": 44,
+      "county": "Isiolo",
+      "total_ksh": 5718810379
+    },
+    {
+      "rank": 45,
+      "county": "Taita-Taveta",
+      "total_ksh": 5232408363
+    },
+    {
+      "rank": 46,
+      "county": "Lamu",
+      "total_ksh": 4541837952
+    }
+  ]
+}

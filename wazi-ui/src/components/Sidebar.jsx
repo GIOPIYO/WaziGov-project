@@ -5,6 +5,7 @@ import ThemeToggle from './ThemeToggle';
 export default function Sidebar({ activeSection, onSelect }) {
   const sections = [
     { id: 'dashboard', label: 'Dashboard', icon: <Home size={18} /> },
+    { id: 'analytics', label: 'Analytics', icon: <FileText size={18} /> },
     { id: 'projects', label: 'Projects', icon: <Layers size={18} /> },
     { id: 'reports', label: 'Reports', icon: <FileText size={18} /> },
     { id: 'settings', label: 'Settings', icon: <Settings size={18} /> },

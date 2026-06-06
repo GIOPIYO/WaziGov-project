@@ -13,12 +13,16 @@ export default function Dashboard({
   setSearchQuery, 
   selectedCounty, 
   setSelectedCounty, 
+  countyOptions,
   selectedSector, 
   setSelectedSector, 
+  sectorOptions,
   selectedOpinion, 
   setSelectedOpinion, 
+  opinionOptions,
   selectedStatus, 
   setSelectedStatus, 
+  statusOptions,
   handleResetFilters, 
   selectedProject, 
   setSelectedProject, 
@@ -42,12 +46,16 @@ export default function Dashboard({
             setSearchQuery={setSearchQuery}
             selectedCounty={selectedCounty}
             setSelectedCounty={setSelectedCounty}
+            countyOptions={countyOptions}
             selectedSector={selectedSector}
             setSelectedSector={setSelectedSector}
+            sectorOptions={sectorOptions}
             selectedOpinion={selectedOpinion}
             setSelectedOpinion={setSelectedOpinion}
+            opinionOptions={opinionOptions}
             selectedStatus={selectedStatus}
             setSelectedStatus={setSelectedStatus}
+            statusOptions={statusOptions}
             onReset={handleResetFilters}
           />
 

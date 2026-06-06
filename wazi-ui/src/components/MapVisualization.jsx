@@ -1,113 +1,90 @@
-import React, { useState } from 'react';
-import { Map, MapPin, Info } from 'lucide-react';
+import { useEffect, useState } from 'react';
+import { Maximize2, Minimize2, Map, MapPin } from 'lucide-react';
+import MapView from './MapView';
 
-export default function MapVisualization({ activeCounty, onSelectCounty, projects }) {
-  const [hoveredCounty, setHoveredCounty] = useState(null);
-  const [tooltipPos, setTooltipPos] = useState({ x: 0, y: 0 });
+export default function MapVisualization({ activeCounty, projects, onSelectCounty }) {
+  const projectCount = Array.isArray(projects) ? projects.length : 0;
+  const [hoveredFeature, setHoveredFeature] = useState(null);
+  const [selectedFeature, setSelectedFeature] = useState(null);
+  const [isExpanded, setIsExpanded] = useState(false);
 
-  const getCountyStats = (countyName) => {
-    const countyProjects = projects.filter(p => p.county.toLowerCase() === countyName.toLowerCase());
-    const totalBudget = countyProjects.reduce((acc, p) => acc + p.budget, 0);
-    const queryCount = countyProjects.filter(p => p.oagOpinion === 'Adverse' || p.oagOpinion === 'Disclaimer').length;
-    const queryRate = countyProjects.length ? Math.round((queryCount / countyProjects.length) * 100) : 0;
-    
-    return {
-      count: countyProjects.length,
-      budget: totalBudget,
-      queryRate,
-      name: countyName
+  const displayedFeature = hoveredFeature || selectedFeature;
+
+  useEffect(() => {
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = isExpanded ? 'hidden' : previousOverflow;
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
     };
+  }, [isExpanded]);
+
+  const handleFeatureHover = (feature) => {
+    setHoveredFeature(feature);
   };
 
-  const handleMouseMove = (e) => {
-    const rect = e.currentTarget.getBoundingClientRect();
-    setTooltipPos({
-      x: e.clientX - rect.left + 15,
-      y: e.clientY - rect.top + 15
-    });
+  const handleFeatureClear = () => {
+    setHoveredFeature(null);
   };
 
-  const formatBudget = (val) => {
-    if (val >= 1e9) return `KES ${(val / 1e9).toFixed(2)} Billion`;
-    if (val >= 1e6) return `KES ${(val / 1e6).toFixed(1)} Million`;
-    return `KES ${val.toLocaleString()}`;
+  const handleFeatureSelect = (feature) => {
+    setSelectedFeature(feature);
   };
 
-  // A simple list of county names for the new map
-  const countyNames = [
-    'Mombasa', 'Kwale', 'Kilifi', 'Tana River', 'Lamu', 'Taita-Taveta', 'Garissa', 'Wajir', 
-    'Mandera', 'Marsabit', 'Isiolo', 'Meru', 'Tharaka-Nithi', 'Embu', 'Kitui', 'Machakos', 
-    'Makueni', 'Nyandarua', 'Nyeri', 'Kirinyaga', 'Muranga', 'Kiambu', 'Turkana', 'West Pokot', 
-    'Samburu', 'Trans Nzoia', 'Uasin Gishu', 'Elgeyo-Marakwet', 'Nandi', 'Baringo', 'Laikipia', 
-    'Nakuru', 'Narok', 'Kajiado', 'Kericho', 'Bomet', 'Kakamega', 'Vihiga', 'Bungoma', 'Busia', 
-    'Siaya', 'Kisumu', 'Homa Bay', 'Migori', 'Kisii', 'Nyamira', 'Nairobi'
-  ];
+  const toggleExpanded = () => {
+    setIsExpanded((current) => !current);
+  };
 
   return (
-    <div className="material-card" style={styles.container}>
+    <div className={`material-card ${isExpanded ? 'map-panel-expanded' : ''}`} style={isExpanded ? { ...styles.container, ...styles.expandedContainer } : styles.container}>
       <div style={styles.header}>
         <div style={styles.headerTitle}>
           <Map size={18} style={{ color: 'var(--accent-secondary)' }} />
           <span style={styles.titleText}>Geospatial Accountability View</span>
         </div>
-        <div style={styles.legend}>
-          <div style={styles.legendItem}>
-            <span style={{ ...styles.legendDot, background: 'var(--color-clean)' }} />
-            <span>Clean</span>
+        <div style={styles.headerMeta}>
+          <span style={styles.metaPill}>{projectCount} projects</span>
+          <span style={styles.metaPill}>{activeCounty || 'All counties'}</span>
+          <button type="button" className="btn-primary" style={styles.expandButton} onClick={toggleExpanded}>
+            {isExpanded ? <><Minimize2 size={14} /> Shrink map</> : <><Maximize2 size={14} /> Expand map</>}
+          </button>
+        </div>
+      </div>
+
+      <div style={isExpanded ? { ...styles.mapLayout, ...styles.mapLayoutExpanded } : styles.mapLayout}>
+        <MapView
+          selectedFeatureKey={selectedFeature?.key}
+          onFeatureHover={handleFeatureHover}
+          onFeatureSelect={handleFeatureSelect}
+          onFeatureClear={handleFeatureClear}
+          resizeToken={isExpanded ? 'expanded' : 'collapsed'}
+        />
+
+        <div style={styles.overlayCard}>
+          <div style={styles.overlayTitleRow}>
+            <MapPin size={13} />
+            <span style={styles.overlayTitle}>
+              {displayedFeature ? displayedFeature.label : 'Kenya Geo Layer'}
+            </span>
           </div>
-          <div style={styles.legendItem}>
-            <span style={{ ...styles.legendDot, background: 'var(--color-qualified)' }} />
-            <span>Moderate Flags</span>
-          </div>
-          <div style={styles.legendItem}>
-            <span style={{ ...styles.legendDot, background: 'var(--color-adverse)' }} />
-            <span>Critical Queries</span>
+          <p style={styles.overlayText}>
+            {displayedFeature ? (
+              <>
+                {displayedFeature.district || 'Boundary'}
+                {displayedFeature.province ? ` • ${displayedFeature.province}` : ''}
+              </>
+            ) : (
+              <>
+                Interactive boundary map from the <strong>wazi-geoai</strong> module.
+              </>
+            )}
+          </p>
+          <div style={styles.overlayHint}>
+            Click a boundary to pin it. Hover to preview.
           </div>
         </div>
       </div>
 
-      <div style={styles.mapLayout} onMouseMove={handleMouseMove}>
-        <img src="/kenya-map.svg" alt="Map of Kenya" 
-          style={{ width: '100%', height: '100%', objectFit: 'contain' }} 
-        />
-
-        {/* Tooltip card */}
-        {hoveredCounty && (
-          <div 
-            style={{ 
-              ...styles.tooltip, 
-              left: `${tooltipPos.x}px`, 
-              top: `${tooltipPos.y}px` 
-            }}
-          >
-            <div style={styles.tooltipHeader}>
-              <MapPin size={13} />
-              <span style={styles.tooltipTitle}>{hoveredCounty.name}</span>
-            </div>
-            <div style={styles.tooltipBody}>
-              <div style={styles.tooltipRow}>
-                <span style={styles.tooltipLabel}>Projects:</span>
-                <span style={styles.tooltipVal}>{hoveredCounty.count} active</span>
-              </div>
-              <div style={styles.tooltipRow}>
-                <span style={styles.tooltipLabel}>Total Tracked:</span>
-                <span style={{ ...styles.tooltipVal, color: 'var(--accent-blue)' }}>
-                  {formatBudget(hoveredCounty.budget)}
-                </span>
-              </div>
-              <div style={styles.tooltipRow}>
-                <span style={styles.tooltipLabel}>Audit Flags:</span>
-                <span style={{ 
-                  ...styles.tooltipVal, 
-                  color: hoveredCounty.queryRate > 40 ? 'var(--color-adverse)' : hoveredCounty.queryRate > 0 ? 'var(--color-qualified)' : 'var(--color-clean)' 
-                }}>
-                  {hoveredCounty.queryRate}% Rate
-                </span>
-              </div>
-            </div>
-          </div>
-        )}
-      </div>
       <div style={styles.footerNote}>
         Linked to OAG (Office of the Auditor General) Database for Kenya.
       </div>
@@ -122,6 +99,21 @@ const styles = {
     flexDirection: 'column',
     gap: '16px',
     minHeight: '380px',
+    position: 'relative',
+    zIndex: 1,
+  },
+  expandedContainer: {
+    position: 'fixed',
+    top: '16px',
+    right: '16px',
+    bottom: '16px',
+    left: 'calc(var(--sidebar-width) + 16px)',
+    zIndex: 1200,
+    margin: 0,
+    minHeight: 'auto',
+    boxShadow: '0 24px 70px rgba(0, 0, 0, 0.28)',
+    borderRadius: '20px',
+    background: 'var(--bg-card)',
   },
   header: {
     display: 'flex',
@@ -144,80 +136,90 @@ const styles = {
     color: 'var(--text-title)',
     letterSpacing: '0.01em',
   },
-  legend: {
+  headerMeta: {
     display: 'flex',
-    gap: '10px',
-    fontSize: '0.7rem',
-    color: 'var(--text-secondary)',
-  },
-  legendItem: {
-    display: 'flex',
+    gap: '8px',
+    flexWrap: 'wrap',
+    justifyContent: 'flex-end',
     alignItems: 'center',
-    gap: '4px',
   },
-  legendDot: {
-    width: '6px',
-    height: '6px',
-    borderRadius: '50%',
-    display: 'inline-block',
+  metaPill: {
+    display: 'inline-flex',
+    alignItems: 'center',
+    padding: '5px 10px',
+    borderRadius: '999px',
+    background: 'rgba(0, 107, 63, 0.08)',
+    color: 'var(--text-secondary)',
+    fontSize: '0.72rem',
+    fontWeight: '600',
+  },
+  expandButton: {
+    display: 'inline-flex',
+    alignItems: 'center',
+    gap: '6px',
+    padding: '8px 12px',
+    fontSize: '0.76rem',
+    whiteSpace: 'nowrap',
   },
   mapLayout: {
     position: 'relative',
     flex: 1,
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    background: 'rgba(240, 242, 245, 0.5)',
-    borderRadius: '10px',
-    border: '1px solid var(--border-light)',
+    minHeight: '440px',
     overflow: 'hidden',
+    borderRadius: '14px',
+    border: '1px solid var(--border-light)',
+    background: '#dbeafe',
   },
-  tooltip: {
+  mapLayoutExpanded: {
+    minHeight: 'calc(100vh - 220px)',
+  },
+  overlayCard: {
     position: 'absolute',
-    background: '#ffffff',
+    left: '16px',
+    top: '16px',
+    zIndex: 400,
+    maxWidth: '260px',
+    padding: '12px 14px',
+    borderRadius: '12px',
+    background: 'rgba(255, 255, 255, 0.92)',
     border: '1px solid rgba(0, 0, 0, 0.08)',
-    borderRadius: '10px',
-    padding: '12px',
-    boxShadow: '0 8px 24px rgba(0, 0, 0, 0.12)',
-    width: '210px',
-    zIndex: 50,
-    pointerEvents: 'none',
+    boxShadow: '0 14px 30px rgba(0, 0, 0, 0.12)',
+    backdropFilter: 'blur(12px)',
+    WebkitBackdropFilter: 'blur(12px)',
   },
-  tooltipHeader: {
+  overlayTitleRow: {
     display: 'flex',
     alignItems: 'center',
     gap: '6px',
-    borderBottom: '1px solid var(--border-light)',
-    paddingBottom: '6px',
-    marginBottom: '6px',
-  },
-  tooltipTitle: {
     fontFamily: 'var(--font-display)',
     fontWeight: '700',
     fontSize: '0.85rem',
     color: 'var(--text-title)',
+    marginBottom: '6px',
   },
-  tooltipBody: {
-    display: 'flex',
-    flexDirection: 'column',
-    gap: '4px',
+  overlayTitle: {
+    lineHeight: 1.2,
   },
-  tooltipRow: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    fontSize: '0.72rem',
-  },
-  tooltipLabel: {
+  overlayText: {
+    margin: 0,
+    fontSize: '0.78rem',
     color: 'var(--text-secondary)',
+    lineHeight: 1.45,
   },
-  tooltipVal: {
-    fontWeight: '600',
-    color: 'var(--text-main)',
+  overlayHint: {
+    marginTop: '8px',
+    fontSize: '0.68rem',
+    color: 'var(--text-muted)',
+    textTransform: 'uppercase',
+    letterSpacing: '0.06em',
+    fontWeight: '700',
   },
   footerNote: {
     fontSize: '0.7rem',
     color: 'var(--text-secondary)',
     textAlign: 'center',
     fontStyle: 'italic',
+    position: 'relative',
+    zIndex: 1,
   }
 };

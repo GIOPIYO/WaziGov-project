@@ -67,7 +67,7 @@ export default function StatsGrid({ projects }) {
         </div>
         <div style={styles.content}>
           <span className="stat-title" style={styles.title}>Audit Queries</span>
-          <div className="stat-value" style={styles.value} style={{ ...styles.value, color: queryPercentage > 30 ? 'var(--color-adverse)' : 'inherit' }}>
+          <div className="stat-value" style={{ ...styles.value, color: queryPercentage > 30 ? 'var(--color-adverse)' : 'inherit' }}>
             {queryPercentage}%
           </div>
         </div>

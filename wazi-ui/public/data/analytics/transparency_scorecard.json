@@ -1,0 +1,1891 @@
+{
+  "metadata": {
+    "generated_at": "2026-05-31T15:47:28.043024+00:00",
+    "fiscal_years": [
+      "2023-2024"
+    ],
+    "description": "Public transparency scorecards from validation warning burden."
+  },
+  "documents": [
+    {
+      "report_id": "Auditor-Generals-summary-Report-on-County-Governments-2023-2024",
+      "report_family": "Audit",
+      "fiscal_year": "2023-2024",
+      "source_file": "WaziGov table detection\\data\\pdfs\\Auditor-Generals-summary-Report-on-County-Governments-2023-2024.pdf",
+      "table_count": 234,
+      "warning_table_count": 226,
+      "warnings_total": 449,
+      "warning_table_rate": 0.965812,
+      "warnings_per_table": 1.918803,
+      "counties_covered": [
+        "Baringo",
+        "Bomet",
+        "Bungoma",
+        "Busia",
+        "Elgeyo-Marakwet",
+        "Embu",
+        "Garissa",
+        "Homa Bay",
+        "Isiolo",
+        "Kajiado",
+        "Kakamega",
+        "Kericho",
+        "Kiambu",
+        "Kilifi",
+        "Kirinyaga",
+        "Kisii",
+        "Kisumu",
+        "Kitui",
+        "Kwale",
+        "Laikipia",
+        "Lamu",
+        "Machakos",
+        "Makueni",
+        "Mandera",
+        "Marsabit",
+        "Meru",
+        "Migori",
+        "Mombasa",
+        "Murang'a",
+        "Nairobi",
+        "Nakuru",
+        "Nandi",
+        "Narok",
+        "Nyamira",
+        "Nyandarua",
+        "Nyeri",
+        "Samburu",
+        "Siaya",
+        "Taita-Taveta",
+        "Tana River",
+        "Tharaka-Nithi",
+        "Trans Nzoia",
+        "Turkana",
+        "Uasin Gishu",
+        "Vihiga",
+        "Wajir",
+        "West Pokot"
+      ],
+      "warning_type_counts": [
+        {
+          "warning": "no_merged_cells_detected",
+          "count": 220
+        },
+        {
+          "warning": "no_header_hierarchy_detected",
+          "count": 182
+        },
+        {
+          "warning": "no_cell_text_extracted",
+          "count": 15
+        },
+        {
+          "warning": "1_cell_boxes_outside_table",
+          "count": 3
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 146.7 vs reported 68.0",
+          "count": 3
+        },
+        {
+          "warning": "5_cell_boxes_outside_table",
+          "count": 2
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_0: expected 221.0 vs reported 45.0",
+          "count": 2
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 1488978680.6 vs reported 40.0",
+          "count": 2
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 1506281022.6 vs reported 40.0",
+          "count": 2
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 5068181818.2 vs reported 72.0",
+          "count": 2
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 641594019.4 vs reported 29.0",
+          "count": 2
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 6453052525.8 vs reported 40.0",
+          "count": 2
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 8711980083.3 vs reported 44.0",
+          "count": 2
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 9701424183.9 vs reported 44.0",
+          "count": 2
+        },
+        {
+          "warning": "40_cell_boxes_outside_table",
+          "count": 1
+        },
+        {
+          "warning": "6_cell_boxes_outside_table",
+          "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 20.7 vs reported 35.9",
+          "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 56301857700.0 vs reported 61.0",
+          "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 737925519900.0 vs reported 59.0",
+          "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 94.1 vs reported 61.0",
+          "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_2: expected 22000000000.0 vs reported 200.0",
+          "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_2: expected 60.5 vs reported 79.0",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "report_id": "GREEN-BOOK-EXECUTIVES-2024-FINAL-5.3.2025-SIGNED",
+      "report_family": "Budget",
+      "fiscal_year": "2023-2024",
+      "source_file": "WaziGov table detection\\data\\pdfs\\GREEN-BOOK-EXECUTIVES-2024-FINAL-5.3.2025-SIGNED.pdf",
+      "table_count": 670,
+      "warning_table_count": 617,
+      "warnings_total": 1284,
+      "warning_table_rate": 0.920896,
+      "warnings_per_table": 1.916418,
+      "counties_covered": [
+        "Baringo",
+        "Bomet",
+        "Bungoma",
+        "Busia",
+        "Elgeyo-Marakwet",
+        "Embu",
+        "Garissa",
+        "Homa Bay",
+        "Isiolo",
+        "Kajiado",
+        "Kakamega",
+        "Kericho",
+        "Kiambu",
+        "Kilifi",
+        "Kirinyaga",
+        "Kisii",
+        "Kisumu",
+        "Kitui",
+        "Kwale",
+        "Laikipia",
+        "Lamu",
+        "Machakos",
+        "Makueni",
+        "Mandera",
+        "Marsabit",
+        "Meru",
+        "Migori",
+        "Mombasa",
+        "Murang'a",
+        "Nairobi",
+        "Nakuru",
+        "Nandi",
+        "Narok",
+        "Nyamira",
+        "Nyeri",
+        "Samburu",
+        "Siaya",
+        "Taita-Taveta",
+        "Tana River",
+        "Tharaka-Nithi",
+        "Trans Nzoia",
+        "Turkana",
+        "Uasin Gishu",
+        "Vihiga",
+        "Wajir",
+        "West Pokot"
+      ],
+      "warning_type_counts": [
+        {
+          "warning": "no_merged_cells_detected",
+          "count": 603
+        },
+        {
+          "warning": "no_header_hierarchy_detected",
+          "count": 439
+        },
+        {
+          "warning": "no_cell_text_extracted",
+          "count": 147
+        },
+        {
+          "warning": "6_cell_boxes_outside_table",
+          "count": 36
+        },
+        {
+          "warning": "4_cell_boxes_outside_table",
+          "count": 21
+        },
+        {
+          "warning": "2_cell_boxes_outside_table",
+          "count": 11
+        },
+        {
+          "warning": "1_cell_boxes_outside_table",
+          "count": 7
+        },
+        {
+          "warning": "8_cell_boxes_outside_table",
+          "count": 7
+        },
+        {
+          "warning": "3_cell_boxes_outside_table",
+          "count": 6
+        },
+        {
+          "warning": "16_cell_boxes_outside_table",
+          "count": 3
+        },
+        {
+          "warning": "10_cell_boxes_outside_table",
+          "count": 2
+        },
+        {
+          "warning": "14_cell_boxes_outside_table",
+          "count": 1
+        },
+        {
+          "warning": "28_cell_boxes_outside_table",
+          "count": 1
+        }
+      ]
+    }
+  ],
+  "counties": [
+    {
+      "county": "Baringo",
+      "fiscal_years": [
+        "2023-2024"
+      ],
+      "table_mentions": 29,
+      "warning_table_mentions": 29,
+      "warnings_total": 55,
+      "warning_table_rate": 1.0,
+      "warnings_per_table_mention": 1.896552,
+      "warning_type_counts": [
+        {
+          "warning": "no_merged_cells_detected",
+          "count": 29
+        },
+        {
+          "warning": "no_header_hierarchy_detected",
+          "count": 24
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 56301857700.0 vs reported 61.0",
+          "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 94.1 vs reported 61.0",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "county": "Bomet",
+      "fiscal_years": [
+        "2023-2024"
+      ],
+      "table_mentions": 25,
+      "warning_table_mentions": 25,
+      "warnings_total": 50,
+      "warning_table_rate": 1.0,
+      "warnings_per_table_mention": 2.0,
+      "warning_type_counts": [
+        {
+          "warning": "no_merged_cells_detected",
+          "count": 24
+        },
+        {
+          "warning": "no_header_hierarchy_detected",
+          "count": 21
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 1506281022.6 vs reported 40.0",
+          "count": 2
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 5068181818.2 vs reported 72.0",
+          "count": 2
+        },
+        {
+          "warning": "16_cell_boxes_outside_table",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "county": "Bungoma",
+      "fiscal_years": [
+        "2023-2024"
+      ],
+      "table_mentions": 21,
+      "warning_table_mentions": 21,
+      "warnings_total": 40,
+      "warning_table_rate": 1.0,
+      "warnings_per_table_mention": 1.904762,
+      "warning_type_counts": [
+        {
+          "warning": "no_merged_cells_detected",
+          "count": 20
+        },
+        {
+          "warning": "no_header_hierarchy_detected",
+          "count": 18
+        },
+        {
+          "warning": "16_cell_boxes_outside_table",
+          "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 737925519900.0 vs reported 59.0",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "county": "Busia",
+      "fiscal_years": [
+        "2023-2024"
+      ],
+      "table_mentions": 29,
+      "warning_table_mentions": 27,
+      "warnings_total": 55,
+      "warning_table_rate": 0.931034,
+      "warnings_per_table_mention": 1.896552,
+      "warning_type_counts": [
+        {
+          "warning": "no_merged_cells_detected",
+          "count": 26
+        },
+        {
+          "warning": "no_header_hierarchy_detected",
+          "count": 22
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 641594019.4 vs reported 29.0",
+          "count": 2
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 8711980083.3 vs reported 44.0",
+          "count": 2
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 9701424183.9 vs reported 44.0",
+          "count": 2
+        },
+        {
+          "warning": "16_cell_boxes_outside_table",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "county": "Elgeyo-Marakwet",
+      "fiscal_years": [
+        "2023-2024"
+      ],
+      "table_mentions": 28,
+      "warning_table_mentions": 28,
+      "warnings_total": 55,
+      "warning_table_rate": 1.0,
+      "warnings_per_table_mention": 1.964286,
+      "warning_type_counts": [
+        {
+          "warning": "no_merged_cells_detected",
+          "count": 27
+        },
+        {
+          "warning": "no_header_hierarchy_detected",
+          "count": 22
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 146.7 vs reported 68.0",
+          "count": 3
+        },
+        {
+          "warning": "28_cell_boxes_outside_table",
+          "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 737925519900.0 vs reported 59.0",
+          "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_2: expected 22000000000.0 vs reported 200.0",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "county": "Embu",
+      "fiscal_years": [
+        "2023-2024"
+      ],
+      "table_mentions": 40,
+      "warning_table_mentions": 40,
+      "warnings_total": 80,
+      "warning_table_rate": 1.0,
+      "warnings_per_table_mention": 2.0,
+      "warning_type_counts": [
+        {
+          "warning": "no_merged_cells_detected",
+          "count": 38
+        },
+        {
+          "warning": "no_header_hierarchy_detected",
+          "count": 35
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 8711980083.3 vs reported 44.0",
+          "count": 2
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 9701424183.9 vs reported 44.0",
+          "count": 2
+        },
+        {
+          "warning": "28_cell_boxes_outside_table",
+          "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 737925519900.0 vs reported 59.0",
+          "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_2: expected 22000000000.0 vs reported 200.0",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "county": "Garissa",
+      "fiscal_years": [
+        "2023-2024"
+      ],
+      "table_mentions": 30,
+      "warning_table_mentions": 30,
+      "warnings_total": 53,
+      "warning_table_rate": 1.0,
+      "warnings_per_table_mention": 1.766667,
+      "warning_type_counts": [
+        {
+          "warning": "no_merged_cells_detected",
+          "count": 29
+        },
+        {
+          "warning": "no_header_hierarchy_detected",
+          "count": 21
+        },
+        {
+          "warning": "28_cell_boxes_outside_table",
+          "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 56301857700.0 vs reported 61.0",
+          "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 94.1 vs reported 61.0",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "county": "Homa Bay",
+      "fiscal_years": [
+        "2023-2024"
+      ],
+      "table_mentions": 31,
+      "warning_table_mentions": 31,
+      "warnings_total": 55,
+      "warning_table_rate": 1.0,
+      "warnings_per_table_mention": 1.774194,
+      "warning_type_counts": [
+        {
+          "warning": "no_merged_cells_detected",
+          "count": 30
+        },
+        {
+          "warning": "no_header_hierarchy_detected",
+          "count": 21
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 146.7 vs reported 68.0",
+          "count": 3
+        },
+        {
+          "warning": "16_cell_boxes_outside_table",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "county": "Isiolo",
+      "fiscal_years": [
+        "2023-2024"
+      ],
+      "table_mentions": 36,
+      "warning_table_mentions": 36,
+      "warnings_total": 66,
+      "warning_table_rate": 1.0,
+      "warnings_per_table_mention": 1.833333,
+      "warning_type_counts": [
+        {
+          "warning": "no_merged_cells_detected",
+          "count": 34
+        },
+        {
+          "warning": "no_header_hierarchy_detected",
+          "count": 29
+        },
+        {
+          "warning": "28_cell_boxes_outside_table",
+          "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 56301857700.0 vs reported 61.0",
+          "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 94.1 vs reported 61.0",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "county": "Kajiado",
+      "fiscal_years": [
+        "2023-2024"
+      ],
+      "table_mentions": 25,
+      "warning_table_mentions": 25,
+      "warnings_total": 52,
+      "warning_table_rate": 1.0,
+      "warnings_per_table_mention": 2.08,
+      "warning_type_counts": [
+        {
+          "warning": "no_merged_cells_detected",
+          "count": 24
+        },
+        {
+          "warning": "no_header_hierarchy_detected",
+          "count": 21
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 5068181818.2 vs reported 72.0",
+          "count": 2
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 641594019.4 vs reported 29.0",
+          "count": 2
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 6453052525.8 vs reported 40.0",
+          "count": 2
+        },
+        {
+          "warning": "16_cell_boxes_outside_table",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "county": "Kakamega",
+      "fiscal_years": [
+        "2023-2024"
+      ],
+      "table_mentions": 37,
+      "warning_table_mentions": 37,
+      "warnings_total": 69,
+      "warning_table_rate": 1.0,
+      "warnings_per_table_mention": 1.864865,
+      "warning_type_counts": [
+        {
+          "warning": "no_merged_cells_detected",
+          "count": 36
+        },
+        {
+          "warning": "no_header_hierarchy_detected",
+          "count": 30
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 6453052525.8 vs reported 40.0",
+          "count": 2
+        },
+        {
+          "warning": "16_cell_boxes_outside_table",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "county": "Kericho",
+      "fiscal_years": [
+        "2023-2024"
+      ],
+      "table_mentions": 25,
+      "warning_table_mentions": 25,
+      "warnings_total": 52,
+      "warning_table_rate": 1.0,
+      "warnings_per_table_mention": 2.08,
+      "warning_type_counts": [
+        {
+          "warning": "no_merged_cells_detected",
+          "count": 24
+        },
+        {
+          "warning": "no_header_hierarchy_detected",
+          "count": 23
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 1488978680.6 vs reported 40.0",
+          "count": 2
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 1506281022.6 vs reported 40.0",
+          "count": 2
+        },
+        {
+          "warning": "16_cell_boxes_outside_table",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "county": "Kiambu",
+      "fiscal_years": [
+        "2023-2024"
+      ],
+      "table_mentions": 32,
+      "warning_table_mentions": 32,
+      "warnings_total": 60,
+      "warning_table_rate": 1.0,
+      "warnings_per_table_mention": 1.875,
+      "warning_type_counts": [
+        {
+          "warning": "no_merged_cells_detected",
+          "count": 31
+        },
+        {
+          "warning": "no_header_hierarchy_detected",
+          "count": 22
+        },
+        {
+          "warning": "1_cell_boxes_outside_table",
+          "count": 2
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 5068181818.2 vs reported 72.0",
+          "count": 2
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 641594019.4 vs reported 29.0",
+          "count": 2
+        },
+        {
+          "warning": "28_cell_boxes_outside_table",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "county": "Kilifi",
+      "fiscal_years": [
+        "2023-2024"
+      ],
+      "table_mentions": 37,
+      "warning_table_mentions": 35,
+      "warnings_total": 70,
+      "warning_table_rate": 0.945946,
+      "warnings_per_table_mention": 1.891892,
+      "warning_type_counts": [
+        {
+          "warning": "no_merged_cells_detected",
+          "count": 33
+        },
+        {
+          "warning": "no_header_hierarchy_detected",
+          "count": 30
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 1488978680.6 vs reported 40.0",
+          "count": 2
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 1506281022.6 vs reported 40.0",
+          "count": 2
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 5068181818.2 vs reported 72.0",
+          "count": 2
+        },
+        {
+          "warning": "28_cell_boxes_outside_table",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "county": "Kirinyaga",
+      "fiscal_years": [
+        "2023-2024"
+      ],
+      "table_mentions": 24,
+      "warning_table_mentions": 24,
+      "warnings_total": 45,
+      "warning_table_rate": 1.0,
+      "warnings_per_table_mention": 1.875,
+      "warning_type_counts": [
+        {
+          "warning": "no_merged_cells_detected",
+          "count": 23
+        },
+        {
+          "warning": "no_header_hierarchy_detected",
+          "count": 20
+        },
+        {
+          "warning": "28_cell_boxes_outside_table",
+          "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_2: expected 22000000000.0 vs reported 200.0",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "county": "Kisii",
+      "fiscal_years": [
+        "2023-2024"
+      ],
+      "table_mentions": 34,
+      "warning_table_mentions": 34,
+      "warnings_total": 60,
+      "warning_table_rate": 1.0,
+      "warnings_per_table_mention": 1.764706,
+      "warning_type_counts": [
+        {
+          "warning": "no_merged_cells_detected",
+          "count": 33
+        },
+        {
+          "warning": "no_header_hierarchy_detected",
+          "count": 20
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 146.7 vs reported 68.0",
+          "count": 3
+        },
+        {
+          "warning": "16_cell_boxes_outside_table",
+          "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 56301857700.0 vs reported 61.0",
+          "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 737925519900.0 vs reported 59.0",
+          "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 94.1 vs reported 61.0",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "county": "Kisumu",
+      "fiscal_years": [
+        "2023-2024"
+      ],
+      "table_mentions": 23,
+      "warning_table_mentions": 21,
+      "warnings_total": 44,
+      "warning_table_rate": 0.913043,
+      "warnings_per_table_mention": 1.913043,
+      "warning_type_counts": [
+        {
+          "warning": "no_merged_cells_detected",
+          "count": 20
+        },
+        {
+          "warning": "no_header_hierarchy_detected",
+          "count": 17
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 1506281022.6 vs reported 40.0",
+          "count": 2
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 5068181818.2 vs reported 72.0",
+          "count": 2
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 6453052525.8 vs reported 40.0",
+          "count": 2
+        },
+        {
+          "warning": "16_cell_boxes_outside_table",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "county": "Kitui",
+      "fiscal_years": [
+        "2023-2024"
+      ],
+      "table_mentions": 29,
+      "warning_table_mentions": 29,
+      "warnings_total": 61,
+      "warning_table_rate": 1.0,
+      "warnings_per_table_mention": 2.103448,
+      "warning_type_counts": [
+        {
+          "warning": "no_merged_cells_detected",
+          "count": 27
+        },
+        {
+          "warning": "no_header_hierarchy_detected",
+          "count": 25
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 1488978680.6 vs reported 40.0",
+          "count": 2
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 1506281022.6 vs reported 40.0",
+          "count": 2
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 8711980083.3 vs reported 44.0",
+          "count": 2
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 9701424183.9 vs reported 44.0",
+          "count": 2
+        },
+        {
+          "warning": "28_cell_boxes_outside_table",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "county": "Kwale",
+      "fiscal_years": [
+        "2023-2024"
+      ],
+      "table_mentions": 27,
+      "warning_table_mentions": 27,
+      "warnings_total": 51,
+      "warning_table_rate": 1.0,
+      "warnings_per_table_mention": 1.888889,
+      "warning_type_counts": [
+        {
+          "warning": "no_merged_cells_detected",
+          "count": 25
+        },
+        {
+          "warning": "no_header_hierarchy_detected",
+          "count": 21
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 1506281022.6 vs reported 40.0",
+          "count": 2
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 5068181818.2 vs reported 72.0",
+          "count": 2
+        },
+        {
+          "warning": "28_cell_boxes_outside_table",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "county": "Laikipia",
+      "fiscal_years": [
+        "2023-2024"
+      ],
+      "table_mentions": 37,
+      "warning_table_mentions": 37,
+      "warnings_total": 71,
+      "warning_table_rate": 1.0,
+      "warnings_per_table_mention": 1.918919,
+      "warning_type_counts": [
+        {
+          "warning": "no_merged_cells_detected",
+          "count": 37
+        },
+        {
+          "warning": "no_header_hierarchy_detected",
+          "count": 29
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 146.7 vs reported 68.0",
+          "count": 3
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 1506281022.6 vs reported 40.0",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "county": "Lamu",
+      "fiscal_years": [
+        "2023-2024"
+      ],
+      "table_mentions": 30,
+      "warning_table_mentions": 28,
+      "warnings_total": 54,
+      "warning_table_rate": 0.933333,
+      "warnings_per_table_mention": 1.8,
+      "warning_type_counts": [
+        {
+          "warning": "no_merged_cells_detected",
+          "count": 27
+        },
+        {
+          "warning": "no_header_hierarchy_detected",
+          "count": 25
+        },
+        {
+          "warning": "28_cell_boxes_outside_table",
+          "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_2: expected 22000000000.0 vs reported 200.0",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "county": "Machakos",
+      "fiscal_years": [
+        "2023-2024"
+      ],
+      "table_mentions": 26,
+      "warning_table_mentions": 26,
+      "warnings_total": 46,
+      "warning_table_rate": 1.0,
+      "warnings_per_table_mention": 1.769231,
+      "warning_type_counts": [
+        {
+          "warning": "no_merged_cells_detected",
+          "count": 25
+        },
+        {
+          "warning": "no_header_hierarchy_detected",
+          "count": 18
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 641594019.4 vs reported 29.0",
+          "count": 2
+        },
+        {
+          "warning": "28_cell_boxes_outside_table",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "county": "Makueni",
+      "fiscal_years": [
+        "2023-2024"
+      ],
+      "table_mentions": 21,
+      "warning_table_mentions": 21,
+      "warnings_total": 39,
+      "warning_table_rate": 1.0,
+      "warnings_per_table_mention": 1.857143,
+      "warning_type_counts": [
+        {
+          "warning": "no_merged_cells_detected",
+          "count": 20
+        },
+        {
+          "warning": "no_header_hierarchy_detected",
+          "count": 17
+        },
+        {
+          "warning": "28_cell_boxes_outside_table",
+          "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 737925519900.0 vs reported 59.0",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "county": "Mandera",
+      "fiscal_years": [
+        "2023-2024"
+      ],
+      "table_mentions": 26,
+      "warning_table_mentions": 26,
+      "warnings_total": 49,
+      "warning_table_rate": 1.0,
+      "warnings_per_table_mention": 1.884615,
+      "warning_type_counts": [
+        {
+          "warning": "no_merged_cells_detected",
+          "count": 25
+        },
+        {
+          "warning": "no_header_hierarchy_detected",
+          "count": 21
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 9701424183.9 vs reported 44.0",
+          "count": 2
+        },
+        {
+          "warning": "28_cell_boxes_outside_table",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "county": "Marsabit",
+      "fiscal_years": [
+        "2023-2024"
+      ],
+      "table_mentions": 43,
+      "warning_table_mentions": 43,
+      "warnings_total": 91,
+      "warning_table_rate": 1.0,
+      "warnings_per_table_mention": 2.116279,
+      "warning_type_counts": [
+        {
+          "warning": "no_merged_cells_detected",
+          "count": 42
+        },
+        {
+          "warning": "no_header_hierarchy_detected",
+          "count": 40
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 641594019.4 vs reported 29.0",
+          "count": 2
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 6453052525.8 vs reported 40.0",
+          "count": 2
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 8711980083.3 vs reported 44.0",
+          "count": 2
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 9701424183.9 vs reported 44.0",
+          "count": 2
+        },
+        {
+          "warning": "28_cell_boxes_outside_table",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "county": "Meru",
+      "fiscal_years": [
+        "2023-2024"
+      ],
+      "table_mentions": 15,
+      "warning_table_mentions": 15,
+      "warnings_total": 29,
+      "warning_table_rate": 1.0,
+      "warnings_per_table_mention": 1.933333,
+      "warning_type_counts": [
+        {
+          "warning": "no_merged_cells_detected",
+          "count": 13
+        },
+        {
+          "warning": "no_header_hierarchy_detected",
+          "count": 11
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 5068181818.2 vs reported 72.0",
+          "count": 2
+        },
+        {
+          "warning": "28_cell_boxes_outside_table",
+          "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 56301857700.0 vs reported 61.0",
+          "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 94.1 vs reported 61.0",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "county": "Migori",
+      "fiscal_years": [
+        "2023-2024"
+      ],
+      "table_mentions": 24,
+      "warning_table_mentions": 24,
+      "warnings_total": 44,
+      "warning_table_rate": 1.0,
+      "warnings_per_table_mention": 1.833333,
+      "warning_type_counts": [
+        {
+          "warning": "no_merged_cells_detected",
+          "count": 23
+        },
+        {
+          "warning": "no_header_hierarchy_detected",
+          "count": 17
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 5068181818.2 vs reported 72.0",
+          "count": 2
+        },
+        {
+          "warning": "16_cell_boxes_outside_table",
+          "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 737925519900.0 vs reported 59.0",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "county": "Mombasa",
+      "fiscal_years": [
+        "2023-2024"
+      ],
+      "table_mentions": 29,
+      "warning_table_mentions": 29,
+      "warnings_total": 55,
+      "warning_table_rate": 1.0,
+      "warnings_per_table_mention": 1.896552,
+      "warning_type_counts": [
+        {
+          "warning": "no_merged_cells_detected",
+          "count": 28
+        },
+        {
+          "warning": "no_header_hierarchy_detected",
+          "count": 22
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 146.7 vs reported 68.0",
+          "count": 3
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 6453052525.8 vs reported 40.0",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "county": "Murang'a",
+      "fiscal_years": [
+        "2023-2024"
+      ],
+      "table_mentions": 30,
+      "warning_table_mentions": 30,
+      "warnings_total": 58,
+      "warning_table_rate": 1.0,
+      "warnings_per_table_mention": 1.933333,
+      "warning_type_counts": [
+        {
+          "warning": "no_merged_cells_detected",
+          "count": 30
+        },
+        {
+          "warning": "no_header_hierarchy_detected",
+          "count": 19
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 146.7 vs reported 68.0",
+          "count": 3
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 5068181818.2 vs reported 72.0",
+          "count": 2
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 6453052525.8 vs reported 40.0",
+          "count": 2
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 56301857700.0 vs reported 61.0",
+          "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 94.1 vs reported 61.0",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "county": "Nairobi",
+      "fiscal_years": [
+        "2023-2024"
+      ],
+      "table_mentions": 37,
+      "warning_table_mentions": 35,
+      "warnings_total": 67,
+      "warning_table_rate": 0.945946,
+      "warnings_per_table_mention": 1.810811,
+      "warning_type_counts": [
+        {
+          "warning": "no_merged_cells_detected",
+          "count": 35
+        },
+        {
+          "warning": "no_header_hierarchy_detected",
+          "count": 25
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 146.7 vs reported 68.0",
+          "count": 3
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 5068181818.2 vs reported 72.0",
+          "count": 2
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 6453052525.8 vs reported 40.0",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "county": "Nakuru",
+      "fiscal_years": [
+        "2023-2024"
+      ],
+      "table_mentions": 34,
+      "warning_table_mentions": 34,
+      "warnings_total": 72,
+      "warning_table_rate": 1.0,
+      "warnings_per_table_mention": 2.117647,
+      "warning_type_counts": [
+        {
+          "warning": "no_merged_cells_detected",
+          "count": 33
+        },
+        {
+          "warning": "no_header_hierarchy_detected",
+          "count": 29
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 1488978680.6 vs reported 40.0",
+          "count": 2
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 1506281022.6 vs reported 40.0",
+          "count": 2
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 8711980083.3 vs reported 44.0",
+          "count": 2
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 9701424183.9 vs reported 44.0",
+          "count": 2
+        },
+        {
+          "warning": "16_cell_boxes_outside_table",
+          "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 737925519900.0 vs reported 59.0",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "county": "Nandi",
+      "fiscal_years": [
+        "2023-2024"
+      ],
+      "table_mentions": 52,
+      "warning_table_mentions": 44,
+      "warnings_total": 86,
+      "warning_table_rate": 0.846154,
+      "warnings_per_table_mention": 1.653846,
+      "warning_type_counts": [
+        {
+          "warning": "no_merged_cells_detected",
+          "count": 44
+        },
+        {
+          "warning": "no_header_hierarchy_detected",
+          "count": 35
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 146.7 vs reported 68.0",
+          "count": 3
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 641594019.4 vs reported 29.0",
+          "count": 2
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 56301857700.0 vs reported 61.0",
+          "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 94.1 vs reported 61.0",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "county": "Narok",
+      "fiscal_years": [
+        "2023-2024"
+      ],
+      "table_mentions": 30,
+      "warning_table_mentions": 30,
+      "warnings_total": 56,
+      "warning_table_rate": 1.0,
+      "warnings_per_table_mention": 1.866667,
+      "warning_type_counts": [
+        {
+          "warning": "no_merged_cells_detected",
+          "count": 29
+        },
+        {
+          "warning": "no_header_hierarchy_detected",
+          "count": 23
+        },
+        {
+          "warning": "16_cell_boxes_outside_table",
+          "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 56301857700.0 vs reported 61.0",
+          "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 94.1 vs reported 61.0",
+          "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_2: expected 22000000000.0 vs reported 200.0",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "county": "Nyamira",
+      "fiscal_years": [
+        "2023-2024"
+      ],
+      "table_mentions": 29,
+      "warning_table_mentions": 29,
+      "warnings_total": 57,
+      "warning_table_rate": 1.0,
+      "warnings_per_table_mention": 1.965517,
+      "warning_type_counts": [
+        {
+          "warning": "no_merged_cells_detected",
+          "count": 28
+        },
+        {
+          "warning": "no_header_hierarchy_detected",
+          "count": 26
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 641594019.4 vs reported 29.0",
+          "count": 2
+        },
+        {
+          "warning": "16_cell_boxes_outside_table",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "county": "Nyandarua",
+      "fiscal_years": [
+        "2023-2024"
+      ],
+      "table_mentions": 42,
+      "warning_table_mentions": 42,
+      "warnings_total": 90,
+      "warning_table_rate": 1.0,
+      "warnings_per_table_mention": 2.142857,
+      "warning_type_counts": [
+        {
+          "warning": "no_merged_cells_detected",
+          "count": 42
+        },
+        {
+          "warning": "no_header_hierarchy_detected",
+          "count": 38
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 1488978680.6 vs reported 40.0",
+          "count": 2
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 1506281022.6 vs reported 40.0",
+          "count": 2
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 6453052525.8 vs reported 40.0",
+          "count": 2
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 8711980083.3 vs reported 44.0",
+          "count": 2
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 9701424183.9 vs reported 44.0",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "county": "Nyeri",
+      "fiscal_years": [
+        "2023-2024"
+      ],
+      "table_mentions": 28,
+      "warning_table_mentions": 26,
+      "warnings_total": 49,
+      "warning_table_rate": 0.928571,
+      "warnings_per_table_mention": 1.75,
+      "warning_type_counts": [
+        {
+          "warning": "no_merged_cells_detected",
+          "count": 25
+        },
+        {
+          "warning": "no_header_hierarchy_detected",
+          "count": 20
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 146.7 vs reported 68.0",
+          "count": 3
+        },
+        {
+          "warning": "28_cell_boxes_outside_table",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "county": "Samburu",
+      "fiscal_years": [
+        "2023-2024"
+      ],
+      "table_mentions": 46,
+      "warning_table_mentions": 46,
+      "warnings_total": 96,
+      "warning_table_rate": 1.0,
+      "warnings_per_table_mention": 2.086957,
+      "warning_type_counts": [
+        {
+          "warning": "no_merged_cells_detected",
+          "count": 45
+        },
+        {
+          "warning": "no_header_hierarchy_detected",
+          "count": 42
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 641594019.4 vs reported 29.0",
+          "count": 2
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 8711980083.3 vs reported 44.0",
+          "count": 2
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 9701424183.9 vs reported 44.0",
+          "count": 2
+        },
+        {
+          "warning": "28_cell_boxes_outside_table",
+          "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 737925519900.0 vs reported 59.0",
+          "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_2: expected 22000000000.0 vs reported 200.0",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "county": "Siaya",
+      "fiscal_years": [
+        "2023-2024"
+      ],
+      "table_mentions": 18,
+      "warning_table_mentions": 18,
+      "warnings_total": 35,
+      "warning_table_rate": 1.0,
+      "warnings_per_table_mention": 1.944444,
+      "warning_type_counts": [
+        {
+          "warning": "no_merged_cells_detected",
+          "count": 17
+        },
+        {
+          "warning": "no_header_hierarchy_detected",
+          "count": 13
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 8711980083.3 vs reported 44.0",
+          "count": 2
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 9701424183.9 vs reported 44.0",
+          "count": 2
+        },
+        {
+          "warning": "16_cell_boxes_outside_table",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "county": "Taita-Taveta",
+      "fiscal_years": [
+        "2023-2024"
+      ],
+      "table_mentions": 33,
+      "warning_table_mentions": 33,
+      "warnings_total": 61,
+      "warning_table_rate": 1.0,
+      "warnings_per_table_mention": 1.848485,
+      "warning_type_counts": [
+        {
+          "warning": "no_merged_cells_detected",
+          "count": 31
+        },
+        {
+          "warning": "no_header_hierarchy_detected",
+          "count": 25
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 146.7 vs reported 68.0",
+          "count": 3
+        },
+        {
+          "warning": "28_cell_boxes_outside_table",
+          "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 737925519900.0 vs reported 59.0",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "county": "Tana River",
+      "fiscal_years": [
+        "2023-2024"
+      ],
+      "table_mentions": 38,
+      "warning_table_mentions": 36,
+      "warnings_total": 69,
+      "warning_table_rate": 0.947368,
+      "warnings_per_table_mention": 1.815789,
+      "warning_type_counts": [
+        {
+          "warning": "no_merged_cells_detected",
+          "count": 35
+        },
+        {
+          "warning": "no_header_hierarchy_detected",
+          "count": 32
+        },
+        {
+          "warning": "28_cell_boxes_outside_table",
+          "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_2: expected 22000000000.0 vs reported 200.0",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "county": "Tharaka-Nithi",
+      "fiscal_years": [
+        "2023-2024"
+      ],
+      "table_mentions": 29,
+      "warning_table_mentions": 29,
+      "warnings_total": 61,
+      "warning_table_rate": 1.0,
+      "warnings_per_table_mention": 2.103448,
+      "warning_type_counts": [
+        {
+          "warning": "no_header_hierarchy_detected",
+          "count": 27
+        },
+        {
+          "warning": "no_merged_cells_detected",
+          "count": 27
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 1488978680.6 vs reported 40.0",
+          "count": 2
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 1506281022.6 vs reported 40.0",
+          "count": 2
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 6453052525.8 vs reported 40.0",
+          "count": 2
+        },
+        {
+          "warning": "28_cell_boxes_outside_table",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "county": "Trans Nzoia",
+      "fiscal_years": [
+        "2023-2024"
+      ],
+      "table_mentions": 31,
+      "warning_table_mentions": 31,
+      "warnings_total": 56,
+      "warning_table_rate": 1.0,
+      "warnings_per_table_mention": 1.806452,
+      "warning_type_counts": [
+        {
+          "warning": "no_merged_cells_detected",
+          "count": 30
+        },
+        {
+          "warning": "no_header_hierarchy_detected",
+          "count": 23
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 641594019.4 vs reported 29.0",
+          "count": 2
+        },
+        {
+          "warning": "28_cell_boxes_outside_table",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "county": "Turkana",
+      "fiscal_years": [
+        "2023-2024"
+      ],
+      "table_mentions": 19,
+      "warning_table_mentions": 19,
+      "warnings_total": 33,
+      "warning_table_rate": 1.0,
+      "warnings_per_table_mention": 1.736842,
+      "warning_type_counts": [
+        {
+          "warning": "no_merged_cells_detected",
+          "count": 18
+        },
+        {
+          "warning": "no_header_hierarchy_detected",
+          "count": 13
+        },
+        {
+          "warning": "28_cell_boxes_outside_table",
+          "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_2: expected 22000000000.0 vs reported 200.0",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "county": "Uasin Gishu",
+      "fiscal_years": [
+        "2023-2024"
+      ],
+      "table_mentions": 31,
+      "warning_table_mentions": 31,
+      "warnings_total": 56,
+      "warning_table_rate": 1.0,
+      "warnings_per_table_mention": 1.806452,
+      "warning_type_counts": [
+        {
+          "warning": "no_merged_cells_detected",
+          "count": 30
+        },
+        {
+          "warning": "no_header_hierarchy_detected",
+          "count": 23
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 641594019.4 vs reported 29.0",
+          "count": 2
+        },
+        {
+          "warning": "28_cell_boxes_outside_table",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "county": "Vihiga",
+      "fiscal_years": [
+        "2023-2024"
+      ],
+      "table_mentions": 41,
+      "warning_table_mentions": 41,
+      "warnings_total": 80,
+      "warning_table_rate": 1.0,
+      "warnings_per_table_mention": 1.95122,
+      "warning_type_counts": [
+        {
+          "warning": "no_merged_cells_detected",
+          "count": 40
+        },
+        {
+          "warning": "no_header_hierarchy_detected",
+          "count": 34
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 6453052525.8 vs reported 40.0",
+          "count": 2
+        },
+        {
+          "warning": "16_cell_boxes_outside_table",
+          "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 56301857700.0 vs reported 61.0",
+          "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 94.1 vs reported 61.0",
+          "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_2: expected 22000000000.0 vs reported 200.0",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "county": "Wajir",
+      "fiscal_years": [
+        "2023-2024"
+      ],
+      "table_mentions": 33,
+      "warning_table_mentions": 33,
+      "warnings_total": 68,
+      "warning_table_rate": 1.0,
+      "warnings_per_table_mention": 2.060606,
+      "warning_type_counts": [
+        {
+          "warning": "no_merged_cells_detected",
+          "count": 31
+        },
+        {
+          "warning": "no_header_hierarchy_detected",
+          "count": 28
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 8711980083.3 vs reported 44.0",
+          "count": 2
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 9701424183.9 vs reported 44.0",
+          "count": 2
+        },
+        {
+          "warning": "28_cell_boxes_outside_table",
+          "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 56301857700.0 vs reported 61.0",
+          "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 737925519900.0 vs reported 59.0",
+          "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 94.1 vs reported 61.0",
+          "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_2: expected 22000000000.0 vs reported 200.0",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "county": "West Pokot",
+      "fiscal_years": [
+        "2023-2024"
+      ],
+      "table_mentions": 31,
+      "warning_table_mentions": 31,
+      "warnings_total": 57,
+      "warning_table_rate": 1.0,
+      "warnings_per_table_mention": 1.83871,
+      "warning_type_counts": [
+        {
+          "warning": "no_merged_cells_detected",
+          "count": 30
+        },
+        {
+          "warning": "no_header_hierarchy_detected",
+          "count": 24
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 8711980083.3 vs reported 44.0",
+          "count": 2
+        },
+        {
+          "warning": "28_cell_boxes_outside_table",
+          "count": 1
+        }
+      ]
+    }
+  ]
+}
