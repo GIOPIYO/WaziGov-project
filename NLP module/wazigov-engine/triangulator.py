@@ -264,7 +264,7 @@ def run_pipeline():
     ]
     OAG_FILES = [
         "data/processed/GREEN-BOOK-EXECUTIVES-2024-FINAL-5.3.2025-SIGNED.md",
-        "data/processed/AUDITOR-GENERAL’S REPORT ON THE COUNTY GOVERNMENTS  COUNTY EXECUTIVES 2022-2023 .md"
+        "data/processed/OAG-2024-2025.md"
     ]
     
     COB_PATH = COB_FILES
