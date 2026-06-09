@@ -3,3 +3,7 @@ venv
 push_output.txt
 NLP module/deberta_ner_model.zip
 NLP module/deberta_ner_model.zip
+NLP module/wazigov-bert-v1/config.json
+NLP module/wazigov-bert-v1/model.safetensors
+NLP module/wazigov-bert-v1/tokenizer.json
+NLP module/wazigov-bert-v1/tokenizer_config.json
