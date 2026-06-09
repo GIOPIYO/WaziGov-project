@@ -2,8 +2,16 @@
 
 import { motion, AnimatePresence } from "motion/react";
 import { geoMercator, geoPath } from "d3-geo";
-import React, { useState, useMemo } from "react";
-import kenyaGeoData from "/workspaces/wazigov-ui-/gadm41_KEN_1.json";
+import React, { useState, useMemo, useEffect } from "react";
+
+import DashboardNarrator from "./DashboardNarrator";
+import { Card, CardContent, CardHeader, CardTitle } from "../../../components/ui/card";
+import { Badge } from "../../../components/ui/badge";
+
+
+//const wardRes = await fetch("/kenya.geojson");
+//const wardGeoData = await wardRes.json();
+
 
 import {
   AlertTriangle,
@@ -15,8 +23,7 @@ import {
   BadgeCent,
 } from "lucide-react";
 
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
+
 
 // --- Types (unchanged) ---
 type RiskStatus = "OK" | "FLAGGED" | "CLEAN_AUDIT";
@@ -298,20 +305,23 @@ const ProjectCard = ({ project }: { project: ProjectData }) => {
 const StylizedKenyaMap = ({
   selectedCounty,
   onSelect,
+  geoData,
 }: {
   selectedCounty: string;
   onSelect: (c: string) => void;
+  geoData: any;
 }) => {
   const width = 400;
   const height = 450;
 
   // useMemo ensures we only calculate the projection paths once, not on every render
   const { pathGenerator, features } = useMemo(() => {
+    if (!geoData) return { pathGenerator: null, features: [] };
     // 1. Create a Mercator projection
     // fitSize automatically calculates the perfect scale and center for Kenya!
     const projection = geoMercator().fitSize(
       [width, height],
-      kenyaGeoData as any 
+      geoData as any 
     );
 
     // 2. Create a path generator using that projection
@@ -319,9 +329,11 @@ const StylizedKenyaMap = ({
 
     return {
       pathGenerator: generator,
-      features: kenyaGeoData.features,
+      features: geoData.features,
     };
-  }, []);
+  }, [geoData]);
+
+  if (!geoData || !pathGenerator) return <div className="h-[450px] flex items-center justify-center text-muted-foreground italic">Loading regional map...</div>;
 
   return (
     <div className="relative w-full aspect-square max-w-[400px] mx-auto">
@@ -396,8 +408,29 @@ const StylizedKenyaMap = ({
 // --- Main Container ---
 export default function CountyDataExplorer() {
   const [selectedCounty, setSelectedCounty] = useState<string>("Baringo");
+  const [kenyaGeoData, setKenyaGeoData] = useState<any>(null);
+
+  useEffect(() => {
+    fetch("/gadm41_KEN_1.json")
+      .then((res) => res.json())
+      .then((data) => setKenyaGeoData(data))
+      .catch((err) => console.error("Failed to load map data:", err));
+  }, []);
 
   const filteredProjects = MOCK_DATA.filter((p) => p.county === selectedCounty);
+
+  // Map projects for the DashboardNarrator to match its expected interface
+  const narrationProjects = filteredProjects.map(p => ({
+    id: p.project_id,
+    title: p.project_name,
+    county: p.county,
+    year: p.financial_year,
+    contractSum: formatCurrency(p.contract_sum_kshs),
+    amountPaid: formatCurrency(p.amount_paid_kshs),
+    progress: p.implementation_pct,
+    oagStatus: p.oag_forensics.status,
+    oagDetail: p.oag_forensics.findings[0]
+  }));
 
   return (
     <div className="w-full max-w-7xl mx-auto p-4 sm:p-6 lg:p-8">
@@ -426,7 +459,7 @@ export default function CountyDataExplorer() {
               </div>
             </div>
 
-            <StylizedKenyaMap selectedCounty={selectedCounty} onSelect={setSelectedCounty} />
+            <StylizedKenyaMap selectedCounty={selectedCounty} onSelect={setSelectedCounty} geoData={kenyaGeoData} />
 
             <div className="mt-8 flex justify-center gap-6 text-xs font-semibold text-muted-foreground">
               <div className="flex items-center gap-2">
@@ -441,13 +474,16 @@ export default function CountyDataExplorer() {
 
         {/* Right Column: Project Cards */}
         <div className="lg:col-span-7 flex flex-col min-h-[500px]">
-          <div className="flex items-center justify-between mb-6">
-            <h2 className="text-xl font-bold text-foreground">
-              {selectedCounty} County Projects
-            </h2>
-            <span className="px-3 py-1 bg-muted text-muted-foreground font-semibold text-sm rounded-full">
-              {filteredProjects.length} Record{filteredProjects.length !== 1 && "s"}
-            </span>
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
+            <div className="flex items-center gap-3">
+              <h2 className="text-xl font-bold text-foreground">
+                {selectedCounty} County Projects
+              </h2>
+              <span className="px-3 py-1 bg-muted text-muted-foreground font-semibold text-sm rounded-full">
+                {filteredProjects.length} Record{filteredProjects.length !== 1 && "s"}
+              </span>
+            </div>
+            <DashboardNarrator activeCounty={selectedCounty} projects={narrationProjects} />
           </div>
 
           <div className="flex flex-col gap-5">

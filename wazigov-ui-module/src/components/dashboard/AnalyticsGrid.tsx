@@ -1,7 +1,7 @@
 // components/analytics-grid.tsx
 "use client";
 import React from "react";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "../../../components/ui/card";
 import { Banknote, Target, AlertOctagon, TrendingUp, TrendingDown } from "lucide-react";
 
 export default function AnalyticsGrid() {
