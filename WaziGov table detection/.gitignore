@@ -21,6 +21,12 @@ data/images/pages/*.png
 data/images/pages/*.jpg
 data/images/table_crops/*.png
 data/images/table_crops/*.jpg
+data/pdfs/*.pdf
+/data/
+/data/*
+
+/models/
+/output/
 
 # Keep directory structure
 !data/images/pages/.gitkeep
@@ -31,3 +37,6 @@ data/images/table_crops/*.jpg
 *.pth
 *.bin
 *.onnx
+
+/SCT212-0147-2022 Project Proposal WaziGov.pdf
+/SCT212-0199-2022 WaziGov_Project_Proposal.pdf
