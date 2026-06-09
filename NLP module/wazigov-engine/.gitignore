@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+*$py.class
+docling==2.15.0
+transformers==4.48.0
+accelerate==1.3.0
+torch==2.5.1
+pandas==2.2.0
+pytesseract==0.3.10
+psycopg2-binary==2.9.9
+.venv/
+setup_env.sh
+
+data/postgres_data/
+/hodeberta_ner_model
+NLP module/deberta_ner_model
