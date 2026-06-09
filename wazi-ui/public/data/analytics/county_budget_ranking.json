@@ -1,235 +1,253 @@
 {
-  "generated_at": "C:/Users/joeki/Documents/Notes/WaziGov project/wazi-ui",
-  "ranking": [
+  "metadata": {
+    "generated_at": "2026-06-07T10:25:11.425450+00:00",
+    "source_files": [
+      "WaziGov table detection\\data\\pdfs\\Auditor-Generals-summary-Report-on-County-Governments-2023-2024.pdf",
+      "WaziGov table detection\\data\\pdfs\\GREEN-BOOK-EXECUTIVES-2024-FINAL-5.3.2025-SIGNED.pdf"
+    ],
+    "fiscal_years": [
+      "2023-2024"
+    ],
+    "description": "Overall budget ranking by county, aggregated across all processed fiscal years.",
+    "notes": [
+      "total_allocation_kshs is the sum of allocation_kshs from all county trends for a given county."
+    ]
+  },
+  "budget_ranking": [
     {
       "rank": 1,
       "county": "Nairobi",
-      "total_ksh": 44966936833
+      "total_allocation_kshs": 84965581663.0
     },
     {
       "rank": 2,
-      "county": "Nakuru",
-      "total_ksh": 24544014263
+      "county": "Kiambu",
+      "total_allocation_kshs": 37486746542.0
     },
     {
       "rank": 3,
-      "county": "Kiambu",
-      "total_ksh": 23214856470
+      "county": "Nakuru",
+      "total_allocation_kshs": 27135014263.0
     },
     {
       "rank": 4,
-      "county": "Kilifi",
-      "total_ksh": 20003782741
+      "county": "Machakos",
+      "total_allocation_kshs": 24135783142.0
     },
     {
       "rank": 5,
-      "county": "Turkana",
-      "total_ksh": 17225014127
+      "county": "Kilifi",
+      "total_allocation_kshs": 23861778494.0
     },
     {
       "rank": 6,
       "county": "Mombasa",
-      "total_ksh": 17035944906
+      "total_allocation_kshs": 22892301903.0
     },
     {
       "rank": 7,
-      "county": "Machakos",
-      "total_ksh": 16896450047
+      "county": "Kakamega",
+      "total_allocation_kshs": 21598820841.0
     },
     {
       "rank": 8,
-      "county": "Kakamega",
-      "total_ksh": 16786428004
+      "county": "Narok",
+      "total_allocation_kshs": 20455306732.0
     },
     {
       "rank": 9,
-      "county": "Kitui",
-      "total_ksh": 15667011553
+      "county": "Nyandarua",
+      "total_allocation_kshs": 20012503090.0
     },
     {
       "rank": 10,
-      "county": "Narok",
-      "total_ksh": 14985206088
+      "county": "Baringo",
+      "total_allocation_kshs": 18512362144.0
     },
     {
       "rank": 11,
-      "county": "Uasin Gishu",
-      "total_ksh": 14359673386
+      "county": "Kisumu",
+      "total_allocation_kshs": 18337455906.0
     },
     {
       "rank": 12,
-      "county": "Kwale",
-      "total_ksh": 14259168763
+      "county": "Kericho",
+      "total_allocation_kshs": 18308024781.0
     },
     {
       "rank": 13,
-      "county": "Bungoma",
-      "total_ksh": 14232623280
+      "county": "Nyamira",
+      "total_allocation_kshs": 18074520237.0
     },
     {
       "rank": 14,
-      "county": "Kisumu",
-      "total_ksh": 13697865202
+      "county": "Tana River",
+      "total_allocation_kshs": 17996857566.0
     },
     {
       "rank": 15,
-      "county": "Kisii",
-      "total_ksh": 13251121884
+      "county": "Turkana",
+      "total_allocation_kshs": 17890779673.0
     },
     {
       "rank": 16,
-      "county": "Mandera",
-      "total_ksh": 13000831007
+      "county": "Laikipia",
+      "total_allocation_kshs": 17104525978.0
     },
     {
       "rank": 17,
-      "county": "Migori",
-      "total_ksh": 12576546230
+      "county": "Embu",
+      "total_allocation_kshs": 16781293669.0
     },
     {
       "rank": 18,
-      "county": "Wajir",
-      "total_ksh": 12140530041
+      "county": "Kitui",
+      "total_allocation_kshs": 16531831417.0
     },
     {
       "rank": 19,
-      "county": "Meru",
-      "total_ksh": 11835953871
+      "county": "Bungoma",
+      "total_allocation_kshs": 16402808166.0
     },
     {
       "rank": 20,
-      "county": "Kajiado",
-      "total_ksh": 11591864106
+      "county": "Uasin Gishu",
+      "total_allocation_kshs": 16182184692.0
     },
     {
       "rank": 21,
-      "county": "Trans Nzoia",
-      "total_ksh": 11270577202
+      "county": "West Pokot",
+      "total_allocation_kshs": 15757386264.0
     },
     {
       "rank": 22,
-      "county": "Makueni",
-      "total_ksh": 11182335100
+      "county": "Samburu",
+      "total_allocation_kshs": 15692911134.0
     },
     {
       "rank": 23,
-      "county": "Homa Bay",
-      "total_ksh": 11167226300
+      "county": "Kwale",
+      "total_allocation_kshs": 15654209972.0
     },
     {
       "rank": 24,
-      "county": "Garissa",
-      "total_ksh": 10532421124
+      "county": "Kirinyaga",
+      "total_allocation_kshs": 15299958892.0
     },
     {
       "rank": 25,
-      "county": "Murang'a",
-      "total_ksh": 10346366046
+      "county": "Kajiado",
+      "total_allocation_kshs": 14827780682.0
     },
     {
       "rank": 26,
-      "county": "Busia",
-      "total_ksh": 10203033153
+      "county": "Migori",
+      "total_allocation_kshs": 14323346230.0
     },
     {
       "rank": 27,
-      "county": "Nandi",
-      "total_ksh": 9850666465
+      "county": "Kisii",
+      "total_allocation_kshs": 14246735370.0
     },
     {
       "rank": 28,
-      "county": "Siaya",
-      "total_ksh": 9761123388
+      "county": "Mandera",
+      "total_allocation_kshs": 14019764317.0
     },
     {
       "rank": 29,
-      "county": "Bomet",
-      "total_ksh": 9591003564
+      "county": "Vihiga",
+      "total_allocation_kshs": 13907734226.0
     },
     {
       "rank": 30,
-      "county": "Marsabit",
-      "total_ksh": 9424650449
+      "county": "Tharaka-Nithi",
+      "total_allocation_kshs": 13638190302.0
     },
     {
       "rank": 31,
-      "county": "Baringo",
-      "total_ksh": 8893005726
+      "county": "Elgeyo-Marakwet",
+      "total_allocation_kshs": 13507567088.0
     },
     {
       "rank": 32,
-      "county": "Tana River",
-      "total_ksh": 8869497866
+      "county": "Meru",
+      "total_allocation_kshs": 13208106199.0
     },
     {
       "rank": 33,
-      "county": "Nyandarua",
-      "total_ksh": 8748151545
+      "county": "Homa Bay",
+      "total_allocation_kshs": 12801049658.0
     },
     {
       "rank": 34,
-      "county": "Kericho",
-      "total_ksh": 8484768032
+      "county": "Murang'a",
+      "total_allocation_kshs": 12731095658.0
     },
     {
       "rank": 35,
-      "county": "Nyamira",
-      "total_ksh": 8197155052
+      "county": "Makueni",
+      "total_allocation_kshs": 12674960888.0
     },
     {
       "rank": 36,
-      "county": "Embu",
-      "total_ksh": 7932599418
+      "county": "Wajir",
+      "total_allocation_kshs": 12565001603.0
     },
     {
       "rank": 37,
-      "county": "Laikipia",
-      "total_ksh": 7726465272
+      "county": "Isiolo",
+      "total_allocation_kshs": 11933112514.0
     },
     {
       "rank": 38,
-      "county": "West Pokot",
-      "total_ksh": 7715474283
+      "county": "Busia",
+      "total_allocation_kshs": 11786441824.0
     },
     {
       "rank": 39,
-      "county": "Samburu",
-      "total_ksh": 7665941867
+      "county": "Trans Nzoia",
+      "total_allocation_kshs": 11708819537.0
     },
     {
       "rank": 40,
-      "county": "Kirinyaga",
-      "total_ksh": 7240547406
+      "county": "Taita-Taveta",
+      "total_allocation_kshs": 11323983319.0
     },
     {
       "rank": 41,
-      "county": "Vihiga",
-      "total_ksh": 6701592386
+      "county": "Nandi",
+      "total_allocation_kshs": 11233054625.0
     },
     {
       "rank": 42,
-      "county": "Elgeyo-Marakwet",
-      "total_ksh": 6527819912
+      "county": "Garissa",
+      "total_allocation_kshs": 11076298988.0
     },
     {
       "rank": 43,
-      "county": "Tharaka-Nithi",
-      "total_ksh": 6518796358
+      "county": "Siaya",
+      "total_allocation_kshs": 10780085932.0
     },
     {
       "rank": 44,
-      "county": "Isiolo",
-      "total_ksh": 5718810379
+      "county": "Bomet",
+      "total_allocation_kshs": 10255087224.0
     },
     {
       "rank": 45,
-      "county": "Taita-Taveta",
-      "total_ksh": 5232408363
+      "county": "Marsabit",
+      "total_allocation_kshs": 9774159449.0
     },
     {
       "rank": 46,
       "county": "Lamu",
-      "total_ksh": 4541837952
+      "total_allocation_kshs": 9472068148.0
+    },
+    {
+      "rank": 47,
+      "county": "Nyeri",
+      "total_allocation_kshs": 971455028.0
     }
   ]
 }

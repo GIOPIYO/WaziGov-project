@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-05-31T15:47:28.043024+00:00",
+    "generated_at": "2026-06-07T10:25:11.425450+00:00",
     "fiscal_years": [
       "2023-2024"
     ],
@@ -277,26 +277,38 @@
       "fiscal_years": [
         "2023-2024"
       ],
-      "table_mentions": 29,
-      "warning_table_mentions": 29,
-      "warnings_total": 55,
+      "table_mentions": 49,
+      "warning_table_mentions": 49,
+      "warnings_total": 95,
       "warning_table_rate": 1.0,
-      "warnings_per_table_mention": 1.896552,
+      "warnings_per_table_mention": 1.938776,
       "warning_type_counts": [
         {
           "warning": "no_merged_cells_detected",
-          "count": 29
+          "count": 49
         },
         {
           "warning": "no_header_hierarchy_detected",
-          "count": 24
+          "count": 39
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 146.7 vs reported 68.0",
+          "count": 3
         },
         {
           "warning": "numeric_ratio_mismatch_row_1: expected 56301857700.0 vs reported 61.0",
           "count": 1
         },
         {
+          "warning": "numeric_ratio_mismatch_row_1: expected 737925519900.0 vs reported 59.0",
+          "count": 1
+        },
+        {
           "warning": "numeric_ratio_mismatch_row_1: expected 94.1 vs reported 61.0",
+          "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_2: expected 22000000000.0 vs reported 200.0",
           "count": 1
         }
       ]
@@ -306,19 +318,23 @@
       "fiscal_years": [
         "2023-2024"
       ],
-      "table_mentions": 25,
-      "warning_table_mentions": 25,
-      "warnings_total": 50,
+      "table_mentions": 44,
+      "warning_table_mentions": 44,
+      "warnings_total": 85,
       "warning_table_rate": 1.0,
-      "warnings_per_table_mention": 2.0,
+      "warnings_per_table_mention": 1.931818,
       "warning_type_counts": [
         {
           "warning": "no_merged_cells_detected",
-          "count": 24
+          "count": 43
         },
         {
           "warning": "no_header_hierarchy_detected",
-          "count": 21
+          "count": 32
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 146.7 vs reported 68.0",
+          "count": 3
         },
         {
           "warning": "numeric_ratio_mismatch_row_1: expected 1506281022.6 vs reported 40.0",
@@ -326,6 +342,10 @@
         },
         {
           "warning": "numeric_ratio_mismatch_row_1: expected 5068181818.2 vs reported 72.0",
+          "count": 2
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 6453052525.8 vs reported 40.0",
           "count": 2
         },
         {
@@ -339,26 +359,42 @@
       "fiscal_years": [
         "2023-2024"
       ],
-      "table_mentions": 21,
-      "warning_table_mentions": 21,
-      "warnings_total": 40,
+      "table_mentions": 40,
+      "warning_table_mentions": 40,
+      "warnings_total": 78,
       "warning_table_rate": 1.0,
-      "warnings_per_table_mention": 1.904762,
+      "warnings_per_table_mention": 1.95,
       "warning_type_counts": [
         {
           "warning": "no_merged_cells_detected",
-          "count": 20
+          "count": 39
         },
         {
           "warning": "no_header_hierarchy_detected",
-          "count": 18
+          "count": 30
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 146.7 vs reported 68.0",
+          "count": 3
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 5068181818.2 vs reported 72.0",
+          "count": 2
         },
         {
           "warning": "16_cell_boxes_outside_table",
           "count": 1
         },
         {
+          "warning": "numeric_ratio_mismatch_row_1: expected 56301857700.0 vs reported 61.0",
+          "count": 1
+        },
+        {
           "warning": "numeric_ratio_mismatch_row_1: expected 737925519900.0 vs reported 59.0",
+          "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 94.1 vs reported 61.0",
           "count": 1
         }
       ]
@@ -368,19 +404,23 @@
       "fiscal_years": [
         "2023-2024"
       ],
-      "table_mentions": 29,
-      "warning_table_mentions": 27,
-      "warnings_total": 55,
-      "warning_table_rate": 0.931034,
-      "warnings_per_table_mention": 1.896552,
+      "table_mentions": 57,
+      "warning_table_mentions": 55,
+      "warnings_total": 109,
+      "warning_table_rate": 0.964912,
+      "warnings_per_table_mention": 1.912281,
       "warning_type_counts": [
         {
           "warning": "no_merged_cells_detected",
-          "count": 26
+          "count": 54
         },
         {
           "warning": "no_header_hierarchy_detected",
-          "count": 22
+          "count": 45
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 5068181818.2 vs reported 72.0",
+          "count": 2
         },
         {
           "warning": "numeric_ratio_mismatch_row_1: expected 641594019.4 vs reported 29.0",
@@ -397,6 +437,10 @@
         {
           "warning": "16_cell_boxes_outside_table",
           "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 737925519900.0 vs reported 59.0",
+          "count": 1
         }
       ]
     },
@@ -405,30 +449,42 @@
       "fiscal_years": [
         "2023-2024"
       ],
-      "table_mentions": 28,
-      "warning_table_mentions": 28,
-      "warnings_total": 55,
+      "table_mentions": 42,
+      "warning_table_mentions": 42,
+      "warnings_total": 83,
       "warning_table_rate": 1.0,
-      "warnings_per_table_mention": 1.964286,
+      "warnings_per_table_mention": 1.97619,
       "warning_type_counts": [
         {
           "warning": "no_merged_cells_detected",
-          "count": 27
+          "count": 41
         },
         {
           "warning": "no_header_hierarchy_detected",
-          "count": 22
+          "count": 32
         },
         {
           "warning": "numeric_ratio_mismatch_row_1: expected 146.7 vs reported 68.0",
           "count": 3
         },
         {
+          "warning": "numeric_ratio_mismatch_row_1: expected 641594019.4 vs reported 29.0",
+          "count": 2
+        },
+        {
           "warning": "28_cell_boxes_outside_table",
           "count": 1
         },
         {
+          "warning": "numeric_ratio_mismatch_row_1: expected 56301857700.0 vs reported 61.0",
+          "count": 1
+        },
+        {
           "warning": "numeric_ratio_mismatch_row_1: expected 737925519900.0 vs reported 59.0",
+          "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 94.1 vs reported 61.0",
           "count": 1
         },
         {
@@ -442,19 +498,19 @@
       "fiscal_years": [
         "2023-2024"
       ],
-      "table_mentions": 40,
-      "warning_table_mentions": 40,
-      "warnings_total": 80,
+      "table_mentions": 56,
+      "warning_table_mentions": 56,
+      "warnings_total": 112,
       "warning_table_rate": 1.0,
       "warnings_per_table_mention": 2.0,
       "warning_type_counts": [
         {
           "warning": "no_merged_cells_detected",
-          "count": 38
+          "count": 54
         },
         {
           "warning": "no_header_hierarchy_detected",
-          "count": 35
+          "count": 49
         },
         {
           "warning": "numeric_ratio_mismatch_row_1: expected 8711980083.3 vs reported 44.0",
@@ -469,7 +525,15 @@
           "count": 1
         },
         {
+          "warning": "numeric_ratio_mismatch_row_1: expected 56301857700.0 vs reported 61.0",
+          "count": 1
+        },
+        {
           "warning": "numeric_ratio_mismatch_row_1: expected 737925519900.0 vs reported 59.0",
+          "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 94.1 vs reported 61.0",
           "count": 1
         },
         {
@@ -483,19 +547,27 @@
       "fiscal_years": [
         "2023-2024"
       ],
-      "table_mentions": 30,
-      "warning_table_mentions": 30,
-      "warnings_total": 53,
+      "table_mentions": 41,
+      "warning_table_mentions": 41,
+      "warnings_total": 76,
       "warning_table_rate": 1.0,
-      "warnings_per_table_mention": 1.766667,
+      "warnings_per_table_mention": 1.853659,
       "warning_type_counts": [
         {
           "warning": "no_merged_cells_detected",
-          "count": 29
+          "count": 40
         },
         {
           "warning": "no_header_hierarchy_detected",
-          "count": 21
+          "count": 27
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 146.7 vs reported 68.0",
+          "count": 3
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 5068181818.2 vs reported 72.0",
+          "count": 2
         },
         {
           "warning": "28_cell_boxes_outside_table",
@@ -503,6 +575,10 @@
         },
         {
           "warning": "numeric_ratio_mismatch_row_1: expected 56301857700.0 vs reported 61.0",
+          "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 737925519900.0 vs reported 59.0",
           "count": 1
         },
         {
@@ -516,19 +592,19 @@
       "fiscal_years": [
         "2023-2024"
       ],
-      "table_mentions": 31,
-      "warning_table_mentions": 31,
-      "warnings_total": 55,
+      "table_mentions": 54,
+      "warning_table_mentions": 54,
+      "warnings_total": 102,
       "warning_table_rate": 1.0,
-      "warnings_per_table_mention": 1.774194,
+      "warnings_per_table_mention": 1.888889,
       "warning_type_counts": [
         {
           "warning": "no_merged_cells_detected",
-          "count": 30
+          "count": 53
         },
         {
           "warning": "no_header_hierarchy_detected",
-          "count": 21
+          "count": 41
         },
         {
           "warning": "numeric_ratio_mismatch_row_1: expected 146.7 vs reported 68.0",
@@ -536,6 +612,22 @@
         },
         {
           "warning": "16_cell_boxes_outside_table",
+          "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 56301857700.0 vs reported 61.0",
+          "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 737925519900.0 vs reported 59.0",
+          "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 94.1 vs reported 61.0",
+          "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_2: expected 22000000000.0 vs reported 200.0",
           "count": 1
         }
       ]
@@ -545,19 +637,23 @@
       "fiscal_years": [
         "2023-2024"
       ],
-      "table_mentions": 36,
-      "warning_table_mentions": 36,
-      "warnings_total": 66,
+      "table_mentions": 54,
+      "warning_table_mentions": 54,
+      "warnings_total": 103,
       "warning_table_rate": 1.0,
-      "warnings_per_table_mention": 1.833333,
+      "warnings_per_table_mention": 1.907407,
       "warning_type_counts": [
         {
           "warning": "no_merged_cells_detected",
-          "count": 34
+          "count": 52
         },
         {
           "warning": "no_header_hierarchy_detected",
-          "count": 29
+          "count": 43
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 146.7 vs reported 68.0",
+          "count": 3
         },
         {
           "warning": "28_cell_boxes_outside_table",
@@ -568,7 +664,15 @@
           "count": 1
         },
         {
+          "warning": "numeric_ratio_mismatch_row_1: expected 737925519900.0 vs reported 59.0",
+          "count": 1
+        },
+        {
           "warning": "numeric_ratio_mismatch_row_1: expected 94.1 vs reported 61.0",
+          "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_2: expected 22000000000.0 vs reported 200.0",
           "count": 1
         }
       ]
@@ -578,19 +682,27 @@
       "fiscal_years": [
         "2023-2024"
       ],
-      "table_mentions": 25,
-      "warning_table_mentions": 25,
-      "warnings_total": 52,
+      "table_mentions": 41,
+      "warning_table_mentions": 41,
+      "warnings_total": 83,
       "warning_table_rate": 1.0,
-      "warnings_per_table_mention": 2.08,
+      "warnings_per_table_mention": 2.02439,
       "warning_type_counts": [
         {
           "warning": "no_merged_cells_detected",
-          "count": 24
+          "count": 40
         },
         {
           "warning": "no_header_hierarchy_detected",
-          "count": 21
+          "count": 31
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 146.7 vs reported 68.0",
+          "count": 3
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 1506281022.6 vs reported 40.0",
+          "count": 2
         },
         {
           "warning": "numeric_ratio_mismatch_row_1: expected 5068181818.2 vs reported 72.0",
@@ -615,19 +727,31 @@
       "fiscal_years": [
         "2023-2024"
       ],
-      "table_mentions": 37,
-      "warning_table_mentions": 37,
-      "warnings_total": 69,
+      "table_mentions": 54,
+      "warning_table_mentions": 54,
+      "warnings_total": 106,
       "warning_table_rate": 1.0,
-      "warnings_per_table_mention": 1.864865,
+      "warnings_per_table_mention": 1.962963,
       "warning_type_counts": [
         {
           "warning": "no_merged_cells_detected",
-          "count": 36
+          "count": 53
         },
         {
           "warning": "no_header_hierarchy_detected",
-          "count": 30
+          "count": 41
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 146.7 vs reported 68.0",
+          "count": 3
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 5068181818.2 vs reported 72.0",
+          "count": 2
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 641594019.4 vs reported 29.0",
+          "count": 2
         },
         {
           "warning": "numeric_ratio_mismatch_row_1: expected 6453052525.8 vs reported 40.0",
@@ -635,6 +759,14 @@
         },
         {
           "warning": "16_cell_boxes_outside_table",
+          "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 56301857700.0 vs reported 61.0",
+          "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 94.1 vs reported 61.0",
           "count": 1
         }
       ]
@@ -644,19 +776,23 @@
       "fiscal_years": [
         "2023-2024"
       ],
-      "table_mentions": 25,
-      "warning_table_mentions": 25,
-      "warnings_total": 52,
+      "table_mentions": 39,
+      "warning_table_mentions": 39,
+      "warnings_total": 82,
       "warning_table_rate": 1.0,
-      "warnings_per_table_mention": 2.08,
+      "warnings_per_table_mention": 2.102564,
       "warning_type_counts": [
         {
           "warning": "no_merged_cells_detected",
-          "count": 24
+          "count": 38
         },
         {
           "warning": "no_header_hierarchy_detected",
-          "count": 23
+          "count": 32
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 146.7 vs reported 68.0",
+          "count": 3
         },
         {
           "warning": "numeric_ratio_mismatch_row_1: expected 1488978680.6 vs reported 40.0",
@@ -667,7 +803,19 @@
           "count": 2
         },
         {
+          "warning": "numeric_ratio_mismatch_row_1: expected 641594019.4 vs reported 29.0",
+          "count": 2
+        },
+        {
           "warning": "16_cell_boxes_outside_table",
+          "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 737925519900.0 vs reported 59.0",
+          "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_2: expected 22000000000.0 vs reported 200.0",
           "count": 1
         }
       ]
@@ -677,19 +825,23 @@
       "fiscal_years": [
         "2023-2024"
       ],
-      "table_mentions": 32,
-      "warning_table_mentions": 32,
-      "warnings_total": 60,
+      "table_mentions": 52,
+      "warning_table_mentions": 52,
+      "warnings_total": 100,
       "warning_table_rate": 1.0,
-      "warnings_per_table_mention": 1.875,
+      "warnings_per_table_mention": 1.923077,
       "warning_type_counts": [
         {
           "warning": "no_merged_cells_detected",
-          "count": 31
+          "count": 51
         },
         {
           "warning": "no_header_hierarchy_detected",
-          "count": 22
+          "count": 37
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 146.7 vs reported 68.0",
+          "count": 3
         },
         {
           "warning": "1_cell_boxes_outside_table",
@@ -706,6 +858,14 @@
         {
           "warning": "28_cell_boxes_outside_table",
           "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 56301857700.0 vs reported 61.0",
+          "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 94.1 vs reported 61.0",
+          "count": 1
         }
       ]
     },
@@ -714,19 +874,19 @@
       "fiscal_years": [
         "2023-2024"
       ],
-      "table_mentions": 37,
-      "warning_table_mentions": 35,
-      "warnings_total": 70,
-      "warning_table_rate": 0.945946,
-      "warnings_per_table_mention": 1.891892,
+      "table_mentions": 48,
+      "warning_table_mentions": 48,
+      "warnings_total": 97,
+      "warning_table_rate": 1.0,
+      "warnings_per_table_mention": 2.020833,
       "warning_type_counts": [
         {
           "warning": "no_merged_cells_detected",
-          "count": 33
+          "count": 46
         },
         {
           "warning": "no_header_hierarchy_detected",
-          "count": 30
+          "count": 41
         },
         {
           "warning": "numeric_ratio_mismatch_row_1: expected 1488978680.6 vs reported 40.0",
@@ -741,7 +901,15 @@
           "count": 2
         },
         {
+          "warning": "numeric_ratio_mismatch_row_1: expected 8711980083.3 vs reported 44.0",
+          "count": 2
+        },
+        {
           "warning": "28_cell_boxes_outside_table",
+          "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 737925519900.0 vs reported 59.0",
           "count": 1
         }
       ]
@@ -751,22 +919,38 @@
       "fiscal_years": [
         "2023-2024"
       ],
-      "table_mentions": 24,
-      "warning_table_mentions": 24,
-      "warnings_total": 45,
+      "table_mentions": 42,
+      "warning_table_mentions": 42,
+      "warnings_total": 80,
       "warning_table_rate": 1.0,
-      "warnings_per_table_mention": 1.875,
+      "warnings_per_table_mention": 1.904762,
       "warning_type_counts": [
         {
           "warning": "no_merged_cells_detected",
-          "count": 23
+          "count": 41
         },
         {
           "warning": "no_header_hierarchy_detected",
-          "count": 20
+          "count": 31
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 146.7 vs reported 68.0",
+          "count": 3
         },
         {
           "warning": "28_cell_boxes_outside_table",
+          "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 56301857700.0 vs reported 61.0",
+          "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 737925519900.0 vs reported 59.0",
+          "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 94.1 vs reported 61.0",
           "count": 1
         },
         {
@@ -780,19 +964,19 @@
       "fiscal_years": [
         "2023-2024"
       ],
-      "table_mentions": 34,
-      "warning_table_mentions": 34,
-      "warnings_total": 60,
+      "table_mentions": 51,
+      "warning_table_mentions": 51,
+      "warnings_total": 94,
       "warning_table_rate": 1.0,
-      "warnings_per_table_mention": 1.764706,
+      "warnings_per_table_mention": 1.843137,
       "warning_type_counts": [
         {
           "warning": "no_merged_cells_detected",
-          "count": 33
+          "count": 50
         },
         {
           "warning": "no_header_hierarchy_detected",
-          "count": 20
+          "count": 36
         },
         {
           "warning": "numeric_ratio_mismatch_row_1: expected 146.7 vs reported 68.0",
@@ -813,6 +997,10 @@
         {
           "warning": "numeric_ratio_mismatch_row_1: expected 94.1 vs reported 61.0",
           "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_2: expected 22000000000.0 vs reported 200.0",
+          "count": 1
         }
       ]
     },
@@ -821,19 +1009,23 @@
       "fiscal_years": [
         "2023-2024"
       ],
-      "table_mentions": 23,
-      "warning_table_mentions": 21,
-      "warnings_total": 44,
-      "warning_table_rate": 0.913043,
-      "warnings_per_table_mention": 1.913043,
+      "table_mentions": 42,
+      "warning_table_mentions": 40,
+      "warnings_total": 79,
+      "warning_table_rate": 0.952381,
+      "warnings_per_table_mention": 1.880952,
       "warning_type_counts": [
         {
           "warning": "no_merged_cells_detected",
-          "count": 20
+          "count": 39
         },
         {
           "warning": "no_header_hierarchy_detected",
-          "count": 17
+          "count": 30
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 146.7 vs reported 68.0",
+          "count": 3
         },
         {
           "warning": "numeric_ratio_mismatch_row_1: expected 1506281022.6 vs reported 40.0",
@@ -858,230 +1050,11 @@
       "fiscal_years": [
         "2023-2024"
       ],
-      "table_mentions": 29,
-      "warning_table_mentions": 29,
-      "warnings_total": 61,
+      "table_mentions": 44,
+      "warning_table_mentions": 44,
+      "warnings_total": 92,
       "warning_table_rate": 1.0,
-      "warnings_per_table_mention": 2.103448,
-      "warning_type_counts": [
-        {
-          "warning": "no_merged_cells_detected",
-          "count": 27
-        },
-        {
-          "warning": "no_header_hierarchy_detected",
-          "count": 25
-        },
-        {
-          "warning": "numeric_ratio_mismatch_row_1: expected 1488978680.6 vs reported 40.0",
-          "count": 2
-        },
-        {
-          "warning": "numeric_ratio_mismatch_row_1: expected 1506281022.6 vs reported 40.0",
-          "count": 2
-        },
-        {
-          "warning": "numeric_ratio_mismatch_row_1: expected 8711980083.3 vs reported 44.0",
-          "count": 2
-        },
-        {
-          "warning": "numeric_ratio_mismatch_row_1: expected 9701424183.9 vs reported 44.0",
-          "count": 2
-        },
-        {
-          "warning": "28_cell_boxes_outside_table",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "county": "Kwale",
-      "fiscal_years": [
-        "2023-2024"
-      ],
-      "table_mentions": 27,
-      "warning_table_mentions": 27,
-      "warnings_total": 51,
-      "warning_table_rate": 1.0,
-      "warnings_per_table_mention": 1.888889,
-      "warning_type_counts": [
-        {
-          "warning": "no_merged_cells_detected",
-          "count": 25
-        },
-        {
-          "warning": "no_header_hierarchy_detected",
-          "count": 21
-        },
-        {
-          "warning": "numeric_ratio_mismatch_row_1: expected 1506281022.6 vs reported 40.0",
-          "count": 2
-        },
-        {
-          "warning": "numeric_ratio_mismatch_row_1: expected 5068181818.2 vs reported 72.0",
-          "count": 2
-        },
-        {
-          "warning": "28_cell_boxes_outside_table",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "county": "Laikipia",
-      "fiscal_years": [
-        "2023-2024"
-      ],
-      "table_mentions": 37,
-      "warning_table_mentions": 37,
-      "warnings_total": 71,
-      "warning_table_rate": 1.0,
-      "warnings_per_table_mention": 1.918919,
-      "warning_type_counts": [
-        {
-          "warning": "no_merged_cells_detected",
-          "count": 37
-        },
-        {
-          "warning": "no_header_hierarchy_detected",
-          "count": 29
-        },
-        {
-          "warning": "numeric_ratio_mismatch_row_1: expected 146.7 vs reported 68.0",
-          "count": 3
-        },
-        {
-          "warning": "numeric_ratio_mismatch_row_1: expected 1506281022.6 vs reported 40.0",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "county": "Lamu",
-      "fiscal_years": [
-        "2023-2024"
-      ],
-      "table_mentions": 30,
-      "warning_table_mentions": 28,
-      "warnings_total": 54,
-      "warning_table_rate": 0.933333,
-      "warnings_per_table_mention": 1.8,
-      "warning_type_counts": [
-        {
-          "warning": "no_merged_cells_detected",
-          "count": 27
-        },
-        {
-          "warning": "no_header_hierarchy_detected",
-          "count": 25
-        },
-        {
-          "warning": "28_cell_boxes_outside_table",
-          "count": 1
-        },
-        {
-          "warning": "numeric_ratio_mismatch_row_2: expected 22000000000.0 vs reported 200.0",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "county": "Machakos",
-      "fiscal_years": [
-        "2023-2024"
-      ],
-      "table_mentions": 26,
-      "warning_table_mentions": 26,
-      "warnings_total": 46,
-      "warning_table_rate": 1.0,
-      "warnings_per_table_mention": 1.769231,
-      "warning_type_counts": [
-        {
-          "warning": "no_merged_cells_detected",
-          "count": 25
-        },
-        {
-          "warning": "no_header_hierarchy_detected",
-          "count": 18
-        },
-        {
-          "warning": "numeric_ratio_mismatch_row_1: expected 641594019.4 vs reported 29.0",
-          "count": 2
-        },
-        {
-          "warning": "28_cell_boxes_outside_table",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "county": "Makueni",
-      "fiscal_years": [
-        "2023-2024"
-      ],
-      "table_mentions": 21,
-      "warning_table_mentions": 21,
-      "warnings_total": 39,
-      "warning_table_rate": 1.0,
-      "warnings_per_table_mention": 1.857143,
-      "warning_type_counts": [
-        {
-          "warning": "no_merged_cells_detected",
-          "count": 20
-        },
-        {
-          "warning": "no_header_hierarchy_detected",
-          "count": 17
-        },
-        {
-          "warning": "28_cell_boxes_outside_table",
-          "count": 1
-        },
-        {
-          "warning": "numeric_ratio_mismatch_row_1: expected 737925519900.0 vs reported 59.0",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "county": "Mandera",
-      "fiscal_years": [
-        "2023-2024"
-      ],
-      "table_mentions": 26,
-      "warning_table_mentions": 26,
-      "warnings_total": 49,
-      "warning_table_rate": 1.0,
-      "warnings_per_table_mention": 1.884615,
-      "warning_type_counts": [
-        {
-          "warning": "no_merged_cells_detected",
-          "count": 25
-        },
-        {
-          "warning": "no_header_hierarchy_detected",
-          "count": 21
-        },
-        {
-          "warning": "numeric_ratio_mismatch_row_1: expected 9701424183.9 vs reported 44.0",
-          "count": 2
-        },
-        {
-          "warning": "28_cell_boxes_outside_table",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "county": "Marsabit",
-      "fiscal_years": [
-        "2023-2024"
-      ],
-      "table_mentions": 43,
-      "warning_table_mentions": 43,
-      "warnings_total": 91,
-      "warning_table_rate": 1.0,
-      "warnings_per_table_mention": 2.116279,
+      "warnings_per_table_mention": 2.090909,
       "warning_type_counts": [
         {
           "warning": "no_merged_cells_detected",
@@ -1089,10 +1062,14 @@
         },
         {
           "warning": "no_header_hierarchy_detected",
-          "count": 40
+          "count": 38
         },
         {
-          "warning": "numeric_ratio_mismatch_row_1: expected 641594019.4 vs reported 29.0",
+          "warning": "numeric_ratio_mismatch_row_1: expected 1488978680.6 vs reported 40.0",
+          "count": 2
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 1506281022.6 vs reported 40.0",
           "count": 2
         },
         {
@@ -1110,30 +1087,267 @@
         {
           "warning": "28_cell_boxes_outside_table",
           "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_2: expected 22000000000.0 vs reported 200.0",
+          "count": 1
         }
       ]
     },
     {
-      "county": "Meru",
+      "county": "Kwale",
       "fiscal_years": [
         "2023-2024"
       ],
-      "table_mentions": 15,
-      "warning_table_mentions": 15,
-      "warnings_total": 29,
+      "table_mentions": 42,
+      "warning_table_mentions": 42,
+      "warnings_total": 82,
       "warning_table_rate": 1.0,
-      "warnings_per_table_mention": 1.933333,
+      "warnings_per_table_mention": 1.952381,
       "warning_type_counts": [
         {
           "warning": "no_merged_cells_detected",
-          "count": 13
+          "count": 40
         },
         {
           "warning": "no_header_hierarchy_detected",
-          "count": 11
+          "count": 32
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 1506281022.6 vs reported 40.0",
+          "count": 2
         },
         {
           "warning": "numeric_ratio_mismatch_row_1: expected 5068181818.2 vs reported 72.0",
+          "count": 2
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 8711980083.3 vs reported 44.0",
+          "count": 2
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 9701424183.9 vs reported 44.0",
+          "count": 2
+        },
+        {
+          "warning": "28_cell_boxes_outside_table",
+          "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 737925519900.0 vs reported 59.0",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "county": "Laikipia",
+      "fiscal_years": [
+        "2023-2024"
+      ],
+      "table_mentions": 58,
+      "warning_table_mentions": 58,
+      "warnings_total": 113,
+      "warning_table_rate": 1.0,
+      "warnings_per_table_mention": 1.948276,
+      "warning_type_counts": [
+        {
+          "warning": "no_merged_cells_detected",
+          "count": 58
+        },
+        {
+          "warning": "no_header_hierarchy_detected",
+          "count": 47
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 146.7 vs reported 68.0",
+          "count": 3
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 1506281022.6 vs reported 40.0",
+          "count": 2
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 6453052525.8 vs reported 40.0",
+          "count": 2
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_2: expected 22000000000.0 vs reported 200.0",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "county": "Lamu",
+      "fiscal_years": [
+        "2023-2024"
+      ],
+      "table_mentions": 47,
+      "warning_table_mentions": 45,
+      "warnings_total": 89,
+      "warning_table_rate": 0.957447,
+      "warnings_per_table_mention": 1.893617,
+      "warning_type_counts": [
+        {
+          "warning": "no_merged_cells_detected",
+          "count": 44
+        },
+        {
+          "warning": "no_header_hierarchy_detected",
+          "count": 37
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 146.7 vs reported 68.0",
+          "count": 3
+        },
+        {
+          "warning": "28_cell_boxes_outside_table",
+          "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 56301857700.0 vs reported 61.0",
+          "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 737925519900.0 vs reported 59.0",
+          "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 94.1 vs reported 61.0",
+          "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_2: expected 22000000000.0 vs reported 200.0",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "county": "Machakos",
+      "fiscal_years": [
+        "2023-2024"
+      ],
+      "table_mentions": 41,
+      "warning_table_mentions": 41,
+      "warnings_total": 78,
+      "warning_table_rate": 1.0,
+      "warnings_per_table_mention": 1.902439,
+      "warning_type_counts": [
+        {
+          "warning": "no_merged_cells_detected",
+          "count": 40
+        },
+        {
+          "warning": "no_header_hierarchy_detected",
+          "count": 27
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 146.7 vs reported 68.0",
+          "count": 3
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 5068181818.2 vs reported 72.0",
+          "count": 2
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 641594019.4 vs reported 29.0",
+          "count": 2
+        },
+        {
+          "warning": "28_cell_boxes_outside_table",
+          "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 56301857700.0 vs reported 61.0",
+          "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 737925519900.0 vs reported 59.0",
+          "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 94.1 vs reported 61.0",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "county": "Makueni",
+      "fiscal_years": [
+        "2023-2024"
+      ],
+      "table_mentions": 44,
+      "warning_table_mentions": 44,
+      "warnings_total": 82,
+      "warning_table_rate": 1.0,
+      "warnings_per_table_mention": 1.863636,
+      "warning_type_counts": [
+        {
+          "warning": "no_merged_cells_detected",
+          "count": 43
+        },
+        {
+          "warning": "no_header_hierarchy_detected",
+          "count": 31
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 146.7 vs reported 68.0",
+          "count": 3
+        },
+        {
+          "warning": "28_cell_boxes_outside_table",
+          "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 56301857700.0 vs reported 61.0",
+          "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 737925519900.0 vs reported 59.0",
+          "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 94.1 vs reported 61.0",
+          "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_2: expected 22000000000.0 vs reported 200.0",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "county": "Mandera",
+      "fiscal_years": [
+        "2023-2024"
+      ],
+      "table_mentions": 44,
+      "warning_table_mentions": 44,
+      "warnings_total": 91,
+      "warning_table_rate": 1.0,
+      "warnings_per_table_mention": 2.068182,
+      "warning_type_counts": [
+        {
+          "warning": "no_merged_cells_detected",
+          "count": 43
+        },
+        {
+          "warning": "no_header_hierarchy_detected",
+          "count": 37
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 5068181818.2 vs reported 72.0",
+          "count": 2
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 6453052525.8 vs reported 40.0",
+          "count": 2
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 8711980083.3 vs reported 44.0",
+          "count": 2
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 9701424183.9 vs reported 44.0",
           "count": 2
         },
         {
@@ -1151,26 +1365,132 @@
       ]
     },
     {
-      "county": "Migori",
+      "county": "Marsabit",
       "fiscal_years": [
         "2023-2024"
       ],
-      "table_mentions": 24,
-      "warning_table_mentions": 24,
-      "warnings_total": 44,
+      "table_mentions": 51,
+      "warning_table_mentions": 51,
+      "warnings_total": 108,
+      "warning_table_rate": 1.0,
+      "warnings_per_table_mention": 2.117647,
+      "warning_type_counts": [
+        {
+          "warning": "no_merged_cells_detected",
+          "count": 50
+        },
+        {
+          "warning": "no_header_hierarchy_detected",
+          "count": 46
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 1506281022.6 vs reported 40.0",
+          "count": 2
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 641594019.4 vs reported 29.0",
+          "count": 2
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 6453052525.8 vs reported 40.0",
+          "count": 2
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 8711980083.3 vs reported 44.0",
+          "count": 2
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 9701424183.9 vs reported 44.0",
+          "count": 2
+        },
+        {
+          "warning": "28_cell_boxes_outside_table",
+          "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_2: expected 22000000000.0 vs reported 200.0",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "county": "Meru",
+      "fiscal_years": [
+        "2023-2024"
+      ],
+      "table_mentions": 36,
+      "warning_table_mentions": 36,
+      "warnings_total": 66,
       "warning_table_rate": 1.0,
       "warnings_per_table_mention": 1.833333,
       "warning_type_counts": [
         {
           "warning": "no_merged_cells_detected",
-          "count": 23
+          "count": 34
         },
         {
           "warning": "no_header_hierarchy_detected",
-          "count": 17
+          "count": 23
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 146.7 vs reported 68.0",
+          "count": 3
         },
         {
           "warning": "numeric_ratio_mismatch_row_1: expected 5068181818.2 vs reported 72.0",
+          "count": 2
+        },
+        {
+          "warning": "28_cell_boxes_outside_table",
+          "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 56301857700.0 vs reported 61.0",
+          "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 737925519900.0 vs reported 59.0",
+          "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 94.1 vs reported 61.0",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "county": "Migori",
+      "fiscal_years": [
+        "2023-2024"
+      ],
+      "table_mentions": 53,
+      "warning_table_mentions": 53,
+      "warnings_total": 107,
+      "warning_table_rate": 1.0,
+      "warnings_per_table_mention": 2.018868,
+      "warning_type_counts": [
+        {
+          "warning": "no_merged_cells_detected",
+          "count": 52
+        },
+        {
+          "warning": "no_header_hierarchy_detected",
+          "count": 43
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 5068181818.2 vs reported 72.0",
+          "count": 2
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 641594019.4 vs reported 29.0",
+          "count": 2
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 8711980083.3 vs reported 44.0",
+          "count": 2
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 9701424183.9 vs reported 44.0",
           "count": 2
         },
         {
@@ -1178,7 +1498,15 @@
           "count": 1
         },
         {
+          "warning": "numeric_ratio_mismatch_row_1: expected 56301857700.0 vs reported 61.0",
+          "count": 1
+        },
+        {
           "warning": "numeric_ratio_mismatch_row_1: expected 737925519900.0 vs reported 59.0",
+          "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 94.1 vs reported 61.0",
           "count": 1
         }
       ]
@@ -1188,19 +1516,19 @@
       "fiscal_years": [
         "2023-2024"
       ],
-      "table_mentions": 29,
-      "warning_table_mentions": 29,
-      "warnings_total": 55,
+      "table_mentions": 31,
+      "warning_table_mentions": 31,
+      "warnings_total": 61,
       "warning_table_rate": 1.0,
-      "warnings_per_table_mention": 1.896552,
+      "warnings_per_table_mention": 1.967742,
       "warning_type_counts": [
         {
           "warning": "no_merged_cells_detected",
-          "count": 28
+          "count": 30
         },
         {
           "warning": "no_header_hierarchy_detected",
-          "count": 22
+          "count": 23
         },
         {
           "warning": "numeric_ratio_mismatch_row_1: expected 146.7 vs reported 68.0",
@@ -1209,6 +1537,18 @@
         {
           "warning": "numeric_ratio_mismatch_row_1: expected 6453052525.8 vs reported 40.0",
           "count": 2
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 56301857700.0 vs reported 61.0",
+          "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 94.1 vs reported 61.0",
+          "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_2: expected 22000000000.0 vs reported 200.0",
+          "count": 1
         }
       ]
     },
@@ -1217,19 +1557,19 @@
       "fiscal_years": [
         "2023-2024"
       ],
-      "table_mentions": 30,
-      "warning_table_mentions": 30,
-      "warnings_total": 58,
+      "table_mentions": 35,
+      "warning_table_mentions": 35,
+      "warnings_total": 67,
       "warning_table_rate": 1.0,
-      "warnings_per_table_mention": 1.933333,
+      "warnings_per_table_mention": 1.914286,
       "warning_type_counts": [
         {
           "warning": "no_merged_cells_detected",
-          "count": 30
+          "count": 35
         },
         {
           "warning": "no_header_hierarchy_detected",
-          "count": 19
+          "count": 23
         },
         {
           "warning": "numeric_ratio_mismatch_row_1: expected 146.7 vs reported 68.0",
@@ -1258,19 +1598,19 @@
       "fiscal_years": [
         "2023-2024"
       ],
-      "table_mentions": 37,
-      "warning_table_mentions": 35,
-      "warnings_total": 67,
-      "warning_table_rate": 0.945946,
-      "warnings_per_table_mention": 1.810811,
+      "table_mentions": 42,
+      "warning_table_mentions": 40,
+      "warnings_total": 77,
+      "warning_table_rate": 0.952381,
+      "warnings_per_table_mention": 1.833333,
       "warning_type_counts": [
         {
           "warning": "no_merged_cells_detected",
-          "count": 35
+          "count": 40
         },
         {
           "warning": "no_header_hierarchy_detected",
-          "count": 25
+          "count": 28
         },
         {
           "warning": "numeric_ratio_mismatch_row_1: expected 146.7 vs reported 68.0",
@@ -1283,6 +1623,14 @@
         {
           "warning": "numeric_ratio_mismatch_row_1: expected 6453052525.8 vs reported 40.0",
           "count": 2
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 56301857700.0 vs reported 61.0",
+          "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 94.1 vs reported 61.0",
+          "count": 1
         }
       ]
     },
@@ -1291,19 +1639,19 @@
       "fiscal_years": [
         "2023-2024"
       ],
-      "table_mentions": 34,
-      "warning_table_mentions": 34,
-      "warnings_total": 72,
+      "table_mentions": 50,
+      "warning_table_mentions": 50,
+      "warnings_total": 102,
       "warning_table_rate": 1.0,
-      "warnings_per_table_mention": 2.117647,
+      "warnings_per_table_mention": 2.04,
       "warning_type_counts": [
         {
           "warning": "no_merged_cells_detected",
-          "count": 33
+          "count": 49
         },
         {
           "warning": "no_header_hierarchy_detected",
-          "count": 29
+          "count": 42
         },
         {
           "warning": "numeric_ratio_mismatch_row_1: expected 1488978680.6 vs reported 40.0",
@@ -1328,6 +1676,10 @@
         {
           "warning": "numeric_ratio_mismatch_row_1: expected 737925519900.0 vs reported 59.0",
           "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_2: expected 22000000000.0 vs reported 200.0",
+          "count": 1
         }
       ]
     },
@@ -1336,23 +1688,27 @@
       "fiscal_years": [
         "2023-2024"
       ],
-      "table_mentions": 52,
-      "warning_table_mentions": 44,
-      "warnings_total": 86,
-      "warning_table_rate": 0.846154,
-      "warnings_per_table_mention": 1.653846,
+      "table_mentions": 62,
+      "warning_table_mentions": 54,
+      "warnings_total": 107,
+      "warning_table_rate": 0.870968,
+      "warnings_per_table_mention": 1.725806,
       "warning_type_counts": [
         {
           "warning": "no_merged_cells_detected",
-          "count": 44
+          "count": 54
         },
         {
           "warning": "no_header_hierarchy_detected",
-          "count": 35
+          "count": 43
         },
         {
           "warning": "numeric_ratio_mismatch_row_1: expected 146.7 vs reported 68.0",
           "count": 3
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 5068181818.2 vs reported 72.0",
+          "count": 2
         },
         {
           "warning": "numeric_ratio_mismatch_row_1: expected 641594019.4 vs reported 29.0",
@@ -1360,6 +1716,10 @@
         },
         {
           "warning": "numeric_ratio_mismatch_row_1: expected 56301857700.0 vs reported 61.0",
+          "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 737925519900.0 vs reported 59.0",
           "count": 1
         },
         {
@@ -1373,19 +1733,27 @@
       "fiscal_years": [
         "2023-2024"
       ],
-      "table_mentions": 30,
-      "warning_table_mentions": 30,
-      "warnings_total": 56,
+      "table_mentions": 46,
+      "warning_table_mentions": 46,
+      "warnings_total": 90,
       "warning_table_rate": 1.0,
-      "warnings_per_table_mention": 1.866667,
+      "warnings_per_table_mention": 1.956522,
       "warning_type_counts": [
         {
           "warning": "no_merged_cells_detected",
-          "count": 29
+          "count": 45
         },
         {
           "warning": "no_header_hierarchy_detected",
-          "count": 23
+          "count": 37
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 6453052525.8 vs reported 40.0",
+          "count": 2
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 8711980083.3 vs reported 44.0",
+          "count": 2
         },
         {
           "warning": "16_cell_boxes_outside_table",
@@ -1410,26 +1778,46 @@
       "fiscal_years": [
         "2023-2024"
       ],
-      "table_mentions": 29,
-      "warning_table_mentions": 29,
-      "warnings_total": 57,
+      "table_mentions": 50,
+      "warning_table_mentions": 50,
+      "warnings_total": 103,
       "warning_table_rate": 1.0,
-      "warnings_per_table_mention": 1.965517,
+      "warnings_per_table_mention": 2.06,
       "warning_type_counts": [
         {
           "warning": "no_merged_cells_detected",
-          "count": 28
+          "count": 49
         },
         {
           "warning": "no_header_hierarchy_detected",
-          "count": 26
+          "count": 42
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 146.7 vs reported 68.0",
+          "count": 3
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 5068181818.2 vs reported 72.0",
+          "count": 2
         },
         {
           "warning": "numeric_ratio_mismatch_row_1: expected 641594019.4 vs reported 29.0",
           "count": 2
         },
         {
+          "warning": "numeric_ratio_mismatch_row_1: expected 6453052525.8 vs reported 40.0",
+          "count": 2
+        },
+        {
           "warning": "16_cell_boxes_outside_table",
+          "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 56301857700.0 vs reported 61.0",
+          "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 94.1 vs reported 61.0",
           "count": 1
         }
       ]
@@ -1439,19 +1827,19 @@
       "fiscal_years": [
         "2023-2024"
       ],
-      "table_mentions": 42,
-      "warning_table_mentions": 42,
-      "warnings_total": 90,
+      "table_mentions": 62,
+      "warning_table_mentions": 62,
+      "warnings_total": 132,
       "warning_table_rate": 1.0,
-      "warnings_per_table_mention": 2.142857,
+      "warnings_per_table_mention": 2.129032,
       "warning_type_counts": [
         {
           "warning": "no_merged_cells_detected",
-          "count": 42
+          "count": 62
         },
         {
           "warning": "no_header_hierarchy_detected",
-          "count": 38
+          "count": 56
         },
         {
           "warning": "numeric_ratio_mismatch_row_1: expected 1488978680.6 vs reported 40.0",
@@ -1459,6 +1847,14 @@
         },
         {
           "warning": "numeric_ratio_mismatch_row_1: expected 1506281022.6 vs reported 40.0",
+          "count": 2
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 5068181818.2 vs reported 72.0",
+          "count": 2
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 641594019.4 vs reported 29.0",
           "count": 2
         },
         {
@@ -1480,26 +1876,42 @@
       "fiscal_years": [
         "2023-2024"
       ],
-      "table_mentions": 28,
-      "warning_table_mentions": 26,
-      "warnings_total": 49,
-      "warning_table_rate": 0.928571,
-      "warnings_per_table_mention": 1.75,
+      "table_mentions": 56,
+      "warning_table_mentions": 54,
+      "warnings_total": 109,
+      "warning_table_rate": 0.964286,
+      "warnings_per_table_mention": 1.946429,
       "warning_type_counts": [
         {
           "warning": "no_merged_cells_detected",
-          "count": 25
+          "count": 53
         },
         {
           "warning": "no_header_hierarchy_detected",
-          "count": 20
+          "count": 46
         },
         {
           "warning": "numeric_ratio_mismatch_row_1: expected 146.7 vs reported 68.0",
           "count": 3
         },
         {
+          "warning": "numeric_ratio_mismatch_row_1: expected 1506281022.6 vs reported 40.0",
+          "count": 2
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 641594019.4 vs reported 29.0",
+          "count": 2
+        },
+        {
           "warning": "28_cell_boxes_outside_table",
+          "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 737925519900.0 vs reported 59.0",
+          "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_2: expected 22000000000.0 vs reported 200.0",
           "count": 1
         }
       ]
@@ -1509,19 +1921,19 @@
       "fiscal_years": [
         "2023-2024"
       ],
-      "table_mentions": 46,
-      "warning_table_mentions": 46,
-      "warnings_total": 96,
+      "table_mentions": 60,
+      "warning_table_mentions": 60,
+      "warnings_total": 124,
       "warning_table_rate": 1.0,
-      "warnings_per_table_mention": 2.086957,
+      "warnings_per_table_mention": 2.066667,
       "warning_type_counts": [
         {
           "warning": "no_merged_cells_detected",
-          "count": 45
+          "count": 59
         },
         {
           "warning": "no_header_hierarchy_detected",
-          "count": 42
+          "count": 54
         },
         {
           "warning": "numeric_ratio_mismatch_row_1: expected 641594019.4 vs reported 29.0",
@@ -1540,7 +1952,15 @@
           "count": 1
         },
         {
+          "warning": "numeric_ratio_mismatch_row_1: expected 56301857700.0 vs reported 61.0",
+          "count": 1
+        },
+        {
           "warning": "numeric_ratio_mismatch_row_1: expected 737925519900.0 vs reported 59.0",
+          "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 94.1 vs reported 61.0",
           "count": 1
         },
         {
@@ -1554,19 +1974,23 @@
       "fiscal_years": [
         "2023-2024"
       ],
-      "table_mentions": 18,
-      "warning_table_mentions": 18,
-      "warnings_total": 35,
+      "table_mentions": 46,
+      "warning_table_mentions": 46,
+      "warnings_total": 91,
       "warning_table_rate": 1.0,
-      "warnings_per_table_mention": 1.944444,
+      "warnings_per_table_mention": 1.978261,
       "warning_type_counts": [
         {
           "warning": "no_merged_cells_detected",
-          "count": 17
+          "count": 45
         },
         {
           "warning": "no_header_hierarchy_detected",
-          "count": 13
+          "count": 37
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 1506281022.6 vs reported 40.0",
+          "count": 2
         },
         {
           "warning": "numeric_ratio_mismatch_row_1: expected 8711980083.3 vs reported 44.0",
@@ -1579,6 +2003,14 @@
         {
           "warning": "16_cell_boxes_outside_table",
           "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 737925519900.0 vs reported 59.0",
+          "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_2: expected 22000000000.0 vs reported 200.0",
+          "count": 1
         }
       ]
     },
@@ -1587,23 +2019,27 @@
       "fiscal_years": [
         "2023-2024"
       ],
-      "table_mentions": 33,
-      "warning_table_mentions": 33,
-      "warnings_total": 61,
+      "table_mentions": 50,
+      "warning_table_mentions": 50,
+      "warnings_total": 95,
       "warning_table_rate": 1.0,
-      "warnings_per_table_mention": 1.848485,
+      "warnings_per_table_mention": 1.9,
       "warning_type_counts": [
         {
           "warning": "no_merged_cells_detected",
-          "count": 31
+          "count": 48
         },
         {
           "warning": "no_header_hierarchy_detected",
-          "count": 25
+          "count": 39
         },
         {
           "warning": "numeric_ratio_mismatch_row_1: expected 146.7 vs reported 68.0",
           "count": 3
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 1506281022.6 vs reported 40.0",
+          "count": 2
         },
         {
           "warning": "28_cell_boxes_outside_table",
@@ -1611,6 +2047,10 @@
         },
         {
           "warning": "numeric_ratio_mismatch_row_1: expected 737925519900.0 vs reported 59.0",
+          "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_2: expected 22000000000.0 vs reported 200.0",
           "count": 1
         }
       ]
@@ -1620,22 +2060,34 @@
       "fiscal_years": [
         "2023-2024"
       ],
-      "table_mentions": 38,
-      "warning_table_mentions": 36,
-      "warnings_total": 69,
-      "warning_table_rate": 0.947368,
-      "warnings_per_table_mention": 1.815789,
+      "table_mentions": 53,
+      "warning_table_mentions": 51,
+      "warnings_total": 103,
+      "warning_table_rate": 0.962264,
+      "warnings_per_table_mention": 1.943396,
       "warning_type_counts": [
         {
           "warning": "no_merged_cells_detected",
-          "count": 35
+          "count": 50
         },
         {
           "warning": "no_header_hierarchy_detected",
-          "count": 32
+          "count": 46
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 1506281022.6 vs reported 40.0",
+          "count": 2
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 8711980083.3 vs reported 44.0",
+          "count": 2
         },
         {
           "warning": "28_cell_boxes_outside_table",
+          "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 737925519900.0 vs reported 59.0",
           "count": 1
         },
         {
@@ -1649,19 +2101,23 @@
       "fiscal_years": [
         "2023-2024"
       ],
-      "table_mentions": 29,
-      "warning_table_mentions": 29,
-      "warnings_total": 61,
+      "table_mentions": 44,
+      "warning_table_mentions": 44,
+      "warnings_total": 91,
       "warning_table_rate": 1.0,
-      "warnings_per_table_mention": 2.103448,
+      "warnings_per_table_mention": 2.068182,
       "warning_type_counts": [
         {
-          "warning": "no_header_hierarchy_detected",
-          "count": 27
+          "warning": "no_merged_cells_detected",
+          "count": 42
         },
         {
-          "warning": "no_merged_cells_detected",
-          "count": 27
+          "warning": "no_header_hierarchy_detected",
+          "count": 38
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 146.7 vs reported 68.0",
+          "count": 3
         },
         {
           "warning": "numeric_ratio_mismatch_row_1: expected 1488978680.6 vs reported 40.0",
@@ -1678,6 +2134,10 @@
         {
           "warning": "28_cell_boxes_outside_table",
           "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_2: expected 22000000000.0 vs reported 200.0",
+          "count": 1
         }
       ]
     },
@@ -1686,26 +2146,42 @@
       "fiscal_years": [
         "2023-2024"
       ],
-      "table_mentions": 31,
-      "warning_table_mentions": 31,
-      "warnings_total": 56,
+      "table_mentions": 51,
+      "warning_table_mentions": 51,
+      "warnings_total": 102,
       "warning_table_rate": 1.0,
-      "warnings_per_table_mention": 1.806452,
+      "warnings_per_table_mention": 2.0,
       "warning_type_counts": [
         {
           "warning": "no_merged_cells_detected",
-          "count": 30
+          "count": 50
         },
         {
           "warning": "no_header_hierarchy_detected",
-          "count": 23
+          "count": 42
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 1506281022.6 vs reported 40.0",
+          "count": 2
         },
         {
           "warning": "numeric_ratio_mismatch_row_1: expected 641594019.4 vs reported 29.0",
           "count": 2
         },
         {
+          "warning": "numeric_ratio_mismatch_row_1: expected 8711980083.3 vs reported 44.0",
+          "count": 2
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 9701424183.9 vs reported 44.0",
+          "count": 2
+        },
+        {
           "warning": "28_cell_boxes_outside_table",
+          "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 737925519900.0 vs reported 59.0",
           "count": 1
         }
       ]
@@ -1715,22 +2191,42 @@
       "fiscal_years": [
         "2023-2024"
       ],
-      "table_mentions": 19,
-      "warning_table_mentions": 19,
-      "warnings_total": 33,
+      "table_mentions": 30,
+      "warning_table_mentions": 30,
+      "warnings_total": 60,
       "warning_table_rate": 1.0,
-      "warnings_per_table_mention": 1.736842,
+      "warnings_per_table_mention": 2.0,
       "warning_type_counts": [
         {
           "warning": "no_merged_cells_detected",
-          "count": 18
+          "count": 29
         },
         {
           "warning": "no_header_hierarchy_detected",
-          "count": 13
+          "count": 22
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 641594019.4 vs reported 29.0",
+          "count": 2
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 8711980083.3 vs reported 44.0",
+          "count": 2
         },
         {
           "warning": "28_cell_boxes_outside_table",
+          "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 56301857700.0 vs reported 61.0",
+          "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 737925519900.0 vs reported 59.0",
+          "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 94.1 vs reported 61.0",
           "count": 1
         },
         {
@@ -1744,19 +2240,19 @@
       "fiscal_years": [
         "2023-2024"
       ],
-      "table_mentions": 31,
-      "warning_table_mentions": 31,
-      "warnings_total": 56,
+      "table_mentions": 44,
+      "warning_table_mentions": 44,
+      "warnings_total": 83,
       "warning_table_rate": 1.0,
-      "warnings_per_table_mention": 1.806452,
+      "warnings_per_table_mention": 1.886364,
       "warning_type_counts": [
         {
           "warning": "no_merged_cells_detected",
-          "count": 30
+          "count": 43
         },
         {
           "warning": "no_header_hierarchy_detected",
-          "count": 23
+          "count": 32
         },
         {
           "warning": "numeric_ratio_mismatch_row_1: expected 641594019.4 vs reported 29.0",
@@ -1764,6 +2260,26 @@
         },
         {
           "warning": "28_cell_boxes_outside_table",
+          "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 146.7 vs reported 68.0",
+          "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 56301857700.0 vs reported 61.0",
+          "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 737925519900.0 vs reported 59.0",
+          "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 94.1 vs reported 61.0",
+          "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_2: expected 22000000000.0 vs reported 200.0",
           "count": 1
         }
       ]
@@ -1773,19 +2289,23 @@
       "fiscal_years": [
         "2023-2024"
       ],
-      "table_mentions": 41,
-      "warning_table_mentions": 41,
-      "warnings_total": 80,
+      "table_mentions": 57,
+      "warning_table_mentions": 57,
+      "warnings_total": 109,
       "warning_table_rate": 1.0,
-      "warnings_per_table_mention": 1.95122,
+      "warnings_per_table_mention": 1.912281,
       "warning_type_counts": [
         {
           "warning": "no_merged_cells_detected",
-          "count": 40
+          "count": 56
         },
         {
           "warning": "no_header_hierarchy_detected",
-          "count": 34
+          "count": 44
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 146.7 vs reported 68.0",
+          "count": 3
         },
         {
           "warning": "numeric_ratio_mismatch_row_1: expected 6453052525.8 vs reported 40.0",
@@ -1814,19 +2334,19 @@
       "fiscal_years": [
         "2023-2024"
       ],
-      "table_mentions": 33,
-      "warning_table_mentions": 33,
-      "warnings_total": 68,
+      "table_mentions": 52,
+      "warning_table_mentions": 52,
+      "warnings_total": 103,
       "warning_table_rate": 1.0,
-      "warnings_per_table_mention": 2.060606,
+      "warnings_per_table_mention": 1.980769,
       "warning_type_counts": [
         {
           "warning": "no_merged_cells_detected",
-          "count": 31
+          "count": 50
         },
         {
           "warning": "no_header_hierarchy_detected",
-          "count": 28
+          "count": 44
         },
         {
           "warning": "numeric_ratio_mismatch_row_1: expected 8711980083.3 vs reported 44.0",
@@ -1863,19 +2383,23 @@
       "fiscal_years": [
         "2023-2024"
       ],
-      "table_mentions": 31,
-      "warning_table_mentions": 31,
-      "warnings_total": 57,
+      "table_mentions": 50,
+      "warning_table_mentions": 50,
+      "warnings_total": 97,
       "warning_table_rate": 1.0,
-      "warnings_per_table_mention": 1.83871,
+      "warnings_per_table_mention": 1.94,
       "warning_type_counts": [
         {
           "warning": "no_merged_cells_detected",
-          "count": 30
+          "count": 49
         },
         {
           "warning": "no_header_hierarchy_detected",
-          "count": 24
+          "count": 40
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 6453052525.8 vs reported 40.0",
+          "count": 2
         },
         {
           "warning": "numeric_ratio_mismatch_row_1: expected 8711980083.3 vs reported 44.0",
@@ -1883,6 +2407,18 @@
         },
         {
           "warning": "28_cell_boxes_outside_table",
+          "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 56301857700.0 vs reported 61.0",
+          "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_1: expected 94.1 vs reported 61.0",
+          "count": 1
+        },
+        {
+          "warning": "numeric_ratio_mismatch_row_2: expected 22000000000.0 vs reported 200.0",
           "count": 1
         }
       ]

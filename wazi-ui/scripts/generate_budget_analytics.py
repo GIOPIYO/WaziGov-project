@@ -40,6 +40,9 @@ ACTUAL_KEYWORDS = ("actual", "receipt", "receipts", "revenue", "expenditure", "s
 VARIANCE_KEYWORDS = ("variance", "deviation", "difference", "shortfall")
 COUNTY_KEYWORDS = ("county", "executive name", "assembly name", "county name", "name")
 
+# Sanity check: Discard any single value exceeding 100 Billion KSh (typical max for a county is ~40B)
+MAX_PLAUSIBLE_AMOUNT = 100_000_000_000.0
+
 
 def resolve_path(path: str) -> Path:
     candidate = Path(path)
@@ -73,6 +76,11 @@ def parse_numeric(value: str | None) -> float | None:
 
     lowered = text.lower()
     if lowered in {"-", "n/a", "na", "not disclosed", "various"}:
+        return None
+
+    # Heuristic: If it contains a slash or colon, it's likely a date or reference, not a budget
+    # Example: "2023/24" should not be parsed as 202324
+    if "/" in text or ":" in text:
         return None
 
     is_percent = "%" in text
@@ -159,7 +167,7 @@ def to_sorted_counter_items(counter: Counter) -> list[dict[str, Any]]:
     return [{"warning": warning, "count": int(count)} for warning, count in sorted(counter.items(), key=lambda x: (-x[1], x[0]))]
 
 
-def build_analytics(bundles: list[dict[str, Any]]) -> tuple[dict[str, Any], dict[str, Any], dict[str, Any]]:
+def build_analytics(bundles: list[dict[str, Any]]) -> tuple[dict[str, Any], dict[str, Any], dict[str, Any], dict[str, Any]]:
     trend_map: dict[tuple[str, str], dict[str, Any]] = {}
 
     integrity_family_year: dict[tuple[str, str], dict[str, Any]] = {}
@@ -270,18 +278,24 @@ def build_analytics(bundles: list[dict[str, Any]]) -> tuple[dict[str, Any], dict
                     allocation_value = None
                     for cidx in allocation_cols:
                         allocation_value = parse_numeric(row_cells.get(cidx, {}).get("raw_text"))
+                        if allocation_value is not None and abs(allocation_value) > MAX_PLAUSIBLE_AMOUNT:
+                            allocation_value = None
                         if allocation_value is not None:
                             break
 
                     actual_value = None
                     for cidx in actual_cols:
                         actual_value = parse_numeric(row_cells.get(cidx, {}).get("raw_text"))
+                        if actual_value is not None and abs(actual_value) > MAX_PLAUSIBLE_AMOUNT:
+                            actual_value = None
                         if actual_value is not None:
                             break
 
                     variance_value = None
                     for cidx in variance_cols:
                         variance_value = parse_numeric(row_cells.get(cidx, {}).get("raw_text"))
+                        if variance_value is not None and abs(variance_value) > MAX_PLAUSIBLE_AMOUNT:
+                            variance_value = None
                         if variance_value is not None:
                             break
 
@@ -375,6 +389,26 @@ def build_analytics(bundles: list[dict[str, Any]]) -> tuple[dict[str, Any], dict
                 "rows_used": int(row["rows_used"]),
                 "tables_used": int(len(row["tables_used"])),
                 "source_reports": sorted(row["source_reports"]),
+            }
+        )
+
+    # Calculate overall budget ranking across all fiscal years
+    overall_county_allocations: dict[str, float] = defaultdict(float)
+    for trend_item in county_trends:
+        county = trend_item["county"]
+        allocation = trend_item["allocation_kshs"]
+        if allocation is not None:
+            overall_county_allocations[county] += allocation
+
+    budget_ranking = []
+    for rank, (county, total_allocation) in enumerate(
+        sorted(overall_county_allocations.items(), key=lambda item: item[1], reverse=True)
+    ):
+        budget_ranking.append(
+            {
+                "rank": rank + 1,
+                "county": county,
+                "total_allocation_kshs": round(total_allocation, 2),
             }
         )
 
@@ -505,8 +539,21 @@ def build_analytics(bundles: list[dict[str, Any]]) -> tuple[dict[str, Any], dict
         "documents": document_rows,
         "counties": county_rows,
     }
+    
+    budget_ranking_payload = {
+        "metadata": {
+            "generated_at": generated_at,
+            "source_files": sorted(set(source_files)),
+            "fiscal_years": sorted(all_years),
+            "description": "Overall budget ranking by county, aggregated across all processed fiscal years.",
+            "notes": [
+                "total_allocation_kshs is the sum of allocation_kshs from all county trends for a given county.",
+            ],
+        },
+        "budget_ranking": budget_ranking,
+    }
 
-    return trends_payload, integrity_payload, scorecard_payload
+    return trends_payload, integrity_payload, scorecard_payload, budget_ranking_payload
 
 
 def write_json(path: Path, payload: dict[str, Any]) -> None:
@@ -538,18 +585,21 @@ def main() -> int:
         if not path.exists():
             raise FileNotFoundError(f"Input bundle not found: {path}")
 
-    bundles = [load_json(path) for path in resolved_inputs]
-    trends_payload, integrity_payload, scorecard_payload = build_analytics(bundles)
+    bundles = [load_json(path) for path in resolved_inputs] # type: ignore
+    trends_payload, integrity_payload, scorecard_payload, budget_ranking_payload = build_analytics(bundles)
 
     output_dir = resolve_path(args.output_dir)
     write_json(output_dir / "county_trends.json", trends_payload)
     write_json(output_dir / "validation_integrity_panels.json", integrity_payload)
     write_json(output_dir / "transparency_scorecard.json", scorecard_payload)
+    write_json(output_dir / "county_budget_ranking.json", budget_ranking_payload)
 
     print("Generated analytics files:")
     print(f"- {output_dir / 'county_trends.json'}")
     print(f"- {output_dir / 'validation_integrity_panels.json'}")
     print(f"- {output_dir / 'transparency_scorecard.json'}")
+    print(f"- {output_dir / 'county_budget_ranking.json'}")
+
 
     print(f"County trend rows: {len(trends_payload.get('county_trends', []))}")
     print(f"Integrity rows (family/year): {len(integrity_payload.get('by_report_family_year', []))}")
@@ -557,6 +607,7 @@ def main() -> int:
     print(f"Document scorecard rows: {len(scorecard_payload.get('documents', []))}")
     print(f"County scorecard rows: {len(scorecard_payload.get('counties', []))}")
 
+    print(f"Budget ranking rows: {len(budget_ranking_payload.get('budget_ranking', []))}")
     return 0
 
 

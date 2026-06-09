@@ -67,6 +67,16 @@ def resolve_path(path_value, project_dir):
     return (project_dir / p).resolve()
 
 
+def shorten_filename_stem(stem: str, max_len: int = 50) -> str:
+    """Shorten a filename stem to prevent MAX_PATH issues, appending a hash for uniqueness."""
+    if len(stem) <= max_len:
+        return stem
+    # Use a short hash of the full stem to ensure uniqueness after truncation
+    hash_suffix = hashlib.sha256(stem.encode()).hexdigest()[:8]
+    truncated_stem = stem[:max_len - len(hash_suffix) - 1]  # -1 for separator
+    return f"{truncated_stem}-{hash_suffix}"
+
+
 # ============================================================================
 # Detection
 # ============================================================================
@@ -125,7 +135,11 @@ def detect_tables(image, model, processor, device, threshold=0.5):
     ):
         detections.append({
             "label": model.config.id2label.get(label, f"class_{label}"),
+            # Bounding boxes are clamped to image dimensions by clamp_bbox_to_image later.
+            # _raw_bbox preserves the original model output (may have negative coords) so
+            # is_plausible_table() can use off-edge position as a false-positive signal.
             "score": round(score, 4),
+            "_raw_bbox": [round(box[0], 1), round(box[1], 1), round(box[2], 1), round(box[3], 1)],
             "bbox": {
                 "xmin": round(box[0], 1),
                 "ymin": round(box[1], 1),
@@ -134,7 +148,19 @@ def detect_tables(image, model, processor, device, threshold=0.5):
             },
         })
 
-    return detections
+    # Clamp all bounding boxes to image dimensions immediately after detection
+    clamped_detections = []
+    for det in detections:
+        bbox = det["bbox"]
+        clamped_coords = clamp_bbox_to_image(
+            [bbox["xmin"], bbox["ymin"], bbox["xmax"], bbox["ymax"]],
+            image.width,
+            image.height,
+        )
+        det["bbox"] = {"xmin": clamped_coords[0], "ymin": clamped_coords[1], "xmax": clamped_coords[2], "ymax": clamped_coords[3]}
+        clamped_detections.append(det)
+
+    return clamped_detections
 
 
 def detect_structure(table_image, model, processor, device, threshold=0.5):
@@ -729,6 +755,172 @@ def get_backup_detector(device):
     return backup_detector["model"], backup_detector["processor"]
 
 
+def is_plausible_table(
+    raw_bbox: list,
+    img_width: int,
+    img_height: int,
+    off_edge_tolerance: float = 5.0,
+) -> bool:
+    """
+    Reject detections that are geometrically implausible as real tables.
+
+    Accepts the RAW (pre-clamp) bbox from the model so that off-edge origins
+    can be used as a reliable signal.  Clamping happens internally for the
+    area / width / aspect checks.
+
+    Real tables in Kenyan government reports share predictable geometry:
+      - They do not originate significantly off the page edge
+      - They span a meaningful portion of the page width (≥ 15 %)
+      - They are not extremely tall relative to their width (aspect guard)
+      - They cover at least 1 % of the total page area
+
+    This filter eliminates false positives caused by decorative page elements
+    (cover borders, logo frames, margin rules) that the pretrained model
+    sometimes mistakes for tables because they are rectangular regions with
+    visible outlines — structurally similar to the bordered tables the model
+    was trained on (PubTables-1M).
+
+    The checks are intentionally conservative so that legitimate narrow
+    tables (e.g. a two-column appendix key) are never discarded.
+
+    Args:
+        raw_bbox:  [xmin, ymin, xmax, ymax] in pixels, BEFORE clamping.
+        img_width:  full page image width in pixels.
+        img_height: full page image height in pixels.
+        off_edge_tolerance: how many pixels off-edge is still acceptable
+                            (accounts for minor floating-point noise).
+
+    Returns:
+        True  → keep the detection.
+        False → discard as implausible.
+    """
+    xmin, ymin, xmax, ymax = raw_bbox
+
+    if xmax <= xmin or ymax <= ymin:
+        return False
+
+    # ── 1. Off-edge origin check (uses raw, pre-clamp coordinates) ───────────
+    # A detection that starts significantly beyond the page boundary is almost
+    # always a margin decoration or cover-page ornament, never a data table.
+    # Example: the COB cover-page left border produces xmin = -33.1 px.
+    if xmin < -off_edge_tolerance:
+        return False
+    if ymin < -off_edge_tolerance:
+        return False
+
+    # Clamp for the remaining spatial checks
+    cx1 = max(0.0, xmin)
+    cy1 = max(0.0, ymin)
+    cx2 = min(float(img_width),  xmax)
+    cy2 = min(float(img_height), ymax)
+    cw  = cx2 - cx1
+    ch  = cy2 - cy1
+
+    if cw <= 0 or ch <= 0:
+        return False
+
+    page_area = float(img_width * img_height)
+
+    # ── 2. Minimum area: must cover at least 1 % of the page ─────────────────
+    # Eliminates tiny margin ornaments and logo boxes.
+    if (cw * ch) / page_area < 0.01:
+        return False
+
+    # ── 3. Minimum width: must span at least 15 % of page width ──────────────
+    # Real tables nearly always stretch across most of the text column.
+    # A narrow vertical stripe (like a border rule) will fail this check.
+    if cw / img_width < 0.15:
+        return False
+
+    # ── 4. Aspect ratio guard: height must not exceed 10× the width ──────────
+    # A region that is 10× taller than it is wide is almost certainly a
+    # vertical border/margin decoration, not a data table.
+    if ch / cw > 10.0:
+        return False
+
+    return True
+
+
+def get_final_detections_for_page(
+    image,
+    page, # PyMuPDF page object, can be None for single image processing
+    model,
+    processor,
+    device,
+    threshold,
+    use_pdf_table_finder,
+    use_backup_detector,
+    dpi=300,
+    min_table_area_ratio=0.001, # Minimum area for a table to be considered valid (0.1% of page)
+):
+    """
+    Runs initial detection, applies stabilization, and falls back to backup detector if needed.
+    Returns a list of final, refined detections for the page.
+    """
+    initial_detections = detect_tables(image, model, processor, device, threshold)
+    final_detections = initial_detections
+
+    if use_pdf_table_finder and page is not None:
+        final_detections = stabilize_detections_with_pdf_tables(
+            initial_detections,
+            page,
+            image.size,
+            dpi=dpi,
+        )
+
+    if use_backup_detector and detections_are_implausible(final_detections, image.size):
+        backup_model, backup_processor = get_backup_detector(device)
+        backup_detections = detect_tables(image, backup_model, backup_processor, device, threshold)
+        if use_pdf_table_finder and page is not None:
+            backup_detections = stabilize_detections_with_pdf_tables(
+                backup_detections,
+                page,
+                image.size,
+                dpi=dpi,
+            )
+
+        if detection_quality_score(backup_detections, image.size) > detection_quality_score(final_detections, image.size):
+            print(f"    Geometry fallback used pretrained detector on page (quality score improved)")
+            final_detections = backup_detections
+
+    # ── Final filtering: remove geometrically implausible detections ─────────
+    #
+    # Two complementary checks are applied in sequence:
+    #
+    #   1. is_plausible_table() — geometry heuristics tuned for Kenyan
+    #      government report layouts (off-edge origin, area, width fraction,
+    #      aspect ratio).  Uses the raw pre-clamp bbox so that detections
+    #      originating off the page edge (e.g. cover-page border decorations)
+    #      are reliably rejected.
+    #
+    #   2. Legacy min_table_area_ratio guard — kept as a safety net for any
+    #      edge cases that slip through the geometry filter.
+    #
+    # Both must pass for a detection to be kept.
+    # _raw_bbox is an internal field and is stripped before returning.
+    image_area = float(image.width * image.height)
+    filtered_detections = []
+    for det in final_detections:
+        bbox     = det["bbox"]
+        raw_bbox = det.get("_raw_bbox", [bbox["xmin"], bbox["ymin"], bbox["xmax"], bbox["ymax"]])
+        width    = bbox["xmax"] - bbox["xmin"]
+        height   = bbox["ymax"] - bbox["ymin"]
+
+        # Legacy area check
+        if image_area > 0 and (width * height) / image_area < min_table_area_ratio:
+            continue
+
+        # Geometry plausibility check (covers false positives like cover borders)
+        if not is_plausible_table(raw_bbox, image.width, image.height):
+            continue
+
+        # Strip the internal raw bbox field before the detection leaves this function
+        det.pop("_raw_bbox", None)
+        filtered_detections.append(det)
+
+    return filtered_detections
+
+
 def validate_table(table_entry):
     """Attach validation checks and warnings to a table entry."""
     warnings = []
@@ -1151,7 +1343,19 @@ def process_image(image_path, model, processor, device, output_dir, threshold):
     image_path = Path(image_path)
     image = Image.open(image_path).convert("RGB")
 
-    detections = detect_tables(image, model, processor, device, threshold)
+    # For single image processing, we don't have a PyMuPDF page object,
+    # so we skip PDF table finder and backup detector for simplicity.
+    # We still apply the final area filter.
+    detections = get_final_detections_for_page(
+        image=image,
+        page=None, # No PyMuPDF page object for single image
+        model=model,
+        processor=processor,
+        device=device,
+        threshold=threshold,
+        use_pdf_table_finder=False, # Not applicable for single image
+        use_backup_detector=False,  # Not applicable for single image
+    )
 
     print(f"\n  {image_path.name}: {len(detections)} table(s) detected")
     for det in detections:
@@ -1204,6 +1408,7 @@ def process_pdf(
     print(f"\nProcessing PDF: {pdf_path.name}")
 
     # Create temp dir for page images
+    short_pdf_stem = shorten_filename_stem(pdf_path.stem)
     pages_dir = Path(output_dir) / "pages"
     pages_dir.mkdir(parents=True, exist_ok=True)
 
@@ -1216,44 +1421,31 @@ def process_pdf(
         page_total = min(page_total, max(0, int(max_pages)))
 
     for page_num in range(page_total):
+        print(f"    Page {page_num + 1}/{page_total}...", end="\r", flush=True)
         page = doc.load_page(page_num)
         page_words = page.get_text("words")
         page_ocr_words = []
         mat = fitz.Matrix(300 / 72, 300 / 72)  # 300 DPI
         pix = page.get_pixmap(matrix=mat)
 
-        img_path = pages_dir / f"{pdf_path.stem}_page_{page_num + 1:03d}.png"
+        img_path = pages_dir / f"{short_pdf_stem}_page_{page_num + 1:03d}.png"
         pix.save(str(img_path))
 
-        detections = process_image(
-            img_path, model, processor, device, output_dir, threshold
-        )
         image = Image.open(img_path).convert("RGB")
-        if use_pdf_table_finder:
-            detections = stabilize_detections_with_pdf_tables(
-                detections,
-                page,
-                image.size,
-                dpi=300,
-            )
+        detections = get_final_detections_for_page(
+            image=image,
+            page=page,
+            model=model,
+            processor=processor,
+            device=device,
+            threshold=threshold,
+            use_pdf_table_finder=use_pdf_table_finder,
+            use_backup_detector=use_backup_detector,
+            dpi=300,
+        )
 
-        if use_backup_detector and detections_are_implausible(detections, image.size):
-            backup_model, backup_processor = get_backup_detector(device)
-            backup_detections = detect_tables(image, backup_model, backup_processor, device, threshold)
-            if use_pdf_table_finder:
-                backup_detections = stabilize_detections_with_pdf_tables(
-                    backup_detections,
-                    page,
-                    image.size,
-                    dpi=300,
-                )
-
-            if detection_quality_score(backup_detections, image.size) > detection_quality_score(detections, image.size):
-                print(f"    Geometry fallback used pretrained detector on page {page_num + 1}")
-                detections = backup_detections
         all_detections[f"page_{page_num + 1}"] = detections
         per_page_detections[page_num] = detections
-
         page_tables = []
         for table_idx, det in enumerate(detections):
             bbox = det["bbox"]
@@ -1261,25 +1453,6 @@ def process_pdf(
             x2, y2 = int(round(bbox["xmax"])), int(round(bbox["ymax"]))
             x2 = min(image.width, max(x1 + 1, x2))
             y2 = min(image.height, max(y1 + 1, y2))
-
-            if (x2 - x1) < 50 or (y2 - y1) < 50:
-                inferred_bbox = infer_table_bbox_from_words(page_words)
-                if not inferred_bbox:
-                    if not page_ocr_words:
-                        page_ocr_words = extract_easyocr_words_from_image(image)
-                    inferred_bbox = infer_table_bbox_from_ocr_words(page_ocr_words)
-                if inferred_bbox:
-                    x1, y1, x2, y2 = [int(round(v)) for v in inferred_bbox]
-                    x1 = max(0, x1)
-                    y1 = max(0, y1)
-                    x2 = min(image.width, max(x1 + 1, x2))
-                    y2 = min(image.height, max(y1 + 1, y2))
-                    bbox = {
-                        "xmin": float(x1),
-                        "ymin": float(y1),
-                        "xmax": float(x2),
-                        "ymax": float(y2),
-                    }
 
             table_id = f"page_{page_num + 1:03d}_table_{table_idx:02d}"
             table_entry = {
@@ -1336,6 +1509,7 @@ def process_pdf(
             page_tables.append(table_entry)
 
         per_page_tables[page_num] = page_tables
+    print() # Newline after progress loop
 
     doc.close()
 
