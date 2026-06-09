@@ -17,8 +17,10 @@ export default function AnalyticsGrid() {
   useEffect(() => {
     async function fetchStats() {
       try {
-        // Fetch up to 1000 projects to calculate aggregate stats
-        const res = await fetch("http://localhost:8000/projects?limit=1000");
+        // Grab the live Cloud Run URL, or default to localhost for local testing
+        const baseUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+        
+        const res = await fetch(`${baseUrl}/projects?limit=1000`);
         if (!res.ok) throw new Error("Failed to fetch");
         const projects = await res.json();
 

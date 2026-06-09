@@ -65,7 +65,8 @@ export default function AuditForensicsTable() {
   useEffect(() => {
     async function fetchFlagged() {
       try {
-        const res = await fetch("http://localhost:8000/projects?limit=1000");
+        const baseUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+        const res = await fetch(`${baseUrl}/projects?limit=1000`);
         if (!res.ok) throw new Error("Failed to fetch");
         const allProjects = await res.json();
 
