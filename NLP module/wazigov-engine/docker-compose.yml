@@ -13,7 +13,7 @@ services:
       - "./data/postgres_data:/var/lib/postgresql/data" # Persists your spatial data locally on your machine
 
   api:
-    build:
+    build: 
       context: ./api
       dockerfile: Dockerfile
     container_name: wazigov_api
