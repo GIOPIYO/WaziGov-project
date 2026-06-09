@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "motion/react";
 import { geoMercator, geoPath } from "d3-geo";
 import React, { useState, useMemo, useEffect } from "react";
 import kenyaGeoData from "public/gadm41_KEN_1.json";
+import DashboardNarrator from "./DashboardNarrator";
 
 import {
   AlertTriangle,
@@ -409,7 +410,7 @@ export default function CountyDataExplorer({ searchQuery = "" }: { searchQuery?:
           throw new Error("Failed to fetch data from API");
         }
         const data = await res.json();
-        
+
         // Map the backend data format to the UI component interface
         const mappedData: ProjectData[] = data.map((item: any) => ({
           project_id: item.project_id,
@@ -453,6 +454,19 @@ export default function CountyDataExplorer({ searchQuery = "" }: { searchQuery?:
            project.project_id?.toLowerCase().includes(q) ||
            project.county?.toLowerCase().includes(q);
   });
+
+  // Map projects for the DashboardNarrator to match its expected interface
+  const narrationProjects = filteredProjects.map((p) => ({
+    id: p.project_id,
+    title: p.project_name,
+    county: p.county,
+    year: p.financial_year,
+    contractSum: formatCurrency(p.contract_sum_kshs),
+    amountPaid: formatCurrency(p.amount_paid_kshs),
+    progress: p.implementation_pct,
+    oagStatus: p.oag_forensics.status as string,
+    oagDetail: p.oag_forensics.findings[0]
+  }));
 
   return (
     <div className="w-full max-w-7xl mx-auto p-4 sm:p-6 lg:p-8">
@@ -501,13 +515,16 @@ export default function CountyDataExplorer({ searchQuery = "" }: { searchQuery?:
 
         {/* Right Column: Project Cards */}
         <div className="lg:col-span-7 flex flex-col min-h-[500px]">
-          <div className="flex items-center justify-between mb-6">
-            <h2 className="text-xl font-bold text-foreground">
-              {selectedCounty === "All Counties" ? "National Overview Projects" : `${selectedCounty} County Projects`}
-            </h2>
-            <span className="px-3 py-1 bg-muted text-muted-foreground font-semibold text-sm rounded-full">
-              {loading ? "Loading..." : `Showing ${Math.min(filteredProjects.length, 5)} of ${filteredProjects.length} Record(s)`}
-            </span>
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
+            <div className="flex flex-wrap items-center gap-3">
+              <h2 className="text-xl font-bold text-foreground">
+                {selectedCounty === "All Counties" ? "National Overview Projects" : `${selectedCounty} County Projects`}
+              </h2>
+              <span className="px-3 py-1 bg-muted text-muted-foreground font-semibold text-sm rounded-full whitespace-nowrap">
+                {loading ? "Loading..." : `Showing ${Math.min(filteredProjects.length, 5)} of ${filteredProjects.length} Record(s)`}
+              </span>
+            </div>
+            <DashboardNarrator activeCounty={selectedCounty} projects={narrationProjects} />
           </div>
 
           <div className="flex flex-col gap-5">
