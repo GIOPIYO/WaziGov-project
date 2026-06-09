@@ -14,10 +14,16 @@ app = FastAPI(
     version="1.0.0"
 )
 
+origins = [
+    "http://localhost:3000",  # Keep this so your laptop still works locally
+    "https://wazigov-ui-939561920912.us-central1.run.app"  # Your live Next.js UI
+]
+
+
 # CORS configuration to allow UI module to connect
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Adjust this in production to match your UI domain
+    allow_origins=origins,  # Adjust this in production to match your UI domain
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
