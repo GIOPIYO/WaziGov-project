@@ -394,16 +394,17 @@ export default function CountyDataExplorer({ searchQuery = "" }: { searchQuery?:
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
 
-  useEffect(() => {
+useEffect(() => {
     async function fetchProjects() {
       setLoading(true);
       setError(null);
       try {
-        // Fetch projects directly from our new read-only FastAPI database wrapper.
-        // It strictly loads data from Postgres, triggering NO NLP or CV processing.
+        const baseUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+        
+        // Fetch projects using the dynamic base URL
         const url = selectedCounty === "All Counties" 
-          ? "http://localhost:8000/projects?limit=1000" 
-          : `http://localhost:8000/projects?county_name=${selectedCounty}&limit=1000`;
+          ? `${baseUrl}/projects?limit=1000` 
+          : `${baseUrl}/projects?county_name=${selectedCounty}&limit=1000`;
         
         const res = await fetch(url);
         if (!res.ok) {
