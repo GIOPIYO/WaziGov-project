@@ -7,7 +7,7 @@ from sqlalchemy.ext.declarative import declarative_base
 # Note: The @ symbol in the password has been URL-encoded to %40
 SQLALCHEMY_DATABASE_URL = os.getenv(
     "DATABASE_URL", 
-    "postgresql://postgres:Govan%402003@localhost:5433/wazigov_db"
+    "postgresql://postgres:Govan%402003@localhost:5444/wazigov_db"
 )
 
 engine = create_engine(SQLALCHEMY_DATABASE_URL)
