@@ -35,40 +35,53 @@ ner_pipeline = pipeline(
 # ==========================================
 # 2. FILE PARSING HELPER FUNCTIONS
 # ==========================================
+# ==========================================
+# 2. FILE PARSING HELPER FUNCTIONS
+# ==========================================
 def normalise(name):
     return re.sub(r"[\s'\-/]+", " ", name.lower().strip())
 
-def parse_cob(filepath):
-    text = Path(filepath).read_text(encoding="utf-8")
-    pattern = re.compile(
-        r'3\.\d+\.\s+(?:County Government of\s+([^\.\n\r\t]+)|(Nairobi City) County Government)',
-        re.MULTILINE
-    )
-    positions = []
-    for m in pattern.finditer(text):
-        name = m.group(1) if m.group(1) else m.group(2)
-        positions.append((m.start(), name.strip()))
-
+def parse_cob(filepaths):
     sections = []
-    for i, (start, name) in enumerate(positions):
-        end = positions[i+1][0] if i+1 < len(positions) else len(text)
-        sections.append({"county": name, "source": "COB", "text": text[start:end]})
-    print(f"CoB: {len(sections)} county sections found")
+    for filepath in filepaths:
+        try:
+            text = Path(filepath).read_text(encoding="utf-8")
+            pattern = re.compile(
+                r'3\.\d+\.\s+(?:County Government of\s+([^\.\n\r\t]+)|(Nairobi City) County Government)',
+                re.MULTILINE
+            )
+            positions = []
+            for m in pattern.finditer(text):
+                name = m.group(1) if m.group(1) else m.group(2)
+                positions.append((m.start(), name.strip()))
+
+            for i, (start, name) in enumerate(positions):
+                end = positions[i+1][0] if i+1 < len(positions) else len(text)
+                sections.append({"county": name, "source": "COB", "text": text[start:end]})
+            print(f"CoB: Successfully loaded '{filepath}'")
+        except FileNotFoundError:
+            print(f"ERROR: Could not find COB file -> {filepath}")
+    
     return sections
 
-def parse_oag(filepath):
-    text = Path(filepath).read_text(encoding="utf-8")
-    pattern = re.compile(
-        r'(?=(?:County\s+Executive\s+o\s*f|COUNTY\s+EXECUTIVE\s+OF)\s+([^\.\n\r\t\-–]+)(?:\s*[-–]|\s*\.\.\.))',
-        re.MULTILINE | re.IGNORECASE
-    )
-    positions = [(m.start(), m.group(1).strip().title()) for m in pattern.finditer(text)]
-
+def parse_oag(filepaths):
     sections = []
-    for i, (start, name) in enumerate(positions):
-        end = positions[i+1][0] if i+1 < len(positions) else len(text)
-        sections.append({"county": name, "source": "OAG", "text": text[start:end]})
-    print(f"OAG: {len(sections)} county sections found")
+    for filepath in filepaths:
+        try:
+            text = Path(filepath).read_text(encoding="utf-8")
+            pattern = re.compile(
+                r'(?=(?:County\s+Executive\s+o\s*f|COUNTY\s+EXECUTIVE\s+OF)\s+([^\.\n\r\t\-–]+)(?:\s*[-–]|\s*\.\.\.))',
+                re.MULTILINE | re.IGNORECASE
+            )
+            positions = [(m.start(), m.group(1).strip().title()) for m in pattern.finditer(text)]
+
+            for i, (start, name) in enumerate(positions):
+                end = positions[i+1][0] if i+1 < len(positions) else len(text)
+                sections.append({"county": name, "source": "OAG", "text": text[start:end]})
+            print(f"OAG: Successfully loaded '{filepath}'")
+        except FileNotFoundError:
+             print(f"ERROR: Could not find OAG file -> {filepath}")
+             
     return sections
 
 # ==========================================
@@ -245,18 +258,32 @@ def run_pipeline():
     print("Starting Triangulation Pipeline...")
     
     # --- UPDATE THESE PATHS TO YOUR ACTUAL MD FILES ---
-    COB_PATH = "/data/processed/CGBIRR August 2025.md"
-    OAG_PATH = "/home/godata/processed/AUDITOR GENERAL S REPORTCOUNTY-EXECUTIVES-2024-2025.md"
+    COB_FILES = [
+        "data/processed/County report September 2024 copy.md",
+        "data/processed/CGBIRR August 2025.md"
+    ]
+    OAG_FILES = [
+        "data/processed/GREEN-BOOK-EXECUTIVES-2024-FINAL-5.3.2025-SIGNED.md",
+        "data/processed/AUDITOR-GENERAL’S REPORT ON THE COUNTY GOVERNMENTS  COUNTY EXECUTIVES 2022-2023 .md"
+    ]
     
-    try:
-        cob_sections = parse_cob(COB_PATH)
-        oag_sections = parse_oag(OAG_PATH)
-    except FileNotFoundError as e:
-        print(f"ERROR: {e}. Please ensure the paths are correct.")
+    COB_PATH = COB_FILES
+    OAG_PATH = OAG_FILES
+    
+    cob_sections = parse_cob(COB_PATH)
+    oag_sections = parse_oag(OAG_PATH)
+
+    if not cob_sections or not oag_sections:
+        print("CRITICAL ERROR: Failed to load files. Check your file paths.")
         return
 
     # Create a lookup dictionary for OAG to easily match with COB counties
-    oag_lookup = {normalise(s["county"]): s for s in oag_sections}
+    oag_lookup = {}
+    for s in oag_sections:
+        c_name = normalise(s["county"])
+        if c_name not in oag_lookup:
+            oag_lookup[c_name] = []
+        oag_lookup[c_name].append(s)
 
     all_output = {
         "pipeline": "WaziGov_Hybrid_Extraction",
