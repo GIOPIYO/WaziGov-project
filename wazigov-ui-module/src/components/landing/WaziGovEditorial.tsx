@@ -180,22 +180,18 @@ export default function WaziGovEditorial() {
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 flex-1">
             <div className="w-10 h-10 rounded bg-[#1a1a1a] flex items-center justify-center">
               <span className={`text-[#C5A059] font-bold text-lg ${playfair.className}`}>W</span>
             </div>
+            <span className="font-bold text-xl tracking-tight hidden sm:block">WaziGov</span>
           </div>
           
-          <nav className="hidden md:flex items-center gap-8 text-sm font-medium tracking-wide">
+          <nav className="hidden lg:flex items-center justify-end gap-8 text-sm font-medium tracking-wide flex-1">
             <a href="#intro" className="text-zinc-600 hover:text-[#C5A059] transition-colors">Introduction</a>
-            <a href="#transparency" className="text-zinc-600 hover:text-[#C5A059] transition-colors">The Transparency Code</a>
-            <a href="#impact" className="text-zinc-600 hover:text-[#C5A059] transition-colors">Impact</a>
-            <a href="#authors" className="text-zinc-600 hover:text-[#C5A059] transition-colors">Authors</a>
+            <a href="#transparency" className="text-zinc-600 hover:text-[#C5A059] transition-colors">Intelligence</a>
+            <a href="#impact" className="text-zinc-600 hover:text-[#C5A059] transition-colors">Overview</a>
           </nav>
-
-          <Link href="/dashboard" className="bg-[#1a1a1a] text-[#F9F8F4] px-6 py-2.5 rounded-full text-sm font-medium hover:bg-[#C5A059] transition-colors duration-300">
-            Enter Dashboard
-          </Link>
         </div>
       </header>
 
@@ -225,7 +221,7 @@ export default function WaziGovEditorial() {
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
             className={`text-2xl md:text-4xl text-[#C5A059] italic mt-4 sm:mt-6 ${playfair.className}`}
           >
-            AI for Civic Accountability
+            Civic Data Intelligence
           </motion.p>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -233,8 +229,19 @@ export default function WaziGovEditorial() {
             transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
             className="mt-8 text-base md:text-lg text-zinc-600 max-w-2xl mx-auto leading-relaxed"
           >
-            A recursive, pattern-matching engine that decodes complex county budgets and highlights regulatory anomalies in real-time.
+            Real-time county budget telemetry cross-referenced with OAG findings and CoB expenditure signals for automated audit forensics.
           </motion.p>
+          
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
+            className="mt-10 flex justify-center"
+          >
+            <Link href="/dashboard" className="bg-[#1a1a1a] text-[#F9F8F4] px-8 py-3 rounded-full text-sm sm:text-base font-medium hover:bg-[#C5A059] transition-colors duration-300 whitespace-nowrap shadow-lg">
+              Enter Dashboard
+            </Link>
+          </motion.div>
         </div>
 
         <motion.div 
@@ -258,7 +265,7 @@ export default function WaziGovEditorial() {
           <div className="lg:col-span-5 flex flex-col gap-6">
              <div className="w-12 h-1 bg-[#C5A059] rounded-full"></div>
              <h2 className={`text-4xl md:text-5xl leading-tight text-[#1a1a1a] ${playfair.className}`}>
-               The Opacity<br/>Barrier.
+               The Accountability<br/>Gap.
              </h2>
           </div>
           <div className="lg:col-span-7 prose prose-lg prose-zinc font-light leading-loose text-zinc-700">
@@ -266,7 +273,7 @@ export default function WaziGovEditorial() {
                Traditionally, tracking civic funds across decentralized county procurement ledgers has been an exercise in disconnected data analysis. Siloed audits and delayed forensic reports allow structural inefficiencies to remain hidden beneath standard accounting practices.
              </p>
              <p className="mt-6">
-               WaziGov dismantles this barrier by introducing a machine learning schema that automatically ingests, maps, and spots statistical anomalies between approved municipal budgets and executed procurement ledgers.
+               WaziGov dismantles this barrier by introducing a unified civic data explorer that automatically aggregates, maps, and spots statistical anomalies between executed projects, CoB expenditure signals, and OAG audit findings.
              </p>
           </div>
         </div>
@@ -277,10 +284,10 @@ export default function WaziGovEditorial() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16 md:mb-24">
             <h2 className={`text-4xl md:text-5xl lg:text-6xl text-[#1a1a1a] mb-6 ${playfair.className}`}>
-              The Transparency Code
+              The Intelligence Engine
             </h2>
             <p className="text-lg text-zinc-600 max-w-2xl mx-auto">
-              Mapping fragmented public ledgers into unified Data Nodes to pass through cross-referenced Regulatory Checkpoints.
+              Mapping fragmented public ledgers into unified records to pass through cross-referenced regulatory checkpoints.
             </p>
           </div>
 
@@ -290,15 +297,15 @@ export default function WaziGovEditorial() {
             </div>
             <div className="order-1 lg:order-2 flex flex-col gap-8">
               <div>
-                <h3 className="text-[#C5A059] font-bold text-sm tracking-widest uppercase mb-3">01. Data Nodes</h3>
+                <h3 className="text-[#C5A059] font-bold text-sm tracking-widest uppercase mb-3">01. Data Aggregation</h3>
                 <p className="text-zinc-700 leading-relaxed font-light">
-                  Raw financial ledgers are parsed and represented as isolated nodes within our spatial verification matrix. At this stage, entries are sanitized but unstructured.
+                  Project telemetry, financial ledgers, and implementation statuses from various counties are centralized into a unified civic data explorer.
                 </p>
               </div>
               <div>
-                <h3 className="text-[#C5A059] font-bold text-sm tracking-widest uppercase mb-3">02. Regulatory Checkpoints</h3>
+                <h3 className="text-[#C5A059] font-bold text-sm tracking-widest uppercase mb-3">02. Triangulation Verdict</h3>
                 <p className="text-zinc-700 leading-relaxed font-light">
-                  Nodes are subjected to cross-referencing against OAG (Office of the Auditor General) and CoB (Controller of Budget) constraints, activating specific neural pathways upon validation.
+                  Data points are cross-referenced against OAG audit forensics and CoB expenditure signals to automatically identify and flag high-risk projects.
                 </p>
               </div>
             </div>
@@ -313,10 +320,10 @@ export default function WaziGovEditorial() {
              <div className="lg:col-span-5 flex flex-col gap-6">
                 <div className="w-12 h-1 bg-[#C5A059] rounded-full"></div>
                 <h2 className={`text-4xl md:text-5xl leading-tight ${playfair.className}`}>
-                  Neural<br/>Telemetry.
+                  Audit<br/>Forensics.
                 </h2>
                 <p className="text-zinc-400 font-light leading-relaxed mt-4">
-                  A multi-layered Transformer architecture analyzes historical discrepancy patterns, mathematically isolating high-risk procurement clusters down to the specific administrative unit.
+                  A comprehensive risk assessment mechanism analyzes historical discrepancy patterns, mathematically isolating high-risk procurement clusters down to the specific administrative unit and project level.
                 </p>
              </div>
              <div className="lg:col-span-7">
@@ -331,10 +338,10 @@ export default function WaziGovEditorial() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className={`text-4xl md:text-5xl text-[#1a1a1a] mb-6 ${playfair.className}`}>
-              Measurable Impact
+              National Overview
             </h2>
             <p className="text-xl text-zinc-600 max-w-2xl mx-auto font-light">
-              A <b className="text-[#C5A059] font-semibold">40% reduction</b> in unprocessed regulatory anomalies.
+              Tracking implementation progress and budget utilization across <b className="text-[#C5A059] font-semibold">all 47 counties</b> to ensure value for public money.
             </p>
           </div>
           
@@ -343,7 +350,7 @@ export default function WaziGovEditorial() {
       </section>
 
       {/* Footer */}
-      <footer id="authors" className="bg-white py-12 px-6 border-t border-zinc-200">
+      <footer className="bg-white py-12 px-6 border-t border-zinc-200">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="flex items-center gap-2">
             <span className={`text-[#1a1a1a] font-bold text-xl ${playfair.className}`}>WaziGov</span>

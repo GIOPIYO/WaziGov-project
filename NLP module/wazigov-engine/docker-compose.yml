@@ -12,5 +12,19 @@ services:
     volumes:
       - "./data/postgres_data:/var/lib/postgresql/data" # Persists your spatial data locally on your machine
 
+  api:
+    build:
+      context: ./api
+      dockerfile: Dockerfile
+    container_name: wazigov_api
+    restart: always
+    ports:
+      - "8000:8000"
+    environment:
+      # Connect string: user postgres, pass Govan@2003, host db, port 5432, db wazigov_db
+      DATABASE_URL: "postgresql://postgres:Govan%402003@db:5432/wazigov_db"
+    depends_on:
+      - db
+
 volumes:
   pg_spatial_data:  # Named volume ensuring data isn't wiped when containers stop

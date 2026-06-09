@@ -5,7 +5,6 @@ import {
   LayoutDashboard,
   Map,
   ShieldAlert,
-  Settings,
   Menu,
   X,
 } from "lucide-react";
@@ -15,11 +14,14 @@ const navItems = [
   { name: "Overview", icon: LayoutDashboard, id: "overview" },
   { name: "County Explorer", icon: Map, id: "explorer" },
   { name: "Audit Forensics", icon: ShieldAlert, id: "audit" },
-  { name: "Settings", icon: Settings, id: "settings" },
 ];
 
-export default function Sidebar() {
-  const [activeTab, setActiveTab] = useState("explorer");
+interface SidebarProps {
+  activeTab: string;
+  setActiveTab: (id: string) => void;
+}
+
+export default function Sidebar({ activeTab, setActiveTab }: SidebarProps) {
   const [isMobileOpen, setIsMobileOpen] = useState(false);
 
   return (
