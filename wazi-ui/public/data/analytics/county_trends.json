@@ -1,0 +1,632 @@
+{
+  "metadata": {
+    "generated_at": "2026-06-07T10:25:11.425450+00:00",
+    "source_files": [
+      "WaziGov table detection\\data\\pdfs\\Auditor-Generals-summary-Report-on-County-Governments-2023-2024.pdf",
+      "WaziGov table detection\\data\\pdfs\\GREEN-BOOK-EXECUTIVES-2024-FINAL-5.3.2025-SIGNED.pdf"
+    ],
+    "fiscal_years": [
+      "2023-2024"
+    ],
+    "description": "County trend metrics from canonical table cells (no NLP).",
+    "notes": [
+      "allocation_kshs and actual_kshs are aggregated from detected county rows and budget-like columns.",
+      "absorption_ratio = actual_kshs / allocation_kshs when allocation is available."
+    ]
+  },
+  "county_trends": [
+    {
+      "county": "Baringo",
+      "fiscal_year": "2023-2024",
+      "allocation_kshs": 18512362144.0,
+      "actual_kshs": 22372824191.0,
+      "variance_kshs": -206074165.0,
+      "absorption_ratio": 1.208534,
+      "rows_used": 10,
+      "tables_used": 10,
+      "source_reports": [
+        "Auditor-Generals-summary-Report-on-County-Governments-2023-2024"
+      ]
+    },
+    {
+      "county": "Bomet",
+      "fiscal_year": "2023-2024",
+      "allocation_kshs": 10255087224.0,
+      "actual_kshs": 57374039039.0,
+      "variance_kshs": -186122820.0,
+      "absorption_ratio": 5.59469,
+      "rows_used": 14,
+      "tables_used": 14,
+      "source_reports": [
+        "Auditor-Generals-summary-Report-on-County-Governments-2023-2024"
+      ]
+    },
+    {
+      "county": "Bungoma",
+      "fiscal_year": "2023-2024",
+      "allocation_kshs": 16402808166.0,
+      "actual_kshs": 80264500445.0,
+      "variance_kshs": -1391213277.0,
+      "absorption_ratio": 4.893339,
+      "rows_used": 15,
+      "tables_used": 15,
+      "source_reports": [
+        "Auditor-Generals-summary-Report-on-County-Governments-2023-2024"
+      ]
+    },
+    {
+      "county": "Busia",
+      "fiscal_year": "2023-2024",
+      "allocation_kshs": 11786441824.0,
+      "actual_kshs": 64200240513.0,
+      "variance_kshs": -798490713.0,
+      "absorption_ratio": 5.446957,
+      "rows_used": 21,
+      "tables_used": 15,
+      "source_reports": [
+        "Auditor-Generals-summary-Report-on-County-Governments-2023-2024",
+        "GREEN-BOOK-EXECUTIVES-2024-FINAL-5.3.2025-SIGNED"
+      ]
+    },
+    {
+      "county": "Elgeyo-Marakwet",
+      "fiscal_year": "2023-2024",
+      "allocation_kshs": 13507567088.0,
+      "actual_kshs": 45414025103.0,
+      "variance_kshs": -135835461.0,
+      "absorption_ratio": 3.362117,
+      "rows_used": 16,
+      "tables_used": 16,
+      "source_reports": [
+        "Auditor-Generals-summary-Report-on-County-Governments-2023-2024"
+      ]
+    },
+    {
+      "county": "Embu",
+      "fiscal_year": "2023-2024",
+      "allocation_kshs": 16781293669.0,
+      "actual_kshs": 62367687349.0,
+      "variance_kshs": -42013694.0,
+      "absorption_ratio": 3.716501,
+      "rows_used": 18,
+      "tables_used": 18,
+      "source_reports": [
+        "Auditor-Generals-summary-Report-on-County-Governments-2023-2024"
+      ]
+    },
+    {
+      "county": "Garissa",
+      "fiscal_year": "2023-2024",
+      "allocation_kshs": 11076298988.0,
+      "actual_kshs": 58758575083.0,
+      "variance_kshs": -356926412.0,
+      "absorption_ratio": 5.304892,
+      "rows_used": 14,
+      "tables_used": 14,
+      "source_reports": [
+        "Auditor-Generals-summary-Report-on-County-Governments-2023-2024"
+      ]
+    },
+    {
+      "county": "Homa Bay",
+      "fiscal_year": "2023-2024",
+      "allocation_kshs": 12801049658.0,
+      "actual_kshs": 60223024378.0,
+      "variance_kshs": -324214064.0,
+      "absorption_ratio": 4.704538,
+      "rows_used": 14,
+      "tables_used": 14,
+      "source_reports": [
+        "Auditor-Generals-summary-Report-on-County-Governments-2023-2024"
+      ]
+    },
+    {
+      "county": "Isiolo",
+      "fiscal_year": "2023-2024",
+      "allocation_kshs": 11933112514.0,
+      "actual_kshs": 44961107081.0,
+      "variance_kshs": -224269148.0,
+      "absorption_ratio": 3.76776,
+      "rows_used": 17,
+      "tables_used": 17,
+      "source_reports": [
+        "Auditor-Generals-summary-Report-on-County-Governments-2023-2024"
+      ]
+    },
+    {
+      "county": "Kajiado",
+      "fiscal_year": "2023-2024",
+      "allocation_kshs": 14827780682.0,
+      "actual_kshs": 60705791225.0,
+      "variance_kshs": -1125167316.0,
+      "absorption_ratio": 4.094058,
+      "rows_used": 15,
+      "tables_used": 15,
+      "source_reports": [
+        "Auditor-Generals-summary-Report-on-County-Governments-2023-2024"
+      ]
+    },
+    {
+      "county": "Kakamega",
+      "fiscal_year": "2023-2024",
+      "allocation_kshs": 21598820841.0,
+      "actual_kshs": 94929790886.0,
+      "variance_kshs": -2011522962.0,
+      "absorption_ratio": 4.395138,
+      "rows_used": 15,
+      "tables_used": 14,
+      "source_reports": [
+        "Auditor-Generals-summary-Report-on-County-Governments-2023-2024"
+      ]
+    },
+    {
+      "county": "Kericho",
+      "fiscal_year": "2023-2024",
+      "allocation_kshs": 18308024781.0,
+      "actual_kshs": 51649485027.0,
+      "variance_kshs": -470292456.0,
+      "absorption_ratio": 2.821139,
+      "rows_used": 16,
+      "tables_used": 16,
+      "source_reports": [
+        "Auditor-Generals-summary-Report-on-County-Governments-2023-2024"
+      ]
+    },
+    {
+      "county": "Kiambu",
+      "fiscal_year": "2023-2024",
+      "allocation_kshs": 37486746542.0,
+      "actual_kshs": 126163575585.0,
+      "variance_kshs": -5072975568.0,
+      "absorption_ratio": 3.365551,
+      "rows_used": 15,
+      "tables_used": 15,
+      "source_reports": [
+        "Auditor-Generals-summary-Report-on-County-Governments-2023-2024"
+      ]
+    },
+    {
+      "county": "Kilifi",
+      "fiscal_year": "2023-2024",
+      "allocation_kshs": 23861778494.0,
+      "actual_kshs": 85335043909.0,
+      "variance_kshs": -1415199150.0,
+      "absorption_ratio": 3.576223,
+      "rows_used": 15,
+      "tables_used": 15,
+      "source_reports": [
+        "Auditor-Generals-summary-Report-on-County-Governments-2023-2024"
+      ]
+    },
+    {
+      "county": "Kirinyaga",
+      "fiscal_year": "2023-2024",
+      "allocation_kshs": 15299958892.0,
+      "actual_kshs": 52470463277.0,
+      "variance_kshs": -132463988.0,
+      "absorption_ratio": 3.429451,
+      "rows_used": 17,
+      "tables_used": 17,
+      "source_reports": [
+        "Auditor-Generals-summary-Report-on-County-Governments-2023-2024"
+      ]
+    },
+    {
+      "county": "Kisii",
+      "fiscal_year": "2023-2024",
+      "allocation_kshs": 14246735370.0,
+      "actual_kshs": 64447688855.0,
+      "variance_kshs": -464897828.0,
+      "absorption_ratio": 4.523681,
+      "rows_used": 13,
+      "tables_used": 13,
+      "source_reports": [
+        "Auditor-Generals-summary-Report-on-County-Governments-2023-2024"
+      ]
+    },
+    {
+      "county": "Kisumu",
+      "fiscal_year": "2023-2024",
+      "allocation_kshs": 18337455906.0,
+      "actual_kshs": 49826666821.0,
+      "variance_kshs": -1573886266.0,
+      "absorption_ratio": 2.717207,
+      "rows_used": 14,
+      "tables_used": 14,
+      "source_reports": [
+        "Auditor-Generals-summary-Report-on-County-Governments-2023-2024"
+      ]
+    },
+    {
+      "county": "Kitui",
+      "fiscal_year": "2023-2024",
+      "allocation_kshs": 16531831417.0,
+      "actual_kshs": 104583151586.0,
+      "variance_kshs": -259188759.0,
+      "absorption_ratio": 6.326169,
+      "rows_used": 16,
+      "tables_used": 16,
+      "source_reports": [
+        "Auditor-Generals-summary-Report-on-County-Governments-2023-2024"
+      ]
+    },
+    {
+      "county": "Kwale",
+      "fiscal_year": "2023-2024",
+      "allocation_kshs": 15654209972.0,
+      "actual_kshs": 76914929220.0,
+      "variance_kshs": -525975610.0,
+      "absorption_ratio": 4.91337,
+      "rows_used": 15,
+      "tables_used": 15,
+      "source_reports": [
+        "Auditor-Generals-summary-Report-on-County-Governments-2023-2024"
+      ]
+    },
+    {
+      "county": "Laikipia",
+      "fiscal_year": "2023-2024",
+      "allocation_kshs": 17104525978.0,
+      "actual_kshs": 52100646025.0,
+      "variance_kshs": -494626744.0,
+      "absorption_ratio": 3.046015,
+      "rows_used": 16,
+      "tables_used": 16,
+      "source_reports": [
+        "Auditor-Generals-summary-Report-on-County-Governments-2023-2024"
+      ]
+    },
+    {
+      "county": "Lamu",
+      "fiscal_year": "2023-2024",
+      "allocation_kshs": 9472068148.0,
+      "actual_kshs": 32720607058.0,
+      "variance_kshs": -119504506.0,
+      "absorption_ratio": 3.454431,
+      "rows_used": 19,
+      "tables_used": 19,
+      "source_reports": [
+        "Auditor-Generals-summary-Report-on-County-Governments-2023-2024",
+        "GREEN-BOOK-EXECUTIVES-2024-FINAL-5.3.2025-SIGNED"
+      ]
+    },
+    {
+      "county": "Machakos",
+      "fiscal_year": "2023-2024",
+      "allocation_kshs": 24135783142.0,
+      "actual_kshs": 72626509281.0,
+      "variance_kshs": -3782158091.0,
+      "absorption_ratio": 3.00908,
+      "rows_used": 12,
+      "tables_used": 12,
+      "source_reports": [
+        "Auditor-Generals-summary-Report-on-County-Governments-2023-2024"
+      ]
+    },
+    {
+      "county": "Makueni",
+      "fiscal_year": "2023-2024",
+      "allocation_kshs": 12674960888.0,
+      "actual_kshs": 46369607698.0,
+      "variance_kshs": -385047578.0,
+      "absorption_ratio": 3.658363,
+      "rows_used": 11,
+      "tables_used": 11,
+      "source_reports": [
+        "Auditor-Generals-summary-Report-on-County-Governments-2023-2024"
+      ]
+    },
+    {
+      "county": "Mandera",
+      "fiscal_year": "2023-2024",
+      "allocation_kshs": 14019764317.0,
+      "actual_kshs": 90351456397.0,
+      "variance_kshs": -635627589.0,
+      "absorption_ratio": 6.444577,
+      "rows_used": 15,
+      "tables_used": 15,
+      "source_reports": [
+        "Auditor-Generals-summary-Report-on-County-Governments-2023-2024"
+      ]
+    },
+    {
+      "county": "Marsabit",
+      "fiscal_year": "2023-2024",
+      "allocation_kshs": 9774159449.0,
+      "actual_kshs": 59026921006.0,
+      "variance_kshs": -150142198.0,
+      "absorption_ratio": 6.039079,
+      "rows_used": 14,
+      "tables_used": 14,
+      "source_reports": [
+        "Auditor-Generals-summary-Report-on-County-Governments-2023-2024"
+      ]
+    },
+    {
+      "county": "Meru",
+      "fiscal_year": "2023-2024",
+      "allocation_kshs": 13208106199.0,
+      "actual_kshs": 69314109909.0,
+      "variance_kshs": -576320854.0,
+      "absorption_ratio": 5.247846,
+      "rows_used": 14,
+      "tables_used": 14,
+      "source_reports": [
+        "Auditor-Generals-summary-Report-on-County-Governments-2023-2024"
+      ]
+    },
+    {
+      "county": "Migori",
+      "fiscal_year": "2023-2024",
+      "allocation_kshs": 14323346230.0,
+      "actual_kshs": 72238220197.0,
+      "variance_kshs": -1050134022.0,
+      "absorption_ratio": 5.04339,
+      "rows_used": 16,
+      "tables_used": 16,
+      "source_reports": [
+        "Auditor-Generals-summary-Report-on-County-Governments-2023-2024"
+      ]
+    },
+    {
+      "county": "Mombasa",
+      "fiscal_year": "2023-2024",
+      "allocation_kshs": 22892301903.0,
+      "actual_kshs": 83334072070.0,
+      "variance_kshs": -1398598701.0,
+      "absorption_ratio": 3.640266,
+      "rows_used": 13,
+      "tables_used": 13,
+      "source_reports": [
+        "Auditor-Generals-summary-Report-on-County-Governments-2023-2024"
+      ]
+    },
+    {
+      "county": "Murang'a",
+      "fiscal_year": "2023-2024",
+      "allocation_kshs": 12731095658.0,
+      "actual_kshs": 59665178704.0,
+      "variance_kshs": -741884066.0,
+      "absorption_ratio": 4.686571,
+      "rows_used": 16,
+      "tables_used": 16,
+      "source_reports": [
+        "Auditor-Generals-summary-Report-on-County-Governments-2023-2024"
+      ]
+    },
+    {
+      "county": "Nairobi",
+      "fiscal_year": "2023-2024",
+      "allocation_kshs": 84965581663.0,
+      "actual_kshs": 193554381561.0,
+      "variance_kshs": -14236070046.0,
+      "absorption_ratio": 2.278033,
+      "rows_used": 11,
+      "tables_used": 11,
+      "source_reports": [
+        "Auditor-Generals-summary-Report-on-County-Governments-2023-2024"
+      ]
+    },
+    {
+      "county": "Nakuru",
+      "fiscal_year": "2023-2024",
+      "allocation_kshs": 27135014263.0,
+      "actual_kshs": 106960218902.0,
+      "variance_kshs": -496015939.0,
+      "absorption_ratio": 3.941779,
+      "rows_used": 14,
+      "tables_used": 14,
+      "source_reports": [
+        "Auditor-Generals-summary-Report-on-County-Governments-2023-2024"
+      ]
+    },
+    {
+      "county": "Nandi",
+      "fiscal_year": "2023-2024",
+      "allocation_kshs": 11233054625.0,
+      "actual_kshs": 40039871895.0,
+      "variance_kshs": -727660496.0,
+      "absorption_ratio": 3.564469,
+      "rows_used": 13,
+      "tables_used": 13,
+      "source_reports": [
+        "Auditor-Generals-summary-Report-on-County-Governments-2023-2024"
+      ]
+    },
+    {
+      "county": "Narok",
+      "fiscal_year": "2023-2024",
+      "allocation_kshs": 20455306732.0,
+      "actual_kshs": 76409603297.0,
+      "variance_kshs": -659727704.0,
+      "absorption_ratio": 3.735442,
+      "rows_used": 14,
+      "tables_used": 14,
+      "source_reports": [
+        "Auditor-Generals-summary-Report-on-County-Governments-2023-2024"
+      ]
+    },
+    {
+      "county": "Nyamira",
+      "fiscal_year": "2023-2024",
+      "allocation_kshs": 18074520237.0,
+      "actual_kshs": 46522259244.0,
+      "variance_kshs": -835269064.0,
+      "absorption_ratio": 2.573914,
+      "rows_used": 15,
+      "tables_used": 15,
+      "source_reports": [
+        "Auditor-Generals-summary-Report-on-County-Governments-2023-2024"
+      ]
+    },
+    {
+      "county": "Nyandarua",
+      "fiscal_year": "2023-2024",
+      "allocation_kshs": 20012503090.0,
+      "actual_kshs": 65089209941.0,
+      "variance_kshs": -1482518456.0,
+      "absorption_ratio": 3.252427,
+      "rows_used": 21,
+      "tables_used": 21,
+      "source_reports": [
+        "Auditor-Generals-summary-Report-on-County-Governments-2023-2024"
+      ]
+    },
+    {
+      "county": "Nyeri",
+      "fiscal_year": "2023-2024",
+      "allocation_kshs": 971455028.0,
+      "actual_kshs": 52237391107.0,
+      "variance_kshs": -260756831.0,
+      "absorption_ratio": 53.77232,
+      "rows_used": 13,
+      "tables_used": 13,
+      "source_reports": [
+        "Auditor-Generals-summary-Report-on-County-Governments-2023-2024"
+      ]
+    },
+    {
+      "county": "Samburu",
+      "fiscal_year": "2023-2024",
+      "allocation_kshs": 15692911134.0,
+      "actual_kshs": 50424832330.0,
+      "variance_kshs": 25215844.0,
+      "absorption_ratio": 3.213224,
+      "rows_used": 17,
+      "tables_used": 17,
+      "source_reports": [
+        "Auditor-Generals-summary-Report-on-County-Governments-2023-2024"
+      ]
+    },
+    {
+      "county": "Siaya",
+      "fiscal_year": "2023-2024",
+      "allocation_kshs": 10780085932.0,
+      "actual_kshs": 60594629975.0,
+      "variance_kshs": -391184982.0,
+      "absorption_ratio": 5.620978,
+      "rows_used": 15,
+      "tables_used": 15,
+      "source_reports": [
+        "Auditor-Generals-summary-Report-on-County-Governments-2023-2024"
+      ]
+    },
+    {
+      "county": "Taita-Taveta",
+      "fiscal_year": "2023-2024",
+      "allocation_kshs": 11323983319.0,
+      "actual_kshs": 42764624199.0,
+      "variance_kshs": -349005217.0,
+      "absorption_ratio": 3.776465,
+      "rows_used": 17,
+      "tables_used": 17,
+      "source_reports": [
+        "Auditor-Generals-summary-Report-on-County-Governments-2023-2024"
+      ]
+    },
+    {
+      "county": "Tana River",
+      "fiscal_year": "2023-2024",
+      "allocation_kshs": 17996857566.0,
+      "actual_kshs": 57395650818.0,
+      "variance_kshs": 42790670.0,
+      "absorption_ratio": 3.189204,
+      "rows_used": 19,
+      "tables_used": 19,
+      "source_reports": [
+        "Auditor-Generals-summary-Report-on-County-Governments-2023-2024"
+      ]
+    },
+    {
+      "county": "Tharaka-Nithi",
+      "fiscal_year": "2023-2024",
+      "allocation_kshs": 13638190302.0,
+      "actual_kshs": 45387009085.0,
+      "variance_kshs": -41596378.0,
+      "absorption_ratio": 3.327935,
+      "rows_used": 19,
+      "tables_used": 19,
+      "source_reports": [
+        "Auditor-Generals-summary-Report-on-County-Governments-2023-2024"
+      ]
+    },
+    {
+      "county": "Trans Nzoia",
+      "fiscal_year": "2023-2024",
+      "allocation_kshs": 11708819537.0,
+      "actual_kshs": 70232716093.0,
+      "variance_kshs": -66860000.0,
+      "absorption_ratio": 5.998275,
+      "rows_used": 14,
+      "tables_used": 14,
+      "source_reports": [
+        "Auditor-Generals-summary-Report-on-County-Governments-2023-2024"
+      ]
+    },
+    {
+      "county": "Turkana",
+      "fiscal_year": "2023-2024",
+      "allocation_kshs": 17890779673.0,
+      "actual_kshs": 61871799157.0,
+      "variance_kshs": -142788452.0,
+      "absorption_ratio": 3.458306,
+      "rows_used": 11,
+      "tables_used": 11,
+      "source_reports": [
+        "Auditor-Generals-summary-Report-on-County-Governments-2023-2024"
+      ]
+    },
+    {
+      "county": "Uasin Gishu",
+      "fiscal_year": "2023-2024",
+      "allocation_kshs": 16182184692.0,
+      "actual_kshs": 49335074536.0,
+      "variance_kshs": -393506736.0,
+      "absorption_ratio": 3.048728,
+      "rows_used": 10,
+      "tables_used": 10,
+      "source_reports": [
+        "Auditor-Generals-summary-Report-on-County-Governments-2023-2024"
+      ]
+    },
+    {
+      "county": "Vihiga",
+      "fiscal_year": "2023-2024",
+      "allocation_kshs": 13907734226.0,
+      "actual_kshs": 39337065054.0,
+      "variance_kshs": 78156811.0,
+      "absorption_ratio": 2.828431,
+      "rows_used": 16,
+      "tables_used": 16,
+      "source_reports": [
+        "Auditor-Generals-summary-Report-on-County-Governments-2023-2024"
+      ]
+    },
+    {
+      "county": "Wajir",
+      "fiscal_year": "2023-2024",
+      "allocation_kshs": 12565001603.0,
+      "actual_kshs": 83394337772.0,
+      "variance_kshs": -258678466.0,
+      "absorption_ratio": 6.637034,
+      "rows_used": 16,
+      "tables_used": 16,
+      "source_reports": [
+        "Auditor-Generals-summary-Report-on-County-Governments-2023-2024"
+      ]
+    },
+    {
+      "county": "West Pokot",
+      "fiscal_year": "2023-2024",
+      "allocation_kshs": 15757386264.0,
+      "actual_kshs": 53657425999.0,
+      "variance_kshs": -44705299.0,
+      "absorption_ratio": 3.405224,
+      "rows_used": 16,
+      "tables_used": 16,
+      "source_reports": [
+        "Auditor-Generals-summary-Report-on-County-Governments-2023-2024"
+      ]
+    }
+  ]
+}

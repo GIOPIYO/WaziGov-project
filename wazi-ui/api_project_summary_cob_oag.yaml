@@ -1,0 +1,25 @@
+openapi: 3.0.0
+info:
+  title: WaziGov - COB+OAG Aggregation API
+  version: 1.0.0
+paths:
+  /api/project/{project_id}/cob-oag:
+    get:
+      summary: Return aggregated COB and OAG findings for a project
+      parameters:
+        - name: project_id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Aggregated project summary (COB + OAG)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProjectSummary'
+components:
+  schemas:
+    ProjectSummary:
+      $ref: './project_summary_cob_oag.schema.json'

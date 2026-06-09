@@ -442,6 +442,44 @@ python scripts/evaluate.py --model models/table_detection/final_model --data-dir
 
 You should see an improvement, especially in recall (fewer missed tables).
 
+### Optional: Evaluate Structure Quality with GRiTS (New)
+
+Detection metrics (precision/recall/F1) only evaluate table bounding boxes. For structure-level quality
+(grid topology, cell text alignment, and cell geometry), run the GRiTS evaluator:
+
+```powershell
+python scripts/evaluate_grits.py --gt outputs/cv_handoff_gt.json --pred outputs/cv_handoff_pred.json --mode grits_style --output outputs/grits_results.json
+```
+
+### GRiTS Modes
+
+| Mode | Purpose | Behavior |
+|---|---|---|
+| `grits_style` | Practical QA on current CV handoff schema | More tolerant to minor boundary shifts |
+| `paper_like` | Stricter research-style structure comparison | Penalizes slot-level structure mismatches more strongly |
+
+### GRiTS Outputs
+
+| Metric | Meaning |
+|---|---|
+| `grits_top` | Grid topology/structure agreement |
+| `grits_con` | Cell content agreement (slot-aligned text) |
+| `grits_loc` | Cell geometry agreement (bbox overlap) |
+| `grits` | Mean of Top/Con/Loc |
+
+### Compare Both GRiTS Modes Quickly
+
+```powershell
+python scripts/evaluate_grits.py --gt outputs/cv_handoff_gt.json --pred outputs/cv_handoff_pred.json --mode grits_style --output outputs/grits_results_style.json
+python scripts/evaluate_grits.py --gt outputs/cv_handoff_gt.json --pred outputs/cv_handoff_pred.json --mode paper_like --output outputs/grits_results_paper_like.json
+```
+
+To generate synthetic comparison test cases:
+
+```powershell
+python scripts/grits_comparison_demo.py --output outputs/grits_comparison_demo.json
+```
+
 ---
 
 ## 10. Step 9 — Run Inference on New Documents
@@ -620,6 +658,9 @@ WaziGov table detection/
 │   ├── crop_tables.py                      # Step 10: Crop tables for Stage 2
 │   ├── train_table_detection.py            # Step 7: Fine-tune Table Transformer
 │   ├── evaluate.py                         # Steps 6 & 8: Compute metrics
+│   ├── evaluate_grits.py                   # Structure metrics: GRiTS-Top/Con/Loc
+│   ├── grits_comparison_demo.py            # Synthetic test cases for dual-mode GRiTS comparison
+│   ├── qa_handoff.py                       # CV→NLP handoff quality gate
 │   └── inference.py                        # Step 9: Run detection on new docs
 │
 ├── data/
@@ -641,10 +682,13 @@ WaziGov table detection/
 ├── outputs/
 │   ├── detections/                         # Inference results (images + JSON)
 │   ├── evaluation_results.json             # Evaluation metrics
-│   └── sample_cv_output.json              # Sample output for NLP integration
+│   ├── grits_results.json                  # GRiTS structure evaluation results
+│   ├── grits_comparison_demo.json          # Generated GRiTS comparison metadata
+│   └── sample_cv_output.json               # Sample output for NLP integration
 │
 └── docs/
     ├── pipeline_and_nlp_integration.md     # Pipeline docs for NLP teammate
+    ├── grits_comparison_guide.md           # How to interpret dual-mode GRiTS
     └── full_process_guide.md               # This file
 ```
 
@@ -664,6 +708,8 @@ WaziGov table detection/
 | Poor recall after fine-tuning | Too few annotations | Annotate more pages (target 100+) |
 | Fine-tuned model not found | Model not yet trained | Script auto-falls back to pretrained model |
 | Slow training on CPU | No GPU available | Use `--freeze-backbone` and lower `--epochs` |
+| `Matched tables: 0` in GRiTS | GT/pred table IDs or pages do not align | Use `--match-by bbox` and verify page numbers/bboxes |
+| Low `grits_top` but high detection F1 | Grid structure mismatch (rows/cols/spans), not detection failure | Inspect `cells[]` (`row_idx`, `col_idx`, spans) in CV handoff JSON |
 
 ### Quick Health Check
 
@@ -718,9 +764,17 @@ python scripts/train_table_detection.py --data-dir data/ --epochs 50 --batch-siz
 # ── STEP 8: EVALUATE FINE-TUNED ───────────────────────────
 python scripts/evaluate.py --model models/table_detection/final_model --data-dir data/
 
+# ── STEP 8.5: EVALUATE STRUCTURE (GRiTS) ──────────────────
+python scripts/evaluate_grits.py --gt outputs/cv_handoff_gt.json --pred outputs/cv_handoff_pred.json --mode grits_style --output outputs/grits_results.json
+python scripts/evaluate_grits.py --gt outputs/cv_handoff_gt.json --pred outputs/cv_handoff_pred.json --mode paper_like --output outputs/grits_results_paper_like.json
+python scripts/grits_comparison_demo.py --output outputs/grits_comparison_demo.json
+
 # ── STEP 9: INFERENCE ─────────────────────────────────────
 python scripts/inference.py --pdf path/to/document.pdf
 python scripts/inference.py --image-dir data/images/pages/
+
+# ── CV→NLP QA GATE ─────────────────────────────────────────
+python scripts/qa_handoff.py --input outputs/cv_handoff.json --output outputs/cv_handoff_qa.json
 
 # ── STEP 10: CROP TABLES FOR STAGE 2 ─────────────────────
 python scripts/crop_tables.py
@@ -728,4 +782,4 @@ python scripts/crop_tables.py
 
 ---
 
-*Last updated: March 2026 | WaziGov CV Module | JKUAT BSc CT Final Year Project*
+*Last updated: April 2026 | WaziGov CV Module | JKUAT BSc CT Final Year Project*

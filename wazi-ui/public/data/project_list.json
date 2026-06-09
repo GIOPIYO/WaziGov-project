@@ -1,0 +1,62 @@
+[
+  {
+    "project_id": "Auditor-Generals-summary-Report-on-County-Governments-2023-2024",
+    "title": "Auditor Generals Summary Report On County Governments 2023 2024",
+    "location": {
+      "label": "OAG"
+    },
+    "last_updated": "2026-05-28T15:21:23.417865+00:00",
+    "overall_status": "Partial",
+    "summary": "OAG report extracted from the 2023-2024 bundle.",
+    "cob_findings": [
+      {
+        "report_id": "Auditor-Generals-summary-Report-on-County-Governments-2023-2024-cob",
+        "fiscal_year": "2023-2024",
+        "title": "COB source extract",
+        "summary": "Extracted from WaziGov table detection\\data\\pdfs\\Auditor-Generals-summary-Report-on-County-Governments-2023-2024.pdf. The source bundle records 154 pages and 234 tables.",
+        "link": "WaziGov table detection\\data\\pdfs\\Auditor-Generals-summary-Report-on-County-Governments-2023-2024.pdf",
+        "amount": null
+      }
+    ],
+    "oag_findings": [
+      {
+        "report_id": "Auditor-Generals-summary-Report-on-County-Governments-2023-2024-oag",
+        "fiscal_year": "2023-2024",
+        "title": "OAG source extract",
+        "summary": "Extracted from WaziGov table detection\\data\\pdfs\\Auditor-Generals-summary-Report-on-County-Governments-2023-2024.pdf. The source bundle records 154 pages and 234 tables.",
+        "link": "WaziGov table detection\\data\\pdfs\\Auditor-Generals-summary-Report-on-County-Governments-2023-2024.pdf",
+        "recommendation": "Review the generated bundle for full document context."
+      }
+    ]
+  },
+  {
+    "project_id": "GREEN-BOOK-EXECUTIVES-2024-FINAL-5.3.2025-SIGNED",
+    "title": "Green Book Executives 2024 Final 5.3.2025 Signed",
+    "location": {
+      "label": "COB"
+    },
+    "last_updated": "2026-05-28T15:21:23.417865+00:00",
+    "overall_status": "Partial",
+    "summary": "COB report extracted from the 2023-2024 bundle.",
+    "cob_findings": [
+      {
+        "report_id": "GREEN-BOOK-EXECUTIVES-2024-FINAL-5.3.2025-SIGNED-cob",
+        "fiscal_year": "2023-2024",
+        "title": "COB source extract",
+        "summary": "Extracted from WaziGov table detection\\data\\pdfs\\GREEN-BOOK-EXECUTIVES-2024-FINAL-5.3.2025-SIGNED.pdf. The source bundle records 555 pages and 670 tables.",
+        "link": "WaziGov table detection\\data\\pdfs\\GREEN-BOOK-EXECUTIVES-2024-FINAL-5.3.2025-SIGNED.pdf",
+        "amount": null
+      }
+    ],
+    "oag_findings": [
+      {
+        "report_id": "GREEN-BOOK-EXECUTIVES-2024-FINAL-5.3.2025-SIGNED-oag",
+        "fiscal_year": "2023-2024",
+        "title": "OAG source extract",
+        "summary": "Extracted from WaziGov table detection\\data\\pdfs\\GREEN-BOOK-EXECUTIVES-2024-FINAL-5.3.2025-SIGNED.pdf. The source bundle records 555 pages and 670 tables.",
+        "link": "WaziGov table detection\\data\\pdfs\\GREEN-BOOK-EXECUTIVES-2024-FINAL-5.3.2025-SIGNED.pdf",
+        "recommendation": "Review the generated bundle for full document context."
+      }
+    ]
+  }
+]

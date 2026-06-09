@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 125">
+    <defs>
+        <style>
+            .shield-red { fill: #bb1a34; }
+            .shield-black { fill: #1a1a1a; }
+            .shield-white { fill: #ffffff; }
+        </style>
+    </defs>
+    <g>
+        <path class="shield-black" d="M50,0.5 C20,0.5 5,20 5,50 C5,80 20,99.5 50,99.5 C80,99.5 95,80 95,50 C95,20 80,0.5 50,0.5 Z M50,93.5 C25,93.5 11,75 11,50 C11,25 25,6.5 50,6.5 C75,6.5 89,25 89,50 C89,75 75,93.5 50,93.5 Z"/>
+        <path class="shield-red" d="M50,7 C72,7 87,25 87,50 C87,75 72,93 50,93 C28,93 13,75 13,50 C13,25 28,7 50,7 Z"/>
+        <rect x="35" y="7" width="30" height="86" class="shield-black"/>
+        <path class="shield-white" d="M49.5,15 L49.5,85 M50.5,15 L50.5,85" stroke="#ffffff" stroke-width="2"/>
+        <circle class="shield-white" cx="50" cy="50" r="10"/>
+        <circle class="shield-black" cx="50" cy="50" r="5"/>
+    </g>
+</svg>
