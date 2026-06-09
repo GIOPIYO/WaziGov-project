@@ -24,6 +24,7 @@ Usage:
 import argparse
 import json
 import os
+from typing import Optional
 import xml.etree.ElementTree as ET
 from pathlib import Path
 from urllib.parse import unquote
@@ -43,6 +44,22 @@ def _extract_image_filename(image_value: str) -> str:
     raw = unquote(raw).replace("\\", "/")
     return os.path.basename(raw)
 
+
+def _find_image_file(base_filename: str, images_dir: Path) -> Optional[Path]:
+    """
+    Finds the actual image file on disk, accounting for potential UUID prefixes
+    added by Label Studio or other naming inconsistencies.
+    """
+    # 1. Try direct match
+    direct_path = images_dir / base_filename
+    if direct_path.exists():
+        return direct_path
+
+    # 2. Search for partial match (e.g., with/without UUID prefix)
+    for f in images_dir.iterdir():
+        if base_filename in f.name or f.name in base_filename:
+            return f
+    return None
 
 def labelstudio_to_pascal_voc(
     input_path: str,
@@ -86,42 +103,40 @@ def labelstudio_to_pascal_voc(
 
     count = 0
     for task in tasks:
-        img_filename = _extract_image_filename(task.get("data", {}).get("image", ""))
-        if not img_filename:
-            print(f"  Skipping task {task.get('id', '?')} - missing image path")
+        img_filename_from_ls = _extract_image_filename(task.get("data", {}).get("image", ""))
+        if not img_filename_from_ls:
+            print(f"  Skipping task {task.get('id', '?')} - missing image path in Label Studio export")
             continue
+
+        actual_img_path = _find_image_file(img_filename_from_ls, Path(images_dir))
+        if not actual_img_path:
+            print(f"  Skipping task {task.get('id', '?')} - actual image file not found for '{img_filename_from_ls}' in '{images_dir}'")
+            continue
+
+        actual_img_filename = actual_img_path.name
 
         annotations = task.get("annotations", [])
 
         # Find image dimensions from any rectangle annotation first.
         img_width = 0
         img_height = 0
-        for ann in annotations:
-            for result in ann.get("result", []):
-                if result.get("type") != "rectanglelabels":
-                    continue
-                img_width = result.get("original_width", 0)
-                img_height = result.get("original_height", 0)
-                if img_width and img_height:
-                    break
-            if img_width and img_height:
-                break
+        # Label Studio's export sometimes includes original_width/height in the result
+        # We prioritize this if available, otherwise read from the image file.
+        if annotations and annotations[0].get("result"):
+            first_result = annotations[0]["result"][0]
+            if first_result.get("type") == "rectanglelabels":
+                img_width = int(first_result.get("original_width", 0))
+                img_height = int(first_result.get("original_height", 0))
 
         # If dimensions not in annotation, try reading from the actual image
         if img_width == 0 or img_height == 0:
-            from PIL import Image as PILImage
-            img_path = os.path.join(images_dir, img_filename)
-            if os.path.exists(img_path):
-                with PILImage.open(img_path) as img:
-                    img_width, img_height = img.size
-            else:
-                print(f"  Skipping - image not found: {img_path}")
-                continue
+            # Use the already imported PIL.Image
+            with Image.open(actual_img_path) as img:
+                img_width, img_height = img.size
 
         # Build XML annotation
         annotation = ET.Element("annotation")
-        ET.SubElement(annotation, "folder").text = str(output_dir.name)
-        ET.SubElement(annotation, "filename").text = img_filename
+        ET.SubElement(annotation, "filename").text = actual_img_filename
 
         size = ET.SubElement(annotation, "size")
         ET.SubElement(size, "width").text = str(img_width)
@@ -142,7 +157,7 @@ def labelstudio_to_pascal_voc(
 
                 for label in labels:
                     if label not in valid_labels[stage]:
-                        print(f"  Warning: Skipping unknown label '{label}' in {img_filename}")
+                        print(f"  Warning: Skipping unknown label '{label}' in {actual_img_filename}")
                         continue
 
                     # Label Studio stores as percentages (0-100)
@@ -183,7 +198,7 @@ def labelstudio_to_pascal_voc(
             # Remove the XML declaration added by minidom
             xml_str = "\n".join(xml_str.split("\n")[1:])
 
-            xml_filename = Path(img_filename).stem + ".xml"
+            xml_filename = Path(actual_img_filename).stem + ".xml"
             xml_path = output_dir / xml_filename
             with open(xml_path, "w") as f:
                 f.write(xml_str)
