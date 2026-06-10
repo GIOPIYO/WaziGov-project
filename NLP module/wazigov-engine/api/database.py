@@ -8,7 +8,7 @@ from sqlalchemy.ext.declarative import declarative_base
 SQLALCHEMY_DATABASE_URL = os.getenv(
     "DATABASE_URL", 
     "postgresql://postgres:Govan%402003@localhost:5444/wazigov_db"
-
+)
 
 engine = create_engine(SQLALCHEMY_DATABASE_URL)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
