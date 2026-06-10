@@ -1,0 +1,3038 @@
+{
+  "metadata": {
+    "generated_at": "2026-05-30T19:48:36.099912Z",
+    "fiscal_year": "2023-2024",
+    "source": {
+      "oag_report": "Auditor Generals Summary Report On County Governments 2023 2024",
+      "cob_report": "Green Book Executives 2024 Final 5.3.2025 Signed"
+    },
+    "description": "Extracted project and financial performance data from the Kenya OAG County Governments Audit Summary Report and COB Green Book for FY 2023-2024.",
+    "summary_stats": {
+      "counties_with_delayed_projects_exec": 13,
+      "total_delayed_projects_exec": 42,
+      "counties_with_stalled_projects_exec": 32,
+      "total_stalled_projects_exec": 247,
+      "counties_in_budget_summary": 49,
+      "counties_in_expenditure": 46,
+      "counties_in_own_source_revenue": 44
+    }
+  },
+  "project_implementation": {
+    "_description": "Project status summaries flagged in the OAG audit report.",
+    "delayed_projects_county_executives": {
+      "_description": "County Executives with delayed capital projects (Appendix 26). amount_kshs is the value of delayed projects.",
+      "_columns": [
+        "county",
+        "number_of_projects",
+        "amount_kshs",
+        "amount_kshs_raw"
+      ],
+      "data": [
+        {
+          "county": "Garissa County",
+          "number_of_projects": 1,
+          "amount_kshs": 207158971,
+          "amount_kshs_raw": "207,158,971"
+        },
+        {
+          "county": "Elgeyo/Marakwet County",
+          "number_of_projects": 13,
+          "amount_kshs": 42957825,
+          "amount_kshs_raw": "42,957,825"
+        },
+        {
+          "county": "Baringo County",
+          "number_of_projects": 11,
+          "amount_kshs": 32148270,
+          "amount_kshs_raw": "32,148,270"
+        },
+        {
+          "county": "Mandera County",
+          "number_of_projects": 1,
+          "amount_kshs": 22000000,
+          "amount_kshs_raw": "22,000,000"
+        },
+        {
+          "county": "Migori County",
+          "number_of_projects": 2,
+          "amount_kshs": 21982124,
+          "amount_kshs_raw": "21,982,124"
+        },
+        {
+          "county": "Nakuru County",
+          "number_of_projects": 8,
+          "amount_kshs": 21331241,
+          "amount_kshs_raw": "21,331,241"
+        },
+        {
+          "county": "Kisumu County",
+          "number_of_projects": 1,
+          "amount_kshs": 10880291,
+          "amount_kshs_raw": "10,880,291"
+        },
+        {
+          "county": "Kiambu County",
+          "number_of_projects": 1,
+          "amount_kshs": 4984600,
+          "amount_kshs_raw": "4,984,600"
+        },
+        {
+          "county": "Uasin Gishu County",
+          "number_of_projects": 1,
+          "amount_kshs": 2993653,
+          "amount_kshs_raw": "2,993,653"
+        },
+        {
+          "county": "Wajir County",
+          "number_of_projects": 1,
+          "amount_kshs": null,
+          "amount_kshs_raw": "Not disclosed"
+        },
+        {
+          "county": "Elgeyo/Marakwet County Kwale County",
+          "number_of_projects": null,
+          "amount_kshs": 109870306884722,
+          "amount_kshs_raw": "10,987,030 6,884,722"
+        },
+        {
+          "county": "Kwale County",
+          "number_of_projects": 1,
+          "amount_kshs": 6884722,
+          "amount_kshs_raw": "6,884,722"
+        },
+        {
+          "county": "Embu County",
+          "number_of_projects": 1,
+          "amount_kshs": 1999004,
+          "amount_kshs_raw": "1,999,004"
+        }
+      ],
+      "total_counties": 13
+    },
+    "stalled_abandoned_projects_county_executives": {
+      "_description": "County Executives with stalled or abandoned projects (Appendix 27). amount_kshs is the cumulative value of stalled/abandoned projects.",
+      "_columns": [
+        "county",
+        "number_of_projects",
+        "amount_kshs",
+        "amount_kshs_raw"
+      ],
+      "data": [
+        {
+          "county": "Kakamega County",
+          "number_of_projects": 8,
+          "amount_kshs": 8152680753,
+          "amount_kshs_raw": "8,152,680,753"
+        },
+        {
+          "county": "Nairobi County",
+          "number_of_projects": 6,
+          "amount_kshs": 2460888080,
+          "amount_kshs_raw": "2,460,888,080"
+        },
+        {
+          "county": "Trans Nzoia County",
+          "number_of_projects": 2,
+          "amount_kshs": 2101364258,
+          "amount_kshs_raw": "2,101,364,258"
+        },
+        {
+          "county": "Isiolo County",
+          "number_of_projects": 2,
+          "amount_kshs": 1216704325,
+          "amount_kshs_raw": "1,216,704,325"
+        },
+        {
+          "county": "Turkana County",
+          "number_of_projects": "Various",
+          "amount_kshs": 1131373148,
+          "amount_kshs_raw": "1,131,373,148"
+        },
+        {
+          "county": "Uasin Gishu County",
+          "number_of_projects": 3,
+          "amount_kshs": 826051814,
+          "amount_kshs_raw": "826,051,814"
+        },
+        {
+          "county": "West Pokot County",
+          "number_of_projects": 5,
+          "amount_kshs": 650347828,
+          "amount_kshs_raw": "650,347,828"
+        },
+        {
+          "county": "Garissa County",
+          "number_of_projects": 17,
+          "amount_kshs": 504292598,
+          "amount_kshs_raw": "504,292,598"
+        },
+        {
+          "county": "Siaya County",
+          "number_of_projects": 2,
+          "amount_kshs": 488189885,
+          "amount_kshs_raw": "488,189,885"
+        },
+        {
+          "county": "Kitui County",
+          "number_of_projects": "Various",
+          "amount_kshs": 404585303,
+          "amount_kshs_raw": "404,585,303"
+        },
+        {
+          "county": "Nyandarua County",
+          "number_of_projects": 43,
+          "amount_kshs": 403913801,
+          "amount_kshs_raw": "403,913,801"
+        },
+        {
+          "county": "Kwale County",
+          "number_of_projects": 4,
+          "amount_kshs": 352822534,
+          "amount_kshs_raw": "352,822,534"
+        },
+        {
+          "county": "Machakos County",
+          "number_of_projects": 54,
+          "amount_kshs": 314262161,
+          "amount_kshs_raw": "314,262,161"
+        },
+        {
+          "county": "Samburu County",
+          "number_of_projects": 2,
+          "amount_kshs": 168230938,
+          "amount_kshs_raw": "168,230,938"
+        },
+        {
+          "county": "Kericho County",
+          "number_of_projects": 3,
+          "amount_kshs": 143081088,
+          "amount_kshs_raw": "143,081,088"
+        },
+        {
+          "county": "Nyamira County",
+          "number_of_projects": 2,
+          "amount_kshs": 130098679,
+          "amount_kshs_raw": "130,098,679"
+        },
+        {
+          "county": "Bomet County",
+          "number_of_projects": "Various",
+          "amount_kshs": 98944483,
+          "amount_kshs_raw": "98,944,483"
+        },
+        {
+          "county": "Wajir County",
+          "number_of_projects": 3,
+          "amount_kshs": 95455794,
+          "amount_kshs_raw": "95,455,794"
+        },
+        {
+          "county": "Baringo County",
+          "number_of_projects": 2,
+          "amount_kshs": 76230193,
+          "amount_kshs_raw": "76,230,193"
+        },
+        {
+          "county": "Elgeyo/Marakwet County",
+          "number_of_projects": 4,
+          "amount_kshs": 73167433,
+          "amount_kshs_raw": "73,167,433"
+        },
+        {
+          "county": "Nakuru County",
+          "number_of_projects": 27,
+          "amount_kshs": 60287502,
+          "amount_kshs_raw": "60,287,502"
+        },
+        {
+          "county": "Busia County",
+          "number_of_projects": 8,
+          "amount_kshs": 54447480,
+          "amount_kshs_raw": "54,447,480"
+        },
+        {
+          "county": "Taita/Taveta County",
+          "number_of_projects": 7,
+          "amount_kshs": 44982286,
+          "amount_kshs_raw": "44,982,286"
+        },
+        {
+          "county": "Meru County",
+          "number_of_projects": 2,
+          "amount_kshs": 36886105,
+          "amount_kshs_raw": "36,886,105"
+        },
+        {
+          "county": "Makueni County",
+          "number_of_projects": 6,
+          "amount_kshs": 35146971,
+          "amount_kshs_raw": "35,146,971"
+        },
+        {
+          "county": "Kajiado County",
+          "number_of_projects": 3,
+          "amount_kshs": 27121769,
+          "amount_kshs_raw": "27,121,769"
+        },
+        {
+          "county": "Lamu County",
+          "number_of_projects": 2,
+          "amount_kshs": 14978117,
+          "amount_kshs_raw": "14,978,117"
+        },
+        {
+          "county": "Nandi County",
+          "number_of_projects": "Various",
+          "amount_kshs": 9954900,
+          "amount_kshs_raw": "9,954,900"
+        },
+        {
+          "county": "Vihiga County",
+          "number_of_projects": 1,
+          "amount_kshs": 3262337,
+          "amount_kshs_raw": "3,262,337"
+        },
+        {
+          "county": "Tana River County",
+          "number_of_projects": 1,
+          "amount_kshs": 1682696,
+          "amount_kshs_raw": "1,682,696"
+        },
+        {
+          "county": "Embu County",
+          "number_of_projects": 1,
+          "amount_kshs": null,
+          "amount_kshs_raw": null
+        },
+        {
+          "county": "Kisumu County",
+          "number_of_projects": 27,
+          "amount_kshs": null,
+          "amount_kshs_raw": null
+        }
+      ],
+      "total_counties": 32
+    },
+    "delayed_projects_county_assemblies": {
+      "_description": "County Assemblies with delayed projects (OAG appendix). amount_kshs is the value of delayed projects.",
+      "_columns": [
+        "county",
+        "number_of_projects",
+        "amount_kshs",
+        "amount_kshs_raw"
+      ],
+      "data": [
+        {
+          "county": "Kajiado County",
+          "number_of_projects": 3,
+          "amount_kshs": 13310680,
+          "amount_kshs_raw": "13,310,680"
+        }
+      ],
+      "total_counties": 1
+    },
+    "unutilized_assets": {
+      "_description": "County Executives with significant unutilized/idle assets flagged during the audit (Appendix 28 area). amount_kshs is the value of the unutilized assets.",
+      "_columns": [
+        "county",
+        "description",
+        "amount_kshs"
+      ],
+      "data": [
+        {
+          "county": "Nairobi County",
+          "description": "Thirteen Medical machines have remained idle and unused in the stores for over 10 years. Thirty-one (31) vehicles remain unutilzed.",
+          "amount_kshs": null
+        },
+        {
+          "county": "Nyeri County",
+          "description": "Air conditioning and equipping of the two surgery theatres by the Department of health services were not in use.",
+          "amount_kshs": 9794676
+        },
+        {
+          "county": "Busia County",
+          "description": "Unutilized refrigerated truck which had private registration number",
+          "amount_kshs": 9753305
+        },
+        {
+          "county": "Tana River County",
+          "description": "Uninstalled specialized medical equipment at Hola Level 4 Hospital",
+          "amount_kshs": 84913536
+        }
+      ],
+      "total_counties": 4
+    },
+    "procurement_irregularities": {
+      "_description": "County Executives with procurement irregularities (Appendix 24/25). amount_kshs is the value of irregular procurement spending.",
+      "_columns": [
+        "county",
+        "amount_kshs",
+        "amount_kshs_raw"
+      ],
+      "data": [
+        {
+          "county": "Nairobi County",
+          "amount_kshs": 463434545,
+          "amount_kshs_raw": "463,434,545"
+        },
+        {
+          "county": "Samburu County",
+          "amount_kshs": 319651201,
+          "amount_kshs_raw": "319,651,201"
+        },
+        {
+          "county": "Nandi County",
+          "amount_kshs": 296929835,
+          "amount_kshs_raw": "296,929,835"
+        },
+        {
+          "county": "Nandi County Nyeri County",
+          "amount_kshs": 268587823,
+          "amount_kshs_raw": "268,587,823"
+        },
+        {
+          "county": "Nyeri County Kisumu County",
+          "amount_kshs": 210009458,
+          "amount_kshs_raw": "210,009,458"
+        },
+        {
+          "county": "Kisumu County Mandera County",
+          "amount_kshs": 188987235,
+          "amount_kshs_raw": "188,987,235"
+        },
+        {
+          "county": "Mandera County Laikipia County",
+          "amount_kshs": 159312438,
+          "amount_kshs_raw": "159,312,438"
+        },
+        {
+          "county": "Laikipia County Busia County",
+          "amount_kshs": 119036047,
+          "amount_kshs_raw": "119,036,047"
+        },
+        {
+          "county": "Busia County Kiambu County",
+          "amount_kshs": 65254713,
+          "amount_kshs_raw": "65,254,713"
+        },
+        {
+          "county": "Nyandarua County",
+          "amount_kshs": 57777835,
+          "amount_kshs_raw": "57,777,835"
+        },
+        {
+          "county": "Narok County",
+          "amount_kshs": 48517077,
+          "amount_kshs_raw": "48,517,077"
+        },
+        {
+          "county": "Uasin Gishu County",
+          "amount_kshs": 29956721,
+          "amount_kshs_raw": "29,956,721"
+        },
+        {
+          "county": "Wajir County",
+          "amount_kshs": 23792180,
+          "amount_kshs_raw": "23,792,180"
+        },
+        {
+          "county": "Tharaka-Nithi County",
+          "amount_kshs": 16746137,
+          "amount_kshs_raw": "16,746,137"
+        },
+        {
+          "county": "Siaya County",
+          "amount_kshs": 14509755,
+          "amount_kshs_raw": "14,509,755"
+        },
+        {
+          "county": "Trans Nzoia County",
+          "amount_kshs": 11010887,
+          "amount_kshs_raw": "11,010,887"
+        },
+        {
+          "county": "Nakuru County",
+          "amount_kshs": 1067250,
+          "amount_kshs_raw": "1,067,250"
+        },
+        {
+          "county": "Marsabit County",
+          "amount_kshs": 288645729,
+          "amount_kshs_raw": "288,645,729"
+        },
+        {
+          "county": "Garissa County",
+          "amount_kshs": 377787076,
+          "amount_kshs_raw": "377,787,076"
+        }
+      ],
+      "total_counties": 19
+    }
+  },
+  "financial_performance": {
+    "_description": "County-level financial data from OAG audit appendices.",
+    "budget_summary": {
+      "_description": "Approved budget allocation for County Executives and Assemblies (Appendix 2, FY 2023-2024).",
+      "_columns": [
+        "county",
+        "executive_budget_kshs",
+        "assembly_budget_kshs",
+        "total_budget_kshs"
+      ],
+      "data": [
+        {
+          "county": "Nairobi County",
+          "executive_budget_kshs": 42286936833,
+          "assembly_budget_kshs": 2680000000,
+          "total_budget_kshs": "44,966,936,833"
+        },
+        {
+          "county": "Nakuru County",
+          "executive_budget_kshs": 23310531513,
+          "assembly_budget_kshs": 1233482750,
+          "total_budget_kshs": "24,544,014,263"
+        },
+        {
+          "county": "Kiambu County",
+          "executive_budget_kshs": 21458869952,
+          "assembly_budget_kshs": 1755986518,
+          "total_budget_kshs": "23,214,856,470"
+        },
+        {
+          "county": "Kilifi County",
+          "executive_budget_kshs": 18812448474,
+          "assembly_budget_kshs": 1191334267,
+          "total_budget_kshs": "20,003,782,741"
+        },
+        {
+          "county": "Turkana County",
+          "executive_budget_kshs": 15983137168,
+          "assembly_budget_kshs": 1241876959,
+          "total_budget_kshs": "17,225,014,127"
+        },
+        {
+          "county": "Mombasa County",
+          "executive_budget_kshs": 15990000000,
+          "assembly_budget_kshs": 1045944906,
+          "total_budget_kshs": "17,035,944,906"
+        },
+        {
+          "county": "Machakos County",
+          "executive_budget_kshs": 15808454221,
+          "assembly_budget_kshs": 1087995826,
+          "total_budget_kshs": "16,896,450,047"
+        },
+        {
+          "county": "Kakamega County Kitui County",
+          "executive_budget_kshs": 1538560690114257138712,
+          "assembly_budget_kshs": 14008211031409872841,
+          "total_budget_kshs": "16,786,428,004"
+        },
+        {
+          "county": "Kitui County",
+          "executive_budget_kshs": 14257138712,
+          "assembly_budget_kshs": 1409872841,
+          "total_budget_kshs": "15,667,011,553"
+        },
+        {
+          "county": "Narok County",
+          "executive_budget_kshs": 14024206088,
+          "assembly_budget_kshs": 961000000,
+          "total_budget_kshs": "14,985,206,088"
+        },
+        {
+          "county": "Narok County Uasin Gishu County",
+          "executive_budget_kshs": 1402420608813286616749,
+          "assembly_budget_kshs": 9610000001073056637,
+          "total_budget_kshs": "14,985,206,088 14,359,673,386"
+        },
+        {
+          "county": "Uasin Gishu County",
+          "executive_budget_kshs": 13286616749,
+          "assembly_budget_kshs": 1073056637,
+          "total_budget_kshs": "14,359,673,386"
+        },
+        {
+          "county": "Kwale County",
+          "executive_budget_kshs": 13168456197,
+          "assembly_budget_kshs": 1090712566,
+          "total_budget_kshs": "14,259,168,763"
+        },
+        {
+          "county": "Bungoma County",
+          "executive_budget_kshs": 12948647400,
+          "assembly_budget_kshs": 1283975880,
+          "total_budget_kshs": "14,232,623,280"
+        },
+        {
+          "county": "Kisumu County",
+          "executive_budget_kshs": 12557553292,
+          "assembly_budget_kshs": 1140311910,
+          "total_budget_kshs": "13,697,865,202"
+        },
+        {
+          "county": "Kisii County",
+          "executive_budget_kshs": 11872739910,
+          "assembly_budget_kshs": 1378381974,
+          "total_budget_kshs": "13,251,121,884"
+        },
+        {
+          "county": "Kisii County Mandera County",
+          "executive_budget_kshs": 1187273991011987831007,
+          "assembly_budget_kshs": 13783819741013000000,
+          "total_budget_kshs": "13,251,121,884 13,000,831,007"
+        },
+        {
+          "county": "Mandera County",
+          "executive_budget_kshs": 11987831007,
+          "assembly_budget_kshs": 1013000000,
+          "total_budget_kshs": "13,000,831,007"
+        },
+        {
+          "county": "Mandera County Migori County",
+          "executive_budget_kshs": 1198783100711473037521,
+          "assembly_budget_kshs": 10130000001103508709,
+          "total_budget_kshs": "13,000,831,007 12,576,546,230"
+        },
+        {
+          "county": "Migori County",
+          "executive_budget_kshs": 11473037521,
+          "assembly_budget_kshs": 1103508709,
+          "total_budget_kshs": "12,576,546,230"
+        },
+        {
+          "county": "Wajir County",
+          "executive_budget_kshs": 11143480018,
+          "assembly_budget_kshs": 997050023,
+          "total_budget_kshs": "12,140,530,041"
+        },
+        {
+          "county": "Meru County",
+          "executive_budget_kshs": 10813575576,
+          "assembly_budget_kshs": 1022378295,
+          "total_budget_kshs": "11,835,953,871"
+        },
+        {
+          "county": "Kajiado County",
+          "executive_budget_kshs": 10514620550,
+          "assembly_budget_kshs": 1077243556,
+          "total_budget_kshs": "11,591,864,106"
+        },
+        {
+          "county": "Trans Nzoia County",
+          "executive_budget_kshs": 10185156069,
+          "assembly_budget_kshs": 1085421133,
+          "total_budget_kshs": "11,270,577,202"
+        },
+        {
+          "county": "Makueni County",
+          "executive_budget_kshs": 10233333653,
+          "assembly_budget_kshs": 949001447,
+          "total_budget_kshs": "11,182,335,100"
+        },
+        {
+          "county": "Homa Bay County",
+          "executive_budget_kshs": 9962208395,
+          "assembly_budget_kshs": 1205017905,
+          "total_budget_kshs": "11,167,226,300"
+        },
+        {
+          "county": "Garissa County",
+          "executive_budget_kshs": 9568689395,
+          "assembly_budget_kshs": 963731729,
+          "total_budget_kshs": "10,532,421,124"
+        },
+        {
+          "county": "Murang'a County",
+          "executive_budget_kshs": 9516657013,
+          "assembly_budget_kshs": 829709033,
+          "total_budget_kshs": "10,346,366,046"
+        },
+        {
+          "county": "Busia County",
+          "executive_budget_kshs": 9221975801,
+          "assembly_budget_kshs": 981057352,
+          "total_budget_kshs": "10,203,033,153"
+        },
+        {
+          "county": "Nandi County",
+          "executive_budget_kshs": 8988667004,
+          "assembly_budget_kshs": 861999461,
+          "total_budget_kshs": "9,850,666,465"
+        },
+        {
+          "county": "Siaya County",
+          "executive_budget_kshs": 8622296306,
+          "assembly_budget_kshs": 1138827082,
+          "total_budget_kshs": "9,761,123,388"
+        },
+        {
+          "county": "Bomet County",
+          "executive_budget_kshs": 8521100308,
+          "assembly_budget_kshs": 1069903256,
+          "total_budget_kshs": "9,591,003,564"
+        },
+        {
+          "county": "Marsabit County",
+          "executive_budget_kshs": 8107949379,
+          "assembly_budget_kshs": 1316701070,
+          "total_budget_kshs": "9,424,650,449"
+        },
+        {
+          "county": "Baringo County",
+          "executive_budget_kshs": 7985216848,
+          "assembly_budget_kshs": 907788878,
+          "total_budget_kshs": "8,893,005,726"
+        },
+        {
+          "county": "Tana River County",
+          "executive_budget_kshs": 7826060113,
+          "assembly_budget_kshs": 1043437753,
+          "total_budget_kshs": "8,869,497,866"
+        },
+        {
+          "county": "Nyandarua County",
+          "executive_budget_kshs": 7757865839,
+          "assembly_budget_kshs": 990285706,
+          "total_budget_kshs": "8,748,151,545"
+        },
+        {
+          "county": "Kericho County",
+          "executive_budget_kshs": 7604644288,
+          "assembly_budget_kshs": 880123744,
+          "total_budget_kshs": "8,484,768,032"
+        },
+        {
+          "county": "Nyamira County",
+          "executive_budget_kshs": 7282175903,
+          "assembly_budget_kshs": 914979149,
+          "total_budget_kshs": "8,197,155,052"
+        },
+        {
+          "county": "Embu County",
+          "executive_budget_kshs": 7298577468,
+          "assembly_budget_kshs": 634021950,
+          "total_budget_kshs": "7,932,599,418"
+        },
+        {
+          "county": "Laikipia County",
+          "executive_budget_kshs": 7080656223,
+          "assembly_budget_kshs": 645809049,
+          "total_budget_kshs": "7,726,465,272"
+        },
+        {
+          "county": "West Pokot County",
+          "executive_budget_kshs": 6878909805,
+          "assembly_budget_kshs": 836564478,
+          "total_budget_kshs": "7,715,474,283"
+        },
+        {
+          "county": "Samburu County",
+          "executive_budget_kshs": 6977942770,
+          "assembly_budget_kshs": 687999097,
+          "total_budget_kshs": "7,665,941,867"
+        },
+        {
+          "county": "Kirinyaga County",
+          "executive_budget_kshs": 6481998272,
+          "assembly_budget_kshs": 758549134,
+          "total_budget_kshs": "7,240,547,406"
+        },
+        {
+          "county": "Vihiga County",
+          "executive_budget_kshs": 5965773487,
+          "assembly_budget_kshs": 735818899,
+          "total_budget_kshs": "6,701,592,386"
+        },
+        {
+          "county": "Elgeyo/Marakwet County",
+          "executive_budget_kshs": 5820971067,
+          "assembly_budget_kshs": 706848845,
+          "total_budget_kshs": "6,527,819,912"
+        },
+        {
+          "county": "Tharaka-Nithi County",
+          "executive_budget_kshs": 5954279762,
+          "assembly_budget_kshs": 564516596,
+          "total_budget_kshs": "6,518,796,358"
+        },
+        {
+          "county": "Isiolo County",
+          "executive_budget_kshs": 5139557699,
+          "assembly_budget_kshs": 579252680,
+          "total_budget_kshs": "5,718,810,379"
+        },
+        {
+          "county": "Taita/Taveta County",
+          "executive_budget_kshs": 4391514765,
+          "assembly_budget_kshs": 840893598,
+          "total_budget_kshs": "5,232,408,363"
+        },
+        {
+          "county": "Lamu County",
+          "executive_budget_kshs": 3952337952,
+          "assembly_budget_kshs": 589500000,
+          "total_budget_kshs": "4,541,837,952"
+        }
+      ],
+      "total_counties": 49
+    },
+    "actual_revenue": {
+      "_description": "Actual revenue collected by County Executives and Assemblies (Appendix 3, FY 2023-2024).",
+      "_columns": [
+        "county",
+        "executive_revenue_kshs",
+        "assembly_revenue_kshs",
+        "total_revenue_kshs"
+      ],
+      "data": [
+        {
+          "county": "Nairobi City County",
+          "executive_revenue_kshs": 118794238631,
+          "assembly_revenue_kshs": 582067180,
+          "total_revenue_kshs": "119,376,305,811"
+        },
+        {
+          "county": "Embu County",
+          "executive_revenue_kshs": 18207053571,
+          "assembly_revenue_kshs": 74215437,
+          "total_revenue_kshs": "18,281,269,008"
+        },
+        {
+          "county": "Kiambu County",
+          "executive_revenue_kshs": 6620512229,
+          "assembly_revenue_kshs": 228676515,
+          "total_revenue_kshs": "6,849,188,744"
+        },
+        {
+          "county": "Kilifi County",
+          "executive_revenue_kshs": 6091340081,
+          "assembly_revenue_kshs": 203500044,
+          "total_revenue_kshs": "6,294,840,125"
+        },
+        {
+          "county": "Machakos County",
+          "executive_revenue_kshs": 5583993403,
+          "assembly_revenue_kshs": 82073561,
+          "total_revenue_kshs": "5,666,066,964"
+        },
+        {
+          "county": "Mombasa County",
+          "executive_revenue_kshs": 4440572242,
+          "assembly_revenue_kshs": 50527547,
+          "total_revenue_kshs": "4,491,099,789"
+        },
+        {
+          "county": "Tana River County",
+          "executive_revenue_kshs": 4164271894,
+          "assembly_revenue_kshs": 168573029,
+          "total_revenue_kshs": "4,332,844,923"
+        },
+        {
+          "county": "Bungoma County",
+          "executive_revenue_kshs": 3339153758,
+          "assembly_revenue_kshs": 127074723,
+          "total_revenue_kshs": "3,466,228,481"
+        },
+        {
+          "county": "Kisumu County",
+          "executive_revenue_kshs": 3245557812,
+          "assembly_revenue_kshs": 144730225,
+          "total_revenue_kshs": "3,390,288,037"
+        },
+        {
+          "county": "Nyandarua County",
+          "executive_revenue_kshs": 2965410323,
+          "assembly_revenue_kshs": 158412703,
+          "total_revenue_kshs": "3,123,823,026"
+        },
+        {
+          "county": "Narok County",
+          "executive_revenue_kshs": 2613799585,
+          "assembly_revenue_kshs": 88593957,
+          "total_revenue_kshs": "2,702,393,542"
+        },
+        {
+          "county": "Laikipia County",
+          "executive_revenue_kshs": 2327374687,
+          "assembly_revenue_kshs": 35037911,
+          "total_revenue_kshs": "2,362,412,598"
+        },
+        {
+          "county": "Kajiado County",
+          "executive_revenue_kshs": 2290313208,
+          "assembly_revenue_kshs": 176002077,
+          "total_revenue_kshs": "2,466,315,285"
+        },
+        {
+          "county": "Mandera County",
+          "executive_revenue_kshs": 2227277664,
+          "assembly_revenue_kshs": null,
+          "total_revenue_kshs": "2,227,277,664"
+        },
+        {
+          "county": "Migori County",
+          "executive_revenue_kshs": 2178167188,
+          "assembly_revenue_kshs": 210466225,
+          "total_revenue_kshs": "2,388,633,413"
+        },
+        {
+          "county": "Taita/Taveta County",
+          "executive_revenue_kshs": 2175125908,
+          "assembly_revenue_kshs": 99141994,
+          "total_revenue_kshs": "2,274,267,902"
+        },
+        {
+          "county": "Kwale County",
+          "executive_revenue_kshs": 2148682205,
+          "assembly_revenue_kshs": 312063816,
+          "total_revenue_kshs": "2,460,746,021"
+        },
+        {
+          "county": "Busia County",
+          "executive_revenue_kshs": 1838870345,
+          "assembly_revenue_kshs": 178115299,
+          "total_revenue_kshs": "2,016,985,644"
+        },
+        {
+          "county": "Garissa County",
+          "executive_revenue_kshs": 1815019389,
+          "assembly_revenue_kshs": 127498949,
+          "total_revenue_kshs": "1,942,518,338"
+        },
+        {
+          "county": "Kisii County",
+          "executive_revenue_kshs": 1763314575,
+          "assembly_revenue_kshs": 56967124,
+          "total_revenue_kshs": "1,820,281,699"
+        },
+        {
+          "county": "Kakamega County",
+          "executive_revenue_kshs": 1708945892,
+          "assembly_revenue_kshs": 256232434,
+          "total_revenue_kshs": "1,965,178,326"
+        },
+        {
+          "county": "Wajir County",
+          "executive_revenue_kshs": 1674786776,
+          "assembly_revenue_kshs": 144645537,
+          "total_revenue_kshs": "1,819,432,313"
+        },
+        {
+          "county": "Vihiga County",
+          "executive_revenue_kshs": 1595018823,
+          "assembly_revenue_kshs": 86239692,
+          "total_revenue_kshs": "1,681,258,515"
+        },
+        {
+          "county": "Trans Nzoia County",
+          "executive_revenue_kshs": 1497561536,
+          "assembly_revenue_kshs": 37616156,
+          "total_revenue_kshs": "1,535,177,692"
+        },
+        {
+          "county": "Nakuru County",
+          "executive_revenue_kshs": 1478761394,
+          "assembly_revenue_kshs": 88968678,
+          "total_revenue_kshs": "1,567,730,072"
+        },
+        {
+          "county": "Siaya County",
+          "executive_revenue_kshs": 1466051827,
+          "assembly_revenue_kshs": 15205456,
+          "total_revenue_kshs": "1,481,257,283"
+        },
+        {
+          "county": "Murang'a County",
+          "executive_revenue_kshs": 1342502610,
+          "assembly_revenue_kshs": 72444484,
+          "total_revenue_kshs": "1,414,947,094"
+        },
+        {
+          "county": "Meru County",
+          "executive_revenue_kshs": 1329144337,
+          "assembly_revenue_kshs": 2653328,
+          "total_revenue_kshs": "1,331,797,665"
+        },
+        {
+          "county": "Kirinyaga County",
+          "executive_revenue_kshs": 1252361361,
+          "assembly_revenue_kshs": 4062103,
+          "total_revenue_kshs": "1,256,423,464"
+        },
+        {
+          "county": "Isiolo County",
+          "executive_revenue_kshs": 1242393771,
+          "assembly_revenue_kshs": 87663162,
+          "total_revenue_kshs": "1,330,056,933"
+        },
+        {
+          "county": "Kericho County",
+          "executive_revenue_kshs": 1147933403,
+          "assembly_revenue_kshs": 35758402,
+          "total_revenue_kshs": "1,183,691,805"
+        },
+        {
+          "county": "Bomet County",
+          "executive_revenue_kshs": 1021785351,
+          "assembly_revenue_kshs": 86957737,
+          "total_revenue_kshs": "1,108,743,088"
+        },
+        {
+          "county": "Kitui County",
+          "executive_revenue_kshs": 861319545,
+          "assembly_revenue_kshs": 17742283,
+          "total_revenue_kshs": "879,061,828"
+        },
+        {
+          "county": "Tharaka-Nithi County",
+          "executive_revenue_kshs": 852199498,
+          "assembly_revenue_kshs": 115506646,
+          "total_revenue_kshs": "967,706,144"
+        },
+        {
+          "county": "Marsabit County",
+          "executive_revenue_kshs": 837274018,
+          "assembly_revenue_kshs": 431767745,
+          "total_revenue_kshs": "1,269,041,763"
+        },
+        {
+          "county": "Turkana County",
+          "executive_revenue_kshs": 801687224,
+          "assembly_revenue_kshs": 54595083,
+          "total_revenue_kshs": "856,282,307"
+        },
+        {
+          "county": "Nyamira County",
+          "executive_revenue_kshs": 776779157,
+          "assembly_revenue_kshs": 120186595,
+          "total_revenue_kshs": "896,965,752"
+        },
+        {
+          "county": "Nandi County",
+          "executive_revenue_kshs": 776597838,
+          "assembly_revenue_kshs": 1194205,
+          "total_revenue_kshs": "777,792,043"
+        },
+        {
+          "county": "Uasin Gishu County",
+          "executive_revenue_kshs": 707393356,
+          "assembly_revenue_kshs": 37702163,
+          "total_revenue_kshs": "745,095,519"
+        },
+        {
+          "county": "Makueni County",
+          "executive_revenue_kshs": 686830832,
+          "assembly_revenue_kshs": 82087023,
+          "total_revenue_kshs": "768,917,855"
+        },
+        {
+          "county": "Samburu County",
+          "executive_revenue_kshs": 600004263,
+          "assembly_revenue_kshs": null,
+          "total_revenue_kshs": "600,004,263"
+        },
+        {
+          "county": "West Pokot County",
+          "executive_revenue_kshs": 559029164,
+          "assembly_revenue_kshs": 39002832,
+          "total_revenue_kshs": "598,031,996"
+        },
+        {
+          "county": "Baringo County",
+          "executive_revenue_kshs": 455035776,
+          "assembly_revenue_kshs": 385053382,
+          "total_revenue_kshs": "840,089,158"
+        },
+        {
+          "county": "Nyeri County",
+          "executive_revenue_kshs": 192269444,
+          "assembly_revenue_kshs": 112969073,
+          "total_revenue_kshs": "305,238,517"
+        },
+        {
+          "county": "Elgeyo/Marakwet County",
+          "executive_revenue_kshs": 103636606,
+          "assembly_revenue_kshs": null,
+          "total_revenue_kshs": "103,636,606"
+        },
+        {
+          "county": "Lamu County",
+          "executive_revenue_kshs": 49122593,
+          "assembly_revenue_kshs": null,
+          "total_revenue_kshs": "49,122,593"
+        }
+      ],
+      "total_counties": 46
+    },
+    "own_source_revenue": {
+      "_description": "Own-source revenue budget vs actual and % achievement (Appendix 5, FY 2023-2024).",
+      "_columns": [
+        "county",
+        "budgeted_kshs",
+        "actual_kshs",
+        "achievement_pct"
+      ],
+      "data": [
+        {
+          "county": "Lamu County",
+          "budgeted_kshs": 180000000,
+          "actual_kshs": 213328064,
+          "achievement_pct": "119%"
+        },
+        {
+          "county": "Kirinyaga County",
+          "budgeted_kshs": 550000000,
+          "actual_kshs": 651009992,
+          "achievement_pct": "118%"
+        },
+        {
+          "county": "Vihiga County",
+          "budgeted_kshs": 300549454,
+          "actual_kshs": 335439785,
+          "achievement_pct": "112%"
+        },
+        {
+          "county": "Samburu County",
+          "budgeted_kshs": 256027400,
+          "actual_kshs": 280319244,
+          "achievement_pct": "109%"
+        },
+        {
+          "county": "Elgeyo/Marakwet County",
+          "budgeted_kshs": 270326633,
+          "actual_kshs": 278482755,
+          "achievement_pct": "103%"
+        },
+        {
+          "county": "Embu County",
+          "budgeted_kshs": 750000000,
+          "actual_kshs": 746970100,
+          "achievement_pct": "100%"
+        },
+        {
+          "county": "Narok County",
+          "budgeted_kshs": 5023073664,
+          "actual_kshs": 4781452940,
+          "achievement_pct": "95%"
+        },
+        {
+          "county": "Tana River County",
+          "budgeted_kshs": 96630600,
+          "actual_kshs": 90174516,
+          "achievement_pct": "93%"
+        },
+        {
+          "county": "Tharaka-Nithi County",
+          "budgeted_kshs": 450670000,
+          "actual_kshs": 417346034,
+          "achievement_pct": "93%"
+        },
+        {
+          "county": "Isiolo County",
+          "budgeted_kshs": 271208180,
+          "actual_kshs": 243298518,
+          "achievement_pct": "90%"
+        },
+        {
+          "county": "Uasin Gishu County",
+          "budgeted_kshs": 1578147614,
+          "actual_kshs": 1404777903,
+          "achievement_pct": "89%"
+        },
+        {
+          "county": "Kitui County",
+          "budgeted_kshs": 585000000,
+          "actual_kshs": 517049814,
+          "achievement_pct": "88%"
+        },
+        {
+          "county": "Marsabit County",
+          "budgeted_kshs": 190000000,
+          "actual_kshs": 167579472,
+          "achievement_pct": "88%"
+        },
+        {
+          "county": "Homa Bay County",
+          "budgeted_kshs": 1392206352,
+          "actual_kshs": 1200495830,
+          "achievement_pct": "86%"
+        },
+        {
+          "county": "Makueni County",
+          "budgeted_kshs": 1240000000,
+          "actual_kshs": 1045086845,
+          "achievement_pct": "84%"
+        },
+        {
+          "county": "Baringo County",
+          "budgeted_kshs": 450097396,
+          "actual_kshs": 378472185,
+          "achievement_pct": "84%"
+        },
+        {
+          "county": "Nyeri County",
+          "budgeted_kshs": 800000000,
+          "actual_kshs": 667120607,
+          "achievement_pct": "83%"
+        },
+        {
+          "county": "Nakuru County",
+          "budgeted_kshs": 2400000000,
+          "actual_kshs": 1934878518,
+          "achievement_pct": "81%"
+        },
+        {
+          "county": "West Pokot County",
+          "budgeted_kshs": 230000000,
+          "actual_kshs": 185294701,
+          "achievement_pct": "81%"
+        },
+        {
+          "county": "Siaya County",
+          "budgeted_kshs": 760998234,
+          "actual_kshs": 610364012,
+          "achievement_pct": "80%"
+        },
+        {
+          "county": "Kericho County",
+          "budgeted_kshs": 1066426600,
+          "actual_kshs": 834758771,
+          "achievement_pct": "78%"
+        },
+        {
+          "county": "Kisii County",
+          "budgeted_kshs": 650000000,
+          "actual_kshs": 497491034,
+          "achievement_pct": "77%"
+        },
+        {
+          "county": "Mombasa County",
+          "budgeted_kshs": 5856356997,
+          "actual_kshs": 4457758296,
+          "achievement_pct": "76%"
+        },
+        {
+          "county": "Taita/Taveta County",
+          "budgeted_kshs": 628667445,
+          "actual_kshs": 466449100,
+          "achievement_pct": "74%"
+        },
+        {
+          "county": "Laikipia County",
+          "budgeted_kshs": 1475000000,
+          "actual_kshs": 1085142996,
+          "achievement_pct": "74%"
+        },
+        {
+          "county": "Murang'a County",
+          "budgeted_kshs": 1115000000,
+          "actual_kshs": 802633560,
+          "achievement_pct": "72%"
+        },
+        {
+          "county": "Bomet County",
+          "budgeted_kshs": 332041830,
+          "actual_kshs": 238980420,
+          "achievement_pct": "72%"
+        },
+        {
+          "county": "Kwale County",
+          "budgeted_kshs": 600000000,
+          "actual_kshs": 427377928,
+          "achievement_pct": "71%"
+        },
+        {
+          "county": "Migori County",
+          "budgeted_kshs": 480000000,
+          "actual_kshs": 337154048,
+          "achievement_pct": "70%"
+        },
+        {
+          "county": "Kajiado County",
+          "budgeted_kshs": 1515702515,
+          "actual_kshs": 1048356435,
+          "achievement_pct": "69%"
+        },
+        {
+          "county": "Kilifi County",
+          "budgeted_kshs": 1788634224,
+          "actual_kshs": 1206703667,
+          "achievement_pct": "67%"
+        },
+        {
+          "county": "Meru County",
+          "budgeted_kshs": 562000000,
+          "actual_kshs": 376008436,
+          "achievement_pct": "67%"
+        },
+        {
+          "county": "Kisumu County",
+          "budgeted_kshs": 2282844694,
+          "actual_kshs": 1511728382,
+          "achievement_pct": "66%"
+        },
+        {
+          "county": "Kiambu County",
+          "budgeted_kshs": 6995366310,
+          "actual_kshs": 4585751300,
+          "achievement_pct": "66%"
+        },
+        {
+          "county": "Nairobi County",
+          "budgeted_kshs": 19999322415,
+          "actual_kshs": 12881287392,
+          "achievement_pct": "64%"
+        },
+        {
+          "county": "Garissa County",
+          "budgeted_kshs": 139000000,
+          "actual_kshs": 89055596,
+          "achievement_pct": "64%"
+        },
+        {
+          "county": "Kakamega County",
+          "budgeted_kshs": 2200000000,
+          "actual_kshs": 1349689046,
+          "achievement_pct": "61%"
+        },
+        {
+          "county": "Nandi County",
+          "budgeted_kshs": 558329869,
+          "actual_kshs": 307822318,
+          "achievement_pct": "55%"
+        },
+        {
+          "county": "Busia County",
+          "budgeted_kshs": 649015634,
+          "actual_kshs": 357765802,
+          "achievement_pct": "55%"
+        },
+        {
+          "county": "Nyamira County",
+          "budgeted_kshs": 687000000,
+          "actual_kshs": 373047917,
+          "achievement_pct": "54%"
+        },
+        {
+          "county": "Mandera County",
+          "budgeted_kshs": 330533846,
+          "actual_kshs": 169040486,
+          "achievement_pct": "51%"
+        },
+        {
+          "county": "Machakos County",
+          "budgeted_kshs": 3432286060,
+          "actual_kshs": 1578877300,
+          "achievement_pct": "46%"
+        },
+        {
+          "county": "Bungoma County",
+          "budgeted_kshs": 868201471,
+          "actual_kshs": 368069810,
+          "achievement_pct": "42%"
+        },
+        {
+          "county": "Nyandarua County",
+          "budgeted_kshs": 1225000000,
+          "actual_kshs": 515740772,
+          "achievement_pct": "42%"
+        }
+      ],
+      "total_counties": 44
+    },
+    "exchequer_releases_vs_receipts": {
+      "_description": "National Government exchequer releases versus amounts receipted in County Revenue Funds (Appendix 6).",
+      "_columns": [
+        "county",
+        "exchequer_releases_kshs",
+        "receipts_kshs",
+        "variance_kshs"
+      ],
+      "data": [
+        {
+          "county": "Mombasa County",
+          "exchequer_releases_kshs": 7232601918,
+          "receipts_kshs": 7232601918,
+          "variance_kshs": null
+        },
+        {
+          "county": "Kwale County",
+          "exchequer_releases_kshs": 7897375394,
+          "receipts_kshs": 7897375394,
+          "variance_kshs": null
+        },
+        {
+          "county": "Kilifi County",
+          "exchequer_releases_kshs": 11140464455,
+          "receipts_kshs": 11140464455,
+          "variance_kshs": null
+        },
+        {
+          "county": "Tana River County",
+          "exchequer_releases_kshs": 6247446338,
+          "receipts_kshs": 6247446338,
+          "variance_kshs": null
+        },
+        {
+          "county": "Lamu County",
+          "exchequer_releases_kshs": 2978362651,
+          "receipts_kshs": 2978362651,
+          "variance_kshs": null
+        },
+        {
+          "county": "Taita/Taveta County",
+          "exchequer_releases_kshs": 4637193237,
+          "receipts_kshs": 4637193237,
+          "variance_kshs": null
+        },
+        {
+          "county": "Garissa County",
+          "exchequer_releases_kshs": 7588848254,
+          "receipts_kshs": 7588848254,
+          "variance_kshs": null
+        },
+        {
+          "county": "Wajir County",
+          "exchequer_releases_kshs": 9065363910,
+          "receipts_kshs": 9065363910,
+          "variance_kshs": null
+        },
+        {
+          "county": "Mandera County",
+          "exchequer_releases_kshs": 10702536315,
+          "receipts_kshs": 10702536315,
+          "variance_kshs": null
+        },
+        {
+          "county": "Marsabit County",
+          "exchequer_releases_kshs": 6955566539,
+          "receipts_kshs": 6955566539,
+          "variance_kshs": null
+        },
+        {
+          "county": "Isiolo County",
+          "exchequer_releases_kshs": 4507117912,
+          "receipts_kshs": 4507117912,
+          "variance_kshs": null
+        },
+        {
+          "county": "Meru County",
+          "exchequer_releases_kshs": 9101215160,
+          "receipts_kshs": 9101215160,
+          "variance_kshs": null
+        },
+        {
+          "county": "Tharaka - Nithi County",
+          "exchequer_releases_kshs": 4027976038,
+          "receipts_kshs": 4027976038,
+          "variance_kshs": null
+        },
+        {
+          "county": "Embu County",
+          "exchequer_releases_kshs": 4914465884,
+          "receipts_kshs": 4914465884,
+          "variance_kshs": null
+        },
+        {
+          "county": "Kitui County",
+          "exchequer_releases_kshs": 9963127985,
+          "receipts_kshs": 9963127985,
+          "variance_kshs": null
+        },
+        {
+          "county": "Nyandarua County",
+          "exchequer_releases_kshs": 5433497971,
+          "receipts_kshs": 5433497971,
+          "variance_kshs": null
+        },
+        {
+          "county": "Nyeri County",
+          "exchequer_releases_kshs": 5966504567,
+          "receipts_kshs": 5966504567,
+          "variance_kshs": null
+        },
+        {
+          "county": "Kirinyaga County",
+          "exchequer_releases_kshs": 4986600128,
+          "receipts_kshs": 4986600128,
+          "variance_kshs": null
+        },
+        {
+          "county": "Murang'a County",
+          "exchequer_releases_kshs": 6875883767,
+          "receipts_kshs": 6875883767,
+          "variance_kshs": null
+        },
+        {
+          "county": "Kiambu County",
+          "exchequer_releases_kshs": 11249348254,
+          "receipts_kshs": 11249348254,
+          "variance_kshs": null
+        },
+        {
+          "county": "West Pokot County",
+          "exchequer_releases_kshs": 6047957089,
+          "receipts_kshs": 6047957089,
+          "variance_kshs": null
+        },
+        {
+          "county": "Trans Nzoia County",
+          "exchequer_releases_kshs": 6899836646,
+          "receipts_kshs": 6899836646,
+          "variance_kshs": null
+        },
+        {
+          "county": "Uasin Gishu County",
+          "exchequer_releases_kshs": 7751986826,
+          "receipts_kshs": 7751986826,
+          "variance_kshs": null
+        },
+        {
+          "county": "Elgeyo/Marakwet County",
+          "exchequer_releases_kshs": 4417336932,
+          "receipts_kshs": 4417336932,
+          "variance_kshs": null
+        },
+        {
+          "county": "Laikipia County",
+          "exchequer_releases_kshs": 4929586810,
+          "receipts_kshs": 4929586810,
+          "variance_kshs": null
+        },
+        {
+          "county": "Narok County",
+          "exchequer_releases_kshs": 8460574742,
+          "receipts_kshs": 8460574742,
+          "variance_kshs": null
+        },
+        {
+          "county": "Kajiado County",
+          "exchequer_releases_kshs": 7636196490,
+          "receipts_kshs": 7636196490,
+          "variance_kshs": null
+        },
+        {
+          "county": "Bomet County",
+          "exchequer_releases_kshs": 6419690145,
+          "receipts_kshs": 6419690145,
+          "variance_kshs": null
+        },
+        {
+          "county": "Kakamega County",
+          "exchequer_releases_kshs": 11879634559,
+          "receipts_kshs": 11879634559,
+          "variance_kshs": null
+        },
+        {
+          "county": "Bungoma County",
+          "exchequer_releases_kshs": 10223024920,
+          "receipts_kshs": 10223024920,
+          "variance_kshs": null
+        },
+        {
+          "county": "Busia County",
+          "exchequer_releases_kshs": 6877538472,
+          "receipts_kshs": 6877538472,
+          "variance_kshs": null
+        },
+        {
+          "county": "Siaya County",
+          "exchequer_releases_kshs": 6681977903,
+          "receipts_kshs": 6681977903,
+          "variance_kshs": null
+        },
+        {
+          "county": "Homa Bay County",
+          "exchequer_releases_kshs": 7478116271,
+          "receipts_kshs": 7478116271,
+          "variance_kshs": null
+        },
+        {
+          "county": "Migori County",
+          "exchequer_releases_kshs": 7674130419,
+          "receipts_kshs": 7674130419,
+          "variance_kshs": null
+        },
+        {
+          "county": "Kisii County",
+          "exchequer_releases_kshs": 8517901520,
+          "receipts_kshs": 8517901520,
+          "variance_kshs": null
+        }
+      ],
+      "total_counties": 35
+    },
+    "county_expenditure": {
+      "_description": "Total expenditure by County Executives and Assemblies (Appendix 9, FY 2023-2024).",
+      "_columns": [
+        "county",
+        "executive_expenditure_kshs",
+        "assembly_expenditure_kshs",
+        "total_expenditure_kshs"
+      ],
+      "data": [
+        {
+          "county": "Nairobi County",
+          "executive_expenditure_kshs": 31537870129,
+          "assembly_expenditure_kshs": 1994404032,
+          "total_expenditure_kshs": "33,532,274,161"
+        },
+        {
+          "county": "Kiambu County",
+          "executive_expenditure_kshs": 17557270125,
+          "assembly_expenditure_kshs": 1419787046,
+          "total_expenditure_kshs": "18,977,057,171"
+        },
+        {
+          "county": "Nakuru County",
+          "executive_expenditure_kshs": 15661259832,
+          "assembly_expenditure_kshs": 1165905233,
+          "total_expenditure_kshs": "16,827,165,065"
+        },
+        {
+          "county": "Turkana County",
+          "executive_expenditure_kshs": 13522985032,
+          "assembly_expenditure_kshs": 1235265855,
+          "total_expenditure_kshs": "14,758,250,887"
+        },
+        {
+          "county": "Kilifi County",
+          "executive_expenditure_kshs": 13272416667,
+          "assembly_expenditure_kshs": 1190499600,
+          "total_expenditure_kshs": "14,462,916,267"
+        },
+        {
+          "county": "Kakamega County",
+          "executive_expenditure_kshs": 12583074077,
+          "assembly_expenditure_kshs": 1326581205,
+          "total_expenditure_kshs": "13,909,655,282"
+        },
+        {
+          "county": "Kitui County",
+          "executive_expenditure_kshs": 12452736420,
+          "assembly_expenditure_kshs": 1022961295,
+          "total_expenditure_kshs": "13,475,697,715"
+        },
+        {
+          "county": "Narok County",
+          "executive_expenditure_kshs": 12492701430,
+          "assembly_expenditure_kshs": 865032014,
+          "total_expenditure_kshs": "13,357,733,444"
+        },
+        {
+          "county": "Mombasa County",
+          "executive_expenditure_kshs": 11839144461,
+          "assembly_expenditure_kshs": 965441886,
+          "total_expenditure_kshs": "12,804,586,347"
+        },
+        {
+          "county": "Machakos County",
+          "executive_expenditure_kshs": 11631124769,
+          "assembly_expenditure_kshs": 1064803037,
+          "total_expenditure_kshs": "12,695,927,806"
+        },
+        {
+          "county": "Bungoma County",
+          "executive_expenditure_kshs": 10451325600,
+          "assembly_expenditure_kshs": 1225278231,
+          "total_expenditure_kshs": "11,676,603,831"
+        },
+        {
+          "county": "Mandera County",
+          "executive_expenditure_kshs": 10489346036,
+          "assembly_expenditure_kshs": 954793083,
+          "total_expenditure_kshs": "11,444,139,119"
+        },
+        {
+          "county": "Wajir County",
+          "executive_expenditure_kshs": 10165707959,
+          "assembly_expenditure_kshs": 999253492,
+          "total_expenditure_kshs": "11,164,961,451"
+        },
+        {
+          "county": "Kwale County",
+          "executive_expenditure_kshs": 9392698890,
+          "assembly_expenditure_kshs": 791119186,
+          "total_expenditure_kshs": "10,183,818,076"
+        },
+        {
+          "county": "Uasin Gishu County",
+          "executive_expenditure_kshs": 9164762310,
+          "assembly_expenditure_kshs": 950248325,
+          "total_expenditure_kshs": "10,115,010,635"
+        },
+        {
+          "county": "Meru County",
+          "executive_expenditure_kshs": 9085410908,
+          "assembly_expenditure_kshs": 990343463,
+          "total_expenditure_kshs": "10,075,754,371"
+        },
+        {
+          "county": "Trans Nzoia County",
+          "executive_expenditure_kshs": 8748084293,
+          "assembly_expenditure_kshs": 1049312407,
+          "total_expenditure_kshs": "9,797,396,700"
+        },
+        {
+          "county": "Kisii County",
+          "executive_expenditure_kshs": 8439680442,
+          "assembly_expenditure_kshs": 1261835923,
+          "total_expenditure_kshs": "9,701,516,365"
+        },
+        {
+          "county": "Migori County",
+          "executive_expenditure_kshs": 8652021734,
+          "assembly_expenditure_kshs": 991170024,
+          "total_expenditure_kshs": "9,643,191,758"
+        },
+        {
+          "county": "Kisumu County",
+          "executive_expenditure_kshs": 8708152234,
+          "assembly_expenditure_kshs": 836068445,
+          "total_expenditure_kshs": "9,544,220,679"
+        },
+        {
+          "county": "Makueni County",
+          "executive_expenditure_kshs": 8168030249,
+          "assembly_expenditure_kshs": 866413369,
+          "total_expenditure_kshs": "9,034,443,618"
+        },
+        {
+          "county": "Garissa County",
+          "executive_expenditure_kshs": 7932015780,
+          "assembly_expenditure_kshs": 917318096,
+          "total_expenditure_kshs": "8,849,333,876"
+        },
+        {
+          "county": "Kajiado County",
+          "executive_expenditure_kshs": 7835892231,
+          "assembly_expenditure_kshs": 884884189,
+          "total_expenditure_kshs": "8,720,776,420"
+        },
+        {
+          "county": "Busia County",
+          "executive_expenditure_kshs": 7692246047,
+          "assembly_expenditure_kshs": 951630591,
+          "total_expenditure_kshs": "8,643,876,638"
+        },
+        {
+          "county": "Homa Bay County",
+          "executive_expenditure_kshs": 7629345969,
+          "assembly_expenditure_kshs": 1011186327,
+          "total_expenditure_kshs": "8,640,532,296"
+        },
+        {
+          "county": "Siaya County",
+          "executive_expenditure_kshs": 7020265520,
+          "assembly_expenditure_kshs": 998618694,
+          "total_expenditure_kshs": "8,018,884,214"
+        },
+        {
+          "county": "Nyeri County",
+          "executive_expenditure_kshs": 7198713560,
+          "assembly_expenditure_kshs": 792811018,
+          "total_expenditure_kshs": "7,991,524,578"
+        },
+        {
+          "county": "Nandi County",
+          "executive_expenditure_kshs": 6971536463,
+          "assembly_expenditure_kshs": 851322029,
+          "total_expenditure_kshs": "7,822,858,492"
+        },
+        {
+          "county": "Marsabit County",
+          "executive_expenditure_kshs": 6592073216,
+          "assembly_expenditure_kshs": 890153452,
+          "total_expenditure_kshs": "7,482,226,668"
+        },
+        {
+          "county": "Bomet County",
+          "executive_expenditure_kshs": 6496467460,
+          "assembly_expenditure_kshs": 973754291,
+          "total_expenditure_kshs": "7,470,221,751"
+        },
+        {
+          "county": "Tana River County",
+          "executive_expenditure_kshs": 6402768835,
+          "assembly_expenditure_kshs": 969614847,
+          "total_expenditure_kshs": "7,372,383,682"
+        },
+        {
+          "county": "Murang'a County",
+          "executive_expenditure_kshs": 6468547821,
+          "assembly_expenditure_kshs": 786922587,
+          "total_expenditure_kshs": "7,255,470,408"
+        },
+        {
+          "county": "Kericho County",
+          "executive_expenditure_kshs": 6123097776,
+          "assembly_expenditure_kshs": 820153741,
+          "total_expenditure_kshs": "6,943,251,517"
+        },
+        {
+          "county": "West Pokot County",
+          "executive_expenditure_kshs": 5914265308,
+          "assembly_expenditure_kshs": 830245641,
+          "total_expenditure_kshs": "6,744,510,949"
+        },
+        {
+          "county": "Embu County",
+          "executive_expenditure_kshs": 6020517257,
+          "assembly_expenditure_kshs": 579018829,
+          "total_expenditure_kshs": "6,599,536,086"
+        },
+        {
+          "county": "Nyandarua County",
+          "executive_expenditure_kshs": 5649519383,
+          "assembly_expenditure_kshs": 924911749,
+          "total_expenditure_kshs": "6,574,431,132"
+        },
+        {
+          "county": "Nyamira County",
+          "executive_expenditure_kshs": 5745164842,
+          "assembly_expenditure_kshs": 777838864,
+          "total_expenditure_kshs": "6,523,003,706"
+        },
+        {
+          "county": "Samburu County",
+          "executive_expenditure_kshs": 5666818805,
+          "assembly_expenditure_kshs": 681932667,
+          "total_expenditure_kshs": "6,348,751,472"
+        },
+        {
+          "county": "Kirinyaga County",
+          "executive_expenditure_kshs": 5234034923,
+          "assembly_expenditure_kshs": 734462357,
+          "total_expenditure_kshs": "5,968,497,280"
+        },
+        {
+          "county": "Laikipia County",
+          "executive_expenditure_kshs": 5260341257,
+          "assembly_expenditure_kshs": 585612952,
+          "total_expenditure_kshs": "5,845,954,209"
+        },
+        {
+          "county": "Vihiga County",
+          "executive_expenditure_kshs": 4797492560,
+          "assembly_expenditure_kshs": 672564546,
+          "total_expenditure_kshs": "5,470,057,106"
+        },
+        {
+          "county": "Elgeyo/Marakwet County",
+          "executive_expenditure_kshs": 4649608582,
+          "assembly_expenditure_kshs": 706716501,
+          "total_expenditure_kshs": "5,356,325,083"
+        },
+        {
+          "county": "County Tharaka-Nithi County",
+          "executive_expenditure_kshs": 4596640671,
+          "assembly_expenditure_kshs": 517106065,
+          "total_expenditure_kshs": "5,113,746,736"
+        },
+        {
+          "county": "Isiolo County",
+          "executive_expenditure_kshs": 4519902217,
+          "assembly_expenditure_kshs": 514746621,
+          "total_expenditure_kshs": "5,034,648,838"
+        },
+        {
+          "county": "Taita/Taveta County",
+          "executive_expenditure_kshs": 3979497715,
+          "assembly_expenditure_kshs": 804879457,
+          "total_expenditure_kshs": "4,784,377,172"
+        },
+        {
+          "county": "Lamu County",
+          "executive_expenditure_kshs": 3220567734,
+          "assembly_expenditure_kshs": 425711413,
+          "total_expenditure_kshs": "3,646,279,147"
+        }
+      ],
+      "total_counties": 46
+    },
+    "wage_bill_county_executives": {
+      "_description": "Personnel emoluments versus total revenue for County Executives (Appendix 10). High values indicate over-spending on salaries.",
+      "_columns": [
+        "county",
+        "personnel_emoluments_kshs",
+        "total_revenue_kshs",
+        "wage_bill_pct_of_revenue"
+      ],
+      "data": [
+        {
+          "county": "Kisii County",
+          "personnel_emoluments_kshs": 5647519423,
+          "total_revenue_kshs": 8284558775,
+          "wage_bill_pct_of_revenue": "68%"
+        },
+        {
+          "county": "Taita/Taveta County",
+          "personnel_emoluments_kshs": 2661985420,
+          "total_revenue_kshs": 4006125483,
+          "wage_bill_pct_of_revenue": "66%"
+        },
+        {
+          "county": "Elgeyo/Marakwet County",
+          "personnel_emoluments_kshs": 2492554613,
+          "total_revenue_kshs": 4522701628,
+          "wage_bill_pct_of_revenue": "55%"
+        },
+        {
+          "county": "Nyeri County",
+          "personnel_emoluments_kshs": 3981766677,
+          "total_revenue_kshs": 7253744913,
+          "wage_bill_pct_of_revenue": "55%"
+        },
+        {
+          "county": "Nandi County",
+          "personnel_emoluments_kshs": 3933307091,
+          "total_revenue_kshs": 7185688945,
+          "wage_bill_pct_of_revenue": "55%"
+        },
+        {
+          "county": "Laikipia County",
+          "personnel_emoluments_kshs": 2949101094,
+          "total_revenue_kshs": 5390366893,
+          "wage_bill_pct_of_revenue": "55%"
+        },
+        {
+          "county": "Murang'a County",
+          "personnel_emoluments_kshs": 3685639768,
+          "total_revenue_kshs": 6783549529,
+          "wage_bill_pct_of_revenue": "54%"
+        },
+        {
+          "county": "Nairobi County",
+          "personnel_emoluments_kshs": 17293371865,
+          "total_revenue_kshs": 31871477161,
+          "wage_bill_pct_of_revenue": "54%"
+        },
+        {
+          "county": "Homa Bay County",
+          "personnel_emoluments_kshs": 4205707306,
+          "total_revenue_kshs": 7967540682,
+          "wage_bill_pct_of_revenue": "53%"
+        },
+        {
+          "county": "Mombasa County",
+          "personnel_emoluments_kshs": 6287283596,
+          "total_revenue_kshs": 11947471895,
+          "wage_bill_pct_of_revenue": "53%"
+        },
+        {
+          "county": "Kisumu County",
+          "personnel_emoluments_kshs": 4462912360,
+          "total_revenue_kshs": 8584243710,
+          "wage_bill_pct_of_revenue": "52%"
+        },
+        {
+          "county": "Nyamira County",
+          "personnel_emoluments_kshs": 3038348148,
+          "total_revenue_kshs": 5884949781,
+          "wage_bill_pct_of_revenue": "52%"
+        },
+        {
+          "county": "Tharaka-Nithi County",
+          "personnel_emoluments_kshs": 2354655972,
+          "total_revenue_kshs": 4688222963,
+          "wage_bill_pct_of_revenue": "50%"
+        },
+        {
+          "county": "Kericho County",
+          "personnel_emoluments_kshs": 3187074306,
+          "total_revenue_kshs": 6353006481,
+          "wage_bill_pct_of_revenue": "50%"
+        },
+        {
+          "county": "Bomet County",
+          "personnel_emoluments_kshs": 3239817670,
+          "total_revenue_kshs": 6508445326,
+          "wage_bill_pct_of_revenue": "50%"
+        },
+        {
+          "county": "Meru County",
+          "personnel_emoluments_kshs": 4611166325,
+          "total_revenue_kshs": 9276775770,
+          "wage_bill_pct_of_revenue": "50%"
+        },
+        {
+          "county": "Kirinyaga County",
+          "personnel_emoluments_kshs": 2613372430,
+          "total_revenue_kshs": 5356680031,
+          "wage_bill_pct_of_revenue": "49%"
+        },
+        {
+          "county": "Garissa County",
+          "personnel_emoluments_kshs": 3860417424,
+          "total_revenue_kshs": 7935375572,
+          "wage_bill_pct_of_revenue": "49%"
+        },
+        {
+          "county": "Baringo County",
+          "personnel_emoluments_kshs": 3214252532,
+          "total_revenue_kshs": 6659679065,
+          "wage_bill_pct_of_revenue": "48%"
+        },
+        {
+          "county": "Vihiga County",
+          "personnel_emoluments_kshs": 2382693382,
+          "total_revenue_kshs": 4963541189,
+          "wage_bill_pct_of_revenue": "48%"
+        },
+        {
+          "county": "Kajiado County",
+          "personnel_emoluments_kshs": 3783743196,
+          "total_revenue_kshs": 7915412157,
+          "wage_bill_pct_of_revenue": "48%"
+        },
+        {
+          "county": "Makueni County",
+          "personnel_emoluments_kshs": 3873777028,
+          "total_revenue_kshs": 8373777028,
+          "wage_bill_pct_of_revenue": "46%"
+        },
+        {
+          "county": "Lamu County",
+          "personnel_emoluments_kshs": 1593862717,
+          "total_revenue_kshs": 3469572977,
+          "wage_bill_pct_of_revenue": "46%"
+        },
+        {
+          "county": "Bungoma County",
+          "personnel_emoluments_kshs": 4859170763,
+          "total_revenue_kshs": 10773422692,
+          "wage_bill_pct_of_revenue": "45%"
+        },
+        {
+          "county": "Machakos County",
+          "personnel_emoluments_kshs": 5959269939,
+          "total_revenue_kshs": 13278940564,
+          "wage_bill_pct_of_revenue": "45%"
+        },
+        {
+          "county": "Kakamega County",
+          "personnel_emoluments_kshs": 5624458149,
+          "total_revenue_kshs": 12572429645,
+          "wage_bill_pct_of_revenue": "45%"
+        },
+        {
+          "county": "Kiambu County",
+          "personnel_emoluments_kshs": 7890419502,
+          "total_revenue_kshs": 17709147271,
+          "wage_bill_pct_of_revenue": "45%"
+        },
+        {
+          "county": "Isiolo County",
+          "personnel_emoluments_kshs": 2082321741,
+          "total_revenue_kshs": 4701820844,
+          "wage_bill_pct_of_revenue": "44%"
+        },
+        {
+          "county": "West Pokot County",
+          "personnel_emoluments_kshs": 2613594025,
+          "total_revenue_kshs": 5967223847,
+          "wage_bill_pct_of_revenue": "44%"
+        },
+        {
+          "county": "Marsabit County",
+          "personnel_emoluments_kshs": 3007441497,
+          "total_revenue_kshs": 6911278809,
+          "wage_bill_pct_of_revenue": "44%"
+        },
+        {
+          "county": "Nyandarua County",
+          "personnel_emoluments_kshs": 2440833652,
+          "total_revenue_kshs": 5710177876,
+          "wage_bill_pct_of_revenue": "43%"
+        },
+        {
+          "county": "Wajir County",
+          "personnel_emoluments_kshs": 4155910662,
+          "total_revenue_kshs": 10166128101,
+          "wage_bill_pct_of_revenue": "41%"
+        },
+        {
+          "county": "Siaya County",
+          "personnel_emoluments_kshs": 2872515819,
+          "total_revenue_kshs": 7095447929,
+          "wage_bill_pct_of_revenue": "40%"
+        },
+        {
+          "county": "Embu County",
+          "personnel_emoluments_kshs": 2434981502,
+          "total_revenue_kshs": 6022913829,
+          "wage_bill_pct_of_revenue": "40%"
+        },
+        {
+          "county": "Samburu County",
+          "personnel_emoluments_kshs": 2272177410,
+          "total_revenue_kshs": 5724353308,
+          "wage_bill_pct_of_revenue": "40%"
+        },
+        {
+          "county": "Nakuru County",
+          "personnel_emoluments_kshs": 6447452070,
+          "total_revenue_kshs": 16362575243,
+          "wage_bill_pct_of_revenue": "39%"
+        },
+        {
+          "county": "Busia County",
+          "personnel_emoluments_kshs": 3085605917,
+          "total_revenue_kshs": 7997291623,
+          "wage_bill_pct_of_revenue": "39%"
+        },
+        {
+          "county": "Kitui County",
+          "personnel_emoluments_kshs": 5002692126,
+          "total_revenue_kshs": 13074283745,
+          "wage_bill_pct_of_revenue": "38%"
+        },
+        {
+          "county": "Mandera County",
+          "personnel_emoluments_kshs": 4111229696,
+          "total_revenue_kshs": 10749914764,
+          "wage_bill_pct_of_revenue": "38%"
+        },
+        {
+          "county": "Migori County",
+          "personnel_emoluments_kshs": 3255148943,
+          "total_revenue_kshs": 8667087798,
+          "wage_bill_pct_of_revenue": "38%"
+        },
+        {
+          "county": "Kwale County",
+          "personnel_emoluments_kshs": 3534133545,
+          "total_revenue_kshs": 9448307309,
+          "wage_bill_pct_of_revenue": "37%"
+        },
+        {
+          "county": "Trans Nzoia County",
+          "personnel_emoluments_kshs": 3197121378,
+          "total_revenue_kshs": 8621915309,
+          "wage_bill_pct_of_revenue": "37%"
+        },
+        {
+          "county": "Turkana County",
+          "personnel_emoluments_kshs": 4899162834,
+          "total_revenue_kshs": 13973380385,
+          "wage_bill_pct_of_revenue": "35%"
+        },
+        {
+          "county": "Narok County",
+          "personnel_emoluments_kshs": 4030657659,
+          "total_revenue_kshs": 12665878290,
+          "wage_bill_pct_of_revenue": "32%"
+        },
+        {
+          "county": "Kilifi County",
+          "personnel_emoluments_kshs": 4158068890,
+          "total_revenue_kshs": 13282691014,
+          "wage_bill_pct_of_revenue": "31%"
+        },
+        {
+          "county": "Tana River County",
+          "personnel_emoluments_kshs": 1945696586,
+          "total_revenue_kshs": 6447528844,
+          "wage_bill_pct_of_revenue": "30%"
+        }
+      ],
+      "total_counties": 46
+    },
+    "crf_q4_disbursements_executives": {
+      "_description": "Q4 CRF disbursements to County Executives versus total disbursed (Appendix 7). High Q4 % indicates last-minute fund releases.",
+      "_columns": [
+        "county",
+        "q4_disbursement_kshs",
+        "total_disbursed_kshs",
+        "disbursement_pct"
+      ],
+      "data": [
+        {
+          "county": "Nakuru County",
+          "q4_disbursement_kshs": 7379255199,
+          "total_disbursed_kshs": 12505950654,
+          "disbursement_pct": "59%"
+        },
+        {
+          "county": "Taita/Taveta County",
+          "q4_disbursement_kshs": 2241772868,
+          "total_disbursed_kshs": 4006125483,
+          "disbursement_pct": "56%"
+        },
+        {
+          "county": "Elgeyo/Marakwet County",
+          "q4_disbursement_kshs": 2322054171,
+          "total_disbursed_kshs": 4522701628,
+          "disbursement_pct": "51%"
+        },
+        {
+          "county": "Kisii County",
+          "q4_disbursement_kshs": 4124775311,
+          "total_disbursed_kshs": 8284558775,
+          "disbursement_pct": "50%"
+        },
+        {
+          "county": "Migori County",
+          "q4_disbursement_kshs": 4189295612,
+          "total_disbursed_kshs": 8520597992,
+          "disbursement_pct": "49%"
+        },
+        {
+          "county": "Bungoma County",
+          "q4_disbursement_kshs": 5041591749,
+          "total_disbursed_kshs": 10275595855,
+          "disbursement_pct": "49%"
+        },
+        {
+          "county": "Samburu County",
+          "q4_disbursement_kshs": 2719505642,
+          "total_disbursed_kshs": 5550672020,
+          "disbursement_pct": "49%"
+        },
+        {
+          "county": "Makueni County",
+          "q4_disbursement_kshs": 3907929078,
+          "total_disbursed_kshs": 8259693356,
+          "disbursement_pct": "47%"
+        },
+        {
+          "county": "Wajir County",
+          "q4_disbursement_kshs": 4805236024,
+          "total_disbursed_kshs": 10166128101,
+          "disbursement_pct": "47%"
+        },
+        {
+          "county": "Embu County",
+          "q4_disbursement_kshs": 2831114635,
+          "total_disbursed_kshs": 5998837439,
+          "disbursement_pct": "47%"
+        },
+        {
+          "county": "Nyeri County",
+          "q4_disbursement_kshs": 3418650184,
+          "total_disbursed_kshs": 7253744913,
+          "disbursement_pct": "47%"
+        },
+        {
+          "county": "Kilifi County",
+          "q4_disbursement_kshs": 6181449956,
+          "total_disbursed_kshs": 13272089760,
+          "disbursement_pct": "47%"
+        },
+        {
+          "county": "Busia County",
+          "q4_disbursement_kshs": 3622472255,
+          "total_disbursed_kshs": 7813249712,
+          "disbursement_pct": "46%"
+        },
+        {
+          "county": "Turkana County",
+          "q4_disbursement_kshs": 6223000187,
+          "total_disbursed_kshs": 13522985032,
+          "disbursement_pct": "46%"
+        },
+        {
+          "county": "Kirinyaga County",
+          "q4_disbursement_kshs": 2450272412,
+          "total_disbursed_kshs": 5356605031,
+          "disbursement_pct": "46%"
+        },
+        {
+          "county": "Kwale County",
+          "q4_disbursement_kshs": 4299286702,
+          "total_disbursed_kshs": 9448307309,
+          "disbursement_pct": "46%"
+        },
+        {
+          "county": "Baringo County",
+          "q4_disbursement_kshs": 2947792587,
+          "total_disbursed_kshs": 6654883060,
+          "disbursement_pct": "44%"
+        },
+        {
+          "county": "Lamu County",
+          "q4_disbursement_kshs": 1526718766,
+          "total_disbursed_kshs": 3447419685,
+          "disbursement_pct": "44%"
+        },
+        {
+          "county": "Siaya County",
+          "q4_disbursement_kshs": 3132049365,
+          "total_disbursed_kshs": 7095447929,
+          "disbursement_pct": "44%"
+        },
+        {
+          "county": "Tana River County",
+          "q4_disbursement_kshs": 2836419605,
+          "total_disbursed_kshs": 6447528844,
+          "disbursement_pct": "44%"
+        },
+        {
+          "county": "Meru County",
+          "q4_disbursement_kshs": 3988610633,
+          "total_disbursed_kshs": 9130920703,
+          "disbursement_pct": "44%"
+        },
+        {
+          "county": "Kericho County",
+          "q4_disbursement_kshs": 2563794538,
+          "total_disbursed_kshs": 5913233879,
+          "disbursement_pct": "43%"
+        },
+        {
+          "county": "Isiolo County",
+          "q4_disbursement_kshs": 1956410933,
+          "total_disbursed_kshs": 4522730268,
+          "disbursement_pct": "43%"
+        },
+        {
+          "county": "Trans Nzoia County",
+          "q4_disbursement_kshs": 3717904578,
+          "total_disbursed_kshs": 8621915309,
+          "disbursement_pct": "43%"
+        },
+        {
+          "county": "Nandi County",
+          "q4_disbursement_kshs": 2965512090,
+          "total_disbursed_kshs": 6966275231,
+          "disbursement_pct": "43%"
+        },
+        {
+          "county": "Garissa County",
+          "q4_disbursement_kshs": 3359274848,
+          "total_disbursed_kshs": 7935375572,
+          "disbursement_pct": "42%"
+        },
+        {
+          "county": "Uasin Gishu County",
+          "q4_disbursement_kshs": 4034595646,
+          "total_disbursed_kshs": 9709129531,
+          "disbursement_pct": "42%"
+        },
+        {
+          "county": "Homa Bay County",
+          "q4_disbursement_kshs": 3239196861,
+          "total_disbursed_kshs": 7967540682,
+          "disbursement_pct": "41%"
+        },
+        {
+          "county": "Machakos County",
+          "q4_disbursement_kshs": 4558552099,
+          "total_disbursed_kshs": 11221963896,
+          "disbursement_pct": "41%"
+        },
+        {
+          "county": "Vihiga County",
+          "q4_disbursement_kshs": 2000446283,
+          "total_disbursed_kshs": 4963541189,
+          "disbursement_pct": "40%"
+        },
+        {
+          "county": "Kisumu County",
+          "q4_disbursement_kshs": 3457417960,
+          "total_disbursed_kshs": 8584243710,
+          "disbursement_pct": "40%"
+        },
+        {
+          "county": "Kajiado County",
+          "q4_disbursement_kshs": 3135146181,
+          "total_disbursed_kshs": 7915412157,
+          "disbursement_pct": "40%"
+        },
+        {
+          "county": "Kakamega County",
+          "q4_disbursement_kshs": 4923653617,
+          "total_disbursed_kshs": 12552411335,
+          "disbursement_pct": "39%"
+        },
+        {
+          "county": "Mombasa County",
+          "q4_disbursement_kshs": 4676121455,
+          "total_disbursed_kshs": 11945024500,
+          "disbursement_pct": "39%"
+        },
+        {
+          "county": "Nairobi County",
+          "q4_disbursement_kshs": 11806382128,
+          "total_disbursed_kshs": 30399535609,
+          "disbursement_pct": "39%"
+        },
+        {
+          "county": "Tharaka-Nithi County",
+          "q4_disbursement_kshs": 1799445416,
+          "total_disbursed_kshs": 4688222963,
+          "disbursement_pct": "38%"
+        },
+        {
+          "county": "Nyandarua County",
+          "q4_disbursement_kshs": 2183406256,
+          "total_disbursed_kshs": 5710177876,
+          "disbursement_pct": "38%"
+        },
+        {
+          "county": "Marsabit County",
+          "q4_disbursement_kshs": 2540429191,
+          "total_disbursed_kshs": 6759079399,
+          "disbursement_pct": "38%"
+        },
+        {
+          "county": "Murang'a County",
+          "q4_disbursement_kshs": 2507995782,
+          "total_disbursed_kshs": 6783549529,
+          "disbursement_pct": "37%"
+        },
+        {
+          "county": "Kitui County",
+          "q4_disbursement_kshs": 3682025560,
+          "total_disbursed_kshs": 9963127985,
+          "disbursement_pct": "37%"
+        },
+        {
+          "county": "Laikipia County",
+          "q4_disbursement_kshs": 1977875643,
+          "total_disbursed_kshs": 5363059747,
+          "disbursement_pct": "37%"
+        },
+        {
+          "county": "Mandera County",
+          "q4_disbursement_kshs": 3963192725,
+          "total_disbursed_kshs": 10749914764,
+          "disbursement_pct": "37%"
+        },
+        {
+          "county": "Nyamira County",
+          "q4_disbursement_kshs": 1833366809,
+          "total_disbursed_kshs": 4999163012,
+          "disbursement_pct": "37%"
+        },
+        {
+          "county": "Bomet County",
+          "q4_disbursement_kshs": 2255692222,
+          "total_disbursed_kshs": 6476822750,
+          "disbursement_pct": "35%"
+        },
+        {
+          "county": "Narok County",
+          "q4_disbursement_kshs": 4257100515,
+          "total_disbursed_kshs": 12665878290,
+          "disbursement_pct": "34%"
+        },
+        {
+          "county": "West Pokot County",
+          "q4_disbursement_kshs": null,
+          "total_disbursed_kshs": 5781746527,
+          "disbursement_pct": "0%"
+        }
+      ],
+      "total_counties": 46
+    },
+    "crf_q4_disbursements_assemblies": {
+      "_description": "Q4 CRF disbursements to County Assemblies versus total disbursed (Appendix 8).",
+      "_columns": [
+        "county",
+        "q4_disbursement_kshs",
+        "total_disbursed_kshs",
+        "disbursement_pct"
+      ],
+      "data": [
+        {
+          "county": "Tana River County",
+          "q4_disbursement_kshs": 333999999,
+          "total_disbursed_kshs": 331210106,
+          "disbursement_pct": "101%"
+        },
+        {
+          "county": "Garissa County",
+          "q4_disbursement_kshs": 432818684,
+          "total_disbursed_kshs": 917318653,
+          "disbursement_pct": "47%"
+        },
+        {
+          "county": "Kwale County",
+          "q4_disbursement_kshs": 363626657,
+          "total_disbursed_kshs": 791216911,
+          "disbursement_pct": "46%"
+        },
+        {
+          "county": "Wajir County",
+          "q4_disbursement_kshs": 449704824,
+          "total_disbursed_kshs": 999537966,
+          "disbursement_pct": "45%"
+        },
+        {
+          "county": "Isiolo County",
+          "q4_disbursement_kshs": 215219746,
+          "total_disbursed_kshs": 514765436,
+          "disbursement_pct": "42%"
+        },
+        {
+          "county": "Embu County",
+          "q4_disbursement_kshs": 240958512,
+          "total_disbursed_kshs": 579019269,
+          "disbursement_pct": "42%"
+        },
+        {
+          "county": "Murang'a County",
+          "q4_disbursement_kshs": 325095484,
+          "total_disbursed_kshs": 787056297,
+          "disbursement_pct": "41%"
+        },
+        {
+          "county": "Siaya County",
+          "q4_disbursement_kshs": 410294687,
+          "total_disbursed_kshs": 998720529,
+          "disbursement_pct": "41%"
+        },
+        {
+          "county": "Kisii County",
+          "q4_disbursement_kshs": 501197781,
+          "total_disbursed_kshs": 1257630064,
+          "disbursement_pct": "40%"
+        },
+        {
+          "county": "Mandera County",
+          "q4_disbursement_kshs": 378139369,
+          "total_disbursed_kshs": 954793083,
+          "disbursement_pct": "40%"
+        },
+        {
+          "county": "Homa Bay County",
+          "q4_disbursement_kshs": 389999680,
+          "total_disbursed_kshs": 1010039680,
+          "disbursement_pct": "39%"
+        },
+        {
+          "county": "Bungoma County",
+          "q4_disbursement_kshs": 452639304,
+          "total_disbursed_kshs": 1225248282,
+          "disbursement_pct": "37%"
+        },
+        {
+          "county": "West Pokot County",
+          "q4_disbursement_kshs": 305715180,
+          "total_disbursed_kshs": 830245641,
+          "disbursement_pct": "37%"
+        },
+        {
+          "county": "Bomet County",
+          "q4_disbursement_kshs": 357088760,
+          "total_disbursed_kshs": 973829237,
+          "disbursement_pct": "37%"
+        },
+        {
+          "county": "Kitui County",
+          "q4_disbursement_kshs": 366564330,
+          "total_disbursed_kshs": 1024015986,
+          "disbursement_pct": "36%"
+        },
+        {
+          "county": "Narok County",
+          "q4_disbursement_kshs": 308582836,
+          "total_disbursed_kshs": 864968019,
+          "disbursement_pct": "36%"
+        },
+        {
+          "county": "Nakuru County",
+          "q4_disbursement_kshs": 413312454,
+          "total_disbursed_kshs": 1164163735,
+          "disbursement_pct": "36%"
+        },
+        {
+          "county": "Lamu County",
+          "q4_disbursement_kshs": 148996930,
+          "total_disbursed_kshs": 427368719,
+          "disbursement_pct": "35%"
+        },
+        {
+          "county": "Laikipia County",
+          "q4_disbursement_kshs": 203035516,
+          "total_disbursed_kshs": 585482022,
+          "disbursement_pct": "35%"
+        },
+        {
+          "county": "Kirinyaga County",
+          "q4_disbursement_kshs": 253555467,
+          "total_disbursed_kshs": 734881073,
+          "disbursement_pct": "35%"
+        },
+        {
+          "county": "Mombasa County",
+          "q4_disbursement_kshs": 326295989,
+          "total_disbursed_kshs": 950807393,
+          "disbursement_pct": "34%"
+        },
+        {
+          "county": "Baringo County",
+          "q4_disbursement_kshs": 290917417,
+          "total_disbursed_kshs": 882876372,
+          "disbursement_pct": "33%"
+        },
+        {
+          "county": "Taita/Taveta County",
+          "q4_disbursement_kshs": 261392671,
+          "total_disbursed_kshs": 805520757,
+          "disbursement_pct": "32%"
+        },
+        {
+          "county": "Meru County",
+          "q4_disbursement_kshs": 321126088,
+          "total_disbursed_kshs": 990343463,
+          "disbursement_pct": "32%"
+        },
+        {
+          "county": "Kisumu County",
+          "q4_disbursement_kshs": 265419590,
+          "total_disbursed_kshs": 836065890,
+          "disbursement_pct": "32%"
+        },
+        {
+          "county": "Vihiga County",
+          "q4_disbursement_kshs": 213205969,
+          "total_disbursed_kshs": 677409009,
+          "disbursement_pct": "31%"
+        },
+        {
+          "county": "Tharaka-Nithi County",
+          "q4_disbursement_kshs": 160366366,
+          "total_disbursed_kshs": 517106065,
+          "disbursement_pct": "31%"
+        },
+        {
+          "county": "Makueni County",
+          "q4_disbursement_kshs": 263062942,
+          "total_disbursed_kshs": 868057775,
+          "disbursement_pct": "30%"
+        },
+        {
+          "county": "Kilifi County",
+          "q4_disbursement_kshs": 359338453,
+          "total_disbursed_kshs": 1189781973,
+          "disbursement_pct": "30%"
+        },
+        {
+          "county": "Samburu County",
+          "q4_disbursement_kshs": 198894146,
+          "total_disbursed_kshs": 681932892,
+          "disbursement_pct": "29%"
+        },
+        {
+          "county": "Uasin Gishu County",
+          "q4_disbursement_kshs": 278227458,
+          "total_disbursed_kshs": 956275539,
+          "disbursement_pct": "29%"
+        },
+        {
+          "county": "Machakos County",
+          "q4_disbursement_kshs": 307707573,
+          "total_disbursed_kshs": 1066128487,
+          "disbursement_pct": "29%"
+        },
+        {
+          "county": "Kiambu County",
+          "q4_disbursement_kshs": 404267488,
+          "total_disbursed_kshs": 1419787566,
+          "disbursement_pct": "28%"
+        },
+        {
+          "county": "Nyamira County",
+          "q4_disbursement_kshs": 217778718,
+          "total_disbursed_kshs": 767033615,
+          "disbursement_pct": "28%"
+        },
+        {
+          "county": "Kajiado County",
+          "q4_disbursement_kshs": 250533859,
+          "total_disbursed_kshs": 883021059,
+          "disbursement_pct": "28%"
+        },
+        {
+          "county": "Marsabit County",
+          "q4_disbursement_kshs": 250044924,
+          "total_disbursed_kshs": 891855245,
+          "disbursement_pct": "28%"
+        },
+        {
+          "county": "Nandi County",
+          "q4_disbursement_kshs": 234078963,
+          "total_disbursed_kshs": 851322029,
+          "disbursement_pct": "27%"
+        },
+        {
+          "county": "Busia County",
+          "q4_disbursement_kshs": 257777500,
+          "total_disbursed_kshs": 942251854,
+          "disbursement_pct": "27%"
+        },
+        {
+          "county": "Trans Nzoia County",
+          "q4_disbursement_kshs": 277741130,
+          "total_disbursed_kshs": 1049312407,
+          "disbursement_pct": "26%"
+        },
+        {
+          "county": "Turkana County",
+          "q4_disbursement_kshs": 321404722,
+          "total_disbursed_kshs": 1232254537,
+          "disbursement_pct": "26%"
+        },
+        {
+          "county": "Nyandarua County",
+          "q4_disbursement_kshs": 239165592,
+          "total_disbursed_kshs": 925914901,
+          "disbursement_pct": "26%"
+        },
+        {
+          "county": "Nyeri County",
+          "q4_disbursement_kshs": 204097986,
+          "total_disbursed_kshs": 792988260,
+          "disbursement_pct": "26%"
+        },
+        {
+          "county": "Elgeyo/Marakwet County",
+          "q4_disbursement_kshs": 176696643,
+          "total_disbursed_kshs": 706716501,
+          "disbursement_pct": "25%"
+        },
+        {
+          "county": "Kericho County",
+          "q4_disbursement_kshs": 188531091,
+          "total_disbursed_kshs": 820153741,
+          "disbursement_pct": "23%"
+        },
+        {
+          "county": "Migori County",
+          "q4_disbursement_kshs": 227059341,
+          "total_disbursed_kshs": 991170024,
+          "disbursement_pct": "23%"
+        },
+        {
+          "county": "Kakamega County",
+          "q4_disbursement_kshs": 259967568,
+          "total_disbursed_kshs": 1309842525,
+          "disbursement_pct": "20%"
+        }
+      ],
+      "total_counties": 46
+    },
+    "voided_transactions_executives": {
+      "_description": "IFMIS voided transactions in County Executives (Appendix 19). High counts may indicate internal control weaknesses.",
+      "_columns": [
+        "county",
+        "transaction_count",
+        "amount_kshs"
+      ],
+      "data": [
+        {
+          "county": "Narok County",
+          "transaction_count": null,
+          "amount_kshs": 5249670709
+        },
+        {
+          "county": "Kiambu County",
+          "transaction_count": null,
+          "amount_kshs": 5219659850
+        },
+        {
+          "county": "Kilifi County",
+          "transaction_count": null,
+          "amount_kshs": 5043949597
+        },
+        {
+          "county": "Kakamega County",
+          "transaction_count": null,
+          "amount_kshs": 4974571043
+        },
+        {
+          "county": "Turkana County",
+          "transaction_count": null,
+          "amount_kshs": 4170589899
+        },
+        {
+          "county": "Garrisa County",
+          "transaction_count": null,
+          "amount_kshs": 3489270106
+        },
+        {
+          "county": "Bungoma County",
+          "transaction_count": null,
+          "amount_kshs": 2945551049
+        },
+        {
+          "county": "Kisumu County",
+          "transaction_count": null,
+          "amount_kshs": 2582069052
+        },
+        {
+          "county": "Isiolo County",
+          "transaction_count": null,
+          "amount_kshs": 2578659493
+        },
+        {
+          "county": "Wajir County",
+          "transaction_count": null,
+          "amount_kshs": 2293660421
+        },
+        {
+          "county": "Busia County",
+          "transaction_count": null,
+          "amount_kshs": 2155388788
+        },
+        {
+          "county": "Meru County",
+          "transaction_count": null,
+          "amount_kshs": 2150872669
+        },
+        {
+          "county": "Trans Nzoia County",
+          "transaction_count": null,
+          "amount_kshs": 2062796219
+        },
+        {
+          "county": "Kajiado County",
+          "transaction_count": 834,
+          "amount_kshs": 1971257469
+        },
+        {
+          "county": "Machakos County",
+          "transaction_count": null,
+          "amount_kshs": 1968652988
+        },
+        {
+          "county": "Siaya County",
+          "transaction_count": null,
+          "amount_kshs": 1952925016
+        },
+        {
+          "county": "Kwale County",
+          "transaction_count": null,
+          "amount_kshs": 1890599512
+        },
+        {
+          "county": "Uasin Gishu County",
+          "transaction_count": 888,
+          "amount_kshs": 1801509426
+        },
+        {
+          "county": "Murang'a County",
+          "transaction_count": null,
+          "amount_kshs": 1574027220
+        },
+        {
+          "county": "Mombasa County",
+          "transaction_count": 765,
+          "amount_kshs": 1534306703
+        },
+        {
+          "county": "Embu County",
+          "transaction_count": null,
+          "amount_kshs": 1470224741
+        },
+        {
+          "county": "Taita Taveta County",
+          "transaction_count": 420,
+          "amount_kshs": 1330965955
+        },
+        {
+          "county": "Nandi County",
+          "transaction_count": 498,
+          "amount_kshs": 1277498652
+        },
+        {
+          "county": "Tana River County",
+          "transaction_count": 618,
+          "amount_kshs": 1225716463
+        },
+        {
+          "county": "Homabay County",
+          "transaction_count": 438,
+          "amount_kshs": 1222559608
+        },
+        {
+          "county": "Makueni County",
+          "transaction_count": null,
+          "amount_kshs": 1216215033
+        },
+        {
+          "county": "Westpokot County",
+          "transaction_count": 932,
+          "amount_kshs": 1138033266
+        },
+        {
+          "county": "Laikipia County",
+          "transaction_count": 931,
+          "amount_kshs": 1063523594
+        },
+        {
+          "county": "Kitui County",
+          "transaction_count": null,
+          "amount_kshs": 1055156739
+        },
+        {
+          "county": "Kirinyaga County",
+          "transaction_count": 946,
+          "amount_kshs": 1000034710
+        },
+        {
+          "county": "Bomet County",
+          "transaction_count": null,
+          "amount_kshs": 920481762872030651
+        },
+        {
+          "county": "Vihiga County",
+          "transaction_count": null,
+          "amount_kshs": 818076160
+        },
+        {
+          "county": "Kericho County",
+          "transaction_count": null,
+          "amount_kshs": 817899296
+        },
+        {
+          "county": "Baringo County",
+          "transaction_count": null,
+          "amount_kshs": 691923761
+        },
+        {
+          "county": "Elgeyo County",
+          "transaction_count": null,
+          "amount_kshs": 542150719
+        },
+        {
+          "county": "Nyeri County",
+          "transaction_count": 722,
+          "amount_kshs": 527252502
+        },
+        {
+          "county": "Nyandarua County",
+          "transaction_count": null,
+          "amount_kshs": 526040887
+        },
+        {
+          "county": "Tharaka County",
+          "transaction_count": 615,
+          "amount_kshs": 510570784
+        },
+        {
+          "county": "Kisii County",
+          "transaction_count": 921,
+          "amount_kshs": 503797521
+        },
+        {
+          "county": "Mandera County",
+          "transaction_count": 204,
+          "amount_kshs": 448288733
+        },
+        {
+          "county": "Samburu County",
+          "transaction_count": 411,
+          "amount_kshs": 358621664
+        },
+        {
+          "county": "Nakuru County",
+          "transaction_count": 240,
+          "amount_kshs": 308061121
+        },
+        {
+          "county": "Lamu County",
+          "transaction_count": 440,
+          "amount_kshs": 305466934
+        },
+        {
+          "county": "Migori County",
+          "transaction_count": 83,
+          "amount_kshs": 219385548
+        }
+      ],
+      "total_counties": 44
+    }
+  },
+  "audit_quality": {
+    "_description": "OAG audit opinion distribution for FY 2023-2024.",
+    "opinion_distribution": {
+      "_columns": [
+        "opinion_type",
+        "executives_count",
+        "executives_pct",
+        "assemblies_count",
+        "assemblies_pct"
+      ],
+      "data": [
+        {
+          "opinion_type": "Unqualified/ Unmodified",
+          "executives_count": 0,
+          "executives_pct": "0%",
+          "assemblies_count": 8,
+          "assemblies_pct": "17%"
+        },
+        {
+          "opinion_type": "Qualified",
+          "executives_count": 47,
+          "executives_pct": "100%",
+          "assemblies_count": 37,
+          "assemblies_pct": "79%"
+        },
+        {
+          "opinion_type": "Adverse",
+          "executives_count": 0,
+          "executives_pct": "0%",
+          "assemblies_count": 2,
+          "assemblies_pct": "4%"
+        },
+        {
+          "opinion_type": "Disclaimer",
+          "executives_count": 0,
+          "executives_pct": "0%",
+          "assemblies_count": 0,
+          "assemblies_pct": "0%"
+        }
+      ]
+    }
+  },
+  "cob_green_book": {
+    "_description": "County Executives covered in the COB Green Book (budget estimates FY 2023-2024).",
+    "counties_covered": [
+      "Mombasa",
+      "Kilifi",
+      "Tana River",
+      "Lamu",
+      "Taita/Taveta",
+      "Garissa",
+      "Wajir",
+      "Mandera",
+      "Marsabit",
+      "Isiolo",
+      "Meru",
+      "Embu",
+      "Kitui",
+      "Machakos",
+      "Makueni",
+      "Nyeri",
+      "Kirinyaga",
+      "Kiambu",
+      "Turkana",
+      "West Pokot",
+      "Samburu",
+      "Trans Nzoia",
+      "Uasin Gishu",
+      "Elgeyo/Marakwet",
+      "Laikipia",
+      "Nakuru",
+      "Narok",
+      "Kajiado",
+      "Kericho",
+      "Bomet",
+      "Kakamega",
+      "Vihiga",
+      "Bungoma",
+      "Busia",
+      "Siaya",
+      "Kisumu",
+      "Homa Bay",
+      "Migori",
+      "Kisii",
+      "Nyamira"
+    ],
+    "total_counties": 40
+  }
+}

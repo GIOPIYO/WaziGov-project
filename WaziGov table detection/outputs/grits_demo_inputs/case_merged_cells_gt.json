@@ -1,0 +1,267 @@
+{
+  "document_id": "gt_demo_doc",
+  "source_file": "test.pdf",
+  "page_count": 1,
+  "processed_at": "2026-04-17T00:00:00Z",
+  "model_version": "ground_truth",
+  "tables": [
+    {
+      "table_id": "page_001_table_00",
+      "page_number": 1,
+      "bbox": {
+        "xmin": 0.0,
+        "ymin": 0.0,
+        "xmax": 300.0,
+        "ymax": 200.0
+      },
+      "confidence": 0.98,
+      "label": "table",
+      "grid": {
+        "rows": 4,
+        "cols": 3
+      },
+      "continuation": {
+        "is_continuation": false,
+        "continues_from": null,
+        "continues_on_next_page": false,
+        "linked_table_id": null,
+        "match_score": 0.0
+      },
+      "cells": [
+        {
+          "cell_id": "page_001_table_00_r0_c0",
+          "row_idx": 0,
+          "col_idx": 0,
+          "row_span": 1,
+          "col_span": 1,
+          "cell_type": "header",
+          "hierarchy_level": 1,
+          "bbox": {
+            "xmin": 0.0,
+            "ymin": 0.0,
+            "xmax": 100.0,
+            "ymax": 50.0
+          },
+          "raw_text": "Cell_R0_C0",
+          "text_source": "pdf_text",
+          "image_b64": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAADElEQVR4nGP49+8fAAX4AvvKn0zIAAAAAElFTkSuQmCC",
+          "confidence": 0.95
+        },
+        {
+          "cell_id": "page_001_table_00_r0_c1",
+          "row_idx": 0,
+          "col_idx": 1,
+          "row_span": 1,
+          "col_span": 1,
+          "cell_type": "header",
+          "hierarchy_level": 1,
+          "bbox": {
+            "xmin": 100.0,
+            "ymin": 0.0,
+            "xmax": 200.0,
+            "ymax": 50.0
+          },
+          "raw_text": "Cell_R0_C1",
+          "text_source": "pdf_text",
+          "image_b64": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAADElEQVR4nGP49+8fAAX4AvvKn0zIAAAAAElFTkSuQmCC",
+          "confidence": 0.95
+        },
+        {
+          "cell_id": "page_001_table_00_r0_c2",
+          "row_idx": 0,
+          "col_idx": 2,
+          "row_span": 1,
+          "col_span": 1,
+          "cell_type": "header",
+          "hierarchy_level": 1,
+          "bbox": {
+            "xmin": 200.0,
+            "ymin": 0.0,
+            "xmax": 300.0,
+            "ymax": 50.0
+          },
+          "raw_text": "Cell_R0_C2",
+          "text_source": "pdf_text",
+          "image_b64": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAADElEQVR4nGP49+8fAAX4AvvKn0zIAAAAAElFTkSuQmCC",
+          "confidence": 0.95
+        },
+        {
+          "cell_id": "page_001_table_00_r1_c0",
+          "row_idx": 1,
+          "col_idx": 0,
+          "row_span": 1,
+          "col_span": 1,
+          "cell_type": "data",
+          "hierarchy_level": null,
+          "bbox": {
+            "xmin": 0.0,
+            "ymin": 50.0,
+            "xmax": 100.0,
+            "ymax": 100.0
+          },
+          "raw_text": "Cell_R1_C0",
+          "text_source": "pdf_text",
+          "image_b64": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAADElEQVR4nGP49+8fAAX4AvvKn0zIAAAAAElFTkSuQmCC",
+          "confidence": 0.95
+        },
+        {
+          "cell_id": "page_001_table_00_r1_c1",
+          "row_idx": 1,
+          "col_idx": 1,
+          "row_span": 1,
+          "col_span": 1,
+          "cell_type": "data",
+          "hierarchy_level": null,
+          "bbox": {
+            "xmin": 100.0,
+            "ymin": 50.0,
+            "xmax": 200.0,
+            "ymax": 100.0
+          },
+          "raw_text": "Cell_R1_C1",
+          "text_source": "pdf_text",
+          "image_b64": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAADElEQVR4nGP49+8fAAX4AvvKn0zIAAAAAElFTkSuQmCC",
+          "confidence": 0.95
+        },
+        {
+          "cell_id": "page_001_table_00_r1_c2",
+          "row_idx": 1,
+          "col_idx": 2,
+          "row_span": 1,
+          "col_span": 1,
+          "cell_type": "data",
+          "hierarchy_level": null,
+          "bbox": {
+            "xmin": 200.0,
+            "ymin": 50.0,
+            "xmax": 300.0,
+            "ymax": 100.0
+          },
+          "raw_text": "Cell_R1_C2",
+          "text_source": "pdf_text",
+          "image_b64": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAADElEQVR4nGP49+8fAAX4AvvKn0zIAAAAAElFTkSuQmCC",
+          "confidence": 0.95
+        },
+        {
+          "cell_id": "page_001_table_00_r2_c0",
+          "row_idx": 2,
+          "col_idx": 0,
+          "row_span": 1,
+          "col_span": 1,
+          "cell_type": "data",
+          "hierarchy_level": null,
+          "bbox": {
+            "xmin": 0.0,
+            "ymin": 100.0,
+            "xmax": 100.0,
+            "ymax": 150.0
+          },
+          "raw_text": "Cell_R2_C0",
+          "text_source": "pdf_text",
+          "image_b64": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAADElEQVR4nGP49+8fAAX4AvvKn0zIAAAAAElFTkSuQmCC",
+          "confidence": 0.95
+        },
+        {
+          "cell_id": "page_001_table_00_r2_c1",
+          "row_idx": 2,
+          "col_idx": 1,
+          "row_span": 1,
+          "col_span": 1,
+          "cell_type": "data",
+          "hierarchy_level": null,
+          "bbox": {
+            "xmin": 100.0,
+            "ymin": 100.0,
+            "xmax": 200.0,
+            "ymax": 150.0
+          },
+          "raw_text": "Cell_R2_C1",
+          "text_source": "pdf_text",
+          "image_b64": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAADElEQVR4nGP49+8fAAX4AvvKn0zIAAAAAElFTkSuQmCC",
+          "confidence": 0.95
+        },
+        {
+          "cell_id": "page_001_table_00_r2_c2",
+          "row_idx": 2,
+          "col_idx": 2,
+          "row_span": 1,
+          "col_span": 1,
+          "cell_type": "data",
+          "hierarchy_level": null,
+          "bbox": {
+            "xmin": 200.0,
+            "ymin": 100.0,
+            "xmax": 300.0,
+            "ymax": 150.0
+          },
+          "raw_text": "Cell_R2_C2",
+          "text_source": "pdf_text",
+          "image_b64": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAADElEQVR4nGP49+8fAAX4AvvKn0zIAAAAAElFTkSuQmCC",
+          "confidence": 0.95
+        },
+        {
+          "cell_id": "page_001_table_00_r3_c0",
+          "row_idx": 3,
+          "col_idx": 0,
+          "row_span": 1,
+          "col_span": 1,
+          "cell_type": "data",
+          "hierarchy_level": null,
+          "bbox": {
+            "xmin": 0.0,
+            "ymin": 150.0,
+            "xmax": 100.0,
+            "ymax": 200.0
+          },
+          "raw_text": "Cell_R3_C0",
+          "text_source": "pdf_text",
+          "image_b64": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAADElEQVR4nGP49+8fAAX4AvvKn0zIAAAAAElFTkSuQmCC",
+          "confidence": 0.95
+        },
+        {
+          "cell_id": "page_001_table_00_r3_c1",
+          "row_idx": 3,
+          "col_idx": 1,
+          "row_span": 1,
+          "col_span": 1,
+          "cell_type": "data",
+          "hierarchy_level": null,
+          "bbox": {
+            "xmin": 100.0,
+            "ymin": 150.0,
+            "xmax": 200.0,
+            "ymax": 200.0
+          },
+          "raw_text": "Cell_R3_C1",
+          "text_source": "pdf_text",
+          "image_b64": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAADElEQVR4nGP49+8fAAX4AvvKn0zIAAAAAElFTkSuQmCC",
+          "confidence": 0.95
+        },
+        {
+          "cell_id": "page_001_table_00_r3_c2",
+          "row_idx": 3,
+          "col_idx": 2,
+          "row_span": 1,
+          "col_span": 1,
+          "cell_type": "data",
+          "hierarchy_level": null,
+          "bbox": {
+            "xmin": 200.0,
+            "ymin": 150.0,
+            "xmax": 300.0,
+            "ymax": 200.0
+          },
+          "raw_text": "Cell_R3_C2",
+          "text_source": "pdf_text",
+          "image_b64": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAADElEQVR4nGP49+8fAAX4AvvKn0zIAAAAAElFTkSuQmCC",
+          "confidence": 0.95
+        }
+      ],
+      "validation": {
+        "is_valid": true,
+        "checks": [],
+        "warnings": []
+      }
+    }
+  ]
+}
