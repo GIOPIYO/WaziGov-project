@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import {
   LayoutDashboard,
   Map,
+  Wallet,
   ShieldAlert,
   Menu,
   X,
@@ -13,6 +14,7 @@ import { Button } from "@/components/ui/button";
 const navItems = [
   { name: "Overview", icon: LayoutDashboard, id: "overview" },
   { name: "County Explorer", icon: Map, id: "explorer" },
+  { name: "Finance Portal", icon: Wallet, id: "finance" },
   { name: "Audit Forensics", icon: ShieldAlert, id: "audit" },
 ];
 
