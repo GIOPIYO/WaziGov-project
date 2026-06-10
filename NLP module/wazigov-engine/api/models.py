@@ -46,3 +46,18 @@ class Project(Base):
     oag_findings = Column(JSON)
 
     county_details = relationship("County", back_populates="projects")
+
+class FinanceSummary(Base):
+    __tablename__ = "county_finances" # Change this if your table is named differently
+    
+    county_name = Column(String(255), primary_key=True, index=True)
+    fiscal_year = Column(String(255))
+    executive_budget_kshs = Column(Numeric)
+    assembly_budget_kshs = Column(Numeric)
+    total_budget_kshs = Column(Numeric)
+    budgeted_revenue_kshs = Column(Numeric)
+    actual_revenue_kshs = Column(Numeric)
+    revenue_achievement_pct = Column(String(50))
+    executive_expenditure_kshs = Column(Numeric)
+    assembly_expenditure_kshs = Column(Numeric)
+    total_expenditure_kshs = Column(Numeric)

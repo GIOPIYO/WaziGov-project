@@ -73,14 +73,23 @@ export default function CountyFinanceOverview({ onViewProjects }: CountyFinanceO
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
-  useEffect(() => {
+useEffect(() => {
     async function fetchFinances() {
       setLoading(true);
       setError(null);
       try {
         const baseUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
-        const res = await fetch(`${baseUrl}/finances`);
-        if (!res.ok) throw new Error("Failed to fetch finance data");
+        
+        const url = `${baseUrl}/finances?limit=100`;
+
+        const res = await fetch(url);
+        
+        if (!res.ok) {
+          const errText = await res.text();
+          console.error(`Backend returned ${res.status}:`, errText);
+          throw new Error(`Server returned ${res.status} ${res.statusText}`);
+        }
+        
         const data = await res.json();
         setFinances(data);
       } catch (err: any) {
@@ -90,6 +99,7 @@ export default function CountyFinanceOverview({ onViewProjects }: CountyFinanceO
         setLoading(false);
       }
     }
+    
     fetchFinances();
   }, []);
 

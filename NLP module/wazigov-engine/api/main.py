@@ -73,3 +73,17 @@ def get_project(project_id: str, db: Session = Depends(get_db)):
 def get_audit_runs(skip: int = 0, limit: int = 100, db: Session = Depends(get_db)):
     runs = db.query(models.AuditRun).offset(skip).limit(limit).all()
     return runs
+
+@app.get("/finances", response_model=List[schemas.FinanceSummary])
+def get_finances(
+    skip: int = 0, 
+    limit: int = 100, 
+    county_name: Optional[str] = None,
+    db: Session = Depends(get_db)
+):
+    query = db.query(models.FinanceSummary)
+    
+    if county_name:
+        query = query.filter(models.FinanceSummary.county_name == county_name)
+        
+    return query.offset(skip).limit(limit).all()

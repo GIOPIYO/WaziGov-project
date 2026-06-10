@@ -52,3 +52,21 @@ class AuditRun(BaseModel):
 
     class Config:
         from_attributes = True
+
+
+class FinanceSummaryBase(BaseModel):
+    county_name: str
+    fiscal_year: Optional[str] = None
+    executive_budget_kshs: Optional[float] = None
+    assembly_budget_kshs: Optional[float] = None
+    total_budget_kshs: Optional[float] = None
+    budgeted_revenue_kshs: Optional[float] = None
+    actual_revenue_kshs: Optional[float] = None
+    revenue_achievement_pct: Optional[str] = None
+    executive_expenditure_kshs: Optional[float] = None
+    assembly_expenditure_kshs: Optional[float] = None
+    total_expenditure_kshs: Optional[float] = None
+
+class FinanceSummary(FinanceSummaryBase):
+    class Config:
+        from_attributes = True

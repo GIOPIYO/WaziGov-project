@@ -1,14 +1,16 @@
 import os
+import urllib.parse
 from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker
-from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.orm import declarative_base, sessionmaker
 
-# Pull the URL from the environment, with a local fallback if you want to test on your Debian machine
-# Note: The @ symbol in the password has been URL-encoded to %40
-SQLALCHEMY_DATABASE_URL = os.getenv(
-    "DATABASE_URL", 
-    "postgresql://postgres:Govan%402003@localhost:5444/wazigov_db"
+# 1. Grab the raw password from the environment variable
+raw_password = os.getenv("DB_PASSWORD")
 
+# 2. Safely URL-encode the special characters 
+safe_password = urllib.parse.quote_plus(raw_password)
+
+# 3. Build the connection string
+SQLALCHEMY_DATABASE_URL = "postgresql://postgres:%7BO%7DbZy%26EQkVk0Lka@127.0.0.1:5444/wazigov_db"
 
 engine = create_engine(SQLALCHEMY_DATABASE_URL)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
