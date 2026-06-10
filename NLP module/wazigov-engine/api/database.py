@@ -3,14 +3,20 @@ import urllib.parse
 from sqlalchemy import create_engine
 from sqlalchemy.orm import declarative_base, sessionmaker
 
-# 1. Grab the raw password from the environment variable
-raw_password = os.getenv("DB_PASSWORD")
-
-# 2. Safely URL-encode the special characters 
-safe_password = urllib.parse.quote_plus(raw_password)
-
-# 3. Build the connection string
-SQLALCHEMY_DATABASE_URL = "postgresql://postgres:%7BO%7DbZy%26EQkVk0Lka@127.0.0.1:5444/wazigov_db"
+# 1. Check if running in the cloud or locally
+if os.getenv("K_SERVICE"):
+    # PRODUCTION CONNECTION (Cloud Run uses native Unix Sockets)
+    DB_USER = "postgres"
+    DB_PASS = os.getenv("DB_PASSWORD", "{O}bZy&EQkVk0Lka")
+    DB_NAME = "wazigov_db"
+    INSTANCE_CONNECTION = "wazigov:us-central1:govan"
+    
+    safe_password = urllib.parse.quote_plus(DB_PASS)
+    # Cloud Run natively maps databases to the /cloudsql directory
+    SQLALCHEMY_DATABASE_URL = f"postgresql+psycopg2://{DB_USER}:{safe_password}@/{DB_NAME}?host=/cloudsql/{INSTANCE_CONNECTION}"
+else:
+    # LOCAL DEVELOPMENT CONNECTION (Your local proxy tunnel setup)
+    SQLALCHEMY_DATABASE_URL = "postgresql://postgres:%7BO%7DbZy%26EQkVk0Lka@127.0.0.1:5444/wazigov_db"
 
 engine = create_engine(SQLALCHEMY_DATABASE_URL)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
