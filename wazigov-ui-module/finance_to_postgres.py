@@ -5,6 +5,8 @@ import os
 
 def create_finance_tables(cursor):
     """Creates the table structure for county financial summaries."""
+    
+    
     cursor.execute("""
     CREATE TABLE IF NOT EXISTS county_finances (
         county_name VARCHAR(255),
@@ -103,9 +105,15 @@ def ingest_finance_data(conn, json_path):
 if __name__ == "__main__":
     path = sys.argv[1] if len(sys.argv) > 1 else "src/data/finance_summary_output.json"
     try:
+        # Pull the live cloud database password passed from your terminal
+        raw_password = os.getenv("DB_PASSWORD")
+        
         connection = psycopg2.connect(
-            host="localhost", database="wazigov_db", user="postgres",
-            password="Govan@2003", port="5433",
+            host="127.0.0.1", 
+            database="wazigov_db", 
+            user="postgres",
+            password=raw_password, 
+            port="5444",  # <-- Route through the Cloud SQL Proxy tunnel!
             sslmode="disable"
         )
         ingest_finance_data(connection, path)
