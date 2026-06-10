@@ -105,7 +105,6 @@ if __name__ == "__main__":
     try:
         connection = psycopg2.connect(
             host="localhost", database="wazigov_db", user="postgres",
-            password="Govan@2003", port="5444"
             password="Govan@2003", port="5444",
             sslmode="disable"
         )
