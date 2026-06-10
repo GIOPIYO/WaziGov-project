@@ -1,0 +1,59 @@
+{
+  "description": "GRiTS Dual-Mode Comparison Demo",
+  "test_cases": {
+    "case_none": {
+      "description": "Mutation: none",
+      "gt_file": "outputs\\grits_demo_inputs\\case_none_gt.json",
+      "pred_file": "outputs\\grits_demo_inputs\\case_none_pred.json",
+      "commands": {
+        "grits_style": "python scripts/evaluate_grits.py --gt outputs\\grits_demo_inputs\\case_none_gt.json --pred outputs\\grits_demo_inputs\\case_none_pred.json --mode grits_style",
+        "paper_like": "python scripts/evaluate_grits.py --gt outputs\\grits_demo_inputs\\case_none_gt.json --pred outputs\\grits_demo_inputs\\case_none_pred.json --mode paper_like"
+      }
+    },
+    "case_missing_cells": {
+      "description": "Mutation: missing_cells",
+      "gt_file": "outputs\\grits_demo_inputs\\case_missing_cells_gt.json",
+      "pred_file": "outputs\\grits_demo_inputs\\case_missing_cells_pred.json",
+      "commands": {
+        "grits_style": "python scripts/evaluate_grits.py --gt outputs\\grits_demo_inputs\\case_missing_cells_gt.json --pred outputs\\grits_demo_inputs\\case_missing_cells_pred.json --mode grits_style",
+        "paper_like": "python scripts/evaluate_grits.py --gt outputs\\grits_demo_inputs\\case_missing_cells_gt.json --pred outputs\\grits_demo_inputs\\case_missing_cells_pred.json --mode paper_like"
+      }
+    },
+    "case_wrong_boundaries": {
+      "description": "Mutation: wrong_boundaries",
+      "gt_file": "outputs\\grits_demo_inputs\\case_wrong_boundaries_gt.json",
+      "pred_file": "outputs\\grits_demo_inputs\\case_wrong_boundaries_pred.json",
+      "commands": {
+        "grits_style": "python scripts/evaluate_grits.py --gt outputs\\grits_demo_inputs\\case_wrong_boundaries_gt.json --pred outputs\\grits_demo_inputs\\case_wrong_boundaries_pred.json --mode grits_style",
+        "paper_like": "python scripts/evaluate_grits.py --gt outputs\\grits_demo_inputs\\case_wrong_boundaries_gt.json --pred outputs\\grits_demo_inputs\\case_wrong_boundaries_pred.json --mode paper_like"
+      }
+    },
+    "case_bad_text": {
+      "description": "Mutation: bad_text",
+      "gt_file": "outputs\\grits_demo_inputs\\case_bad_text_gt.json",
+      "pred_file": "outputs\\grits_demo_inputs\\case_bad_text_pred.json",
+      "commands": {
+        "grits_style": "python scripts/evaluate_grits.py --gt outputs\\grits_demo_inputs\\case_bad_text_gt.json --pred outputs\\grits_demo_inputs\\case_bad_text_pred.json --mode grits_style",
+        "paper_like": "python scripts/evaluate_grits.py --gt outputs\\grits_demo_inputs\\case_bad_text_gt.json --pred outputs\\grits_demo_inputs\\case_bad_text_pred.json --mode paper_like"
+      }
+    },
+    "case_merged_cells": {
+      "description": "Mutation: merged_cells",
+      "gt_file": "outputs\\grits_demo_inputs\\case_merged_cells_gt.json",
+      "pred_file": "outputs\\grits_demo_inputs\\case_merged_cells_pred.json",
+      "commands": {
+        "grits_style": "python scripts/evaluate_grits.py --gt outputs\\grits_demo_inputs\\case_merged_cells_gt.json --pred outputs\\grits_demo_inputs\\case_merged_cells_pred.json --mode grits_style",
+        "paper_like": "python scripts/evaluate_grits.py --gt outputs\\grits_demo_inputs\\case_merged_cells_gt.json --pred outputs\\grits_demo_inputs\\case_merged_cells_pred.json --mode paper_like"
+      }
+    },
+    "case_low_confidence": {
+      "description": "Mutation: low_confidence",
+      "gt_file": "outputs\\grits_demo_inputs\\case_low_confidence_gt.json",
+      "pred_file": "outputs\\grits_demo_inputs\\case_low_confidence_pred.json",
+      "commands": {
+        "grits_style": "python scripts/evaluate_grits.py --gt outputs\\grits_demo_inputs\\case_low_confidence_gt.json --pred outputs\\grits_demo_inputs\\case_low_confidence_pred.json --mode grits_style",
+        "paper_like": "python scripts/evaluate_grits.py --gt outputs\\grits_demo_inputs\\case_low_confidence_gt.json --pred outputs\\grits_demo_inputs\\case_low_confidence_pred.json --mode paper_like"
+      }
+    }
+  }
+}

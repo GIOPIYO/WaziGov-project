@@ -1,0 +1,74 @@
+{
+  "config": {
+    "gt": "C:\\Users\\joeki\\Documents\\Notes\\WaziGov project\\WaziGov table detection\\outputs\\cv_handoff_test6.json",
+    "pred": "C:\\Users\\joeki\\Documents\\Notes\\WaziGov project\\WaziGov table detection\\outputs\\cv_handoff_test6.json",
+    "match_by": "table_id",
+    "table_iou_threshold": 0.3,
+    "mode": "grits_style"
+  },
+  "summary": {
+    "gt_tables": 4,
+    "pred_tables": 4,
+    "matched_tables": 4,
+    "unmatched_gt_tables": 0,
+    "unmatched_pred_tables": 0,
+    "grits_top": 1.0,
+    "grits_con": 1.0,
+    "grits_loc": 1.0,
+    "grits": 1.0
+  },
+  "unmatched": {
+    "gt_table_ids": [],
+    "pred_table_ids": []
+  },
+  "per_table": [
+    {
+      "gt_table_id": "page_001_table_00",
+      "pred_table_id": "page_001_table_00",
+      "page_number": 1,
+      "match_method": "table_id",
+      "match_score": 1.0,
+      "weight": 12,
+      "grits_top": 1.0,
+      "grits_con": 1.0,
+      "grits_loc": 1.0,
+      "grits": 1.0
+    },
+    {
+      "gt_table_id": "page_002_table_00",
+      "pred_table_id": "page_002_table_00",
+      "page_number": 2,
+      "match_method": "table_id",
+      "match_score": 1.0,
+      "weight": 1,
+      "grits_top": 1.0,
+      "grits_con": 1.0,
+      "grits_loc": 1.0,
+      "grits": 1.0
+    },
+    {
+      "gt_table_id": "page_002_table_01",
+      "pred_table_id": "page_002_table_01",
+      "page_number": 2,
+      "match_method": "table_id",
+      "match_score": 1.0,
+      "weight": 8,
+      "grits_top": 1.0,
+      "grits_con": 1.0,
+      "grits_loc": 1.0,
+      "grits": 1.0
+    },
+    {
+      "gt_table_id": "page_003_table_00",
+      "pred_table_id": "page_003_table_00",
+      "page_number": 3,
+      "match_method": "table_id",
+      "match_score": 1.0,
+      "weight": 8,
+      "grits_top": 1.0,
+      "grits_con": 1.0,
+      "grits_loc": 1.0,
+      "grits": 1.0
+    }
+  ]
+}

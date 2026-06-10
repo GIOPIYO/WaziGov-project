@@ -1,0 +1,54 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Project Summary (COB + OAG)",
+  "type": "object",
+  "required": ["project_id", "title", "last_updated", "cob_findings", "oag_findings"],
+  "properties": {
+    "project_id": { "type": "string" },
+    "title": { "type": "string" },
+    "location": {
+      "type": "object",
+      "properties": {
+        "lat": { "type": "number" },
+        "lon": { "type": "number" },
+        "label": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "last_updated": { "type": "string", "format": "date-time" },
+    "overall_status": { "type": "string", "enum": ["Compliant", "Non-compliant", "Partial"] },
+    "summary": { "type": "string" },
+    "cob_findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["report_id", "fiscal_year", "title", "summary"],
+        "properties": {
+          "report_id": { "type": "string" },
+          "fiscal_year": { "type": "string" },
+          "title": { "type": "string" },
+          "summary": { "type": "string" },
+          "amount": { "type": ["number", "null"] },
+          "link": { "type": ["string", "null"] }
+        },
+        "additionalProperties": false
+      }
+    },
+    "oag_findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["report_id", "title", "summary"],
+        "properties": {
+          "report_id": { "type": "string" },
+          "title": { "type": "string" },
+          "summary": { "type": "string" },
+          "recommendation": { "type": ["string", "null"] },
+          "link": { "type": ["string", "null"] }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

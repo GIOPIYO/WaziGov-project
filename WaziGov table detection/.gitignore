@@ -24,9 +24,11 @@ data/images/table_crops/*.jpg
 data/pdfs/*.pdf
 /data/
 /data/*
-
-/models/
-/output/
+models/
+.models/
+models/table_detection/
+/outputs/*
+.outputs/*
 
 # Keep directory structure
 !data/images/pages/.gitkeep

@@ -7,3 +7,4 @@ NLP module/wazigov-bert-v1/config.json
 NLP module/wazigov-bert-v1/model.safetensors
 NLP module/wazigov-bert-v1/tokenizer.json
 NLP module/wazigov-bert-v1/tokenizer_config.json
+/.venv/

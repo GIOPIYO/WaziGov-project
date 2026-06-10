@@ -9,6 +9,7 @@ import CountyDataExplorer from "@/src/components/dashboard/CountyDataExplorer";
 import Sidebar from "@/src/components/layout/Sidebar";
 import AnalyticsGrid from "@/src/components/dashboard/AnalyticsGrid";
 import AuditForensicsTable from "@/src/components/dashboard/AuditForensicsTable";
+import CountyFinanceOverview from "@/src/components/dashboard/CountyFinanceOverview";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -114,6 +115,10 @@ export default function WaziGovDashboard() {
               <div className="bg-card rounded-3xl shadow-sm border overflow-hidden animate-in fade-in-50 duration-500">
                 <CountyDataExplorer searchQuery={searchQuery} />
               </div>
+            )}
+
+            {activeTab === "finance" && (
+              <CountyFinanceOverview />
             )}
 
             {activeTab === "audit" && (
